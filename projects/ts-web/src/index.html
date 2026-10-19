@@ -1,1 +1,44 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'"><title>Tasks</title></head><body><h1>Tasks</h1><form id="add-form"><label>Title <input id="title" aria-label="Title"></label><button>Add</button></form><p id="error" role="alert"></p><nav><button data-filter="all">All</button><button data-filter="active">Active</button><button data-filter="completed">Completed</button></nav><p>Remaining: <span id="remaining">0</span></p><ul id="tasks"></ul><script type="module" src="/app.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
+  <title>Tasks</title>
+  <style>
+    :root { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #172235; background: #f5f7fb; }
+    * { box-sizing: border-box; }
+    body { max-width: 720px; margin: 0 auto; padding: 48px 20px; }
+    main { padding: 32px; border: 1px solid #dde3ed; border-radius: 16px; background: #fff; box-shadow: 0 10px 32px rgba(29, 42, 67, .07); }
+    h1 { margin: 0 0 28px; font-size: 2rem; letter-spacing: -.03em; }
+    form { display: flex; align-items: end; gap: 12px; }
+    label { display: grid; gap: 8px; flex: 1; font-size: .9rem; font-weight: 600; }
+    input, button { font: inherit; }
+    #title { width: 100%; min-height: 42px; padding: 9px 12px; border: 1px solid #aeb8c8; border-radius: 8px; }
+    button { min-height: 42px; padding: 9px 16px; border: 1px solid #aeb8c8; border-radius: 8px; background: #fff; color: #172235; cursor: pointer; }
+    button:hover { background: #edf2fb; }
+    form button { border-color: #2459bd; background: #2459bd; color: #fff; }
+    form button:hover { background: #1b4698; }
+    #error { min-height: 1.4em; margin: 10px 0 16px; color: #a32431; font-size: .9rem; }
+    nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+    nav button { min-height: 36px; padding: 6px 12px; }
+    #tasks { list-style: none; margin: 0; padding: 0; }
+    #tasks li { display: flex; align-items: center; gap: 12px; min-height: 58px; padding: 8px 0; border-top: 1px solid #e5eaf2; }
+    #tasks li input { flex: none; width: 18px; height: 18px; margin: 0; }
+    #tasks li span { flex: 1; min-width: 0; overflow-wrap: anywhere; }
+    #tasks li button { flex: none; min-height: 34px; padding: 5px 11px; }
+    @media (max-width: 480px) { body { padding: 18px 12px; } main { padding: 20px; } form { align-items: stretch; flex-direction: column; } form button { align-self: flex-start; } }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Tasks</h1>
+    <form id="add-form"><label>Title <input id="title" aria-label="Title"></label><button>Add</button></form>
+    <p id="error" role="alert"></p>
+    <nav><button data-filter="all">All</button><button data-filter="active">Active</button><button data-filter="completed">Completed</button></nav>
+    <p>Remaining: <span id="remaining">0</span></p>
+    <ul id="tasks"></ul>
+  </main>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
