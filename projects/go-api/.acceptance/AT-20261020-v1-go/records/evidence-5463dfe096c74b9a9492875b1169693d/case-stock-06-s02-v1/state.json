@@ -1,0 +1,131 @@
+{
+  "schema": "isolated-scene-pipeline-state-v1",
+  "config_sha256": "bcab9847bebec154ee4a2db65fffa95b6f3752205684fdd359f90edb73ee3bad",
+  "bindings": {
+    "case_input": "7abb501b87e14086e3f185325f1a2cadb4c895b84699f9212efc4ca628198b30",
+    "guide": "ddb81e749a14a1deb649395ddbe9aee9087a6b15bc1ca8460cf50bd2ebb7aba6",
+    "template_catalog": "8657d0ed0e7dbe1ac1d3022e980e674b47feb1c4d57e4295a815ca8992619ea0"
+  },
+  "stages": {
+    "prepare": {
+      "status": "completed",
+      "started_at": "2026-10-20T03:42:21.644395+00:00",
+      "result": {
+        "root": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workspace",
+        "catalog": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/case-stock-06-s02-v1/catalog.json",
+        "setup_seconds": 0,
+        "check_seconds": 0
+      },
+      "finished_at": "2026-10-20T03:42:22.597265+00:00"
+    },
+    "case": {
+      "status": "completed",
+      "started_at": "2026-10-20T03:42:22.822122+00:00",
+      "result": {
+        "metrics": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/case-stock-06-s02-v1/case/metrics.json",
+        "answer": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/case-stock-06-s02-v1/case/answer.json",
+        "seconds": 126.80364924999999,
+        "usage": {
+          "toolUses": 20,
+          "tokens": {
+            "coverage": "partial",
+            "totals": {
+              "input": {
+                "total": 436135,
+                "uncached": 36391,
+                "cacheRead": 399744,
+                "cacheWrite": 0
+              },
+              "output": {
+                "total": 5394,
+                "visible": 4884,
+                "reasoning": 510
+              }
+            }
+          }
+        },
+        "tool_calls": 20,
+        "restarted_after_unavailable_session": false
+      },
+      "finished_at": "2026-10-20T03:44:30.854369+00:00"
+    },
+    "execution": {
+      "status": "completed",
+      "started_at": "2026-10-20T03:44:31.134881+00:00",
+      "result": {
+        "receipt": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/case-stock-06-s02-v1/execution/execution.json",
+        "log": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/case-stock-06-s02-v1/execution/execution.log",
+        "exit_code": 1,
+        "seconds": 16.40491166699212,
+        "test_files": [
+          "projects/go-api/tests/coverage/adapter.py",
+          "projects/go-api/tests/coverage/direct.py",
+          "projects/go-api/tests/coverage/harness_test.go.txt",
+          "projects/go-api/tests/coverage/launcher.py",
+          "projects/go-api/tests/coverage/probe.py",
+          "projects/go-api/tests/stock_02_s01.py",
+          "projects/go-api/tests/stock_06_s02.py"
+        ]
+      },
+      "finished_at": "2026-10-20T03:45:01.716222+00:00"
+    },
+    "evidence": {
+      "status": "completed",
+      "started_at": "2026-10-20T03:45:02.542856+00:00",
+      "result": {
+        "manifest": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/case-stock-06-s02-v1/frozen-evidence.json",
+        "paths": [
+          "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/case-stock-06-s02-v1/frozen-evidence/0/execution.log",
+          "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/case-stock-06-s02-v1/frozen-evidence/0/execution.json",
+          "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/case-stock-06-s02-v1/frozen-evidence/1/covcounters.92693296bbc058414674b6688e10b66b.46375.1792467888422718000",
+          "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/case-stock-06-s02-v1/frozen-evidence/2/covcounters.92693296bbc058414674b6688e10b66b.46391.1792467888494002000",
+          "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/case-stock-06-s02-v1/frozen-evidence/3/covmeta.92693296bbc058414674b6688e10b66b"
+        ],
+        "file_count": 5,
+        "bytes": 5897
+      },
+      "finished_at": "2026-10-20T03:45:04.978825+00:00"
+    },
+    "gate": {
+      "status": "completed",
+      "started_at": "2026-10-20T03:45:05.639390+00:00",
+      "result": {
+        "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/case-stock-06-s02-v1/handoff-gate.json",
+        "seconds": 1.991
+      },
+      "finished_at": "2026-10-20T03:45:08.058028+00:00"
+    },
+    "review": {
+      "status": "completed",
+      "started_at": "2026-10-20T03:45:08.677164+00:00",
+      "result": {
+        "answer": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/case-stock-06-s02-v1/review/answer.json",
+        "metrics": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/case-stock-06-s02-v1/review/metrics.json",
+        "status": "product_bug",
+        "seconds": 70.24583295900001,
+        "usage": {
+          "toolUses": 9,
+          "tokens": {
+            "coverage": "partial",
+            "totals": {
+              "input": {
+                "total": 219590,
+                "uncached": 29382,
+                "cacheRead": 190208,
+                "cacheWrite": 0
+              },
+              "output": {
+                "total": 2814,
+                "visible": 2220,
+                "reasoning": 594
+              }
+            }
+          }
+        },
+        "tool_calls": 9,
+        "restarted_after_unavailable_session": false
+      },
+      "finished_at": "2026-10-20T03:46:20.509513+00:00"
+    }
+  }
+}

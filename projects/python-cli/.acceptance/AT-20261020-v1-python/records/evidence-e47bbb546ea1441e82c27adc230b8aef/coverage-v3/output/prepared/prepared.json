@@ -1,0 +1,103 @@
+{
+  "schema": "project-coverage-preparation-v1",
+  "entry": [
+    "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/runtime-v2/output/runtime/runtime/venv/bin/python",
+    "-B",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workspace/projects/python-cli/tests/coverage_support/adapter.py"
+  ],
+  "adapter_files": {
+    "projects/python-cli/tests/coverage_support/adapter.py": "e59a25ebbeeeb654aa2ebba80335f65587b4b6f66ca735598c6cd0ce5010e4fd",
+    "projects/python-cli/tests/coverage_support/collect.py": "88d83549ff74386cce54a2ff56a4f6e627b1cfe94b82d195d96c1bfc0fffd453",
+    "projects/python-cli/tests/coverage_support/direct.py": "a6b228ad2269606157517eff132ac706478eeb2c41889829783c4b030991b0e0",
+    "projects/python-cli/tests/coverage_support/coverage-requirements.txt": "b69684abad190dea565783e8534d6116e82e1811a0d2b9f1bf99f9613ee83c28",
+    "projects/python-cli/tests/coverage_support/tool-lock.json": "a371e32285e70c144219cc531644e1d4e790b9e7f2981fbd8c701acc0dbde3c6",
+    "projects/python-cli/tests/coverage_support/README.md": "96ff3a7e817bd2cc9818b9b496feddf018c3febaf6c8c1ed72c45fb1d73090e4"
+  },
+  "tools": [
+    {
+      "name": "coverage.py",
+      "version": "7.16.2",
+      "role": "原生行与分支采集、子进程插桩、数据库合并及统计；适配器使用公开 API，独立 reader 使用官方 CLI。已通过最小启动自检核对实际版本和安装文件摘要。"
+    }
+  ],
+  "source_dispositions": {
+    "projects/python-cli/invoice/__init__.py": {
+      "kind": "non_executable",
+      "reason": "冻结源码为空，已复核 SHA256；没有可执行语句，仍保留在完整源码范围。"
+    },
+    "projects/python-cli/invoice/__main__.py": {
+      "kind": "measured",
+      "reason": "使用 coverage.py 显式文件报告输入。前次两路非零探针已通过；此次修正零命中合并丢失分支模式的问题。零探针不执行产品代码，非零探针仅导入模块、不调用业务函数。本声明须由宿主重新执行两路零/非零及独立读取探针确认。"
+    },
+    "projects/python-cli/invoice/totals.py": {
+      "kind": "measured",
+      "reason": "使用 coverage.py 显式文件报告输入，工具负责识别包括未调用函数在内的真实分母。前次两路非零探针已通过；此次修正零命中分支模式保留方式。本声明须由宿主重新验证同份原生数据的零命中、定向导入命中及独立读取。"
+    }
+  },
+  "preparation_status": "ready",
+  "spec": {
+    "project_root": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workspace",
+    "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+    "components": {},
+    "source_hashes": {
+      "projects/python-cli/invoice/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "projects/python-cli/invoice/__main__.py": "252c6574b1687570e0d1a43afc6d17d3fddff15e1effceff86ded16d2b761d43",
+      "projects/python-cli/invoice/totals.py": "f636bf0630ce37b44cd8bb580623ff13008672e3437e0ec0c67863ea4bdd6a3c"
+    },
+    "inventory_path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/coverage-v2/inventory.json",
+    "inventory_sha256": "ff60058bd124df99de706be8d108e500da74ec8f40eeaf9140c5c7e41d6ddd2c",
+    "registry_path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/coverage-v3/registry/coverage-registry.json",
+    "runtime_manifest": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/runtime-v2/output/runtime/runtime.json",
+    "runtime_sha256": "e7396daf12304ca20738b06dd112709022fb64c44f6efc74b8f84cf98799e1c7",
+    "probe_report": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/coverage-v3/output/probes/coverage-probes.json",
+    "probe_report_sha256": "25a6076588854c6f5d2eef8f6ef9b5d8f1e45dcca64ae76895a3d4441199434e"
+  },
+  "preparation_evidence": [
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/coverage-v3/output/probe-plan.json",
+      "sha256": "5bdf0c5337c2758e24f78935a1d591928b58bb515672915e16983ddee3257bda"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/coverage-v3/output/probes/coverage-probes.json",
+      "sha256": "25a6076588854c6f5d2eef8f6ef9b5d8f1e45dcca64ae76895a3d4441199434e"
+    }
+  ],
+  "artifact_aliases": {
+    "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workspace/projects/python-cli/invoice/__init__.py": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/coverage-v3/output/frozen/projects/python-cli/invoice/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workspace/projects/python-cli/invoice/__main__.py": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/coverage-v3/output/frozen/projects/python-cli/invoice/__main__.py",
+      "sha256": "252c6574b1687570e0d1a43afc6d17d3fddff15e1effceff86ded16d2b761d43"
+    },
+    "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workspace/projects/python-cli/invoice/totals.py": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/coverage-v3/output/frozen/projects/python-cli/invoice/totals.py",
+      "sha256": "f636bf0630ce37b44cd8bb580623ff13008672e3437e0ec0c67863ea4bdd6a3c"
+    },
+    "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workspace/projects/python-cli/tests/coverage_support/adapter.py": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/coverage-v3/output/frozen/projects/python-cli/tests/coverage_support/adapter.py",
+      "sha256": "e59a25ebbeeeb654aa2ebba80335f65587b4b6f66ca735598c6cd0ce5010e4fd"
+    },
+    "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workspace/projects/python-cli/tests/coverage_support/collect.py": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/coverage-v3/output/frozen/projects/python-cli/tests/coverage_support/collect.py",
+      "sha256": "88d83549ff74386cce54a2ff56a4f6e627b1cfe94b82d195d96c1bfc0fffd453"
+    },
+    "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workspace/projects/python-cli/tests/coverage_support/direct.py": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/coverage-v3/output/frozen/projects/python-cli/tests/coverage_support/direct.py",
+      "sha256": "a6b228ad2269606157517eff132ac706478eeb2c41889829783c4b030991b0e0"
+    },
+    "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workspace/projects/python-cli/tests/coverage_support/coverage-requirements.txt": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/coverage-v3/output/frozen/projects/python-cli/tests/coverage_support/coverage-requirements.txt",
+      "sha256": "b69684abad190dea565783e8534d6116e82e1811a0d2b9f1bf99f9613ee83c28"
+    },
+    "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workspace/projects/python-cli/tests/coverage_support/tool-lock.json": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/coverage-v3/output/frozen/projects/python-cli/tests/coverage_support/tool-lock.json",
+      "sha256": "a371e32285e70c144219cc531644e1d4e790b9e7f2981fbd8c701acc0dbde3c6"
+    },
+    "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workspace/projects/python-cli/tests/coverage_support/README.md": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/coverage-v3/output/frozen/projects/python-cli/tests/coverage_support/README.md",
+      "sha256": "96ff3a7e817bd2cc9818b9b496feddf018c3febaf6c8c1ed72c45fb1d73090e4"
+    }
+  }
+}

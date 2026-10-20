@@ -1,0 +1,36 @@
+{
+  "status": "product_failure",
+  "test_files": [
+    "projects/go-api/tests/stock_06_s02.py",
+    "projects/go-api/tests/coverage/adapter.py",
+    "projects/go-api/tests/coverage/direct.py",
+    "projects/go-api/tests/coverage/probe.py",
+    "projects/go-api/tests/coverage/launcher.py",
+    "projects/go-api/tests/coverage/harness_test.go.txt"
+  ],
+  "test_command": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "projects/go-api/tests/stock_06_s02.py"
+  ],
+  "test_env": {},
+  "observations": [
+    "通过统一调试入口执行，使用全新状态目录；首次预留3件，完整收到201响应，request_id和quantity正确，available=7。",
+    "正常关闭后以同一状态目录启动新进程，重试前GET /stock返回200、available=7。",
+    "原request_id和quantity重试实际返回201、available=4；预期为200及首次预留内容。",
+    "重试后GET /stock返回200、available=4，证实重复扣减3件。",
+    "两个服务进程均经SIGTERM正常退出，退出码均为0；无清理异常，业务命令退出码为1。",
+    "覆盖率采集complete，Go go1.25.7原生工具报告语句命中47/70；前场景测试保留，产品源码未修改。"
+  ],
+  "evidence_paths": [
+    "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/case-stock-06-s02-v1/case/debug/request-01.json",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/case-stock-06-s02-v1/case/debug/attempt-8640d545067441b697f6f1050afc6851/state/stock-06-s02/observations.json",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/case-stock-06-s02-v1/case/debug/attempt-8640d545067441b697f6f1050afc6851/execution/coverage-report.json",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/case-stock-06-s02-v1/case/debug/attempt-8640d545067441b697f6f1050afc6851/execution/collection.json"
+  ],
+  "limitations": [
+    "重跑需由统一入口注入STOCK_BINARY及全新的ACCEPTANCE_CASE_ROOT，覆盖率环境由现有适配器绑定。",
+    "现有工具仅支持原生语句覆盖率，行和分支覆盖率均为unavailable。",
+    "本地结论尚待调度器冻结重跑与独立复审。"
+  ],
+  "reason": "正常重启后原成功请求被再次执行，库存从7降至4，违反STOCK-06-S02。"
+}

@@ -1,0 +1,42 @@
+{
+  "status": "passed_local",
+  "test_files": [
+    "projects/ts-web/tests/todo-01-s01.test.cjs",
+    "projects/ts-web/tests/coverage-tools/adapter.cjs",
+    "projects/ts-web/tests/coverage-tools/core.cjs",
+    "projects/ts-web/tests/coverage-tools/direct.cjs",
+    "projects/ts-web/tests/coverage-tools/preload.cjs",
+    "projects/ts-web/tests/coverage-tools/probe.cjs",
+    "projects/ts-web/tests/coverage-tools/package.json",
+    "projects/ts-web/tests/coverage-tools/package-lock.json",
+    "projects/ts-web/tests/coverage-tools/README.md"
+  ],
+  "test_command": [
+    "/opt/homebrew/bin/node",
+    "--test",
+    "projects/ts-web/tests/todo-01-s01.test.cjs"
+  ],
+  "test_env": {
+    "PROJECT_COVERAGE_RUNTIME": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/runtime-1/runtime/runtime.json",
+    "PLAYWRIGHT_BROWSERS_PATH": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/runtime-1/runtime/runtime/playwright-browsers"
+  },
+  "observations": [
+    "统一调试入口执行一次，业务测试通过，退出码为 0，无跳过。",
+    "独立回环服务及 Chromium context，视口 1280×800；输入“买牛奶”并点击 Add，列表内准确匹配的标题由 0 项增加为 1 项。",
+    "已逐张人工视觉审查输入前、填入后、添加后的真实截图：输入区、Add 和新增标题清晰可读，无裁切或遮挡，间距、对齐和控件样式协调；填入与点击操作成功。",
+    "服务、context 和浏览器正常清理，cleanupErrors 为空；覆盖率生命周期完整，项目报告状态为 measured。",
+    "新增一个业务测试文件，保留既有覆盖率工具，未修改产品源码。"
+  ],
+  "evidence_paths": [
+    "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/case/debug/attempt-ccdbf9294f4947dd89f3da64710eb4ea/state/screenshots/01-before.png",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/case/debug/attempt-ccdbf9294f4947dd89f3da64710eb4ea/state/screenshots/02-filled.png",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/case/debug/attempt-ccdbf9294f4947dd89f3da64710eb4ea/state/screenshots/03-added.png",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/case/debug/attempt-ccdbf9294f4947dd89f3da64710eb4ea/state/screenshots/states.json",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/case/debug/attempt-ccdbf9294f4947dd89f3da64710eb4ea/execution/coverage-report.json"
+  ],
+  "limitations": [
+    "上述截图仅为本地调试证据，不作为正式执行证据。",
+    "正式命令通过宿主绑定的 ACCEPTANCE_SCREENSHOT_DIR 保存同样三个状态的截图；正式执行与独立复审尚待调度器完成。"
+  ],
+  "reason": "本场景业务断言、本地截图视觉审查与清理均通过，可交付正式宿主重跑和独立复审。"
+}

@@ -1,0 +1,42 @@
+✖ TODO-04-S02: filters retain the global remaining count (3483.974959ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3954.717333
+
+✖ failing tests:
+
+test at projects/ts-web/tests/todo-04-s02.test.cjs:16:1
+✖ TODO-04-S02: filters retain the global remaining count (3483.974959ms)
+  Error [AggregateError]: mixed/Completed: TODO-04 global remaining: Expected values to be strictly equal:
+  
+  0 !== 2
+  
+  active-only/Completed: TODO-04 global remaining: Expected values to be strictly equal:
+  
+  0 !== 2
+  
+      at TestContext.<anonymous> (/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workspace/projects/ts-web/tests/todo-04-s02.test.cjs:163:40)
+      at async Test.run (node:internal/test_runner/test:1116:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    [errors]: [
+      Error: mixed/Completed: TODO-04 global remaining: Expected values to be strictly equal:
+      
+      0 !== 2
+      
+          at TestContext.<anonymous> (/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workspace/projects/ts-web/tests/todo-04-s02.test.cjs:155:35)
+          at async Test.run (node:internal/test_runner/test:1116:7)
+          at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3),
+      Error: active-only/Completed: TODO-04 global remaining: Expected values to be strictly equal:
+      
+      0 !== 2
+      
+          at TestContext.<anonymous> (/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workspace/projects/ts-web/tests/todo-04-s02.test.cjs:155:35)
+          at async Test.run (node:internal/test_runner/test:1116:7)
+          at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3)
+    ]
+  }

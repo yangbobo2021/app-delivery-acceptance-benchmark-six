@@ -1,0 +1,43 @@
+{
+  "status": "product_failure",
+  "test_files": [
+    "projects/electron-desktop/tests/note-01-s06.test.cjs",
+    "projects/electron-desktop/tests/coverage-tools/README.md",
+    "projects/electron-desktop/tests/coverage-tools/adapter.cjs",
+    "projects/electron-desktop/tests/coverage-tools/core.cjs",
+    "projects/electron-desktop/tests/coverage-tools/direct.cjs",
+    "projects/electron-desktop/tests/coverage-tools/electron-wrapper.cjs",
+    "projects/electron-desktop/tests/coverage-tools/launch.cjs",
+    "projects/electron-desktop/tests/coverage-tools/package.json",
+    "projects/electron-desktop/tests/coverage-tools/package-lock.json",
+    "projects/electron-desktop/tests/coverage-tools/probe.cjs",
+    "projects/electron-desktop/tests/coverage-tools/zero.html"
+  ],
+  "test_command": [
+    "/opt/homebrew/bin/node",
+    "--test",
+    "projects/electron-desktop/tests/note-01-s06.test.cjs"
+  ],
+  "test_env": {},
+  "observations": [
+    "新增测试通过静态语法检查，并经指定统一调试入口实际运行一次，业务命令退出码为 1。",
+    "真实界面创建了两条标题为“项目交接记录”、正文不同且 ID 不同的便签；逐条选择后完整正文均匹配。",
+    "重新选择第一条并点击 Delete 后，两条列表项均消失，编辑区清空，未显示错误；独立删除断言失败。",
+    "实际窗口为 850×650，内容视口为 850×622，DPR 为 2，各截图状态均记录尺寸和完整内容。",
+    "人工查看删除前后截图：正文和操作按钮无遮挡；删除前两条列表标题明显过小，与编辑区字体不协调，UI 不判通过。",
+    "应用正常退出，退出码为 0、无终止信号，所启动进程组已消失；没有清理异常。",
+    "产品源码与前一场景测试保持未修改。"
+  ],
+  "evidence_paths": [
+    "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S06/case/debug/attempt-8ef34f91f63d4fe394d6c4e5ff207a90/state/screenshots",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S06/case/debug/attempt-8ef34f91f63d4fe394d6c4e5ff207a90/execution/command/execution.log",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S06/case/debug/attempt-8ef34f91f63d4fe394d6c4e5ff207a90/execution/coverage-report.json"
+  ],
+  "limitations": [
+    "上述截图属于本地调试证据，不是正式执行证据；正式命令会写入宿主绑定的 ACCEPTANCE_SCREENSHOT_DIR，仍需正式冻结重跑与独立复审。",
+    "另一条便签被连带删除，无法继续验证删除后剩余记录的选择和内容保留。",
+    "运行时隔离目录及覆盖率环境变量由统一入口绑定，无额外自定义环境变量。",
+    "覆盖率报告状态为 incomplete，不宣称全项目覆盖率完整。"
+  ],
+  "reason": "真实界面删除一条便签时连带删除了另一条同标题便签，违反 NOTE-01-S06 的独立删除要求。"
+}

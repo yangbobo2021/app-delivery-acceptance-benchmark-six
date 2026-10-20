@@ -1,0 +1,148 @@
+{
+  "acceptance": {
+    "project_root": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui",
+    "id": "AT-20261020-v1-rust",
+    "scope_sha256": "ca4cee68077fa3fcd17800b3de92a726464a509a76fcbd4ec5a94e1aa2e3fef4",
+    "knowledge_receipt": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/knowledge-reads/8e50dcbcc3ee4c73b778f3ab47109523.json"
+  },
+  "requirement": {
+    "id": "TUI-04",
+    "title": "TUI-04",
+    "text": "TUI-04：按空格切换当前选中项的完成状态，画面立即反映结果，状态文件也保存结果。再次按空格可恢复原状态；其他项不受影响。"
+  },
+  "scene": {
+    "id": "TUI-04-S01",
+    "title": "单项清单空格切换、即时显示并保存",
+    "priority": "P0",
+    "priority_reason": "普通单项清单无法正确切换、显示或保存完成状态，直接阻断主要业务操作。",
+    "description": "在满足颜色环境约束且至少80列24行的真实终端，分别打开仅含一个未完成项、仅含一个已完成项的合法状态文件，各按一次空格；无需额外操作，画面立即显示相反的完成状态，状态文件保存相同结果，项目的id和title不变。切换后的标题、项目名称、完成状态、选中标识、操作提示和状态行可见可读、无遮挡或裁切，排版层次清楚、间距与对齐合理，同类文字和控件样式一致，符合项目已有风格。",
+    "requirement_id": "TUI-04",
+    "kind": "BLACK_BOX"
+  },
+  "business_goal": "提供本地终端清单程序，支持读取已有状态文件、浏览和选择项目、切换并保存完成状态，以及正常退出并恢复终端；保证交互可读、数据变更准确，并能应对终端尺寸变化。",
+  "confirmed_scope": {
+    "included_requirement_ids": [
+      "TUI-01",
+      "TUI-02",
+      "TUI-03",
+      "TUI-04",
+      "TUI-05",
+      "TUI-06"
+    ],
+    "exclusions": [
+      "依赖后台服务的运行方式。"
+    ],
+    "limitations": [
+      "验收限定真实、支持颜色的终端，使用 TERM=xterm-256color，且不设置 NO_COLOR。",
+      "未明确终端不小于 40 列、10 行但未达到 80 列、24 行时的完整布局要求。",
+      "README 全文未提供，其补充运行约定尚无法确认；程序实际行为尚未验证。"
+    ]
+  },
+  "related_requirements": [
+    {
+      "id": "TUI-01",
+      "title": "TUI-01",
+      "text": "TUI-01：使用 `--state <绝对路径>` 打开已有的 UTF-8 状态文件；缺少参数、文件不存在或格式错误时，退出码为 2，标准错误给出说明，不进入交互画面。每行格式为 `id|title|done`，id 是唯一的非空 ASCII 字母数字串，title 为 1 至 40 个可打印 ASCII 字符，done 为 `0` 或 `1`；文件至少有一项。"
+    },
+    {
+      "id": "TUI-03",
+      "title": "TUI-03",
+      "text": "TUI-03：`j`/下箭头选择下一项，`k`/上箭头选择上一项；到达首尾时保持在边界。当前选中项有明确可见的标识；切换选择不修改文件。"
+    },
+    {
+      "id": "TUI-05",
+      "title": "TUI-05",
+      "text": "TUI-05：按 `q` 正常退出、恢复终端状态，退出码 0。若未切换状态，原文件字节不变；程序不在状态文件目录留下临时文件。"
+    }
+  ],
+  "scenario_source_path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/scenario-TUI-04-2/scenarios.current.json",
+  "scenario_source_sha256": "af71061a315858a545bf9ca0ff761f08da72ae5a279725b948d5844e04a2aa03",
+  "scenario_self_check": "internal",
+  "local_loopback_required": false,
+  "ui_acceptance": {
+    "required": true,
+    "visual_expectation": "切换后的标题、项目名称、完成状态、选中标识、操作提示和状态行可见可读、无遮挡或裁切，排版层次清楚、间距与对齐合理，同类文字和控件样式一致，符合项目已有风格。",
+    "source_sha256": "8cab7834c4a15051b1b8cf2e93834d09a0bd9caca91abcecc5d40066cadf6a54",
+    "evidence_execution_relative_paths": [],
+    "evidence_env_dir_keys": [
+      "TUI_SCREENSHOT_DIR"
+    ]
+  },
+  "coverage": {
+    "policy": "required",
+    "protocol": "project-coverage-v1",
+    "prepared": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/coverage-2/prepared",
+    "prepared_sha256": "718e6011c1fca05038c241bf17de587a57cf3e617aba4f20b46af8535d1b66df",
+    "inventory_path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/inventory-1/inventory.json",
+    "required_test_files": {
+      "projects/rust-tui/tests/llvm_coverage/adapter.py": "64a25205a14cb6da18e56cf72e20727be39a5b428cc4885b0d3400b3197ae7be",
+      "projects/rust-tui/tests/llvm_coverage/direct.py": "79d87b5d0acb21d19c5cc65adba9ad8589daa0b6b6d177f70c3d81d4c02f4b77",
+      "projects/rust-tui/tests/llvm_coverage/config.json": "6a013cc7e18a7fc515b16418d9746248a7eb92da57694c9b4d018298db53c64f",
+      "projects/rust-tui/tests/llvm_coverage/probe.rs": "f8d1e91662707575d459e4156edb72ee8d7c010d50a9d5a733b87224b39fe3c5",
+      "projects/rust-tui/tests/llvm_coverage/README.md": "95b8390be4987356a7b6e900d1b3b1799c373e0d872077650d5f806fd33434ca"
+    },
+    "acceptance": {
+      "project_root": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui",
+      "id": "AT-20261020-v1-rust",
+      "scope_sha256": "ca4cee68077fa3fcd17800b3de92a726464a509a76fcbd4ec5a94e1aa2e3fef4",
+      "knowledge_receipt": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/knowledge-reads/8e50dcbcc3ee4c73b778f3ab47109523.json"
+    },
+    "scene_id": "TUI-04-S01",
+    "revision": "be952659c7d93018e26793daf2e58fa8321601f4"
+  },
+  "runtime": {
+    "manifest": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/runtime-4/runtime/runtime.json",
+    "sha256": "633a6709953472d6d92896e60e74f0e00c7c19b1959ff3fbf6cb70996d1af31d"
+  },
+  "debug_environment": {
+    "fresh_env_root_key": "TUI_CASE_ROOT",
+    "fresh_env_paths": {
+      "TUI_SCREENSHOT_DIR": "screens"
+    },
+    "evidence_env_dir_keys": [
+      "TUI_SCREENSHOT_DIR"
+    ]
+  },
+  "frozen_revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+  "test_files": [
+    "projects/rust-tui/tests/llvm_coverage/README.md",
+    "projects/rust-tui/tests/llvm_coverage/adapter.py",
+    "projects/rust-tui/tests/llvm_coverage/config.json",
+    "projects/rust-tui/tests/llvm_coverage/direct.py",
+    "projects/rust-tui/tests/llvm_coverage/probe.rs",
+    "projects/rust-tui/tests/tui04_coverage_archive.py",
+    "projects/rust-tui/tests/tui04_single_toggle.py"
+  ],
+  "artifact_scope": "isolated_worktree",
+  "execution_evidence_paths": [
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/frozen-evidence/0/execution.log",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/frozen-evidence/0/execution.json",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/frozen-evidence/1/product-binary",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/frozen-evidence/2/run-26077-3353984249793428757_0.profraw",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/frozen-evidence/3/run-26295-3353984249793428757_0.profraw",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/frozen-evidence/4/merged.profdata",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/frozen-evidence/5/native-export.stdout",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/frozen-evidence/6/native-summary.stdout",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/frozen-evidence/7/processing.json",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/frozen-evidence/8/initial-0-after-space.ansi",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/frozen-evidence/8/initial-0-after-space.json",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/frozen-evidence/8/initial-0-after-space.png",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/frozen-evidence/8/initial-0-before.ansi",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/frozen-evidence/8/initial-0-before.json",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/frozen-evidence/8/initial-0-before.png",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/frozen-evidence/8/initial-1-after-space.ansi",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/frozen-evidence/8/initial-1-after-space.json",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/frozen-evidence/8/initial-1-after-space.png",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/frozen-evidence/8/initial-1-before.ansi",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/frozen-evidence/8/initial-1-before.json",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/frozen-evidence/8/initial-1-before.png",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/execution.log"
+  ],
+  "frozen_evidence_manifest": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/frozen-evidence.json",
+  "frozen_execution_receipt": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/execution.json",
+  "frozen_execution_log": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/execution.log",
+  "coverage_result_path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/coverage-report.json",
+  "agent_result_path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/case/answer.json",
+  "scope_note": "Phase 2A selected normal UI scene, new attempt after coverage adapter native-report archival repair. Run product in real 80x24 TERM=xterm-256color PTY/Terminal, capture initial and toggled PNGs in TUI_SCREENSHOT_DIR, compare saved state. The required project coverage adapter now freezes full native LLVM export during finish; independent Reviewer must inspect images and same-run native report. Preserve TUI-04-S01-1 review history.",
+  "handoff_gate_path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/handoff-gate.json"
+}

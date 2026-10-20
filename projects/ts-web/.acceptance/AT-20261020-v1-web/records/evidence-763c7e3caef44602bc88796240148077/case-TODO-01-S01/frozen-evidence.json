@@ -1,0 +1,107 @@
+{
+  "schema": "frozen-scene-evidence-v1",
+  "files": [
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/frozen-evidence/0/execution.log",
+      "sha256": "ac14bfc77a0dabdf63a557f94990df7ab23209ff48e5eb083fe8f3bf446e1358",
+      "source": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/execution/execution.log"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/frozen-evidence/0/execution.json",
+      "sha256": "05338aa05354d09519b870ef34771d36d1bc9401e751e44766cc20b6be2f4d8c",
+      "source": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/execution/execution.json"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/frozen-evidence/1/node-70705.ended.json",
+      "sha256": "64a7b268552a5df74c2f44d28b8d63680d6c65b5eabce74f8afbf3bf3193a5d9",
+      "source": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/execution/native/node-70705.ended.json"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/frozen-evidence/2/node-70705.started.json",
+      "sha256": "c9aa75814ec56b2b893581c84efb21591335de7163484f294b127ca2dc6e80f0",
+      "source": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/execution/native/node-70705.started.json"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/frozen-evidence/3/node-70706-browser-1-1792465125897-0.4644721991750367.coverage.json",
+      "sha256": "d1bbeba64b74cdc041c34f090d89011f831d62bd2c0769fe6bf30639a5d51e21",
+      "source": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/execution/native/node-70706-browser-1-1792465125897-0.4644721991750367.coverage.json"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/frozen-evidence/4/node-70706-browser-context-666c285a-ea2b-4ca9-a73e-c3ec0cc0ab0a.ended.json",
+      "sha256": "ad1ed6243ea081e7d97d9e7bf7443870a40e1ea693c6c7fb4a35354451f1de93",
+      "source": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/execution/native/node-70706-browser-context-666c285a-ea2b-4ca9-a73e-c3ec0cc0ab0a.ended.json"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/frozen-evidence/5/node-70706-browser-context-666c285a-ea2b-4ca9-a73e-c3ec0cc0ab0a.started.json",
+      "sha256": "00c99a1c06c5882c0eb34b49e7f4b3e8b80d1233044f51ad10296519b63e46e8",
+      "source": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/execution/native/node-70706-browser-context-666c285a-ea2b-4ca9-a73e-c3ec0cc0ab0a.started.json"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/frozen-evidence/6/node-70706.ended.json",
+      "sha256": "0349467a23bbc4e41da03832899ada00c5c4345d2a30ef61df61b919c2741edd",
+      "source": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/execution/native/node-70706.ended.json"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/frozen-evidence/7/node-70706.started.json",
+      "sha256": "3c2bb7a7aaa99bba73dee30a03774e13ff1cbd87eb0d9363df380325bc8710b7",
+      "source": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/execution/native/node-70706.started.json"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/frozen-evidence/8/node-70707.coverage.json",
+      "sha256": "da2e643f6cf3e3cfc61c1212ad065b818904b542315475b1037b15babfa19429",
+      "source": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/execution/native/node-70707.coverage.json"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/frozen-evidence/9/node-70707.ended.json",
+      "sha256": "dcc32b01c1afe2cd15f46f45ee90aa6199002d2dcff1c657b6615aa1de3445fa",
+      "source": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/execution/native/node-70707.ended.json"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/frozen-evidence/10/node-70707.started.json",
+      "sha256": "86b4c5a80d42d2213fefef9528db1385a34a379ec521fda9d8f7bb150e9ad7ff",
+      "source": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/execution/native/node-70707.started.json"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/frozen-evidence/11/node-70709.coverage.json",
+      "sha256": "d4aad28311c04a2251863db82bed71134d0138fc83f2c7220aa932f6a211fb8a",
+      "source": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/execution/native/node-70709.coverage.json"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/frozen-evidence/12/node-70709.ended.json",
+      "sha256": "4929a85f3c0d3220fea2df489c7fd2574cccd3de48d5121474a0b3502ac806c1",
+      "source": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/execution/native/node-70709.ended.json"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/frozen-evidence/13/node-70709.started.json",
+      "sha256": "a4b58d92e3ab6f7b84b2e878959dff72405196e0c1e87004882d03fb0e4ff6b1",
+      "source": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/execution/native/node-70709.started.json"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/frozen-evidence/14/collection-lifecycle.json",
+      "sha256": "9cf9bc7d5dcd8cbf0f563cb54b4bc7a3e4883af0ebeebdc5a3c5969f0766fd2a",
+      "source": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/execution/collection-lifecycle.json"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/frozen-evidence/15/01-before.png",
+      "sha256": "3e6e8a8c503e8fef71f79130e285f6fddb29b588d994ae5bff9f1b7aaba624ec",
+      "source": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/fresh-execution/screenshots/01-before.png"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/frozen-evidence/15/02-filled.png",
+      "sha256": "db70de977130d5c1d43cf0a8ed1b99cabeeb93fdcbc54e0822b8f1abca706851",
+      "source": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/fresh-execution/screenshots/02-filled.png"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/frozen-evidence/15/03-added.png",
+      "sha256": "9886cf38e8b764e3bf2069d8f7e370be78d1e69758a8fe8d4630ae231e8f257a",
+      "source": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/fresh-execution/screenshots/03-added.png"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/frozen-evidence/15/states.json",
+      "sha256": "157ae12aa15590c3bd7969310dd89fa7a10b481760f7fbf4c5c81be037ecb848",
+      "source": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/fresh-execution/screenshots/states.json"
+    }
+  ],
+  "source_execution_sha256": "05338aa05354d09519b870ef34771d36d1bc9401e751e44766cc20b6be2f4d8c",
+  "coverage_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/coverage-report.json"
+}

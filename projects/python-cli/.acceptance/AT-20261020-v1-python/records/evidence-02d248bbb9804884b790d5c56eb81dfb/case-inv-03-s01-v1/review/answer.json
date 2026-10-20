@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "coverage": "断言覆盖完整 stdout 单对象解析、字段集合、账号与整数总额、数据行数、退出码及空 stderr，能识别本场景的错误实现。coverage.py 7.16.2 采集、合并并统计；报告绑定本次冻结用例，采集正常结束。__main__.py 行30/37、分支7/12；totals.py 行4/7、分支0/2。覆盖率不替代业务判断。",
+  "oracle": "输出合同来自 INV-03；汇总依据 INV-02 与测试独立写入的三行固定 CSV：120+30=150、50，数据行数为3。未限制 JSON 键顺序、空白或等值数字写法，未发现额外业务策略。",
+  "evidence": "测试通过真实子进程执行 python -B -m invoice --input，捕获完整 stdout/stderr，无产品函数替身。冻结命令退出码0，日志逐项记录全部9项判据为真；测试代码对异常或任一判据失败均返回非零。结论依据断言及冻结执行记录，未沿用 passed_local 自评。",
+  "ui_review": {
+    "status": "not_applicable",
+    "screenshot_paths": [],
+    "reason": "目标不涉及 UI"
+  },
+  "findings": [],
+  "summary": "本次冻结证据足以支持 INV-03-S01 通过。"
+}

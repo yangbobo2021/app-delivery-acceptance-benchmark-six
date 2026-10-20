@@ -1,0 +1,64 @@
+{
+  "cwd": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workspace",
+  "output": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S06/execution",
+  "files": [
+    "projects/electron-desktop/tests/coverage-tools/README.md",
+    "projects/electron-desktop/tests/coverage-tools/adapter.cjs",
+    "projects/electron-desktop/tests/coverage-tools/core.cjs",
+    "projects/electron-desktop/tests/coverage-tools/direct.cjs",
+    "projects/electron-desktop/tests/coverage-tools/electron-wrapper.cjs",
+    "projects/electron-desktop/tests/coverage-tools/launch.cjs",
+    "projects/electron-desktop/tests/coverage-tools/package-lock.json",
+    "projects/electron-desktop/tests/coverage-tools/package.json",
+    "projects/electron-desktop/tests/coverage-tools/probe.cjs",
+    "projects/electron-desktop/tests/coverage-tools/zero.html",
+    "projects/electron-desktop/tests/note-01-s06.test.cjs",
+    "projects/electron-desktop/tests/note-03-s01.test.cjs"
+  ],
+  "command": [
+    "/opt/homebrew/bin/node",
+    "--test",
+    "projects/electron-desktop/tests/note-01-s06.test.cjs"
+  ],
+  "env": {
+    "ACCEPTANCE_CASE_STATE": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S06/fresh-execution",
+    "ACCEPTANCE_SCREENSHOT_DIR": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S06/fresh-execution/screenshots",
+    "ACCEPTANCE_USER_DATA_DIR": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S06/fresh-execution/user-data"
+  },
+  "fresh_dirs": [
+    "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S06/fresh-execution"
+  ],
+  "business_command_binding": null,
+  "coverage": {
+    "policy": "required",
+    "protocol": "project-coverage-v1",
+    "prepared": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/coverage-2/prepared",
+    "prepared_sha256": "62282a63188bf6f1afaa51f79634519b13d7fa2ec6d4d79797033893b4892ffa",
+    "inventory_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/coverage-inputs-1/inventory.json",
+    "required_test_files": {
+      "projects/electron-desktop/tests/coverage-tools/README.md": "a6a5b5dc5aee10ae47fc88d6e718ab4b8861e44e10eed2d01f43899b2708a47f",
+      "projects/electron-desktop/tests/coverage-tools/adapter.cjs": "465a8c3a7695610f663b3f200e5a8ba0844428683a042f52172845482d71df5a",
+      "projects/electron-desktop/tests/coverage-tools/core.cjs": "33a3a7a2a8a405893e9ab8120c974cf1d3208b18e9eb4b429d834006233bac2b",
+      "projects/electron-desktop/tests/coverage-tools/direct.cjs": "b53f7133ff865fc815937bcd26ef341ffbb95ab1a31fc8742ba6004c3074fe7e",
+      "projects/electron-desktop/tests/coverage-tools/electron-wrapper.cjs": "d23e5749f162581c362fcbf8c9caf6bb6d6e67857ba081ff2d23aee05ec1228a",
+      "projects/electron-desktop/tests/coverage-tools/launch.cjs": "17a6b2fed245b126ae82f60ac2151e4667f66ad4a38f57c3b22045d8e4afe732",
+      "projects/electron-desktop/tests/coverage-tools/package.json": "ef03203ffc1cfa5622d2dd3d77d1fcfceb23159fd34ab19835a114e24525887d",
+      "projects/electron-desktop/tests/coverage-tools/package-lock.json": "9a9a214e8d9ed9396243feae4e1207db518e3005a68b2499f849133b7264eef6",
+      "projects/electron-desktop/tests/coverage-tools/probe.cjs": "9d666ad1c6d0c6cfb15ea7d0479f8ee397e0acabcdc683e0f8930d00c4358ce5",
+      "projects/electron-desktop/tests/coverage-tools/zero.html": "684f03c3c72a21b2070b0d9a76c0f9716787e5b18623c6030af419594f079f04"
+    },
+    "acceptance": {
+      "project_root": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop",
+      "id": "AT-20261020-v1-electron",
+      "scope_sha256": "da964873eb7a7d3d002b8b783843d9ae5ae8655b59298495e6a547031e0a0e07",
+      "knowledge_receipt": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/knowledge-reads/a2bb15da000046fdb8ec9a35fb90efcc.json"
+    },
+    "scene_id": "NOTE-01-S06",
+    "revision": "be952659c7d93018e26793daf2e58fa8321601f4"
+  },
+  "prepared": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/coverage-2/prepared",
+  "scene_id": "NOTE-01-S06",
+  "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+  "inventory_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/coverage-inputs-1/inventory.json",
+  "prepared_sha256": "62282a63188bf6f1afaa51f79634519b13d7fa2ec6d4d79797033893b4892ffa"
+}

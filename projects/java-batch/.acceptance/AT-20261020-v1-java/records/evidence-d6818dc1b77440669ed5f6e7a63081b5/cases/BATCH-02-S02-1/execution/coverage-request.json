@@ -1,0 +1,51 @@
+{
+  "cwd": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workspace",
+  "output": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/execution",
+  "files": [
+    "projects/java-batch/tests/CoverageProbe.java",
+    "projects/java-batch/tests/coverage-tools.json",
+    "projects/java-batch/tests/coverage_adapter.py",
+    "projects/java-batch/tests/coverage_direct.py",
+    "projects/java-batch/tests/coverage_probe.py",
+    "projects/java-batch/tests/test_batch_02_s02.py",
+    "projects/java-batch/tests/test_batch_03_s01.py"
+  ],
+  "command": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "projects/java-batch/tests/test_batch_02_s02.py"
+  ],
+  "env": {
+    "BATCH_SCENE_ROOT": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/fresh-execution"
+  },
+  "fresh_dirs": [
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/fresh-execution"
+  ],
+  "business_command_binding": null,
+  "coverage": {
+    "policy": "required",
+    "protocol": "project-coverage-v1",
+    "prepared": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/coverage-3/prepared",
+    "prepared_sha256": "70ff143f5ab0656d032f01925b7c25c7895122dc2a01458720166f50875aa652",
+    "inventory_path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/inventory-1/inventory.json",
+    "required_test_files": {
+      "projects/java-batch/tests/coverage_adapter.py": "f3765b08d82276bef098c330cc8e03862a9e830b67d6b13579085a2128a47fd5",
+      "projects/java-batch/tests/coverage_probe.py": "155c16ab80c4c2faef73990f17113258ce096d2bb64cda3ae27f04de02001b66",
+      "projects/java-batch/tests/coverage_direct.py": "38169a29bd082e2f360506e36916977faac7d9db7ca6d583baedec174b79e2ae",
+      "projects/java-batch/tests/coverage-tools.json": "99056c8fe296124911e894676e517417dac8f804780a1b9ec4fbeb88724a8c9e",
+      "projects/java-batch/tests/CoverageProbe.java": "41e45dde2c57465a6d17895863e9fd61f422d501d5f0933ae7b2db83e5231038"
+    },
+    "acceptance": {
+      "project_root": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch",
+      "id": "AT-20261020-v1-java",
+      "scope_sha256": "bcdef962ff8a9739376cbf6d9fa684161ab5f2baebac7a144b7df35802d2e0a8",
+      "knowledge_receipt": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/knowledge-reads/330bbb86cec2498fa3f9d8ad8a1d00fc.json"
+    },
+    "scene_id": "BATCH-02-S02",
+    "revision": "be952659c7d93018e26793daf2e58fa8321601f4"
+  },
+  "prepared": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/coverage-3/prepared",
+  "scene_id": "BATCH-02-S02",
+  "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+  "inventory_path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/inventory-1/inventory.json",
+  "prepared_sha256": "70ff143f5ab0656d032f01925b7c25c7895122dc2a01458720166f50875aa652"
+}

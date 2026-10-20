@@ -1,0 +1,47 @@
+{
+  "schema": "isolated-test-execution-v1",
+  "start_utc": "2026-10-20T02:51:02.998170+00:00",
+  "cwd": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workspace",
+  "command": [
+    "/opt/homebrew/bin/python3",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workspace/projects/go-api/tests/coverage/adapter.py",
+    "run",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/case-stock-02-s01-v1/execution/coverage-request.json",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/case-stock-02-s01-v1/execution/run-response.json"
+  ],
+  "env_changes": {
+    "ACCEPTANCE_CASE_ROOT": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/case-stock-02-s01-v1/fresh-execution"
+  },
+  "fresh_dirs": [
+    "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/case-stock-02-s01-v1/fresh-execution"
+  ],
+  "head_before": "be952659c7d93018e26793daf2e58fa8321601f4",
+  "tracked_changes_before": "",
+  "status_before": "?? projects/go-api/tests/stock_02_s01.py",
+  "test_file_sha256_before": {
+    "projects/go-api/tests/coverage/adapter.py": "ddcffcb93a866108d47ebe4aac81aed895cbb205f805067cffc8c5cdcf8529c3",
+    "projects/go-api/tests/coverage/direct.py": "a072cec1c42c4d66237dab6c76ff89f9fbff77bad30b93ce231fd18c83bb8b57",
+    "projects/go-api/tests/coverage/harness_test.go.txt": "b2ce14d3b433cf1be30cf60df7354829f6c14a30e8c2b795243f8bb47306e789",
+    "projects/go-api/tests/coverage/launcher.py": "3b0e41f850552aa6d3fe445447899194727415d1fb584cce0c1d8e6edc4026eb",
+    "projects/go-api/tests/coverage/probe.py": "b1d534c6726cafd675b42c66827057b8862c19c6a69a82db4d438e51f4d8fd9b",
+    "projects/go-api/tests/stock_02_s01.py": "fa0f9a79df2b8cebc71f798ef49b21f2d0544c1a9d33432689efc161629b954c"
+  },
+  "coverage_session_path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/case-stock-02-s01-v1/execution/coverage-request.json",
+  "coverage_session_sha256": "4891104e0c647a8dda71dcf0d2529da2f53075964075ec33ca52398d7e5ab7ae",
+  "child_pid": 59169,
+  "end_utc": "2026-10-20T02:51:12.578648+00:00",
+  "duration_seconds": 9.537217416916974,
+  "exit_code": 0,
+  "head_after": "be952659c7d93018e26793daf2e58fa8321601f4",
+  "tracked_changes_after": "",
+  "status_after": "?? projects/go-api/tests/stock_02_s01.py",
+  "test_file_sha256_after": {
+    "projects/go-api/tests/coverage/adapter.py": "ddcffcb93a866108d47ebe4aac81aed895cbb205f805067cffc8c5cdcf8529c3",
+    "projects/go-api/tests/coverage/direct.py": "a072cec1c42c4d66237dab6c76ff89f9fbff77bad30b93ce231fd18c83bb8b57",
+    "projects/go-api/tests/coverage/harness_test.go.txt": "b2ce14d3b433cf1be30cf60df7354829f6c14a30e8c2b795243f8bb47306e789",
+    "projects/go-api/tests/coverage/launcher.py": "3b0e41f850552aa6d3fe445447899194727415d1fb584cce0c1d8e6edc4026eb",
+    "projects/go-api/tests/coverage/probe.py": "b1d534c6726cafd675b42c66827057b8862c19c6a69a82db4d438e51f4d8fd9b",
+    "projects/go-api/tests/stock_02_s01.py": "fa0f9a79df2b8cebc71f798ef49b21f2d0544c1a9d33432689efc161629b954c"
+  },
+  "log_sha256": "0ef87931144b37abf3a2d62c19364c7707f67954f1e93c5f1d28ea191436c0f0"
+}

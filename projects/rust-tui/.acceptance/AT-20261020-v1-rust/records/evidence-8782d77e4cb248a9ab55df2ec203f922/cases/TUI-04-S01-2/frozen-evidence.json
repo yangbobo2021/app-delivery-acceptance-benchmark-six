@@ -1,0 +1,112 @@
+{
+  "schema": "frozen-scene-evidence-v1",
+  "files": [
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/frozen-evidence/0/execution.log",
+      "sha256": "a646efd85a274fcfbf137916a1a144862af9aabd58c17208d8f846af13effc05",
+      "source": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/execution.log"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/frozen-evidence/0/execution.json",
+      "sha256": "d2e2b14d864da95d1e708354afbbb04dab018164d74682d20994f4c812b74fae",
+      "source": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/execution.json"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/frozen-evidence/1/product-binary",
+      "sha256": "5794ff5f197e3ed34af25e73e1a189c0c7236f386d28485db1e1bebe4dac9069",
+      "source": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/native/product-binary"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/frozen-evidence/2/run-26077-3353984249793428757_0.profraw",
+      "sha256": "47922b560b07f16f55bfd28c7ed4aedc5f1bb1dfaee6542ad952ab0c656fac94",
+      "source": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/native/run-26077-3353984249793428757_0.profraw"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/frozen-evidence/3/run-26295-3353984249793428757_0.profraw",
+      "sha256": "9eb5a7529ed27334e0ae68d0122cd76752c1ab9f87894f385430845fba8f570f",
+      "source": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/native/run-26295-3353984249793428757_0.profraw"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/frozen-evidence/4/merged.profdata",
+      "sha256": "c4e94c2ad8beceab718412fc324377686470d26bfe7f47d55acd647c7ec4409b",
+      "source": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/native/llvm-native-archive/merged.profdata"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/frozen-evidence/5/native-export.stdout",
+      "sha256": "48bfa18d49e32fa72f2058aefa0a7d5d75c6bf0719e6e56056d3882da7794207",
+      "source": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/native/llvm-native-archive/native-export.stdout"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/frozen-evidence/6/native-summary.stdout",
+      "sha256": "42a65e05b933ef59667cbeb6164d5e0000d7859938d7441826a475fb97e25152",
+      "source": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/native/llvm-native-archive/native-summary.stdout"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/frozen-evidence/7/processing.json",
+      "sha256": "1d2c8ea45d8ffd7e071ed8f527ae8ebf4c1acb2eb1fa3fa6efbb216f1ce9184c",
+      "source": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/native/llvm-native-archive/processing.json"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/frozen-evidence/8/initial-0-after-space.ansi",
+      "sha256": "f8abeb5cb890bd40428d341f718d7a51e1a4aa218db704d8b86f3582ba888549",
+      "source": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/fresh-execution/screens/initial-0-after-space.ansi"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/frozen-evidence/8/initial-0-after-space.json",
+      "sha256": "065acb2c1ea8b09acdb28760c5df050cb5835bd20e8230add7c715df496735a5",
+      "source": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/fresh-execution/screens/initial-0-after-space.json"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/frozen-evidence/8/initial-0-after-space.png",
+      "sha256": "d7b9b7d7e8ed820d2dde7863f622cf172db07cb69f2a0e30cdc1d3987fe81583",
+      "source": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/fresh-execution/screens/initial-0-after-space.png"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/frozen-evidence/8/initial-0-before.ansi",
+      "sha256": "73619d1140f644e96d49b7a932c2f7b2b9fc4c1b96d1d567f0ea2e459e412f34",
+      "source": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/fresh-execution/screens/initial-0-before.ansi"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/frozen-evidence/8/initial-0-before.json",
+      "sha256": "e4a929d4982f81121de16293c8d03dccbe72f453a79b89623d798ddad76b18f2",
+      "source": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/fresh-execution/screens/initial-0-before.json"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/frozen-evidence/8/initial-0-before.png",
+      "sha256": "72d4088a952c32db18d387be1e6281647a8a744ef7c18c2974f63f6b6ea6f330",
+      "source": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/fresh-execution/screens/initial-0-before.png"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/frozen-evidence/8/initial-1-after-space.ansi",
+      "sha256": "aea19a4d645652f1fe3c800590610a2f301f1eeaeeba71dec33f5f8fa7812822",
+      "source": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/fresh-execution/screens/initial-1-after-space.ansi"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/frozen-evidence/8/initial-1-after-space.json",
+      "sha256": "7d8bfc7262f62d99c4d2f029c53526cd76a0cc6e67842ecaa316adfc973969b7",
+      "source": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/fresh-execution/screens/initial-1-after-space.json"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/frozen-evidence/8/initial-1-after-space.png",
+      "sha256": "946377639e406da1f8fd62ca56031befc0ad3df5120c348a1aedbdd3ffcdfa5e",
+      "source": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/fresh-execution/screens/initial-1-after-space.png"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/frozen-evidence/8/initial-1-before.ansi",
+      "sha256": "fce57486fb58542f1776e4474587ba1914ec67012e13c5cc69e239899041a5a3",
+      "source": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/fresh-execution/screens/initial-1-before.ansi"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/frozen-evidence/8/initial-1-before.json",
+      "sha256": "77b523aa3cd5fb5093fc77fe35649eaaae0bdd8de9cd7b8d23a326a6b92629e8",
+      "source": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/fresh-execution/screens/initial-1-before.json"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/frozen-evidence/8/initial-1-before.png",
+      "sha256": "7ac667e27a71605db9fe05fff80eeccedf23199a3510bf2083eddc878fd6ef9e",
+      "source": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/fresh-execution/screens/initial-1-before.png"
+    }
+  ],
+  "source_execution_sha256": "d2e2b14d864da95d1e708354afbbb04dab018164d74682d20994f4c812b74fae",
+  "coverage_path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/coverage-report.json"
+}

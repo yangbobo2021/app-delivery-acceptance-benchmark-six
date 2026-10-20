@@ -1,0 +1,189 @@
+{
+  "schema": "project-tool-coverage-report-v1",
+  "protocol": "project-coverage-v1",
+  "prepared": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/coverage-2/prepared",
+  "prepared_sha256": "69a754738d7b11a539ba62bd6c0b39b7056ecd4297cd25edb810d150725fc04c",
+  "scene_id": "TODO-02-S01",
+  "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+  "source_hashes": {
+    "projects/ts-web/build.mjs": "81a20870dcd5ffb9199c811043f691184275bc18ff6c36bc986c611540b3c19a",
+    "projects/ts-web/server.mjs": "fc27a72c55d9969bb58980856db9845a14dce5f30e3bda33c8ac321abf31384c",
+    "projects/ts-web/src/app.ts": "00ebced89c17fd1aaff8f221fb7be962393604170d096eebd118a38703014502",
+    "projects/ts-web/src/index.html": "6b8de0fa329fe4778368d51706ca7bc3350297e82640ff2a072f9cfdde3a4d36"
+  },
+  "tools": [
+    {
+      "name": "istanbul-lib-instrument",
+      "version": "6.0.3",
+      "role": "原始 JS/TS AST 插桩及原生零命中单位生成"
+    },
+    {
+      "name": "istanbul-lib-coverage",
+      "version": "3.2.2",
+      "role": "原生快照读取、合并及行和分支统计"
+    },
+    {
+      "name": "@babel/core",
+      "version": "7.29.7",
+      "role": "通过编译器 AST 提取 Istanbul 注册函数"
+    },
+    {
+      "name": "esbuild",
+      "version": "0.28.2",
+      "role": "原始 TypeScript 插桩后移除类型"
+    },
+    {
+      "name": "Node.js",
+      "version": "v25.5.0",
+      "role": "模块加载钩子、子进程和退出采集生命周期"
+    },
+    {
+      "name": "Playwright",
+      "version": "1.56.1",
+      "role": "复用已验证运行环境的 Chromium、请求拦截及页面快照生命周期"
+    }
+  ],
+  "collection_relation": "same_run",
+  "status": "measured",
+  "receipt_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-02-S01/execution/execution.json",
+  "execution_sha256": "d27dc9c4bdc368dabcfacf767562959b96f5a60ab4eae04eb055ec6e78cb16c2",
+  "raw_evidence": [
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-02-S01/execution/native/node-51012.ended.json",
+      "sha256": "c2402276cc4dc202a11971b9efc4bcdc142f44ab8afcbfafc49e834f9cf274ad",
+      "role": "lifecycle"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-02-S01/execution/native/node-51012.started.json",
+      "sha256": "08ea414bcc8c4f2bdd2204401dff909423bebd54fc0c4aec025347078e9c39e0",
+      "role": "lifecycle"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-02-S01/execution/native/node-51019-browser-1-1792467992326-0.333299167527056.coverage.json",
+      "sha256": "80c644424090f9c881478b3f9938808f90727e3d8ba7ae973d308e9876eab04e",
+      "role": "istanbul-snapshot"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-02-S01/execution/native/node-51019-browser-context-cbfbcad7-5cbc-46b7-8f03-d9cecb849f5c.ended.json",
+      "sha256": "ad1ed6243ea081e7d97d9e7bf7443870a40e1ea693c6c7fb4a35354451f1de93",
+      "role": "lifecycle"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-02-S01/execution/native/node-51019-browser-context-cbfbcad7-5cbc-46b7-8f03-d9cecb849f5c.started.json",
+      "sha256": "978e00f25fe7558f2b628e1b89f0ed6a7fb74a4a301f718e284c1506dcdc26a6",
+      "role": "lifecycle"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-02-S01/execution/native/node-51019.ended.json",
+      "sha256": "03e3f0ddc41b87d550bc54e51f975995fbf6c18859e4ac90ae4639db23816f95",
+      "role": "lifecycle"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-02-S01/execution/native/node-51019.started.json",
+      "sha256": "9e3b8d57eb34f9d44920b8b753bc4251685adc47fd7d088c873238f5a4b1110b",
+      "role": "lifecycle"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-02-S01/execution/native/node-51038.coverage.json",
+      "sha256": "da2e643f6cf3e3cfc61c1212ad065b818904b542315475b1037b15babfa19429",
+      "role": "istanbul-snapshot"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-02-S01/execution/native/node-51038.ended.json",
+      "sha256": "514b1d6de9782d47dfa345cf726ba65469444ff3fcc849a3af4081c06a7910e5",
+      "role": "lifecycle"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-02-S01/execution/native/node-51038.started.json",
+      "sha256": "83062c45bda45a7c40bf3e1042e5389cc9404d29ca589a4d284b573227a794e7",
+      "role": "lifecycle"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-02-S01/execution/native/node-51063.coverage.json",
+      "sha256": "d4aad28311c04a2251863db82bed71134d0138fc83f2c7220aa932f6a211fb8a",
+      "role": "istanbul-snapshot"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-02-S01/execution/native/node-51063.ended.json",
+      "sha256": "304d99b09e44602c5483f9c1af5f9ecb1b8be9a8cde4922da0110308c43841b3",
+      "role": "lifecycle"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-02-S01/execution/native/node-51063.started.json",
+      "sha256": "77194d4defa7854ab4fd692b29292817de9103b531f57f466195105b9ad22d9e",
+      "role": "lifecycle"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-02-S01/execution/collection-lifecycle.json",
+      "sha256": "2574c01e3570ac33cd66b3f15b2ea553f07372e8731c09a24fa4c7901e304f60",
+      "role": "collection-lifecycle"
+    }
+  ],
+  "lifecycle": {
+    "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-02-S01/execution/collection-lifecycle.json",
+    "sha256": "2574c01e3570ac33cd66b3f15b2ea553f07372e8731c09a24fa4c7901e304f60"
+  },
+  "session": {
+    "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-02-S01/execution/coverage-request.json",
+    "sha256": "7710ec27f83ac6651e218c1acdc01201b4cd3cd7f4eecaed3a5312641fda79f5"
+  },
+  "components": [
+    {
+      "id": "projects/ts-web/server.mjs",
+      "label": "projects/ts-web/server.mjs",
+      "source_paths": [
+        "projects/ts-web/server.mjs"
+      ],
+      "line": {
+        "status": "measured",
+        "covered": 6,
+        "total": 6,
+        "pct": 100
+      },
+      "branch": {
+        "status": "measured",
+        "covered": 7,
+        "total": 11,
+        "pct": 63.63
+      }
+    },
+    {
+      "id": "projects/ts-web/src/app.ts",
+      "label": "projects/ts-web/src/app.ts",
+      "source_paths": [
+        "projects/ts-web/src/app.ts"
+      ],
+      "line": {
+        "status": "measured",
+        "covered": 22,
+        "total": 22,
+        "pct": 100
+      },
+      "branch": {
+        "status": "measured",
+        "covered": 6,
+        "total": 10,
+        "pct": 60
+      }
+    },
+    {
+      "id": "projects/ts-web/build.mjs",
+      "label": "projects/ts-web/build.mjs",
+      "source_paths": [
+        "projects/ts-web/build.mjs"
+      ],
+      "line": {
+        "status": "measured",
+        "covered": 1,
+        "total": 1,
+        "pct": 100
+      },
+      "branch": {
+        "status": "measured",
+        "covered": 0,
+        "total": 0,
+        "pct": 100
+      }
+    }
+  ]
+}

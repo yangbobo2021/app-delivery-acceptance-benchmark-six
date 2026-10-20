@@ -1,0 +1,91 @@
+{
+  "offline_project": "/var/folders/jh/mt3s144j7wg98ww3zyqc1np00000gn/T/acceptance-offline-web-phase2b-cknt6j60/checkout/projects/ts-web",
+  "local_absent": true,
+  "store_check": "passed",
+  "aggregate_archive": "evidence-ca0c33a0a4c045079b0ef01a1fe6c0fb",
+  "rows": [
+    {
+      "scene_id": "TODO-01-S01",
+      "requirement_id": "TODO-01",
+      "verdict": "passed",
+      "ui_status": "passed",
+      "screenshot_http_statuses": [
+        200,
+        200,
+        200
+      ],
+      "coverage_status": "measured",
+      "coverage_same_run": "same_run"
+    },
+    {
+      "scene_id": "TODO-02-S01",
+      "requirement_id": "TODO-02",
+      "verdict": "product_bug",
+      "ui_status": "failed",
+      "screenshot_http_statuses": [
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "coverage_status": "measured",
+      "coverage_same_run": "same_run"
+    },
+    {
+      "scene_id": "TODO-04-S02",
+      "requirement_id": "TODO-04",
+      "verdict": "product_bug",
+      "ui_status": "failed",
+      "screenshot_http_statuses": [
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "coverage_status": "measured",
+      "coverage_same_run": "same_run"
+    }
+  ],
+  "project_state": {
+    "project_id": "ts-web",
+    "scenario_count": 23,
+    "executed_count": 3,
+    "not_executed_count": 20,
+    "passed": 1,
+    "product_bug": 2,
+    "accepted_risk": 0,
+    "needs_attention": 0,
+    "pending_review": 0,
+    "requirement_count": 6,
+    "admitted_rule_count": 0,
+    "pending_rule_count": 0,
+    "result_count": 3,
+    "reconciled": true
+  },
+  "coverage_summary": {
+    "scenes_with_coverage": 3,
+    "verified_reports": [
+      {
+        "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/execution/coverage-report.json",
+        "sha256": "8155e1aa185e974b08e2325f5090ca749d4866aa26dd6734acc5c1bbe6cf737b"
+      },
+      {
+        "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-02-S01/execution/coverage-report.json",
+        "sha256": "f3bee1bc6e0f44c082181d8cf1a172b7347aca95503a9bb627ba064f729ef150"
+      },
+      {
+        "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-04-S02/execution/coverage-report.json",
+        "sha256": "b40bf9a92ff0aeb93db3b98fbee5d84c8956658cee97875b347c68626ac8f431"
+      }
+    ],
+    "project_scope_status": "measured"
+  },
+  "warnings": []
+}

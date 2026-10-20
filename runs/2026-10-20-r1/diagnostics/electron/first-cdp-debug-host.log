@@ -1,0 +1,25 @@
+✖ NOTE-03-S01 first saved note survives full application restart (707.903709ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 821.649708
+
+✖ failing tests:
+
+test at projects/electron-desktop/tests/note-03-s01.test.cjs:68:1
+✖ NOTE-03-S01 first saved note survives full application restart (707.903709ms)
+  Error: {"code":-32601,"message":"'Browser.getWindowForTarget' wasn't found"}
+      at WebSocket.<anonymous> (/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workspace/projects/electron-desktop/tests/note-03-s01.test.cjs:27:29)
+      at [nodejs.internal.kHybridDispatch] (node:internal/event_target:843:20)
+      at WebSocket.dispatchEvent (node:internal/event_target:776:26)
+      at fireEvent (node:internal/deps/undici/undici:13224:14)
+      at #onMessage (node:internal/deps/undici/undici:14453:9)
+      at Object.onMessage (node:internal/deps/undici/undici:14166:76)
+      at websocketMessageReceived (node:internal/deps/undici/undici:13228:15)
+      at node:internal/deps/undici/undici:13885:19
+      at node:internal/deps/undici/undici:13705:11
+      at afterWrite (node:internal/streams/writable:708:5)

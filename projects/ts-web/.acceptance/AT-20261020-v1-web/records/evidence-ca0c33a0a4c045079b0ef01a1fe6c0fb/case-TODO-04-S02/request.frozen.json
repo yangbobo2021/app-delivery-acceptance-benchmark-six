@@ -1,0 +1,87 @@
+{
+  "acceptance": {
+    "project_root": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web",
+    "id": "AT-20261020-v1-web",
+    "scope_sha256": "64dfe822d5cf23a37b7f2e8b67cc197ef98b77b2f995362f0ff0883af79121a7",
+    "knowledge_receipt": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/knowledge-reads/924e087d817e4a3083149172ad3cb875.json"
+  },
+  "progress_schema": "single-agent-scene-v1",
+  "project": {
+    "id": "workspace",
+    "label": "workspace",
+    "root": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workspace",
+    "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+    "sources": [
+      "projects/ts-web/build.mjs",
+      "projects/ts-web/server.mjs",
+      "projects/ts-web/src/app.ts",
+      "projects/ts-web/src/index.html"
+    ]
+  },
+  "requirements": [
+    {
+      "id": "TODO-01",
+      "title": "TODO-01",
+      "text": "输入非空标题并添加后，列表出现该待办。标题首尾空白会去除；全空白或去除后超过 80 个 Unicode 码点的标题不能添加，并显示可见错误。错误文案不作要求。"
+    },
+    {
+      "id": "TODO-02",
+      "title": "TODO-02",
+      "text": "可以切换待办完成状态，再次切换可恢复未完成。两个标题相同的待办是不同条目，切换一个不影响另一个。"
+    },
+    {
+      "id": "TODO-03",
+      "title": "TODO-03",
+      "text": "提供全部、未完成、已完成三个过滤选项。可见列表与所选过滤一致；切换过滤不修改待办状态。"
+    },
+    {
+      "id": "TODO-04",
+      "title": "TODO-04",
+      "text": "显示所有待办中的未完成总数，不能只统计当前过滤结果。空列表时为 0。"
+    },
+    {
+      "id": "TODO-05",
+      "title": "TODO-05",
+      "text": "可以删除指定待办，删除其他同名待办不受影响。刷新页面后，条目、完成状态与删除结果保留；不同浏览器存储上下文互不影响。"
+    },
+    {
+      "id": "TODO-06",
+      "title": "TODO-06",
+      "text": "标题作为普通文本展示。`<img src=x onerror=alert(1)>` 是合法短标题，不得创建对应图片元素或执行其中代码。列表排序、视觉设计、刷新后默认过滤均不作要求。"
+    }
+  ],
+  "reverse_rules": [],
+  "scene": {
+    "id": "TODO-04-S02",
+    "title": "过滤不改变全量未完成总数",
+    "priority": "P1",
+    "priority_reason": "过滤时错误缩小统计范围会误报剩余任务，影响常用筛选操作中的判断，但全部视图仍可提供正确统计。",
+    "description": "分别以“两条未完成、一条已完成”和“仅两条未完成”为准备数据，切换全部、未完成、已完成过滤，总数始终应为2，包括后一组已完成过滤下没有可见条目的状态。各过滤状态下，总数、过滤选项及现有待办内容应可见可读，过滤控件可操作且无遮挡或裁切，排版层次清楚、间距与对齐合理，字体与控件一致，并符合项目已有设计风格。",
+    "requirement_id": "TODO-04",
+    "kind": "BLACK_BOX"
+  },
+  "case_catalog": [],
+  "case_input_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/bind-TODO-04-S02/case-input.json",
+  "config_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/bind-TODO-04-S02/config.json",
+  "change": {
+    "inventory": {
+      "schema": "acceptance-source-inventory-v1",
+      "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+      "source_paths": [
+        "projects/ts-web/build.mjs",
+        "projects/ts-web/server.mjs",
+        "projects/ts-web/src/app.ts",
+        "projects/ts-web/src/index.html"
+      ],
+      "source_hashes": {
+        "projects/ts-web/build.mjs": "81a20870dcd5ffb9199c811043f691184275bc18ff6c36bc986c611540b3c19a",
+        "projects/ts-web/server.mjs": "fc27a72c55d9969bb58980856db9845a14dce5f30e3bda33c8ac321abf31384c",
+        "projects/ts-web/src/app.ts": "00ebced89c17fd1aaff8f221fb7be962393604170d096eebd118a38703014502",
+        "projects/ts-web/src/index.html": "6b8de0fa329fe4778368d51706ca7bc3350297e82640ff2a072f9cfdde3a4d36"
+      },
+      "changed_source_paths": [],
+      "changed_lines": {},
+      "basis": "Requirements-only v1 baseline acceptance; no changed-file or changed-line PR scope declared."
+    }
+  }
+}

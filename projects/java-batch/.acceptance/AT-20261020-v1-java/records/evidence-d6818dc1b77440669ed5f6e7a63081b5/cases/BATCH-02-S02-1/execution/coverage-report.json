@@ -1,0 +1,74 @@
+{
+  "schema": "project-tool-coverage-report-v1",
+  "protocol": "project-coverage-v1",
+  "prepared": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/coverage-3/prepared",
+  "prepared_sha256": "70ff143f5ab0656d032f01925b7c25c7895122dc2a01458720166f50875aa652",
+  "scene_id": "BATCH-02-S02",
+  "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+  "source_hashes": {
+    "projects/java-batch/src/main/java/benchmark/BatchReport.java": "821ba9c5ed64ff2b72dad2c6bfa9ecfac7e5c42e646836f83ce32b89cf2ee2bb"
+  },
+  "tools": [
+    {
+      "name": "JaCoCo",
+      "version": "0.8.12.202403310830",
+      "role": "JVM agent 原生 exec 采集；CLI execinfo 校验、report 行/分支计数、merge 合并。已通过适配器 --self-check 核验实际 CLI 版本及工具文件哈希。"
+    }
+  ],
+  "collection_relation": "same_run",
+  "status": "measured",
+  "receipt_path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/execution/execution.json",
+  "execution_sha256": "97effcd8472f6ef459ff3cf9a2352122cc861d3031b3e8d9237ef398c7c1b384",
+  "raw_evidence": [
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/execution/native/classes/benchmark/BatchReport$Event.class",
+      "sha256": "2526fca4e171296bd4591e80a387b784bda12f3a608ed78f264efab362d709b4",
+      "role": "classfile",
+      "class_relative": "benchmark/BatchReport$Event.class"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/execution/native/classes/benchmark/BatchReport$Total.class",
+      "sha256": "a46ac18ac05a3f0eb00b5bc7b25b55c8bd255236992bb9d8f3b81dbca3fb6117",
+      "role": "classfile",
+      "class_relative": "benchmark/BatchReport$Total.class"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/execution/native/classes/benchmark/BatchReport.class",
+      "sha256": "addc9bb93d27f41bd6b6f49b613eefe2b498ef3ff9abaa9efd2493c1d32ced2e",
+      "role": "classfile",
+      "class_relative": "benchmark/BatchReport.class"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/execution/native/session.exec",
+      "sha256": "2ded3a72a3a07c465ea6a7a8a0486bc55e04b6c214516ff34937323d0bb8ca16",
+      "role": "execution-data"
+    }
+  ],
+  "components": [
+    {
+      "id": "java-batch",
+      "label": "BatchReport.java (JaCoCo source-file counters)",
+      "source_paths": [
+        "projects/java-batch/src/main/java/benchmark/BatchReport.java"
+      ],
+      "line": {
+        "status": "measured",
+        "covered": 46,
+        "total": 63
+      },
+      "branch": {
+        "status": "measured",
+        "covered": 24,
+        "total": 44
+      }
+    }
+  ],
+  "collection": {
+    "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/execution/collection.json",
+    "sha256": "ff3b5da360541ef306a3fe381d74f9d9b6a81f0f6482bd0a7a6ad5a3b7a23f62"
+  },
+  "execution_request": {
+    "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/execution/coverage-request.json",
+    "sha256": "a1437a773a4044a25a0b57ee38f11b6742f88c99838f9a96ce18ead312073c11"
+  }
+}

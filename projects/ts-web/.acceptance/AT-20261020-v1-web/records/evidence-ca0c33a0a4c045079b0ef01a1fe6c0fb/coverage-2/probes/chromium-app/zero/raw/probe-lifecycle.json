@@ -1,0 +1,6 @@
+{
+  "route": "browser",
+  "mode": "zero",
+  "status": "complete",
+  "zero_mode": "Runtime executed only Istanbul-generated registration function; product statements not executed"
+}

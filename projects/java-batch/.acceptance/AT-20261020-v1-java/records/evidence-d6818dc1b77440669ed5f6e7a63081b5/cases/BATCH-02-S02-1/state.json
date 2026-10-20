@@ -1,0 +1,143 @@
+{
+  "schema": "isolated-scene-pipeline-state-v1",
+  "config_sha256": "125305a1df1f630bb6eb3b64ad2880b1747f166ff342e1878b3ac3eb3557859a",
+  "bindings": {
+    "case_input": "6ccfa6c211263398c1f6eccea4e0e2b268640130236af6703f04b9c91fa4b604",
+    "guide": "f76fc6ff8e8a845c06fc4b49ebe77a3ea412863bf051552937cc30fcf2c3a99f",
+    "template_catalog": "c4d0af60f6c6d735f06725cc762d3207f8927efe3737d5a2ba070f712d6496b2"
+  },
+  "stages": {
+    "prepare": {
+      "status": "completed",
+      "started_at": "2026-10-20T03:38:50.343551+00:00",
+      "result": {
+        "root": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workspace",
+        "catalog": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/catalog.json",
+        "setup_seconds": 0,
+        "check_seconds": 0
+      },
+      "finished_at": "2026-10-20T03:38:52.927579+00:00"
+    },
+    "case": {
+      "status": "completed",
+      "started_at": "2026-10-20T03:38:53.421542+00:00",
+      "result": {
+        "metrics": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/case/metrics.json",
+        "answer": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/case/answer.json",
+        "seconds": 120.38502320799999,
+        "usage": {
+          "toolUses": 13,
+          "tokens": {
+            "coverage": "partial",
+            "totals": {
+              "input": {
+                "total": 417603,
+                "uncached": 34883,
+                "cacheRead": 382720,
+                "cacheWrite": 0
+              },
+              "output": {
+                "total": 5071,
+                "visible": 4564,
+                "reasoning": 507
+              }
+            }
+          }
+        },
+        "tool_calls": 13,
+        "restarted_after_unavailable_session": false
+      },
+      "finished_at": "2026-10-20T03:40:55.833075+00:00"
+    },
+    "execution": {
+      "status": "completed",
+      "started_at": "2026-10-20T03:40:56.616101+00:00",
+      "result": {
+        "receipt": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/execution/execution.json",
+        "log": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/execution/execution.log",
+        "exit_code": 1,
+        "seconds": 2.0789457500213757,
+        "test_files": [
+          "projects/java-batch/tests/CoverageProbe.java",
+          "projects/java-batch/tests/coverage-tools.json",
+          "projects/java-batch/tests/coverage_adapter.py",
+          "projects/java-batch/tests/coverage_direct.py",
+          "projects/java-batch/tests/coverage_probe.py",
+          "projects/java-batch/tests/test_batch_02_s02.py",
+          "projects/java-batch/tests/test_batch_03_s01.py"
+        ]
+      },
+      "finished_at": "2026-10-20T03:41:10.840245+00:00"
+    },
+    "evidence": {
+      "status": "completed",
+      "started_at": "2026-10-20T03:41:11.313477+00:00",
+      "result": {
+        "manifest": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/frozen-evidence.json",
+        "paths": [
+          "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/frozen-evidence/0/execution.log",
+          "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/frozen-evidence/0/execution.json",
+          "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/frozen-evidence/1/BatchReport$Event.class",
+          "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/frozen-evidence/2/BatchReport$Total.class",
+          "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/frozen-evidence/3/BatchReport.class",
+          "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/frozen-evidence/4/session.exec",
+          "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/frozen-evidence/5/batch-02-s02/classes/benchmark/BatchReport$Event.class",
+          "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/frozen-evidence/5/batch-02-s02/classes/benchmark/BatchReport$Total.class",
+          "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/frozen-evidence/5/batch-02-s02/classes/benchmark/BatchReport.class",
+          "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/frozen-evidence/5/batch-02-s02/compile.stderr",
+          "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/frozen-evidence/5/batch-02-s02/compile.stdout",
+          "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/frozen-evidence/5/batch-02-s02/events.csv",
+          "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/frozen-evidence/5/batch-02-s02/observations.json",
+          "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/frozen-evidence/5/batch-02-s02/process.stderr.application",
+          "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/frozen-evidence/5/batch-02-s02/process.stderr.raw",
+          "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/frozen-evidence/5/batch-02-s02/process.stdout",
+          "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/frozen-evidence/5/batch-02-s02/report.csv"
+        ],
+        "file_count": 17,
+        "bytes": 26218
+      },
+      "finished_at": "2026-10-20T03:41:13.735218+00:00"
+    },
+    "gate": {
+      "status": "completed",
+      "started_at": "2026-10-20T03:41:14.466823+00:00",
+      "result": {
+        "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/handoff-gate.json",
+        "seconds": 2.095
+      },
+      "finished_at": "2026-10-20T03:41:17.013348+00:00"
+    },
+    "review": {
+      "status": "completed",
+      "started_at": "2026-10-20T03:41:17.579743+00:00",
+      "result": {
+        "answer": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/review/answer.json",
+        "metrics": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/review/metrics.json",
+        "status": "product_bug",
+        "seconds": 47.495781292,
+        "usage": {
+          "toolUses": 7,
+          "tokens": {
+            "coverage": "partial",
+            "totals": {
+              "input": {
+                "total": 162142,
+                "uncached": 43614,
+                "cacheRead": 118528,
+                "cacheWrite": 0
+              },
+              "output": {
+                "total": 1925,
+                "visible": 1870,
+                "reasoning": 55
+              }
+            }
+          }
+        },
+        "tool_calls": 7,
+        "restarted_after_unavailable_session": false
+      },
+      "finished_at": "2026-10-20T03:42:06.150414+00:00"
+    }
+  }
+}

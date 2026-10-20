@@ -1,0 +1,206 @@
+{
+  "schema": "project-coverage-probe-report-v1",
+  "plan": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/coverage-2/probe-plan.json",
+  "plan_sha256": "e48c460d6f59f11037167f449abecc91c9851ee2bac08ff3d765cdb934538abd",
+  "runtime_manifest": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/runtime-1/runtime/runtime.json",
+  "runtime_sha256": "d145d999758e9839d9f1ca3338bb6f21099cf56f637b58a80025565e80928575",
+  "workspace": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workspace",
+  "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+  "routes": [
+    {
+      "id": "electron-main-store",
+      "source_paths": [
+        "projects/electron-desktop/src/main.ts",
+        "projects/electron-desktop/src/store.ts"
+      ],
+      "probes": {
+        "zero": {
+          "status": "passed",
+          "receipts": {
+            "collect": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/coverage-2/probes/electron-main-store/zero/collect/receipt.json",
+              "sha256": "7c3233c4b7282f506c3f1ef97ed01d5bacb09ce50365968f6e360de3c56e3fec"
+            },
+            "adapter": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/coverage-2/probes/electron-main-store/zero/adapter/receipt.json",
+              "sha256": "06994f9fd0d5e7ae0c4be61e82ffa787aac76de55bf9b4c2b8453af471c68594"
+            },
+            "direct": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/coverage-2/probes/electron-main-store/zero/direct/receipt.json",
+              "sha256": "97af2993acd149c50b87ea0c833f46a9ead6808d962a01c41f6a8f3faab38e41"
+            }
+          },
+          "native": [
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/coverage-2/probes/electron-main-store/zero/raw/lifecycle-60896.json",
+              "sha256": "60ff5bd534393d571131f8c35c2ee733753fd124314ebc8bd0f387bca01cd321"
+            },
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/coverage-2/probes/electron-main-store/zero/raw/snapshot-f5571060-ea77-4caa-aab5-3c92298d19df-0.42373619846592403.json",
+              "sha256": "f830ab5fbac47cdbf79296e4e3dda67c77210cd55d862958a8893a5c70b280c0"
+            },
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/coverage-2/probes/electron-main-store/zero/raw/snapshot-f5571060-ea77-4caa-aab5-3c92298d19df-0.561628310369171.json",
+              "sha256": "bfd63ce6cb2b5c2d4e6d7ba3cce8ded05055250b387557bd3e1029148d23c748"
+            },
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/coverage-2/probes/electron-main-store/zero/raw/snapshot-f5571060-ea77-4caa-aab5-3c92298d19df-0.6191618174896598.json",
+              "sha256": "11ef128ba4c7808c793c7cc069412bb4ecb5b61cbb9e6faf7f6f47aeaa0f2617"
+            },
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/coverage-2/probes/electron-main-store/zero/raw/snapshot-f5571060-ea77-4caa-aab5-3c92298d19df-0.6476650542888964.json",
+              "sha256": "e1c4fccfd8eaaf586de4cc1bbe05231cf4fbcd684624673905ac40cdba64ecb9"
+            },
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/coverage-2/probes/electron-main-store/zero/raw/snapshot-main-60896.json",
+              "sha256": "69cc6d81e05bf0d50fd5193aeb921afe59c960dcf9bea4340de911ab1b722a60"
+            }
+          ],
+          "normalized_sha256": "c9e127dff050a0aa043d8fd7b0a07284b32816788904bb9440c77920e9a5ae70"
+        },
+        "nonzero": {
+          "status": "passed",
+          "receipts": {
+            "collect": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/coverage-2/probes/electron-main-store/nonzero/collect/receipt.json",
+              "sha256": "661713942e327dcf9f06ecbe10bc504be8d65d7c4656a8ac8d85a5adedce79b6"
+            },
+            "adapter": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/coverage-2/probes/electron-main-store/nonzero/adapter/receipt.json",
+              "sha256": "31fb017bff81843c4f229f011cb3de5b2faf7b22c47ed729db841d7f5ad32c03"
+            },
+            "direct": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/coverage-2/probes/electron-main-store/nonzero/direct/receipt.json",
+              "sha256": "054a3adb4f61a8c97ad15b7ed8fcf87646cb42a55b5675aa5aedcf403ab76d6c"
+            }
+          },
+          "native": [
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/coverage-2/probes/electron-main-store/nonzero/raw/lifecycle-60925.json",
+              "sha256": "143bbc90091b21951af95240e4b233797e27cf16dbea45b330d339d6448cd2f5"
+            },
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/coverage-2/probes/electron-main-store/nonzero/raw/snapshot-e93205c4-223c-4529-a5a1-2c14c21330eb-0.12491751506332405.json",
+              "sha256": "b2ece7e6a0814128dae70cde409ac536df658446b16575f5f262ec3ffb72c657"
+            },
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/coverage-2/probes/electron-main-store/nonzero/raw/snapshot-e93205c4-223c-4529-a5a1-2c14c21330eb-0.2895470686581696.json",
+              "sha256": "19879348d89f7d9318d922df38d33e7624ddda9b4467673a0bce4aec87f4ff70"
+            },
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/coverage-2/probes/electron-main-store/nonzero/raw/snapshot-e93205c4-223c-4529-a5a1-2c14c21330eb-0.9339231052157532.json",
+              "sha256": "02dfd23f5eb6505e97e6c2a6c71d95a07019c88314bfa4a862065095d645ace0"
+            },
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/coverage-2/probes/electron-main-store/nonzero/raw/snapshot-e93205c4-223c-4529-a5a1-2c14c21330eb-0.9987736177366704.json",
+              "sha256": "86d09c85aefa0aa1319e8498b2219572678d93290e8af28b36bdddbe753e6c16"
+            },
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/coverage-2/probes/electron-main-store/nonzero/raw/snapshot-main-60925.json",
+              "sha256": "79ae47958be2ad0b70aaeabb6ca8efdd692a8bc842facdbe35c61656de718463"
+            }
+          ],
+          "normalized_sha256": "11d395fd81749da0b42faec75048a4e74f65c7427fab2410d50d5250217166d4"
+        }
+      }
+    },
+    {
+      "id": "electron-renderer-and-isolated-preload",
+      "source_paths": [
+        "projects/electron-desktop/src/preload.ts",
+        "projects/electron-desktop/src/renderer.ts"
+      ],
+      "probes": {
+        "zero": {
+          "status": "passed",
+          "receipts": {
+            "collect": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/coverage-2/probes/electron-renderer-and-isolated-preload/zero/collect/receipt.json",
+              "sha256": "81fd7f2c8d1b84a5efd89b458f22ae159b6ea82938e7198f7b23304e1e525b8e"
+            },
+            "adapter": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/coverage-2/probes/electron-renderer-and-isolated-preload/zero/adapter/receipt.json",
+              "sha256": "c9ef2a3e1b0d652d1eeb2d7d7adc7942fbd793f9b046137426283a9be500eab8"
+            },
+            "direct": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/coverage-2/probes/electron-renderer-and-isolated-preload/zero/direct/receipt.json",
+              "sha256": "5280121927e677a8e755193adffef71cc781063b10f393763ba990719fb1a36a"
+            }
+          },
+          "native": [
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/coverage-2/probes/electron-renderer-and-isolated-preload/zero/raw/lifecycle-60968.json",
+              "sha256": "a18525632a655e50e11404799ff16a4a0efdb240e1c96b44779b1e88751be24b"
+            },
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/coverage-2/probes/electron-renderer-and-isolated-preload/zero/raw/snapshot-e6a0f29c-1fee-4662-96b6-a11788645c1a-0.00770367099951863.json",
+              "sha256": "b1100f35f5b78fadc4d61d7a02dd02f832df9448fc6c18d82ae44a2545ec1f65"
+            },
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/coverage-2/probes/electron-renderer-and-isolated-preload/zero/raw/snapshot-e6a0f29c-1fee-4662-96b6-a11788645c1a-0.55638970346653.json",
+              "sha256": "d76aa40dfa515c8ead97aa65ee7b0a151550051745f265b9c3da74a776b99389"
+            },
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/coverage-2/probes/electron-renderer-and-isolated-preload/zero/raw/snapshot-e6a0f29c-1fee-4662-96b6-a11788645c1a-0.6249366126581742.json",
+              "sha256": "4b4a0048afcc4046f011eb5694cba37661f2331b1a09d93266706cbfc3f51c86"
+            },
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/coverage-2/probes/electron-renderer-and-isolated-preload/zero/raw/snapshot-e6a0f29c-1fee-4662-96b6-a11788645c1a-0.7663699241507504.json",
+              "sha256": "13a8ae41a58fe43eee71341c35b93bd67d5a277014add569c26f0738b3ba0eb7"
+            },
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/coverage-2/probes/electron-renderer-and-isolated-preload/zero/raw/snapshot-main-60968.json",
+              "sha256": "3c47a00a865fc2f737eeb62723ba417e9ea89d2a2ed1340566d3e932a4bffdbb"
+            }
+          ],
+          "normalized_sha256": "ffa7774e8f6078d95a90c346538350c169a01c28fe0abf93fe3c27ba77bc0878"
+        },
+        "nonzero": {
+          "status": "passed",
+          "receipts": {
+            "collect": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/coverage-2/probes/electron-renderer-and-isolated-preload/nonzero/collect/receipt.json",
+              "sha256": "313216bc74c87c497ea4eb45dcb1850f6e0ec14654f2bc03a3f76d8069ef3fb0"
+            },
+            "adapter": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/coverage-2/probes/electron-renderer-and-isolated-preload/nonzero/adapter/receipt.json",
+              "sha256": "11f1654d77da0260892eae79180f2f708704de784721065449e19615eb84ea79"
+            },
+            "direct": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/coverage-2/probes/electron-renderer-and-isolated-preload/nonzero/direct/receipt.json",
+              "sha256": "ec683d6d37b0c2d31d984fa1ca8579408af0f8eae618483fb9ae1e212235532e"
+            }
+          },
+          "native": [
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/coverage-2/probes/electron-renderer-and-isolated-preload/nonzero/raw/lifecycle-60999.json",
+              "sha256": "dd05f2cd8ad297091c80a41c3f47b65f6fa7135e948c5c8ff2aebba1d34c4665"
+            },
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/coverage-2/probes/electron-renderer-and-isolated-preload/nonzero/raw/snapshot-559121ee-4149-4d20-bc6a-e6e55fd4acad-0.22950292995482435.json",
+              "sha256": "357447d2d98b93a9c4e7b9754d7ac27372590c16aedfc0382c74d9a2f5f7b38c"
+            },
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/coverage-2/probes/electron-renderer-and-isolated-preload/nonzero/raw/snapshot-559121ee-4149-4d20-bc6a-e6e55fd4acad-0.5761237823861995.json",
+              "sha256": "3c0ecde5f7626300849901f10be81d7180789ce6ddbc42a21ed19b0478bf4183"
+            },
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/coverage-2/probes/electron-renderer-and-isolated-preload/nonzero/raw/snapshot-559121ee-4149-4d20-bc6a-e6e55fd4acad-0.8499158695481682.json",
+              "sha256": "2c7b2b3df693c72a3a4d1b8dc209b0004b9ccc495ea78d8f9b313ef4ff51ac51"
+            },
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/coverage-2/probes/electron-renderer-and-isolated-preload/nonzero/raw/snapshot-559121ee-4149-4d20-bc6a-e6e55fd4acad-0.9010467773089526.json",
+              "sha256": "4370955f17c07dc8f5b2c35646d4e9eab0350d832615ebd1266bda495d4ba54b"
+            },
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/coverage-2/probes/electron-renderer-and-isolated-preload/nonzero/raw/snapshot-main-60999.json",
+              "sha256": "4f83aaf7e173b4bad8dae46fe3879c7683c0a44076f9c6a2006216dc6bcb770b"
+            }
+          ],
+          "normalized_sha256": "2cf808a9a6c1ca8ef6d854f44d9717cd454dc703c512cc3e17ffc23b9d1c7600"
+        }
+      }
+    }
+  ],
+  "status": "ready"
+}

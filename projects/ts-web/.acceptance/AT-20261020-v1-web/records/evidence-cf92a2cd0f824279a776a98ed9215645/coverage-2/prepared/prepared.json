@@ -1,0 +1,146 @@
+{
+  "schema": "project-coverage-preparation-v1",
+  "entry": [
+    "/opt/homebrew/bin/node",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workspace/projects/ts-web/tests/coverage-tools/adapter.cjs"
+  ],
+  "adapter_files": {
+    "projects/ts-web/tests/coverage-tools/adapter.cjs": "c27b1675ea898ac63c2c63bf6f8b73bede9cbc104db212dcadd2e1e5f102ff12",
+    "projects/ts-web/tests/coverage-tools/core.cjs": "657b0ef75c727ab96fc51b88da47d2cc96472227c42b80d1055cc87e9a34eab6",
+    "projects/ts-web/tests/coverage-tools/direct.cjs": "6233dab314f29ba7b2520267191c3d6ac25d5c37ad384e9a00fa4ffadd52a09f",
+    "projects/ts-web/tests/coverage-tools/preload.cjs": "98f8f60979645cd3580d2f8a6afbb5e56c1449f1f0ec914f6d6f52e0dfc700bc",
+    "projects/ts-web/tests/coverage-tools/probe.cjs": "d14624872e795faf3a2e48ecd915d0a239c3f933494fb5f104a1c0aa3399cc55",
+    "projects/ts-web/tests/coverage-tools/package.json": "a6f29ab670d92fcbd00ad4597119b6948f6c289c705ed7f9844084380de8613a",
+    "projects/ts-web/tests/coverage-tools/package-lock.json": "fa68fac3322a94d31d3de97820d65d9fc15eed9ec9f2aafa081396a07007f359",
+    "projects/ts-web/tests/coverage-tools/README.md": "f7557582a72b2c714061eb79425960e2127ce59450947a59790f65401c39756f"
+  },
+  "tools": [
+    {
+      "name": "istanbul-lib-instrument",
+      "version": "6.0.3",
+      "role": "原始 JS/TS AST 插桩及原生零命中单位生成"
+    },
+    {
+      "name": "istanbul-lib-coverage",
+      "version": "3.2.2",
+      "role": "原生快照读取、合并及行和分支统计"
+    },
+    {
+      "name": "@babel/core",
+      "version": "7.29.7",
+      "role": "通过编译器 AST 提取 Istanbul 注册函数"
+    },
+    {
+      "name": "esbuild",
+      "version": "0.28.2",
+      "role": "原始 TypeScript 插桩后移除类型"
+    },
+    {
+      "name": "Node.js",
+      "version": "v25.5.0",
+      "role": "模块加载钩子、子进程和退出采集生命周期"
+    },
+    {
+      "name": "Playwright",
+      "version": "1.56.1",
+      "role": "复用已验证运行环境的 Chromium、请求拦截及页面快照生命周期"
+    }
+  ],
+  "source_dispositions": {
+    "projects/ts-web/server.mjs": {
+      "kind": "measured",
+      "reason": "沿用 Istanbul 原始源码插桩和 Node 模块加载钩子；由宿主重新执行零命中、非零命中及同份原生数据独立读取探针后确认。"
+    },
+    "projects/ts-web/src/app.ts": {
+      "kind": "measured",
+      "reason": "保留原始 TypeScript AST 单位，插桩后由 esbuild 移除类型。已修正零探针多语句求值及 CSP 下默认 Function 全局对象访问问题；由宿主重新验证 Chromium 两类探针及独立读取，不继承前次失败结论。"
+    },
+    "projects/ts-web/build.mjs": {
+      "kind": "measured",
+      "reason": "沿用 Istanbul 和 Node 加载钩子采集真实构建入口；保留单独零命中和非零命中探针。正式执行未运行构建时报告 unavailable，不补零基线。"
+    },
+    "projects/ts-web/src/index.html": {
+      "kind": "non_executable",
+      "reason": "静态 HTML/CSS 资源，无内联 JavaScript；保留在源码冻结清单，不纳入 JavaScript 行和分支单位。"
+    }
+  },
+  "preparation_status": "ready",
+  "spec": {
+    "project_root": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workspace",
+    "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+    "components": {},
+    "source_hashes": {
+      "projects/ts-web/build.mjs": "81a20870dcd5ffb9199c811043f691184275bc18ff6c36bc986c611540b3c19a",
+      "projects/ts-web/server.mjs": "fc27a72c55d9969bb58980856db9845a14dce5f30e3bda33c8ac321abf31384c",
+      "projects/ts-web/src/app.ts": "00ebced89c17fd1aaff8f221fb7be962393604170d096eebd118a38703014502",
+      "projects/ts-web/src/index.html": "6b8de0fa329fe4778368d51706ca7bc3350297e82640ff2a072f9cfdde3a4d36"
+    },
+    "inventory_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/coverage-inputs-1/inventory.json",
+    "inventory_sha256": "ec4d87e7befd3df3ff9c97e2fa9754abb32013a7a93eddd42064e0ff470f5db2",
+    "registry_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/coverage-2/registry.json",
+    "runtime_manifest": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/runtime-1/runtime/runtime.json",
+    "runtime_sha256": "7d6cf053c8408677e106094b6f9187a9a562af8e2e559e76a7fa3493e60ece63",
+    "probe_report": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/coverage-2/probes/coverage-probes.json",
+    "probe_report_sha256": "268d320d4e71b504e5f6874a07d9840fc65ba1426bb341d6ca8112e0a65b97bc"
+  },
+  "preparation_evidence": [
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/coverage-2/probe-plan.json",
+      "sha256": "f26885262b8daf9428f1bd015b5e38414b5b190efd0b35e1b523b98997885dee"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/coverage-2/probes/coverage-probes.json",
+      "sha256": "268d320d4e71b504e5f6874a07d9840fc65ba1426bb341d6ca8112e0a65b97bc"
+    }
+  ],
+  "artifact_aliases": {
+    "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workspace/projects/ts-web/build.mjs": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/coverage-2/frozen/projects/ts-web/build.mjs",
+      "sha256": "81a20870dcd5ffb9199c811043f691184275bc18ff6c36bc986c611540b3c19a"
+    },
+    "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workspace/projects/ts-web/server.mjs": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/coverage-2/frozen/projects/ts-web/server.mjs",
+      "sha256": "fc27a72c55d9969bb58980856db9845a14dce5f30e3bda33c8ac321abf31384c"
+    },
+    "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workspace/projects/ts-web/src/app.ts": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/coverage-2/frozen/projects/ts-web/src/app.ts",
+      "sha256": "00ebced89c17fd1aaff8f221fb7be962393604170d096eebd118a38703014502"
+    },
+    "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workspace/projects/ts-web/src/index.html": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/coverage-2/frozen/projects/ts-web/src/index.html",
+      "sha256": "6b8de0fa329fe4778368d51706ca7bc3350297e82640ff2a072f9cfdde3a4d36"
+    },
+    "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workspace/projects/ts-web/tests/coverage-tools/adapter.cjs": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/coverage-2/frozen/projects/ts-web/tests/coverage-tools/adapter.cjs",
+      "sha256": "c27b1675ea898ac63c2c63bf6f8b73bede9cbc104db212dcadd2e1e5f102ff12"
+    },
+    "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workspace/projects/ts-web/tests/coverage-tools/core.cjs": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/coverage-2/frozen/projects/ts-web/tests/coverage-tools/core.cjs",
+      "sha256": "657b0ef75c727ab96fc51b88da47d2cc96472227c42b80d1055cc87e9a34eab6"
+    },
+    "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workspace/projects/ts-web/tests/coverage-tools/direct.cjs": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/coverage-2/frozen/projects/ts-web/tests/coverage-tools/direct.cjs",
+      "sha256": "6233dab314f29ba7b2520267191c3d6ac25d5c37ad384e9a00fa4ffadd52a09f"
+    },
+    "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workspace/projects/ts-web/tests/coverage-tools/preload.cjs": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/coverage-2/frozen/projects/ts-web/tests/coverage-tools/preload.cjs",
+      "sha256": "98f8f60979645cd3580d2f8a6afbb5e56c1449f1f0ec914f6d6f52e0dfc700bc"
+    },
+    "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workspace/projects/ts-web/tests/coverage-tools/probe.cjs": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/coverage-2/frozen/projects/ts-web/tests/coverage-tools/probe.cjs",
+      "sha256": "d14624872e795faf3a2e48ecd915d0a239c3f933494fb5f104a1c0aa3399cc55"
+    },
+    "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workspace/projects/ts-web/tests/coverage-tools/package.json": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/coverage-2/frozen/projects/ts-web/tests/coverage-tools/package.json",
+      "sha256": "a6f29ab670d92fcbd00ad4597119b6948f6c289c705ed7f9844084380de8613a"
+    },
+    "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workspace/projects/ts-web/tests/coverage-tools/package-lock.json": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/coverage-2/frozen/projects/ts-web/tests/coverage-tools/package-lock.json",
+      "sha256": "fa68fac3322a94d31d3de97820d65d9fc15eed9ec9f2aafa081396a07007f359"
+    },
+    "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workspace/projects/ts-web/tests/coverage-tools/README.md": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/coverage-2/frozen/projects/ts-web/tests/coverage-tools/README.md",
+      "sha256": "f7557582a72b2c714061eb79425960e2127ce59450947a59790f65401c39756f"
+    }
+  }
+}

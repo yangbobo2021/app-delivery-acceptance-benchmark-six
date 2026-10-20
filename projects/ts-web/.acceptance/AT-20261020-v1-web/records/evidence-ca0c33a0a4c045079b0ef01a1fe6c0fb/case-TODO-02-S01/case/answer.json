@@ -1,0 +1,41 @@
+{
+  "status": "product_failure",
+  "test_files": [
+    "projects/ts-web/tests/todo-02-s01.test.cjs",
+    "projects/ts-web/tests/coverage-tools/adapter.cjs",
+    "projects/ts-web/tests/coverage-tools/core.cjs",
+    "projects/ts-web/tests/coverage-tools/direct.cjs",
+    "projects/ts-web/tests/coverage-tools/preload.cjs",
+    "projects/ts-web/tests/coverage-tools/probe.cjs",
+    "projects/ts-web/tests/coverage-tools/package.json",
+    "projects/ts-web/tests/coverage-tools/package-lock.json",
+    "projects/ts-web/tests/coverage-tools/README.md"
+  ],
+  "test_command": [
+    "/opt/homebrew/bin/node",
+    "--test",
+    "projects/ts-web/tests/todo-02-s01.test.cjs"
+  ],
+  "test_env": {
+    "PLAYWRIGHT_BROWSERS_PATH": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/runtime-1/runtime/runtime/playwright-browsers"
+  },
+  "observations": [
+    "在独立 PORT=0 服务、独立 Chromium 存储上下文及 1280×800 视口中，通过真实界面添加“整理本周会议记录”，两次点击完成控件。",
+    "三个状态依次为未完成、已完成、未完成；标题内容保持一致，控件始终可操作，机械断言全部通过。",
+    "人工审查五张真实截图：未完成和恢复后的标题清晰；已完成时标题接近白色，与白色背景几乎融为一体，不满足标题清晰可读的判据。",
+    "勾选状态可辨认，控件无遮挡或裁切；其余布局、间距、对齐及样式协调。",
+    "统一调试入口和业务命令退出码均为 0，清理错误为空；覆盖率报告状态为 measured。机械检查通过不代表 UI 验收通过。",
+    "仅新增本场景测试，保留前面场景测试，未修改产品源码。"
+  ],
+  "evidence_paths": [
+    "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-02-S01/case/debug/request-01.json",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-02-S01/case/debug/attempt-d2ba12d2b2db441aa808a5ea125a89b2/state/screenshots",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-02-S01/case/debug/attempt-d2ba12d2b2db441aa808a5ea125a89b2/execution/coverage-report.json",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-02-S01/case/debug/attempt-d2ba12d2b2db441aa808a5ea125a89b2/execution/collection-lifecycle.json"
+  ],
+  "limitations": [
+    "当前截图为本地调试观察，不作为正式证据；正式命令会将相同五个状态截图及 states.json 写入宿主绑定的 ACCEPTANCE_SCREENSHOT_DIR，仍需冻结重跑和独立复审。",
+    "PROJECT_COVERAGE_RUNTIME、NODE_OPTIONS、采集目录及截图目录由统一入口绑定。"
+  ],
+  "reason": "完成状态可以切换并恢复，但已完成标题在真实截图中几乎不可读，违反本场景明确的 UI 可用性判据。"
+}

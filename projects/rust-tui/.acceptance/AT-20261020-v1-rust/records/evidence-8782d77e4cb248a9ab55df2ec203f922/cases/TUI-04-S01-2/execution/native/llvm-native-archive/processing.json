@@ -1,0 +1,63 @@
+{
+  "schema": "llvm-native-archive-v1",
+  "binary": {
+    "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/native/product-binary",
+    "sha256": "5794ff5f197e3ed34af25e73e1a189c0c7236f386d28485db1e1bebe4dac9069"
+  },
+  "profiles": [
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/native/run-26077-3353984249793428757_0.profraw",
+      "sha256": "47922b560b07f16f55bfd28c7ed4aedc5f1bb1dfaee6542ad952ab0c656fac94"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/native/run-26295-3353984249793428757_0.profraw",
+      "sha256": "9eb5a7529ed27334e0ae68d0122cd76752c1ab9f87894f385430845fba8f570f"
+    }
+  ],
+  "merged": {
+    "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/native/llvm-native-archive/merged.profdata",
+    "sha256": "c4e94c2ad8beceab718412fc324377686470d26bfe7f47d55acd647c7ec4409b"
+  },
+  "commands": [
+    [
+      "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/coverage-1/llvm-setup/llvm-tools-1.94.0-aarch64-apple-darwin/llvm-tools-preview/lib/rustlib/aarch64-apple-darwin/bin/llvm-profdata",
+      "merge",
+      "-sparse",
+      "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/native/run-26077-3353984249793428757_0.profraw",
+      "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/native/run-26295-3353984249793428757_0.profraw",
+      "-o",
+      "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/native/llvm-native-archive/merged.profdata"
+    ],
+    [
+      "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/coverage-1/llvm-setup/llvm-tools-1.94.0-aarch64-apple-darwin/llvm-tools-preview/lib/rustlib/aarch64-apple-darwin/bin/llvm-cov",
+      "export",
+      "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/native/product-binary",
+      "-instr-profile=/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/native/llvm-native-archive/merged.profdata"
+    ],
+    [
+      "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/coverage-1/llvm-setup/llvm-tools-1.94.0-aarch64-apple-darwin/llvm-tools-preview/lib/rustlib/aarch64-apple-darwin/bin/llvm-cov",
+      "export",
+      "--summary-only",
+      "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/native/product-binary",
+      "-instr-profile=/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/native/llvm-native-archive/merged.profdata"
+    ]
+  ],
+  "export": {
+    "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/native/llvm-native-archive/native-export.stdout",
+    "sha256": "48bfa18d49e32fa72f2058aefa0a7d5d75c6bf0719e6e56056d3882da7794207"
+  },
+  "summary": {
+    "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/native/llvm-native-archive/native-summary.stdout",
+    "sha256": "42a65e05b933ef59667cbeb6164d5e0000d7859938d7441826a475fb97e25152"
+  },
+  "tools": [
+    {
+      "name": "llvm-profdata",
+      "version": "LLVM (http://llvm.org/):\n  LLVM version 21.1.8-rust-1.94.0-stable\n  Optimized build."
+    },
+    {
+      "name": "llvm-cov",
+      "version": "LLVM (http://llvm.org/):\n  LLVM version 21.1.8-rust-1.94.0-stable\n  Optimized build."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "coverage": "覆盖本场景的单项0→1、1→0、交互中保存、id/title保持及画面更新；不外推为同会话再次切换或多项互不影响已验证。本次两进程原生计数与冻结执行绑定，LLVM完整导出和摘要一致：行96/128（75%），分支unavailable。工具链为rustc 1.94.0插桩→llvm-profdata→llvm-cov 21.1.8。",
+  "oracle": "状态取反、即时显示和保存来自TUI-04；合法记录来自TUI-01。预期由独立夹具的初始值计算，未从产品输出反推；保留id/title符合仅修改完成状态的要求，未强加序列化换行格式。",
+  "evidence": "真实Terminal 80×24、TERM=xterm-256color、未设NO_COLOR，执行真实产品二进制。两个会话输入均仅为空格后q；保存分别约53ms、51ms完成，且在q前取证。冻结图片显示两方向勾选变化，与保存内容一致。冻结命令退出码0。",
+  "ui_review": {
+    "status": "passed",
+    "screenshot_paths": [
+      "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/frozen-evidence/8/initial-0-after-space.png",
+      "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/frozen-evidence/8/initial-0-before.png",
+      "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/frozen-evidence/8/initial-1-after-space.png",
+      "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/frozen-evidence/8/initial-1-before.png"
+    ],
+    "reason": "直接观察四图：两组分别由[ ]变[x]、[x]变[ ]，用户可完成切换任务。标题、完整项目名称、选择箭头、操作提示和底部状态均可读且无遮挡或裁切。标题颜色、分隔线和蓝底选中行形成清楚层次；等宽字体、左对齐及行距一致，底部状态与列表分区合理，单项留白未妨碍操作，达到本场景终端界面的基本视觉完成度。"
+  },
+  "findings": [],
+  "summary": "独立审查支持本单项切换场景通过，业务断言、冻结画面与本次覆盖率来源相互印证。"
+}

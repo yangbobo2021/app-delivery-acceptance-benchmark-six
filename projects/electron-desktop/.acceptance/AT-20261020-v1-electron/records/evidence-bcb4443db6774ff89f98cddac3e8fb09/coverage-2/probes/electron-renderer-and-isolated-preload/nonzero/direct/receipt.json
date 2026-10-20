@@ -1,0 +1,18 @@
+{
+  "command": [
+    "/opt/homebrew/bin/node",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workspace/projects/electron-desktop/tests/coverage-tools/direct.cjs",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/coverage-2/probes/electron-renderer-and-isolated-preload/nonzero/raw",
+    "renderer"
+  ],
+  "cwd": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workspace",
+  "exit_code": 0,
+  "stdout": {
+    "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/coverage-2/probes/electron-renderer-and-isolated-preload/nonzero/direct/stdout.txt",
+    "sha256": "2cf808a9a6c1ca8ef6d854f44d9717cd454dc703c512cc3e17ffc23b9d1c7600"
+  },
+  "stderr": {
+    "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/coverage-2/probes/electron-renderer-and-isolated-preload/nonzero/direct/stderr.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

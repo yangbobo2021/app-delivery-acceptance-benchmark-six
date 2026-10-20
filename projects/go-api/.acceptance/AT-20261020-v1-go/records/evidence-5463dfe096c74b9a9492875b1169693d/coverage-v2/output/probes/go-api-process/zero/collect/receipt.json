@@ -1,0 +1,19 @@
+{
+  "command": [
+    "/opt/homebrew/bin/python3",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workspace/projects/go-api/tests/coverage/probe.py",
+    "zero",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/coverage-v2/output/probes/go-api-process/zero/raw",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/coverage-v2/output/probes/go-api-process/zero"
+  ],
+  "cwd": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workspace",
+  "exit_code": 0,
+  "stdout": {
+    "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/coverage-v2/output/probes/go-api-process/zero/collect/stdout.txt",
+    "sha256": "9996f3f34e91ad1dcdd9269fb8e295731cc98f1ce11abba2be0cc6b7eb6ae058"
+  },
+  "stderr": {
+    "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/coverage-v2/output/probes/go-api-process/zero/collect/stderr.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

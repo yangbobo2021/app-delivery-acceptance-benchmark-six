@@ -1,0 +1,19 @@
+{
+  "command": [
+    "/opt/homebrew/bin/python3",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workspace/projects/java-batch/tests/coverage_probe.py",
+    "read",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/coverage-3/probes/java-cli/zero/raw",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/coverage-3/probes/java-cli/zero/adapter-output"
+  ],
+  "cwd": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workspace",
+  "exit_code": 0,
+  "stdout": {
+    "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/coverage-3/probes/java-cli/zero/adapter/stdout.txt",
+    "sha256": "39b72dab6b38581c3b3dd2c562bb3ca59cb2134507e46d714af0258478091e96"
+  },
+  "stderr": {
+    "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/coverage-3/probes/java-cli/zero/adapter/stderr.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

@@ -1,0 +1,227 @@
+{
+  "scene_id": "STOCK-06-S02",
+  "coverage_checklist": [
+    "STOCK-02 / scene: receive complete 201 for request_id=restart-order, quantity=3, available=7",
+    "STOCK-06: normal process stop and start a new process with the same state directory",
+    "STOCK-01 / scene: GET before retry returns 200 and available=7",
+    "STOCK-03 / scene: original request retry returns 200 and first reservation business content",
+    "STOCK-01 / scene: GET after retry returns 200 and available=7"
+  ],
+  "state_dir": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/case-stock-06-s02-v1/fresh-execution/stock-06-s02/app-state",
+  "http": [
+    {
+      "label": "first reservation",
+      "method": "POST",
+      "url": "http://127.0.0.1:59685/reserve",
+      "request": {
+        "request_id": "restart-order",
+        "quantity": 3
+      },
+      "status": 201,
+      "headers": [
+        [
+          "Content-Type",
+          "application/json"
+        ],
+        [
+          "Date",
+          "Tue, 20 Oct 2026 03:44:48 GMT"
+        ],
+        [
+          "Content-Length",
+          "58"
+        ],
+        [
+          "Connection",
+          "close"
+        ]
+      ],
+      "raw_body": "{\"request_id\":\"restart-order\",\"quantity\":3,\"available\":7}\n",
+      "complete_body_received": true
+    },
+    {
+      "label": "restarted stock before retry",
+      "method": "GET",
+      "url": "http://127.0.0.1:59701/stock",
+      "request": null,
+      "status": 200,
+      "headers": [
+        [
+          "Content-Type",
+          "application/json"
+        ],
+        [
+          "Date",
+          "Tue, 20 Oct 2026 03:44:48 GMT"
+        ],
+        [
+          "Content-Length",
+          "16"
+        ],
+        [
+          "Connection",
+          "close"
+        ]
+      ],
+      "raw_body": "{\"available\":7}\n",
+      "complete_body_received": true
+    },
+    {
+      "label": "original request after restart",
+      "method": "POST",
+      "url": "http://127.0.0.1:59701/reserve",
+      "request": {
+        "request_id": "restart-order",
+        "quantity": 3
+      },
+      "status": 201,
+      "headers": [
+        [
+          "Content-Type",
+          "application/json"
+        ],
+        [
+          "Date",
+          "Tue, 20 Oct 2026 03:44:48 GMT"
+        ],
+        [
+          "Content-Length",
+          "58"
+        ],
+        [
+          "Connection",
+          "close"
+        ]
+      ],
+      "raw_body": "{\"request_id\":\"restart-order\",\"quantity\":3,\"available\":4}\n",
+      "complete_body_received": true
+    },
+    {
+      "label": "restarted stock after retry",
+      "method": "GET",
+      "url": "http://127.0.0.1:59701/stock",
+      "request": null,
+      "status": 200,
+      "headers": [
+        [
+          "Content-Type",
+          "application/json"
+        ],
+        [
+          "Date",
+          "Tue, 20 Oct 2026 03:44:48 GMT"
+        ],
+        [
+          "Content-Length",
+          "16"
+        ],
+        [
+          "Connection",
+          "close"
+        ]
+      ],
+      "raw_body": "{\"available\":4}\n",
+      "complete_body_received": true
+    }
+  ],
+  "checks": [
+    {
+      "label": "first reservation: JSON object",
+      "passed": true,
+      "requirement": "STOCK-01/02/03"
+    },
+    {
+      "label": "first status=201",
+      "passed": true,
+      "requirement": "STOCK-02 / STOCK-06-S02"
+    },
+    {
+      "label": "first request identity",
+      "passed": true,
+      "requirement": "STOCK-02"
+    },
+    {
+      "label": "first quantity=3",
+      "passed": true,
+      "requirement": "STOCK-02"
+    },
+    {
+      "label": "first available=7",
+      "passed": true,
+      "requirement": "STOCK-06-S02"
+    },
+    {
+      "label": "restarted stock before retry: JSON object",
+      "passed": true,
+      "requirement": "STOCK-01/02/03"
+    },
+    {
+      "label": "before retry status=200",
+      "passed": true,
+      "requirement": "STOCK-01"
+    },
+    {
+      "label": "before retry available=7",
+      "passed": true,
+      "requirement": "STOCK-06-S02"
+    },
+    {
+      "label": "original request after restart: JSON object",
+      "passed": true,
+      "requirement": "STOCK-01/02/03"
+    },
+    {
+      "label": "retry status=200",
+      "passed": false,
+      "requirement": "STOCK-03 / STOCK-06-S02"
+    },
+    {
+      "label": "retry preserves first request_id",
+      "passed": true,
+      "requirement": "STOCK-03"
+    },
+    {
+      "label": "retry preserves first quantity",
+      "passed": true,
+      "requirement": "STOCK-03"
+    },
+    {
+      "label": "retry preserves first available",
+      "passed": false,
+      "requirement": "STOCK-03"
+    },
+    {
+      "label": "restarted stock after retry: JSON object",
+      "passed": true,
+      "requirement": "STOCK-01/02/03"
+    },
+    {
+      "label": "after retry status=200",
+      "passed": true,
+      "requirement": "STOCK-01"
+    },
+    {
+      "label": "after retry available=7",
+      "passed": false,
+      "requirement": "STOCK-06-S02"
+    }
+  ],
+  "processes": [
+    {
+      "pid": 46375,
+      "base_url": "http://127.0.0.1:59685",
+      "state_dir": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/case-stock-06-s02-v1/fresh-execution/stock-06-s02/app-state",
+      "stop_signal": "SIGTERM",
+      "exit_code": 0
+    },
+    {
+      "pid": 46391,
+      "base_url": "http://127.0.0.1:59701",
+      "state_dir": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/case-stock-06-s02-v1/fresh-execution/stock-06-s02/app-state",
+      "stop_signal": "SIGTERM",
+      "exit_code": 0
+    }
+  ],
+  "errors": [],
+  "passed": false
+}

@@ -1,0 +1,25 @@
+{
+  "status": "product_bug",
+  "coverage": "本场景断言能识别状态未切换、无法恢复及标题丢失；冻结观察为 false→true→false。覆盖率绑定本次场景、版本和执行收据，原生快照记录切换处理执行两次；使用 Istanbul 专用工具统计。未扩展审查同名条目等其他场景，覆盖率不替代业务判断。",
+  "oracle": "切换及恢复预期来自 TODO-02，标题使用测试固定输入独立核对。可读性依据为 business_goal 的必要信息可读要求及本次明确的 UI 验收要求，不依赖额外审美标准。",
+  "evidence": "冻结命令退出码为 0；测试通过真实 Chromium、回环服务和 UI 添加后连续点击复选框，三个状态均保留同一标题且控件启用。但直接观察 04-completed.png，已完成标题近乎白色，融入白色背景。相关 CSS 将已勾选条目标题设为 #f8f9fc，与截图缺陷吻合。",
+  "ui_review": {
+    "status": "failed",
+    "screenshot_paths": [
+      "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-02-S01/frozen-evidence/15/01-before.png",
+      "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-02-S01/frozen-evidence/15/02-input.png",
+      "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-02-S01/frozen-evidence/15/03-uncompleted.png",
+      "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-02-S01/frozen-evidence/15/04-completed.png",
+      "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-02-S01/frozen-evidence/15/05-restored.png"
+    ],
+    "reason": "五图均已直接观察。输入、添加及恢复状态文字清楚，控件无遮挡或裁切；卡片层次、间距、对齐及字体控件样式协调。已完成时勾选状态清楚且仍可恢复，但任务标题几乎消失，不能清晰识别完成的是哪条任务，违反必要信息可读要求。"
+  },
+  "findings": [
+    {
+      "kind": "product",
+      "reason": "首次勾选“整理本周会议记录”后，标题变成接近背景的浅白色；冻结截图直接证明已完成状态的内容可读性缺陷，功能断言通过不能消除此问题。",
+      "requested_change": "调整已完成条目标题样式，确保文字在背景上清晰可读，并保留可辨认的完成状态；修复后重新冻结本场景截图供复审。"
+    }
+  ],
+  "summary": "完成与恢复功能证据可靠，但已完成标题不可清晰辨认，本场景存在产品 UI 缺陷。"
+}

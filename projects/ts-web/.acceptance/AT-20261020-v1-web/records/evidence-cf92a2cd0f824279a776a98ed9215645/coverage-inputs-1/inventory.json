@@ -1,0 +1,19 @@
+{
+  "schema": "acceptance-source-inventory-v1",
+  "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+  "source_paths": [
+    "projects/ts-web/build.mjs",
+    "projects/ts-web/server.mjs",
+    "projects/ts-web/src/app.ts",
+    "projects/ts-web/src/index.html"
+  ],
+  "source_hashes": {
+    "projects/ts-web/build.mjs": "81a20870dcd5ffb9199c811043f691184275bc18ff6c36bc986c611540b3c19a",
+    "projects/ts-web/server.mjs": "fc27a72c55d9969bb58980856db9845a14dce5f30e3bda33c8ac321abf31384c",
+    "projects/ts-web/src/app.ts": "00ebced89c17fd1aaff8f221fb7be962393604170d096eebd118a38703014502",
+    "projects/ts-web/src/index.html": "6b8de0fa329fe4778368d51706ca7bc3350297e82640ff2a072f9cfdde3a4d36"
+  },
+  "changed_source_paths": [],
+  "changed_lines": {},
+  "basis": "Requirements-only v1 baseline acceptance; no changed-file or changed-line PR scope declared."
+}

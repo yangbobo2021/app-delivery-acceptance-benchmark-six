@@ -1,0 +1,67 @@
+{
+  "status": "verified",
+  "legacy_trace_count": 0,
+  "meaning": "Top-level traces counts legacy delivery-trace files; v4 results are in progress.case_history and project_state.traces",
+  "offline_no_local": true,
+  "requirement_id": "STOCK-06",
+  "scene_id": "STOCK-06-S02",
+  "priority": "P0",
+  "binding_id": "STOCK-06-S02-case",
+  "test_file": "projects/go-api/tests/stock_06_s02.py, projects/go-api/tests/coverage/adapter.py, projects/go-api/tests/coverage/direct.py, projects/go-api/tests/coverage/probe.py, projects/go-api/tests/coverage/launcher.py, projects/go-api/tests/coverage/harness_test.go.txt",
+  "formal_case_status": "failed",
+  "execution_known": true,
+  "execution_evidence_url": "/api/evidence?acceptance_id=AT-20261020-v1-go&trace=402401e7ec17cac3&binding=STOCK-06-S02-case&artifact=cd812783b72779e6",
+  "reviewer_verdict": "product_bug",
+  "reviewer_reason": "冻结失败可靠地证明重启后幂等记录丢失并导致重复扣减。",
+  "coverage_status": "measured",
+  "coverage_relation": "same_run",
+  "coverage_verified": true,
+  "coverage_execution_sha256": "a09ef54faf45c421139020ccca58930203e3228b0e67d35642738a5cbe6a5e1d",
+  "project_scenes": 26,
+  "project_scenes_with_coverage": 2,
+  "project_statement": {
+    "status": "measured",
+    "label": "Go statements",
+    "covered": 48,
+    "total": 70,
+    "pct": 68.6,
+    "tool_output": "totalStmts: 70 coveredStmts: 48\n\tstock.local/app\t\tcoverage: 68.6% of statements\n"
+  },
+  "previous_scene_status": "passed",
+  "archived_formal_observations": {
+    "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance/AT-20261020-v1-go/records/evidence-5463dfe096c74b9a9492875b1169693d/case-stock-06-s02-v1/fresh-execution/stock-06-s02/observations.json",
+    "sha256": "09117e12734e2e8d303f5ab03bbd0f2c7f19f7efc3906ad24e517084eb065d88",
+    "first_status": 201,
+    "before_retry_available": 7,
+    "retry_status": 201,
+    "after_retry_available": 4,
+    "two_processes_same_state_normal_exit": true
+  },
+  "ignored_adapter_archived_hashes": [
+    {
+      "project_file": "projects/go-api/tests/coverage/adapter.py",
+      "archive_path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance/AT-20261020-v1-go/records/evidence-5463dfe096c74b9a9492875b1169693d/coverage-v2/output/frozen/projects/go-api/tests/coverage/adapter.py",
+      "sha256": "ddcffcb93a866108d47ebe4aac81aed895cbb205f805067cffc8c5cdcf8529c3"
+    },
+    {
+      "project_file": "projects/go-api/tests/coverage/direct.py",
+      "archive_path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance/AT-20261020-v1-go/records/evidence-5463dfe096c74b9a9492875b1169693d/coverage-v2/output/frozen/projects/go-api/tests/coverage/direct.py",
+      "sha256": "a072cec1c42c4d66237dab6c76ff89f9fbff77bad30b93ce231fd18c83bb8b57"
+    },
+    {
+      "project_file": "projects/go-api/tests/coverage/probe.py",
+      "archive_path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance/AT-20261020-v1-go/records/evidence-5463dfe096c74b9a9492875b1169693d/coverage-v2/output/frozen/projects/go-api/tests/coverage/probe.py",
+      "sha256": "b1d534c6726cafd675b42c66827057b8862c19c6a69a82db4d438e51f4d8fd9b"
+    },
+    {
+      "project_file": "projects/go-api/tests/coverage/launcher.py",
+      "archive_path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance/AT-20261020-v1-go/records/evidence-5463dfe096c74b9a9492875b1169693d/coverage-v2/output/frozen/projects/go-api/tests/coverage/launcher.py",
+      "sha256": "3b0e41f850552aa6d3fe445447899194727415d1fb584cce0c1d8e6edc4026eb"
+    },
+    {
+      "project_file": "projects/go-api/tests/coverage/harness_test.go.txt",
+      "archive_path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance/AT-20261020-v1-go/records/evidence-5463dfe096c74b9a9492875b1169693d/coverage-v2/output/frozen/projects/go-api/tests/coverage/harness_test.go.txt",
+      "sha256": "b2ce14d3b433cf1be30cf60df7354829f6c14a30e8c2b795243f8bb47306e789"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "schema": "project-coverage-probe-plan-v1",
+  "routes": [
+    {
+      "id": "go-api-process",
+      "source_paths": [
+        "projects/go-api/main.go"
+      ],
+      "zero": {
+        "collect": [
+          "/opt/homebrew/bin/python3",
+          "{workspace}/projects/go-api/tests/coverage/probe.py",
+          "zero",
+          "{raw_dir}",
+          "{probe_dir}"
+        ],
+        "adapter": [
+          "/opt/homebrew/bin/python3",
+          "{workspace}/projects/go-api/tests/coverage/adapter.py",
+          "probe-read",
+          "{raw_dir}"
+        ],
+        "direct": [
+          "/opt/homebrew/bin/python3",
+          "{workspace}/projects/go-api/tests/coverage/direct.py",
+          "{raw_dir}"
+        ]
+      },
+      "nonzero": {
+        "collect": [
+          "/opt/homebrew/bin/python3",
+          "{workspace}/projects/go-api/tests/coverage/probe.py",
+          "nonzero",
+          "{raw_dir}",
+          "{probe_dir}"
+        ],
+        "adapter": [
+          "/opt/homebrew/bin/python3",
+          "{workspace}/projects/go-api/tests/coverage/adapter.py",
+          "probe-read",
+          "{raw_dir}"
+        ],
+        "direct": [
+          "/opt/homebrew/bin/python3",
+          "{workspace}/projects/go-api/tests/coverage/direct.py",
+          "{raw_dir}"
+        ]
+      }
+    }
+  ],
+  "runtime_manifest": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/runtime-v2/output/runtime/runtime.json",
+  "runtime_sha256": "7c9779b91ba116bb17863bef5cc9453fe01802f938098ad52935698c646b7f8c",
+  "workspace": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workspace",
+  "revision": "be952659c7d93018e26793daf2e58fa8321601f4"
+}

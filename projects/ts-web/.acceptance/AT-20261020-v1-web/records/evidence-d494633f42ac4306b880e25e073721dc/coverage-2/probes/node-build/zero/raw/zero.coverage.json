@@ -1,0 +1,48 @@
+{
+  "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workspace/projects/ts-web/build.mjs": {
+    "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workspace/projects/ts-web/build.mjs",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 1,
+          "column": 81
+        },
+        "end": {
+          "line": 1,
+          "column": 118
+        }
+      },
+      "1": {
+        "start": {
+          "line": 1,
+          "column": 119
+        },
+        "end": {
+          "line": 1,
+          "column": 239
+        }
+      },
+      "2": {
+        "start": {
+          "line": 1,
+          "column": 240
+        },
+        "end": {
+          "line": 1,
+          "column": 291
+        }
+      }
+    },
+    "fnMap": {},
+    "branchMap": {},
+    "s": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    "f": {},
+    "b": {},
+    "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    "hash": "5ce355c6fdda78396a7ec7c9c4c1e65c8aabe1af"
+  }
+}

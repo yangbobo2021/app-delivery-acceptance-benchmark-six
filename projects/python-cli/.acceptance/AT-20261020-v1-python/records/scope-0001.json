@@ -1,0 +1,66 @@
+{
+  "schema": "acceptance-scope-v1",
+  "acceptance_id": "AT-20261020-v1-python",
+  "version": 1,
+  "previous_sha256": null,
+  "created_at": "2026-10-20T02:10:22.333978+00:00",
+  "basis": "User's 2026-10-20 v1 baseline first-stage instruction",
+  "scope": {
+    "targets": [
+      {
+        "type": "requirements",
+        "project": "python-cli",
+        "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+        "requirement_ids": [
+          "INV-01",
+          "INV-02",
+          "INV-03",
+          "INV-04",
+          "INV-05",
+          "INV-06"
+        ]
+      }
+    ],
+    "requirements": [
+      {
+        "id": "INV-01",
+        "title": "INV-01",
+        "text": "INV-01：CSV 必须且仅有 `account,amount_cents` 两列表头，顺序如此。account 是非空 ASCII 字母数字串；amount_cents 是 0 至 1000000000 的十进制整数。空文件、无数据行、坏表头、坏记录应失败。"
+      },
+      {
+        "id": "INV-02",
+        "title": "INV-02",
+        "text": "INV-02：按 account 汇总所有记录的 amount_cents，使用精确整数计算。一个 account 的结果可以超过 32 位有符号整数最大值。"
+      },
+      {
+        "id": "INV-03",
+        "title": "INV-03",
+        "text": "INV-03：成功时标准输出为一个 JSON 对象，字段为 `totals`（account 到整数总额的对象）与 `row_count`（数据行数），退出码为 0。JSON 键顺序及空白不作要求，标准错误为空。"
+      },
+      {
+        "id": "INV-04",
+        "title": "INV-04",
+        "text": "INV-04：缺少参数、未知参数、输入文件不存在或输入不合法时，退出码为 2；标准错误包含非空诊断；标准输出为空，不输出部分汇总。具体诊断措辞不作要求。"
+      },
+      {
+        "id": "INV-05",
+        "title": "INV-05",
+        "text": "INV-05：不能修改输入文件，也不能在输入目录写入其他文件。使用者可从任意工作目录以绝对输入路径执行。"
+      },
+      {
+        "id": "INV-06",
+        "title": "INV-06",
+        "text": "INV-06：同一输入重复执行得到相同汇总。账号大小写敏感，`A` 与 `a` 分开统计；不对 account 做大小写转换。"
+      }
+    ],
+    "exclusions": [
+      "No business scene execution in this first stage."
+    ],
+    "user_decisions": [
+      {
+        "source": "2026-10-20 delegated task",
+        "text": "Run v1 baseline new acceptance first stage only; all six original requirements, scenario generation, independent runtime and coverage preparation, and catalog."
+      }
+    ]
+  }
+}

@@ -1,0 +1,177 @@
+{
+  "schema": "project-coverage-probe-plan-v1",
+  "routes": [
+    {
+      "id": "node-server",
+      "source_paths": [
+        "projects/ts-web/server.mjs"
+      ],
+      "zero": {
+        "collect": [
+          "/opt/homebrew/bin/node",
+          "{workspace}/projects/ts-web/tests/coverage-tools/probe.cjs",
+          "collect",
+          "server",
+          "zero",
+          "{raw_dir}",
+          "{workspace}/../workflows/runtime-1/runtime/runtime.json"
+        ],
+        "adapter": [
+          "/opt/homebrew/bin/node",
+          "{workspace}/projects/ts-web/tests/coverage-tools/probe.cjs",
+          "read",
+          "server",
+          "zero",
+          "{raw_dir}"
+        ],
+        "direct": [
+          "/opt/homebrew/bin/node",
+          "{workspace}/projects/ts-web/tests/coverage-tools/direct.cjs",
+          "server",
+          "{raw_dir}"
+        ]
+      },
+      "nonzero": {
+        "collect": [
+          "/opt/homebrew/bin/node",
+          "{workspace}/projects/ts-web/tests/coverage-tools/probe.cjs",
+          "collect",
+          "server",
+          "nonzero",
+          "{raw_dir}",
+          "{workspace}/../workflows/runtime-1/runtime/runtime.json"
+        ],
+        "adapter": [
+          "/opt/homebrew/bin/node",
+          "{workspace}/projects/ts-web/tests/coverage-tools/probe.cjs",
+          "read",
+          "server",
+          "nonzero",
+          "{raw_dir}"
+        ],
+        "direct": [
+          "/opt/homebrew/bin/node",
+          "{workspace}/projects/ts-web/tests/coverage-tools/direct.cjs",
+          "server",
+          "{raw_dir}"
+        ]
+      }
+    },
+    {
+      "id": "chromium-app",
+      "source_paths": [
+        "projects/ts-web/src/app.ts"
+      ],
+      "zero": {
+        "collect": [
+          "/opt/homebrew/bin/node",
+          "{workspace}/projects/ts-web/tests/coverage-tools/probe.cjs",
+          "collect",
+          "browser",
+          "zero",
+          "{raw_dir}",
+          "{workspace}/../workflows/runtime-1/runtime/runtime.json"
+        ],
+        "adapter": [
+          "/opt/homebrew/bin/node",
+          "{workspace}/projects/ts-web/tests/coverage-tools/probe.cjs",
+          "read",
+          "browser",
+          "zero",
+          "{raw_dir}"
+        ],
+        "direct": [
+          "/opt/homebrew/bin/node",
+          "{workspace}/projects/ts-web/tests/coverage-tools/direct.cjs",
+          "browser",
+          "{raw_dir}"
+        ]
+      },
+      "nonzero": {
+        "collect": [
+          "/opt/homebrew/bin/node",
+          "{workspace}/projects/ts-web/tests/coverage-tools/probe.cjs",
+          "collect",
+          "browser",
+          "nonzero",
+          "{raw_dir}",
+          "{workspace}/../workflows/runtime-1/runtime/runtime.json"
+        ],
+        "adapter": [
+          "/opt/homebrew/bin/node",
+          "{workspace}/projects/ts-web/tests/coverage-tools/probe.cjs",
+          "read",
+          "browser",
+          "nonzero",
+          "{raw_dir}"
+        ],
+        "direct": [
+          "/opt/homebrew/bin/node",
+          "{workspace}/projects/ts-web/tests/coverage-tools/direct.cjs",
+          "browser",
+          "{raw_dir}"
+        ]
+      }
+    },
+    {
+      "id": "node-build",
+      "source_paths": [
+        "projects/ts-web/build.mjs"
+      ],
+      "zero": {
+        "collect": [
+          "/opt/homebrew/bin/node",
+          "{workspace}/projects/ts-web/tests/coverage-tools/probe.cjs",
+          "collect",
+          "build",
+          "zero",
+          "{raw_dir}",
+          "{workspace}/../workflows/runtime-1/runtime/runtime.json"
+        ],
+        "adapter": [
+          "/opt/homebrew/bin/node",
+          "{workspace}/projects/ts-web/tests/coverage-tools/probe.cjs",
+          "read",
+          "build",
+          "zero",
+          "{raw_dir}"
+        ],
+        "direct": [
+          "/opt/homebrew/bin/node",
+          "{workspace}/projects/ts-web/tests/coverage-tools/direct.cjs",
+          "build",
+          "{raw_dir}"
+        ]
+      },
+      "nonzero": {
+        "collect": [
+          "/opt/homebrew/bin/node",
+          "{workspace}/projects/ts-web/tests/coverage-tools/probe.cjs",
+          "collect",
+          "build",
+          "nonzero",
+          "{raw_dir}",
+          "{workspace}/../workflows/runtime-1/runtime/runtime.json"
+        ],
+        "adapter": [
+          "/opt/homebrew/bin/node",
+          "{workspace}/projects/ts-web/tests/coverage-tools/probe.cjs",
+          "read",
+          "build",
+          "nonzero",
+          "{raw_dir}"
+        ],
+        "direct": [
+          "/opt/homebrew/bin/node",
+          "{workspace}/projects/ts-web/tests/coverage-tools/direct.cjs",
+          "build",
+          "{raw_dir}"
+        ]
+      }
+    }
+  ],
+  "runtime_manifest": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/runtime-1/runtime/runtime.json",
+  "runtime_sha256": "7d6cf053c8408677e106094b6f9187a9a562af8e2e559e76a7fa3493e60ece63",
+  "workspace": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workspace",
+  "revision": "be952659c7d93018e26793daf2e58fa8321601f4"
+}

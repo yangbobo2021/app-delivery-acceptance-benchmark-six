@@ -1,0 +1,19 @@
+{
+  "status": "product_bug",
+  "coverage": "断言覆盖首次成功、同目录正常重启、重试响应及重试前后库存，能识别重复扣减。执行真实产品 main/load/persist/HTTP 路径。覆盖率绑定本次两个进程，Go go1.25.7 原生工具报告语句47/70（67.1%）；行、分支不可用，不替代业务判断。",
+  "oracle": "独立空状态目录以初始库存10预留3件，按STOCK-02应返回201及available=7；STOCK-06要求正常重启保留库存和成功记录；STOCK-03要求相同请求重试返回200、首次业务内容且不再扣减。失败预期均有原始需求依据。",
+  "evidence": "冻结命令退出1，日志记录三项业务断言失败且errors为空。原始观察显示首次完整收到201、available=7；两个进程使用相同状态目录，SIGTERM后均退出0。重启查询库存为7，同一请求重试却返回201、available=4，随后查询仍为4。源码load在反序列化后无条件清空Requests，与观察一致。",
+  "ui_review": {
+    "status": "not_applicable",
+    "screenshot_paths": [],
+    "reason": "目标不涉及UI"
+  },
+  "findings": [
+    {
+      "kind": "product",
+      "reason": "重启加载时清空已持久化的成功请求记录，使原request_id被当成新请求，再次扣减3件，违反STOCK-06及STOCK-03。",
+      "requested_change": "修复load，保留已加载的Requests记录，仅在记录映射缺失时初始化；修复后重新冻结执行本场景。"
+    }
+  ],
+  "summary": "冻结失败可靠地证明重启后幂等记录丢失并导致重复扣减。"
+}

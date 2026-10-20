@@ -1,0 +1,107 @@
+{
+  "schema": "phase2b-image-audit-v1",
+  "rows": [
+    {
+      "scene_id": "NOTE-01-S06",
+      "requirement_id": "NOTE-01",
+      "requirement_text": "可以新建、选择、编辑、删除便签。每个便签有不变的独立 ID；两个同标题便签独立编辑、删除。",
+      "verdict": "product_bug",
+      "ui_status": "failed",
+      "ui_reason": "直接观察全部八张图片：面板层次、留白、对齐、边框和操作按钮总体协调，编辑器正文及必要控件完整，无明显遮挡或裁切。但第二条保存后，两项列表标题同时变成极小文字，与单条状态及其余控件字号明显失衡，正常窗口下难以阅读；选择两条便签时缺陷持续。相关样式将多项列表字体设为 6px，佐证截图中的退化。删除后列表完全清空，用户无法完成保留并重选另一条的任务。",
+      "review_multimodal_input_count": 8,
+      "review_multimodal_inputs": [
+        {
+          "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S06/frozen-evidence/8/01-empty.png",
+          "sha256": "6180fbbb6e01785d610dc1499f376b1049256cefc9f582012e63ac75a8de36de"
+        },
+        {
+          "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S06/frozen-evidence/8/02-target-entered.png",
+          "sha256": "34352a61430b5434d3ccc6b8ae05e6126eb11a3449547dc1ba879d19984d02ac"
+        },
+        {
+          "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S06/frozen-evidence/8/02-target-saved.png",
+          "sha256": "d3a642d49c31cea81e044c5033196ab2e61e5c0956ffdb8b843353ae5bf84786"
+        },
+        {
+          "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S06/frozen-evidence/8/03-survivor-entered.png",
+          "sha256": "46077d369e2a34442e89900673dd665992a758c2669b0a090144a1f29dfbcb96"
+        },
+        {
+          "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S06/frozen-evidence/8/03-survivor-saved.png",
+          "sha256": "ea31fb3602146431b5a2147964e56a40b84269848184b397c80371c3ed90357d"
+        },
+        {
+          "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S06/frozen-evidence/8/04-survivor-selected.png",
+          "sha256": "58547b59fb85fac783dd4faa2d59536513fa5cdf1288c25c193ef2371c8ff19b"
+        },
+        {
+          "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S06/frozen-evidence/8/05-target-selected.png",
+          "sha256": "2917d9cfdf231e5f3a63b162840c58166d4b5fd5319250cf38572a0eee604008"
+        },
+        {
+          "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S06/frozen-evidence/8/failure.png",
+          "sha256": "738e38265f26693a1f47540a308fd5685b8c181b291b2cf5a0f2b00def697c28"
+        }
+      ],
+      "review_input_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S06/review/input.json",
+      "review_metrics_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S06/review/metrics.json",
+      "frozen_manifest_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S06/frozen-evidence.json",
+      "frozen_execution_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S06/execution/execution.json",
+      "coverage_status": "incomplete",
+      "coverage_relation": "same_run"
+    },
+    {
+      "scene_id": "NOTE-01-S07",
+      "requirement_id": "NOTE-01",
+      "requirement_text": "可以新建、选择、编辑、删除便签。每个便签有不变的独立 ID；两个同标题便签独立编辑、删除。",
+      "verdict": "product_bug",
+      "ui_status": "failed",
+      "ui_reason": "直接观察九张附图：编辑器标题、正文及 New/Save/Delete 均完整可见，无明显遮挡或裁切；双栏、留白、对齐、圆角及按钮样式整体协调。第一条保存时列表标题清晰；第二条保存后，两条列表标题同时变成极小字，切换选择后持续存在，明显破坏可读性与字体一致性。冻结窗口为 850×650、DPR=2；对应产品样式在列表有两个按钮时设置 font-size:6px。自动化完成了保存和选择，但用户依靠列表辨认便签受到实际妨碍。",
+      "review_multimodal_input_count": 9,
+      "review_multimodal_inputs": [
+        {
+          "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/frozen-evidence/8/01-empty.png",
+          "sha256": "6180fbbb6e01785d610dc1499f376b1049256cefc9f582012e63ac75a8de36de"
+        },
+        {
+          "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/frozen-evidence/8/02-first-entered.png",
+          "sha256": "9725c9d5e041c379bd0e4fb214d51dc1adba621e36c36c60c75510617630ec50"
+        },
+        {
+          "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/frozen-evidence/8/02-first-new.png",
+          "sha256": "c992436e98e61d3a0f1f0a74657bcec022b42590e4f44f67f5af709b9f78d863"
+        },
+        {
+          "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/frozen-evidence/8/02-first-saved.png",
+          "sha256": "b3894c444543798362e1094ecc713fd76dc39384cbe765dab1eccb0e5e60db86"
+        },
+        {
+          "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/frozen-evidence/8/03-second-entered.png",
+          "sha256": "f5ef920f5d97e2408888eda4acbe9a5b526e9a42986633317e244400d0cc3e77"
+        },
+        {
+          "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/frozen-evidence/8/03-second-new.png",
+          "sha256": "e26b38e75c3a1cfae78c700d9bb4aafd6a845934014033d9417c6d37e75079ef"
+        },
+        {
+          "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/frozen-evidence/8/03-second-saved.png",
+          "sha256": "21a46bee15eabb7b70c3863c31a2ea1efb64c07183e0598405ff9270faecb02a"
+        },
+        {
+          "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/frozen-evidence/8/04-first-selected.png",
+          "sha256": "f6732740ec5b20eeec6964944c02ba00998ec40e1cf494c8bf9ca6b3ab347425"
+        },
+        {
+          "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/frozen-evidence/8/05-second-selected.png",
+          "sha256": "477a4f50a80e528239978d9ba96fdf43813dd64d3e16b619975c1e32b2029ad7"
+        }
+      ],
+      "review_input_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/review/input.json",
+      "review_metrics_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/review/metrics.json",
+      "frozen_manifest_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/frozen-evidence.json",
+      "frozen_execution_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/execution/execution.json",
+      "coverage_status": "incomplete",
+      "coverage_relation": "same_run"
+    }
+  ]
+}

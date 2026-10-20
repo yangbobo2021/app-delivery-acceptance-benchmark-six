@@ -1,0 +1,41 @@
+{
+  "status": "product_failure",
+  "test_files": [
+    "projects/electron-desktop/tests/note-01-s07.test.cjs",
+    "projects/electron-desktop/tests/coverage-tools/README.md",
+    "projects/electron-desktop/tests/coverage-tools/adapter.cjs",
+    "projects/electron-desktop/tests/coverage-tools/core.cjs",
+    "projects/electron-desktop/tests/coverage-tools/direct.cjs",
+    "projects/electron-desktop/tests/coverage-tools/electron-wrapper.cjs",
+    "projects/electron-desktop/tests/coverage-tools/launch.cjs",
+    "projects/electron-desktop/tests/coverage-tools/package.json",
+    "projects/electron-desktop/tests/coverage-tools/package-lock.json",
+    "projects/electron-desktop/tests/coverage-tools/probe.cjs",
+    "projects/electron-desktop/tests/coverage-tools/zero.html"
+  ],
+  "test_command": [
+    "/opt/homebrew/bin/node",
+    "--test",
+    "projects/electron-desktop/tests/note-01-s07.test.cjs"
+  ],
+  "test_env": {},
+  "observations": [
+    "通过统一调试入口执行真实 Electron 界面操作，自动业务断言通过，退出码为 0。",
+    "新增第二条后，两条便签 ID 独立；分别选择及再次选择第一条，完整标题、正文均保持原值。",
+    "实际窗口为 850×650，内容视口为 850×622，设备像素比为 2；保存了 10 张关键状态截图及对应状态记录。",
+    "直接视觉审查发现：保存第二条后，两个列表项标题明显缩小、难以辨读，与单条状态及编辑区字体不协调，不满足列表可读性判据。",
+    "当前标题、正文和操作控件在已审查状态下完整显示；两条列表项均完成实际点击选择。",
+    "应用正常退出，退出码为 0，无信号终止，本次应用进程组已消失；未记录清理异常。",
+    "仅新增本场景测试文件，保留前面场景测试，未修改产品源码。"
+  ],
+  "evidence_paths": [
+    "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/case/debug/attempt-706238959a7b4900bb2a231c94ee47b3/state/screenshots",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/case/debug/attempt-706238959a7b4900bb2a231c94ee47b3/execution/coverage-report.json"
+  ],
+  "limitations": [
+    "所列截图仅为本地调试诊断材料，不是正式验收证据；正式命令通过宿主绑定的 ACCEPTANCE_SCREENSHOT_DIR 输出截图，待冻结重跑及独立审查。",
+    "视觉结论来自截图审查，未用 DOM、坐标或字体数值断言代替视觉判断。",
+    "覆盖率报告整体为 incomplete；四个应用 TypeScript 文件具有 measured 指标，不能据此宣称全项目覆盖率完整。"
+  ],
+  "reason": "新增保留原记录的业务行为通过，但两条便签状态下的列表标题难以辨读，UI 判据失败。"
+}

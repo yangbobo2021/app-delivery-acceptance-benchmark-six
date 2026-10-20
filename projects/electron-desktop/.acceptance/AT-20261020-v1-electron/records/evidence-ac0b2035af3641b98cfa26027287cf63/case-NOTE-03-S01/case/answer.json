@@ -1,0 +1,43 @@
+{
+  "status": "passed_local",
+  "test_files": [
+    "projects/electron-desktop/tests/note-03-s01.test.cjs",
+    "projects/electron-desktop/tests/coverage-tools/README.md",
+    "projects/electron-desktop/tests/coverage-tools/adapter.cjs",
+    "projects/electron-desktop/tests/coverage-tools/core.cjs",
+    "projects/electron-desktop/tests/coverage-tools/direct.cjs",
+    "projects/electron-desktop/tests/coverage-tools/electron-wrapper.cjs",
+    "projects/electron-desktop/tests/coverage-tools/launch.cjs",
+    "projects/electron-desktop/tests/coverage-tools/package.json",
+    "projects/electron-desktop/tests/coverage-tools/package-lock.json",
+    "projects/electron-desktop/tests/coverage-tools/probe.cjs",
+    "projects/electron-desktop/tests/coverage-tools/zero.html"
+  ],
+  "test_command": [
+    "/opt/homebrew/bin/node",
+    "--test",
+    "projects/electron-desktop/tests/note-03-s01.test.cjs"
+  ],
+  "test_env": {},
+  "observations": [
+    "通过统一调试入口执行，最终业务测试及入口退出码均为 0。",
+    "从空独立目录启动真实 Electron，通过界面新建并保存标题“周三工作安排”和两行普通中文正文，列表出现唯一对应便签。",
+    "完全退出后使用同一目录重启，从列表选择便签，完整标题及正文逐字一致。",
+    "两次 Electron 均正常退出，退出码 0、无终止信号，启动的进程组均已消失；无清理异常。",
+    "人工查看五张真实调试截图：窗口 850×650、视口 850×622、DPR 2；各关键状态中文字和控件清晰，未见遮挡或裁切，间距、对齐及样式合理。",
+    "首次调试因测试辅助调用不受支持而失败；修正尺寸记录方式后重跑通过，未修改产品源码。",
+    "覆盖率采集及两个进程的生命周期收尾均 complete，四个应用 TypeScript 文件的行和分支指标均为 measured。"
+  ],
+  "evidence_paths": [
+    "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-03-S01/case/debug/attempt-283a57367e894714a202712fb09febac/state/screenshots",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-03-S01/case/debug/attempt-283a57367e894714a202712fb09febac/execution/command/execution.log",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-03-S01/case/debug/attempt-283a57367e894714a202712fb09febac/execution/coverage-report.json"
+  ],
+  "limitations": [
+    "现有截图仅为本地调试材料；正式命令会将截图和状态写入宿主绑定的 ACCEPTANCE_SCREENSHOT_DIR，仍需冻结重跑及独立审查。",
+    "状态目录、用户数据目录、截图目录和插桩应用环境变量由统一入口注入，test_env 无额外覆盖。",
+    "公共准备中 build.mjs 无可测路线，覆盖率报告整体为 incomplete，不能称为全项目完整覆盖率。",
+    "仅执行 NOTE-03-S01，未扩展至删除持久化或不同用户目录隔离场景。"
+  ],
+  "reason": "首次保存的单条便签在完整退出并同目录重启后内容一致，本地业务验证和截图视觉检查通过，待宿主正式执行及独立复审。"
+}

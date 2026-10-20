@@ -1,0 +1,61 @@
+{
+  "schema": "project-coverage-summary-snapshot-v1",
+  "reports": [
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/coverage-report.json",
+      "sha256": "9c9c99a46d0b80b757667dac6758d3f2f7a7c16b210ce068a150af8a924d8ee2"
+    }
+  ],
+  "prepared_sha256": "718e6011c1fca05038c241bf17de587a57cf3e617aba4f20b46af8535d1b66df",
+  "summary": {
+    "tools": [
+      {
+        "name": "rustc",
+        "version": "rustc 1.94.0 (4a4ef493e 2026-03-02)",
+        "role": "使用 instrument-coverage 和 link-dead-code 生成原生计数与源码映射"
+      },
+      {
+        "name": "llvm-profdata",
+        "version": "LLVM (http://llvm.org/):\n  LLVM version 21.1.8-rust-1.94.0-stable\n  Optimized build.",
+        "role": "合并原生 profile"
+      },
+      {
+        "name": "llvm-cov",
+        "version": "LLVM (http://llvm.org/):\n  LLVM version 21.1.8-rust-1.94.0-stable\n  Optimized build.",
+        "role": "提供源码行分母、命中数、百分比及原生导出"
+      }
+    ],
+    "scopes": {
+      "project": {
+        "status": "measured",
+        "components": [
+          {
+            "id": "rust-tui",
+            "label": "Rust TUI (LLVM)",
+            "source_paths": [
+              "projects/rust-tui/src/main.rs"
+            ],
+            "line": {
+              "status": "measured",
+              "covered": 96,
+              "total": 128,
+              "pct": 75
+            },
+            "branch": {
+              "status": "unavailable",
+              "reason": "Stable rustc instrument-coverage emits no branch mapping; LLVM reports zero branch units"
+            }
+          }
+        ]
+      },
+      "changed_files": {
+        "status": "unavailable",
+        "reason": "No PR or code-diff target in this requirements acceptance"
+      },
+      "changed_lines": {
+        "status": "unavailable",
+        "reason": "No PR or code-diff target in this requirements acceptance"
+      }
+    }
+  }
+}

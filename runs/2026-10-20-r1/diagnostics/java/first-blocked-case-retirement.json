@@ -1,0 +1,13 @@
+{
+  "schema": "blocked-case-retirement-v1",
+  "at": "2026-10-20T03:02:22.043003+00:00",
+  "scene_id": "BATCH-03-S01",
+  "state_path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-03-S01-1/state.json",
+  "state_sha256": "dc695de8c7b0d3ae4a0b1d4b9266267c9e141e57d2ef5f57a9ca10e651cf18ab",
+  "owner_sha256": "acee1f5e4b1ea4c89018333a7d5c3b243304b5512681eeea09d011ed66978d3b",
+  "answer_path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-03-S01-1/case-repair/answer.json",
+  "answer_sha256": "41126c503330911e980e3427e2e0fdfcf811b10086b9bfdfca87c0ac520583d5",
+  "basis": "Case and case_repair both blocked at ensure_active before business execution: coverage-2 prepared spec froze relative registry_path projects/java-batch/.acceptance-local/...; prep activation resolved it from checkout root, debug resolver ran in acceptance workspace, so no registry existed there. No formal execution receipt or review, runner processes exited, source and catalog bindings intact. Reprepare with absolute registry path.",
+  "business_verdict": null,
+  "next_action": "new frozen scene attempt after external blocker is corrected"
+}

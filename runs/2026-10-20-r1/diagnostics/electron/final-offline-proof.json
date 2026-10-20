@@ -1,0 +1,286 @@
+{
+  "offline_project": "/var/folders/jh/mt3s144j7wg98ww3zyqc1np00000gn/T/acceptance-offline-electron-phase2b-qb4z4qym/checkout/projects/electron-desktop",
+  "local_absent": true,
+  "store_check": "passed",
+  "aggregate_archive": "evidence-ac0b2035af3641b98cfa26027287cf63",
+  "rows": [
+    {
+      "scene_id": "NOTE-01-S06",
+      "requirement_id": "NOTE-01",
+      "verdict": "product_bug",
+      "ui_status": "failed",
+      "screenshot_http_statuses": [
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "coverage_status": "incomplete",
+      "coverage_same_run": "same_run",
+      "coverage_components": [
+        {
+          "id": "projects/electron-desktop/src/main.ts",
+          "line": {
+            "status": "measured",
+            "covered": 8,
+            "total": 8,
+            "pct": 100
+          },
+          "branch": {
+            "status": "measured",
+            "covered": 3,
+            "total": 4,
+            "pct": 75
+          }
+        },
+        {
+          "id": "projects/electron-desktop/src/preload.ts",
+          "line": {
+            "status": "measured",
+            "covered": 1,
+            "total": 1,
+            "pct": 100
+          },
+          "branch": {
+            "status": "measured",
+            "covered": 0,
+            "total": 0,
+            "pct": 100
+          }
+        },
+        {
+          "id": "projects/electron-desktop/src/renderer.ts",
+          "line": {
+            "status": "measured",
+            "covered": 8,
+            "total": 8,
+            "pct": 100
+          },
+          "branch": {
+            "status": "measured",
+            "covered": 1,
+            "total": 2,
+            "pct": 50
+          }
+        },
+        {
+          "id": "projects/electron-desktop/src/store.ts",
+          "line": {
+            "status": "measured",
+            "covered": 11,
+            "total": 11,
+            "pct": 100
+          },
+          "branch": {
+            "status": "measured",
+            "covered": 15,
+            "total": 24,
+            "pct": 62.5
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "NOTE-01-S07",
+      "requirement_id": "NOTE-01",
+      "verdict": "product_bug",
+      "ui_status": "failed",
+      "screenshot_http_statuses": [
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "coverage_status": "incomplete",
+      "coverage_same_run": "same_run",
+      "coverage_components": [
+        {
+          "id": "projects/electron-desktop/src/main.ts",
+          "line": {
+            "status": "measured",
+            "covered": 8,
+            "total": 8,
+            "pct": 100
+          },
+          "branch": {
+            "status": "measured",
+            "covered": 3,
+            "total": 4,
+            "pct": 75
+          }
+        },
+        {
+          "id": "projects/electron-desktop/src/preload.ts",
+          "line": {
+            "status": "measured",
+            "covered": 1,
+            "total": 1,
+            "pct": 100
+          },
+          "branch": {
+            "status": "measured",
+            "covered": 0,
+            "total": 0,
+            "pct": 100
+          }
+        },
+        {
+          "id": "projects/electron-desktop/src/renderer.ts",
+          "line": {
+            "status": "measured",
+            "covered": 8,
+            "total": 8,
+            "pct": 100
+          },
+          "branch": {
+            "status": "measured",
+            "covered": 0,
+            "total": 2,
+            "pct": 0
+          }
+        },
+        {
+          "id": "projects/electron-desktop/src/store.ts",
+          "line": {
+            "status": "measured",
+            "covered": 9,
+            "total": 11,
+            "pct": 81.81
+          },
+          "branch": {
+            "status": "measured",
+            "covered": 11,
+            "total": 24,
+            "pct": 45.83
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "NOTE-03-S01",
+      "requirement_id": "NOTE-03",
+      "verdict": "passed",
+      "ui_status": "passed",
+      "screenshot_http_statuses": [
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "coverage_status": "incomplete",
+      "coverage_same_run": "same_run",
+      "coverage_components": [
+        {
+          "id": "projects/electron-desktop/src/main.ts",
+          "line": {
+            "status": "measured",
+            "covered": 8,
+            "total": 8,
+            "pct": 100
+          },
+          "branch": {
+            "status": "measured",
+            "covered": 3,
+            "total": 4,
+            "pct": 75
+          }
+        },
+        {
+          "id": "projects/electron-desktop/src/preload.ts",
+          "line": {
+            "status": "measured",
+            "covered": 1,
+            "total": 1,
+            "pct": 100
+          },
+          "branch": {
+            "status": "measured",
+            "covered": 0,
+            "total": 0,
+            "pct": 100
+          }
+        },
+        {
+          "id": "projects/electron-desktop/src/renderer.ts",
+          "line": {
+            "status": "measured",
+            "covered": 8,
+            "total": 8,
+            "pct": 100
+          },
+          "branch": {
+            "status": "measured",
+            "covered": 0,
+            "total": 2,
+            "pct": 0
+          }
+        },
+        {
+          "id": "projects/electron-desktop/src/store.ts",
+          "line": {
+            "status": "measured",
+            "covered": 9,
+            "total": 11,
+            "pct": 81.81
+          },
+          "branch": {
+            "status": "measured",
+            "covered": 12,
+            "total": 24,
+            "pct": 50
+          }
+        }
+      ]
+    }
+  ],
+  "project_state": {
+    "project_id": "electron-desktop",
+    "scenario_count": 25,
+    "executed_count": 3,
+    "not_executed_count": 22,
+    "passed": 1,
+    "product_bug": 2,
+    "accepted_risk": 0,
+    "needs_attention": 0,
+    "pending_review": 0,
+    "requirement_count": 6,
+    "admitted_rule_count": 0,
+    "pending_rule_count": 0,
+    "result_count": 3,
+    "reconciled": true
+  },
+  "coverage_summary": {
+    "scenes_with_coverage": 3,
+    "verified_reports": [
+      {
+        "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S06/execution/coverage-report.json",
+        "sha256": "51e7513dbaf06b71e60a518d26d1a37597318737ae69a475e1bccfbd7bb22a47"
+      },
+      {
+        "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/execution/coverage-report.json",
+        "sha256": "fb4b57f678caea9bbefa2bbc089fd7f259605e90bab3e3186f804037ccea96cf"
+      },
+      {
+        "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-03-S01/execution/coverage-report.json",
+        "sha256": "974237bd59827afc4473a0b61b5972dde452dd2e3c4173d7920e00e9844cdab5"
+      }
+    ],
+    "project_scope_status": "incomplete"
+  },
+  "build_mjs_archived_disposition": {
+    "kind": "unsupported",
+    "reason": "在独立 Node 构建进程执行，现有 Electron 应用快照无法观测该进程。本轮保留前次限制，未增加或验证独立构建采集路由；不能以应用计数代表此文件。"
+  },
+  "build_mjs_note": "Viewer API project status is incomplete; explicit unsupported reason resides in archived prepared.json. API component list only has four measured app sources.",
+  "warnings": []
+}

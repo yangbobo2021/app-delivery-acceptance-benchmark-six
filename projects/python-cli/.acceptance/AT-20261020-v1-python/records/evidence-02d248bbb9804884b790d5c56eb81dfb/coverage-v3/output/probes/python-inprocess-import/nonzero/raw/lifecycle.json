@@ -1,0 +1,12 @@
+{
+  "started": true,
+  "complete": true,
+  "route": "inprocess",
+  "exit_code": 0,
+  "native": [
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/coverage-v3/output/probes/python-inprocess-import/nonzero/raw/.coverage.bobos-MacBook-Air-2_local.pid21281.XCpMH3Cx.Hs9Hf1czgVRh",
+      "sha256": "a0859d56bb0fa369e241e71dde4ad5ce566cf09bec79cee69a393e8a4160a2c7"
+    }
+  ]
+}

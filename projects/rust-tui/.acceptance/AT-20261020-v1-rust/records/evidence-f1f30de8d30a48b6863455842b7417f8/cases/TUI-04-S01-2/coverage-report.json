@@ -1,0 +1,92 @@
+{
+  "schema": "project-tool-coverage-report-v1",
+  "protocol": "project-coverage-v1",
+  "prepared": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/coverage-2/prepared",
+  "prepared_sha256": "718e6011c1fca05038c241bf17de587a57cf3e617aba4f20b46af8535d1b66df",
+  "scene_id": "TUI-04-S01",
+  "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+  "source_hashes": {
+    "projects/rust-tui/src/main.rs": "d0b38b8eae43e7580069b69eda21b972dec5d0164570a235594a575c3b722c50"
+  },
+  "tools": [
+    {
+      "name": "rustc",
+      "version": "rustc 1.94.0 (4a4ef493e 2026-03-02)",
+      "role": "使用 instrument-coverage 和 link-dead-code 生成原生计数与源码映射"
+    },
+    {
+      "name": "llvm-profdata",
+      "version": "LLVM (http://llvm.org/):\n  LLVM version 21.1.8-rust-1.94.0-stable\n  Optimized build.",
+      "role": "合并原生 profile"
+    },
+    {
+      "name": "llvm-cov",
+      "version": "LLVM (http://llvm.org/):\n  LLVM version 21.1.8-rust-1.94.0-stable\n  Optimized build.",
+      "role": "提供源码行分母、命中数、百分比及原生导出"
+    }
+  ],
+  "collection_relation": "same_run",
+  "status": "measured",
+  "receipt_path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/execution.json",
+  "execution_sha256": "d2e2b14d864da95d1e708354afbbb04dab018164d74682d20994f4c812b74fae",
+  "raw_evidence": [
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/native/product-binary",
+      "sha256": "5794ff5f197e3ed34af25e73e1a189c0c7236f386d28485db1e1bebe4dac9069"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/native/run-26077-3353984249793428757_0.profraw",
+      "sha256": "47922b560b07f16f55bfd28c7ed4aedc5f1bb1dfaee6542ad952ab0c656fac94"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/native/run-26295-3353984249793428757_0.profraw",
+      "sha256": "9eb5a7529ed27334e0ae68d0122cd76752c1ab9f87894f385430845fba8f570f"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/native/llvm-native-archive/merged.profdata",
+      "sha256": "c4e94c2ad8beceab718412fc324377686470d26bfe7f47d55acd647c7ec4409b"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/native/llvm-native-archive/native-export.stdout",
+      "sha256": "48bfa18d49e32fa72f2058aefa0a7d5d75c6bf0719e6e56056d3882da7794207"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/native/llvm-native-archive/native-summary.stdout",
+      "sha256": "42a65e05b933ef59667cbeb6164d5e0000d7859938d7441826a475fb97e25152"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/native/llvm-native-archive/processing.json",
+      "sha256": "1d2c8ea45d8ffd7e071ed8f527ae8ebf4c1acb2eb1fa3fa6efbb216f1ce9184c"
+    }
+  ],
+  "components": [
+    {
+      "id": "rust-tui",
+      "label": "Rust TUI (LLVM)",
+      "source_paths": [
+        "projects/rust-tui/src/main.rs"
+      ],
+      "line": {
+        "status": "measured",
+        "covered": 96,
+        "total": 128,
+        "pct": 75
+      },
+      "branch": {
+        "status": "unavailable",
+        "reason": "Stable rustc instrument-coverage emits no branch mapping; LLVM reports zero branch units"
+      }
+    }
+  ],
+  "collection": {
+    "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/collection.json",
+    "sha256": "b26dc273a837235a40ff875d5b765614b0b10d1e48bc6c0b037331fb99f89f81"
+  },
+  "execution_request": {
+    "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/coverage-request.json",
+    "sha256": "214e2c0f89397d5ca847d53272041d00727a97b44d8e09dbe2ade5cc87cfaf70"
+  },
+  "report_path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/coverage-report.json",
+  "report_sha256": "9c9c99a46d0b80b757667dac6758d3f2f7a7c16b210ce068a150af8a924d8ee2",
+  "capture_end": "2026-10-20T03:34:12.038083+00:00"
+}

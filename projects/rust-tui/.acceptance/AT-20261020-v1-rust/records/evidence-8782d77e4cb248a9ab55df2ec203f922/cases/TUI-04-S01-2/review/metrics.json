@@ -1,0 +1,48 @@
+{
+  "model": "gpt-6.1-sol",
+  "effort": "high",
+  "started_at": "2026-10-20T03:34:21.343Z",
+  "prompt_characters": 17517,
+  "image_inputs": [
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/frozen-evidence/8/initial-0-after-space.png",
+      "sha256": "d7b9b7d7e8ed820d2dde7863f622cf172db07cb69f2a0e30cdc1d3987fe81583"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/frozen-evidence/8/initial-0-before.png",
+      "sha256": "72d4088a952c32db18d387be1e6281647a8a744ef7c18c2974f63f6b6ea6f330"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/frozen-evidence/8/initial-1-after-space.png",
+      "sha256": "946377639e406da1f8fd62ca56031befc0ad3df5120c348a1aedbdd3ffcdfa5e"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/frozen-evidence/8/initial-1-before.png",
+      "sha256": "7ac667e27a71605db9fe05fff80eeccedf23199a3510bf2083eddc878fd6ef9e"
+    }
+  ],
+  "image_aliases": {},
+  "status": "success",
+  "usage": {
+    "toolUses": 10,
+    "tokens": {
+      "coverage": "partial",
+      "totals": {
+        "input": {
+          "total": 333122,
+          "uncached": 47682,
+          "cacheRead": 285440,
+          "cacheWrite": 0
+        },
+        "output": {
+          "total": 3101,
+          "visible": 2791,
+          "reasoning": 310
+        }
+      }
+    }
+  },
+  "seconds": 75.82556225,
+  "tool_calls": 10,
+  "finished_at": "2026-10-20T03:35:37.169Z"
+}

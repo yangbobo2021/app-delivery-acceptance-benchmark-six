@@ -1,0 +1,10 @@
+{
+  "runtime_manifest": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/runtime-4/runtime/runtime.json",
+  "runtime_sha256": "633a6709953472d6d92896e60e74f0e00c7c19b1959ff3fbf6cb70996d1af31d",
+  "tool_root": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/coverage-1/llvm-setup/llvm-tools-1.94.0-aarch64-apple-darwin/llvm-tools-preview/lib/rustlib/aarch64-apple-darwin/bin",
+  "tool_sha256": {
+    "llvm-cov": "1947fc01453e2c167ec930c33fcd714f39b36468b2694bdd65eadb37d02a1589",
+    "llvm-profdata": "dab8a5c18aa52a11bbcab3250164be862301a9bcbff4c36cf1caa84f9e6cd04c"
+  },
+  "source": "projects/rust-tui/src/main.rs"
+}

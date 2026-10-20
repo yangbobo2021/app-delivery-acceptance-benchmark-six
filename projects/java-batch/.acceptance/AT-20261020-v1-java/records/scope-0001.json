@@ -1,0 +1,46 @@
+{
+  "schema": "acceptance-scope-v1",
+  "acceptance_id": "AT-20261020-v1-java",
+  "version": 1,
+  "previous_sha256": null,
+  "created_at": "2026-10-20T02:10:25.480123+00:00",
+  "basis": "用户 2026-10-20 指定第一阶段六项需求验收与固定 ID",
+  "scope": {
+    "target": {
+      "type": "requirements",
+      "project": "java-batch",
+      "revision": "be952659c7d93018e26793daf2e58fa8321601f4"
+    },
+    "requirements": [
+      {
+        "id": "BATCH-01",
+        "text": "BATCH-01：命令接受 `--input <绝对路径>` 和 `--output <绝对路径>`，两者都必填。输入必须以 `event_id,account,amount_cents` 为唯一表头，并至少有一条数据行。每行恰好三列；event_id 和 account 是非空 ASCII 字母、数字、下划线或连字符，金额是 1 至 1000000000 的十进制整数。不支持 CSV 引号语法。"
+      },
+      {
+        "id": "BATCH-02",
+        "text": "BATCH-02：对每个 account 汇总金额与不同 event_id 的笔数。相同 event_id、account、amount_cents 的重复行只处理一次；相同 event_id 对应不同内容时整批失败。账户名大小写敏感。"
+      },
+      {
+        "id": "BATCH-03",
+        "text": "BATCH-03：成功时输出 UTF-8 CSV，表头固定为 `account,total_cents,event_count`，账户按字典序排列；退出码 0，标准错误为空。所有金额使用精确整数，输出每次相同。"
+      },
+      {
+        "id": "BATCH-04",
+        "text": "BATCH-04：任何参数、读取或数据错误都以退出码 2 失败，标准错误给出非空说明，不生成部分输出。若输出路径已存在，不覆盖它；输入文件保持原样。"
+      },
+      {
+        "id": "BATCH-05",
+        "text": "BATCH-05：可从任意工作目录执行，输入和输出路径可位于不同目录。成功生成的输出文件可再次作为普通文件读取；程序不在输入目录创建临时文件。"
+      },
+      {
+        "id": "BATCH-06",
+        "text": "BATCH-06：有 1000 条合法记录的文件应在普通本地机器上完成处理；空行、列数错误、无数据行都应给出 BATCH-04 规定的失败反馈。"
+      }
+    ],
+    "source": "docs/requirements.md",
+    "exclusions": [
+      "本阶段不执行业务场景"
+    ],
+    "user_decision": "仅第一阶段准备；全量六项需求场景；Rust UI 含可读、无遮挡、布局检查"
+  }
+}

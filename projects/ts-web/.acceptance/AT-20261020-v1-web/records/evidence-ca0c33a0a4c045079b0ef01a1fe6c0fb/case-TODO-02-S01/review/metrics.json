@@ -1,0 +1,52 @@
+{
+  "model": "gpt-6.1-sol",
+  "effort": "high",
+  "started_at": "2026-10-20T03:47:02.169Z",
+  "prompt_characters": 18220,
+  "image_inputs": [
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-02-S01/frozen-evidence/15/01-before.png",
+      "sha256": "3e6e8a8c503e8fef71f79130e285f6fddb29b588d994ae5bff9f1b7aaba624ec"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-02-S01/frozen-evidence/15/02-input.png",
+      "sha256": "3f8f8f9a529cfa56e605599621212bc355a3a6768deef2b4d2b453594a8b807e"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-02-S01/frozen-evidence/15/03-uncompleted.png",
+      "sha256": "fe8fa7de8cfb0dc473ea166ec95d019e0c59e070b74c63b36ba2d0fe30bd4476"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-02-S01/frozen-evidence/15/04-completed.png",
+      "sha256": "1129ef02ae87c0e8fdf4e8575a656b33e16fd710bbcda063ce3a7346b77429fb"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-02-S01/frozen-evidence/15/05-restored.png",
+      "sha256": "8c155a1c12da75a27bf58b9c681f019226ce5d2cf2efd5aa1d5219dad4c22388"
+    }
+  ],
+  "image_aliases": {},
+  "status": "success",
+  "usage": {
+    "toolUses": 9,
+    "tokens": {
+      "coverage": "partial",
+      "totals": {
+        "input": {
+          "total": 207842,
+          "uncached": 33378,
+          "cacheRead": 174464,
+          "cacheWrite": 0
+        },
+        "output": {
+          "total": 2944,
+          "visible": 2758,
+          "reasoning": 186
+        }
+      }
+    }
+  },
+  "seconds": 61.5753575,
+  "tool_calls": 9,
+  "finished_at": "2026-10-20T03:48:03.745Z"
+}

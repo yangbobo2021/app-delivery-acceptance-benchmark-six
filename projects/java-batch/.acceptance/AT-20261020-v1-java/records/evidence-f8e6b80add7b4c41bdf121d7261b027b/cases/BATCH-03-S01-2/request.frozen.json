@@ -1,0 +1,83 @@
+{
+  "acceptance": {
+    "project_root": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch",
+    "id": "AT-20261020-v1-java",
+    "scope_sha256": "bcdef962ff8a9739376cbf6d9fa684161ab5f2baebac7a144b7df35802d2e0a8",
+    "knowledge_receipt": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/knowledge-reads/330bbb86cec2498fa3f9d8ad8a1d00fc.json"
+  },
+  "progress_schema": "single-agent-scene-v1",
+  "project": {
+    "id": "workspace",
+    "label": "workspace",
+    "root": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workspace",
+    "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+    "sources": [
+      "projects/java-batch/src/main/java/benchmark/BatchReport.java"
+    ]
+  },
+  "requirements": [
+    {
+      "id": "BATCH-01",
+      "title": "BATCH-01",
+      "text": "BATCH-01：命令接受 `--input <绝对路径>` 和 `--output <绝对路径>`，两者都必填。输入必须以 `event_id,account,amount_cents` 为唯一表头，并至少有一条数据行。每行恰好三列；event_id 和 account 是非空 ASCII 字母、数字、下划线或连字符，金额是 1 至 1000000000 的十进制整数。不支持 CSV 引号语法。"
+    },
+    {
+      "id": "BATCH-02",
+      "title": "BATCH-02",
+      "text": "BATCH-02：对每个 account 汇总金额与不同 event_id 的笔数。相同 event_id、account、amount_cents 的重复行只处理一次；相同 event_id 对应不同内容时整批失败。账户名大小写敏感。"
+    },
+    {
+      "id": "BATCH-03",
+      "title": "BATCH-03",
+      "text": "BATCH-03：成功时输出 UTF-8 CSV，表头固定为 `account,total_cents,event_count`，账户按字典序排列；退出码 0，标准错误为空。所有金额使用精确整数，输出每次相同。"
+    },
+    {
+      "id": "BATCH-04",
+      "title": "BATCH-04",
+      "text": "BATCH-04：任何参数、读取或数据错误都以退出码 2 失败，标准错误给出非空说明，不生成部分输出。若输出路径已存在，不覆盖它；输入文件保持原样。"
+    },
+    {
+      "id": "BATCH-05",
+      "title": "BATCH-05",
+      "text": "BATCH-05：可从任意工作目录执行，输入和输出路径可位于不同目录。成功生成的输出文件可再次作为普通文件读取；程序不在输入目录创建临时文件。"
+    },
+    {
+      "id": "BATCH-06",
+      "title": "BATCH-06",
+      "text": "BATCH-06：有 1000 条合法记录的文件应在普通本地机器上完成处理；空行、列数错误、无数据行都应给出 BATCH-04 规定的失败反馈。"
+    }
+  ],
+  "reverse_rules": [],
+  "scene": {
+    "id": "BATCH-03-S01",
+    "title": "普通成功输出符合交付格式",
+    "priority": "P0",
+    "priority_reason": "普通合法输入无法交付约定格式及成功信号，会阻断批处理结果的正常接收。",
+    "description": "使用仅含 e1,alice,125 的合法输入和不存在的输出路径执行处理。输出须为有效 UTF-8 CSV，表头恰为 account,total_cents,event_count，数据行为 alice,125,1；退出码为 0，标准错误为空。",
+    "requirement_id": "BATCH-03",
+    "kind": "BLACK_BOX"
+  },
+  "case_catalog": [],
+  "case_input_path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/handoff-BATCH-03-S01-2/case-input.json",
+  "config_path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/handoff-BATCH-03-S01-2/config.json",
+  "change": {
+    "inventory": {
+      "schema": "acceptance-project-source-inventory-v1",
+      "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+      "project_id": "java-batch",
+      "source_paths": [
+        "projects/java-batch/src/main/java/benchmark/BatchReport.java"
+      ],
+      "source_hashes": {
+        "projects/java-batch/src/main/java/benchmark/BatchReport.java": "821ba9c5ed64ff2b72dad2c6bfa9ecfac7e5c42e646836f83ce32b89cf2ee2bb"
+      },
+      "change_scope": {
+        "kind": "requirements-baseline",
+        "base_revision": null,
+        "changed_files": [],
+        "changed_lines": {},
+        "reason": "No PR or code-diff target in this requirements acceptance"
+      }
+    }
+  }
+}

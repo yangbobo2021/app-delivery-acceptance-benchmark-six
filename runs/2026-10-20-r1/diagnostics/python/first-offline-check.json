@@ -1,0 +1,5 @@
+{
+  "status": "failed",
+  "reason": "Temporary offline clone omitted required root .acceptance-local/ rule in .gitignore; ProjectView validation rejected it before reading archive. No business rerun.",
+  "correction": "Copy original project .gitignore in attempt2."
+}

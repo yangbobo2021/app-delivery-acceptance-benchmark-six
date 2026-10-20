@@ -1,0 +1,34 @@
+{
+  "status": "passed_local",
+  "test_files": [
+    "projects/java-batch/tests/test_batch_03_s01.py",
+    "projects/java-batch/tests/coverage_adapter.py",
+    "projects/java-batch/tests/coverage_probe.py",
+    "projects/java-batch/tests/coverage_direct.py",
+    "projects/java-batch/tests/coverage-tools.json",
+    "projects/java-batch/tests/CoverageProbe.java"
+  ],
+  "test_command": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "projects/java-batch/tests/test_batch_03_s01.py"
+  ],
+  "test_env": {},
+  "observations": [
+    "复用既有测试，未修改产品源码或前面场景的测试。",
+    "本次新建隔离目录，输入仅含合法数据行 e1,alice,125，输出路径初始不存在。",
+    "编译与业务进程退出码均为 0；9 项业务检查全部通过。",
+    "输出严格 UTF-8 解码及 CSV 解析成功，完整内容为 account,total_cents,event_count\\nalice,125,1\\n。",
+    "原始标准错误仅含 JVM 的 JAVA_TOOL_OPTIONS 注入提示；精确移除该提示后，应用标准错误为空。",
+    "统一调试入口退出 0，采集收尾 complete=true；JaCoCo 0.8.12.202403310830 同次报告记录行命中 46/63、分支命中 22/44。"
+  ],
+  "evidence_paths": [
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-03-S01-2/case/debug/attempt-2eb08c9480414304a56e07188a050071/state/batch-03-s01/observations.json",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-03-S01-2/case/debug/attempt-2eb08c9480414304a56e07188a050071/execution/execution.json",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-03-S01-2/case/debug/attempt-2eb08c9480414304a56e07188a050071/execution/coverage-report.json"
+  ],
+  "limitations": [
+    "BATCH_SCENE_ROOT 由统一入口绑定，每次重跑须使用新目录；JAVA_TOOL_OPTIONS 由覆盖率适配器注入。",
+    "仅验证冻结场景 BATCH-03-S01，本地通过仍需独立审查。"
+  ],
+  "reason": "冻结场景全部判据在本次隔离执行中通过，原始观察及完整覆盖率采集记录已保留。"
+}

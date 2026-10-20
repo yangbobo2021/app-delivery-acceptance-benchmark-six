@@ -1,0 +1,35 @@
+{
+  "status": "passed_local",
+  "test_files": [
+    "projects/python-cli/tests/test_inv_03_s01.py",
+    "projects/python-cli/tests/coverage_support/adapter.py",
+    "projects/python-cli/tests/coverage_support/collect.py",
+    "projects/python-cli/tests/coverage_support/direct.py",
+    "projects/python-cli/tests/coverage_support/coverage-requirements.txt",
+    "projects/python-cli/tests/coverage_support/tool-lock.json",
+    "projects/python-cli/tests/coverage_support/README.md"
+  ],
+  "test_command": [
+    "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/runtime-v2/output/runtime/runtime/venv/bin/python",
+    "-B",
+    "projects/python-cli/tests/test_inv_03_s01.py"
+  ],
+  "test_env": {},
+  "observations": [
+    "通过指定统一调试入口执行一次，业务测试及入口退出码均为 0。",
+    "输入为 acct1/120、acct1/30、acct2/50 三条记录。",
+    "完整 stdout 为 {\"totals\": {\"acct1\": 150, \"acct2\": 50}, \"row_count\": 3}，末尾有换行；可完整解析为单个 JSON 对象。",
+    "字段、账号身份、整数总额及数据行数检查均通过；stderr 为空，共 9 项检查通过。",
+    "原始 CSV、stdout、stderr 和逐项观察已保留；coverage.py 7.16.2 的行与分支报告状态均为 measured。"
+  ],
+  "evidence_paths": [
+    "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/case-inv-03-s01-v1/case/debug/attempt-330a5c1bed1b477290fd6af04a5ccea2/state/inv-03-s01",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/case-inv-03-s01-v1/case/debug/attempt-330a5c1bed1b477290fd6af04a5ccea2/execution/coverage-report.json",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/case-inv-03-s01-v1/case/debug/attempt-330a5c1bed1b477290fd6af04a5ccea2/execution/execution.json"
+  ],
+  "limitations": [
+    "命令从专用 workspace 执行，ACCEPTANCE_CASE_ROOT 由统一入口绑定至每次新建的状态目录。",
+    "结论仅覆盖 INV-03-S01，本地通过仍需独立审查。"
+  ],
+  "reason": "场景指定的真实三行输入通过全部输出合同检查，统一入口正常结束并保留覆盖率报告。"
+}

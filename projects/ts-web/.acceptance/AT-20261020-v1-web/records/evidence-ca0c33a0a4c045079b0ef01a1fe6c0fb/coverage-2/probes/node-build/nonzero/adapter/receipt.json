@@ -1,0 +1,20 @@
+{
+  "command": [
+    "/opt/homebrew/bin/node",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workspace/projects/ts-web/tests/coverage-tools/probe.cjs",
+    "read",
+    "build",
+    "nonzero",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/coverage-2/probes/node-build/nonzero/raw"
+  ],
+  "cwd": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workspace",
+  "exit_code": 0,
+  "stdout": {
+    "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/coverage-2/probes/node-build/nonzero/adapter/stdout.txt",
+    "sha256": "69868615a5b8940ad9385970449374bb9136b0b792ae53d65230be086e2c0001"
+  },
+  "stderr": {
+    "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/coverage-2/probes/node-build/nonzero/adapter/stderr.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

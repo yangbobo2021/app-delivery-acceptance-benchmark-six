@@ -1,0 +1,3228 @@
+{
+  "schema": "offline-view-proof-v1",
+  "source_archive_project": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui",
+  "standalone_store_only": true,
+  "local_absent": true,
+  "snapshot": {
+    "schema": "acceptance-project-view-v1",
+    "project_root": "/private/var/folders/jh/mt3s144j7wg98ww3zyqc1np00000gn/T/acceptance-rust-phase2b-offline-93duia0t/rust-tui",
+    "acceptances": [
+      {
+        "id": "AT-20261020-v1-rust",
+        "title": "终端清单 v1 基线验收",
+        "owner": "Codex",
+        "created_at": "2026-10-20T02:10:25.590337+00:00"
+      }
+    ],
+    "acceptance_id": "AT-20261020-v1-rust",
+    "traces": [],
+    "progress": {
+      "stages": [
+        {
+          "kind": "case",
+          "project_id": "rust-tui",
+          "project_label": "workspace",
+          "target_id": "TUI-02-S01",
+          "state": "done",
+          "detail": "独立判定：产品 BUG",
+          "blocker": "",
+          "requirement_id": "TUI-02",
+          "finished": true,
+          "started_at": "2026-10-20T03:43:11.238167+00:00",
+          "updated_at": "2026-10-20T03:43:11.238167+00:00",
+          "attempt": 0,
+          "role": "",
+          "folder": "/private/var/folders/jh/mt3s144j7wg98ww3zyqc1np00000gn/T/acceptance-rust-phase2b-offline-93duia0t/rust-tui/.acceptance/AT-20261020-v1-rust/records/evidence-8782d77e4cb248a9ab55df2ec203f922/cases/TUI-02-S01-1"
+        },
+        {
+          "kind": "case",
+          "project_id": "rust-tui",
+          "project_label": "workspace",
+          "target_id": "TUI-04-S01",
+          "state": "done",
+          "detail": "独立判定：通过",
+          "blocker": "",
+          "requirement_id": "TUI-04",
+          "finished": true,
+          "started_at": "2026-10-20T03:31:38.545086+00:00",
+          "updated_at": "2026-10-20T03:31:38.545086+00:00",
+          "attempt": 0,
+          "role": "",
+          "folder": "/private/var/folders/jh/mt3s144j7wg98ww3zyqc1np00000gn/T/acceptance-rust-phase2b-offline-93duia0t/rust-tui/.acceptance/AT-20261020-v1-rust/records/evidence-8782d77e4cb248a9ab55df2ec203f922/cases/TUI-04-S01-2"
+        }
+      ],
+      "previews": [
+        {
+          "schema": "delivery-trace-v1",
+          "provisional": true,
+          "project": {
+            "id": "rust-tui",
+            "label": "workspace",
+            "root": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workspace",
+            "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+            "sources": [
+              "projects/rust-tui/src/main.rs"
+            ]
+          },
+          "requirements": [
+            {
+              "id": "TUI-01",
+              "title": "TUI-01",
+              "text": "TUI-01：使用 `--state <绝对路径>` 打开已有的 UTF-8 状态文件；缺少参数、文件不存在或格式错误时，退出码为 2，标准错误给出说明，不进入交互画面。每行格式为 `id|title|done`，id 是唯一的非空 ASCII 字母数字串，title 为 1 至 40 个可打印 ASCII 字符，done 为 `0` 或 `1`；文件至少有一项。"
+            },
+            {
+              "id": "TUI-02",
+              "title": "TUI-02",
+              "text": "TUI-02：在至少 80 列、24 行的真实终端，显示标题、全部可见项目的名称与完成状态、当前选中项及操作提示。文字应可读，选中项的文字与背景不能同色；标题、列表、提示和状态行不得互相遮挡。项目多于可见行数时仍能通过上下移动找到每一项。"
+            },
+            {
+              "id": "TUI-03",
+              "title": "TUI-03",
+              "text": "TUI-03：`j`/下箭头选择下一项，`k`/上箭头选择上一项；到达首尾时保持在边界。当前选中项有明确可见的标识；切换选择不修改文件。"
+            },
+            {
+              "id": "TUI-04",
+              "title": "TUI-04",
+              "text": "TUI-04：按空格切换当前选中项的完成状态，画面立即反映结果，状态文件也保存结果。再次按空格可恢复原状态；其他项不受影响。"
+            },
+            {
+              "id": "TUI-05",
+              "title": "TUI-05",
+              "text": "TUI-05：按 `q` 正常退出、恢复终端状态，退出码 0。若未切换状态，原文件字节不变；程序不在状态文件目录留下临时文件。"
+            },
+            {
+              "id": "TUI-06",
+              "title": "TUI-06",
+              "text": "TUI-06：终端小于 40 列或 10 行时应显示可读的尺寸不足提示，仍能按 `q` 退出，不发生布局遮挡或程序崩溃。终端重新放大后恢复正常列表。"
+            }
+          ],
+          "reverse_rules": [],
+          "change": {
+            "inventory": {
+              "schema": "acceptance-project-source-inventory-v1",
+              "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+              "project_id": "rust-tui",
+              "source_paths": [
+                "projects/rust-tui/src/main.rs"
+              ],
+              "source_hashes": {
+                "projects/rust-tui/src/main.rs": "d0b38b8eae43e7580069b69eda21b972dec5d0164570a235594a575c3b722c50"
+              },
+              "change_scope": {
+                "kind": "requirements-baseline",
+                "base_revision": null,
+                "changed_files": [],
+                "changed_lines": {},
+                "reason": "No PR or code-diff target in this requirements acceptance"
+              }
+            }
+          },
+          "scenarios": [
+            {
+              "id": "TUI-02-S01",
+              "title": "最低规定尺寸下的基本列表呈现",
+              "priority": "P0",
+              "priority_reason": "普通清单的名称、完成状态或当前选择不可辨认，会直接阻断用户浏览并确认操作对象。",
+              "description": "在80列、24行的真实彩色终端打开无需滚动的有效清单，使用普通短名称并包含已完成和未完成项；应显示标题、全部项目的准确名称与完成状态、当前选择及操作提示。标题、列表、提示和状态行可见可读、互不遮挡或裁切，选中文字与背景不同色，排版层次清楚、间距与对齐合理、同类文字和标识样式一致，并符合项目已有风格。",
+              "requirement_id": "TUI-02",
+              "kind": "BLACK_BOX"
+            }
+          ],
+          "bindings": [
+            {
+              "id": "TUI-02-S01-case",
+              "scenario_id": "TUI-02-S01",
+              "kind": "automated",
+              "title": "冻结测试命令",
+              "test_file": "projects/rust-tui/tests/tui02_basic_list.py, projects/rust-tui/tests/tui04_single_toggle.py, projects/rust-tui/tests/llvm_coverage/adapter.py, projects/rust-tui/tests/llvm_coverage/direct.py, projects/rust-tui/tests/llvm_coverage/config.json, projects/rust-tui/tests/llvm_coverage/probe.rs, projects/rust-tui/tests/llvm_coverage/README.md",
+              "command": [
+                "/opt/homebrew/opt/python@3.14/bin/python3.14",
+                "projects/rust-tui/tests/tui02_basic_list.py"
+              ]
+            }
+          ],
+          "case_results": [
+            {
+              "binding_id": "TUI-02-S01-case",
+              "status": "passed",
+              "actual": "冻结执行退出码 0",
+              "evidence_path": "/private/var/folders/jh/mt3s144j7wg98ww3zyqc1np00000gn/T/acceptance-rust-phase2b-offline-93duia0t/rust-tui/.acceptance/AT-20261020-v1-rust/records/evidence-8782d77e4cb248a9ab55df2ec203f922/cases/TUI-02-S01-1/execution/execution.log",
+              "evidence_url": "/api/evidence?acceptance_id=AT-20261020-v1-rust&trace=f7c2eb9e456d5396&binding=TUI-02-S01-case&artifact=ac45d7f15e5688bb"
+            }
+          ],
+          "stage": "reviewed",
+          "judgment": {
+            "status": "product_bug",
+            "reason": "机械执行成功，但冻结截图直接证明选中项不可读，本场景存在产品缺陷。",
+            "ui_review": {
+              "status": "failed",
+              "screenshot_paths": [
+                "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/frozen-evidence/7/tui02-01-open.png",
+                "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/frozen-evidence/7/tui02-02-after-j.png"
+              ],
+              "reason": "已直接观察两张图片。标题、操作提示、未选中列表及底部状态行清楚，区域互不遮挡或裁切，等宽字体、行距和对齐一致，层次合理。但两种关键状态下选中行均只剩灰色实心条，文字、完成标识和选择符不可见，用户无法确认当前操作对象，违反明确可读性要求。",
+              "screenshots": [
+                {
+                  "label": "tui02-01-open.png",
+                  "url": "/api/ui-evidence?acceptance_id=AT-20261020-v1-rust&trace=f7c2eb9e456d5396&sha256=5ea47926f8509337bcd014c36e0c96055d55d26d4dbc1982a1df35e029c1cdaa"
+                },
+                {
+                  "label": "tui02-02-after-j.png",
+                  "url": "/api/ui-evidence?acceptance_id=AT-20261020-v1-rust&trace=f7c2eb9e456d5396&sha256=de77b8f5f4e3c421c3abaf65dba0406c34e503d3cf1d20e3a2c88a05976c149d"
+                }
+              ]
+            }
+          },
+          "coverage": {
+            "schema": "project-tool-coverage-report-v1",
+            "protocol": "project-coverage-v1",
+            "prepared": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/coverage-2/prepared",
+            "prepared_sha256": "718e6011c1fca05038c241bf17de587a57cf3e617aba4f20b46af8535d1b66df",
+            "scene_id": "TUI-02-S01",
+            "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+            "source_hashes": {
+              "projects/rust-tui/src/main.rs": "d0b38b8eae43e7580069b69eda21b972dec5d0164570a235594a575c3b722c50"
+            },
+            "tools": [
+              {
+                "name": "rustc",
+                "version": "rustc 1.94.0 (4a4ef493e 2026-03-02)",
+                "role": "使用 instrument-coverage 和 link-dead-code 生成原生计数与源码映射"
+              },
+              {
+                "name": "llvm-profdata",
+                "version": "LLVM (http://llvm.org/):\n  LLVM version 21.1.8-rust-1.94.0-stable\n  Optimized build.",
+                "role": "合并原生 profile"
+              },
+              {
+                "name": "llvm-cov",
+                "version": "LLVM (http://llvm.org/):\n  LLVM version 21.1.8-rust-1.94.0-stable\n  Optimized build.",
+                "role": "提供源码行分母、命中数、百分比及原生导出"
+              }
+            ],
+            "collection_relation": "same_run",
+            "status": "measured",
+            "receipt_path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/execution/execution.json",
+            "execution_sha256": "ebbf35de2924056abfd94032cc1b8e1536d0d822d540c664a78531fb61a993e1",
+            "raw_evidence": [
+              {
+                "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/execution/native/product-binary",
+                "sha256": "dfd7f10ff53809ec7d384d60d6a31c0879cfb57d9ea46a244ccbc157cf02e086"
+              },
+              {
+                "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/execution/native/run-50508-3353984249793428757_0.profraw",
+                "sha256": "431d67398e4380e016fa3b64cb8e647840236f0fbd5ec17aa94ad30b9fbfa54f"
+              },
+              {
+                "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/execution/native/llvm-native-archive/merged.profdata",
+                "sha256": "5ae869eb35ba560b2239e2895316dad34d5015112c7fdd30883997b7e1269a58"
+              },
+              {
+                "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/execution/native/llvm-native-archive/native-export.stdout",
+                "sha256": "0bc28a5ba34289cee6d87a10da9444c0cd6849baecb958b54214af426a6af3bb"
+              },
+              {
+                "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/execution/native/llvm-native-archive/native-summary.stdout",
+                "sha256": "70456f8e5ec23f5fbf0ad863cea7d1e4eca66c2d358fe1ae1491c8587b4e327a"
+              },
+              {
+                "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/execution/native/llvm-native-archive/processing.json",
+                "sha256": "9cf5f2ea4317d9b099ead9134ceea4402543a5cbde9efbb7ef076a4982004a5d"
+              }
+            ],
+            "components": [
+              {
+                "id": "rust-tui",
+                "label": "Rust TUI (LLVM)",
+                "source_paths": [
+                  "projects/rust-tui/src/main.rs"
+                ],
+                "line": {
+                  "status": "measured",
+                  "covered": 84,
+                  "total": 128,
+                  "pct": 65.625
+                },
+                "branch": {
+                  "status": "unavailable",
+                  "reason": "Stable rustc instrument-coverage emits no branch mapping; LLVM reports zero branch units"
+                }
+              }
+            ],
+            "collection": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/execution/collection.json",
+              "sha256": "dc201b345d9e87c7e6d4591803df5485763ad38b55ecaa106de77950a161f4c7"
+            },
+            "execution_request": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/execution/coverage-request.json",
+              "sha256": "5ab49b4c51672acd5ae6bd5b050da6ace62bdd63573e5c5f7e41cf1ac34ad816"
+            },
+            "report_path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/execution/coverage-report.json",
+            "verified": true,
+            "capture_note": "独立补采记录；业务结论和原执行时间保持不变。"
+          },
+          "progress_folder": "/private/var/folders/jh/mt3s144j7wg98ww3zyqc1np00000gn/T/acceptance-rust-phase2b-offline-93duia0t/rust-tui/.acceptance/AT-20261020-v1-rust/records/evidence-8782d77e4cb248a9ab55df2ec203f922/cases/TUI-02-S01-1",
+          "attempt_number": 0,
+          "progress_updated_at": "2026-10-20T03:43:11.238167+00:00",
+          "attempt_id": "冻结执行",
+          "generated_at": "2026-10-20T03:47:30.313859+00:00",
+          "progress_kind": "case",
+          "progress_state": "done",
+          "workflow_origin": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/request.frozen.json"
+        },
+        {
+          "schema": "delivery-trace-v1",
+          "provisional": true,
+          "project": {
+            "id": "rust-tui",
+            "label": "workspace",
+            "root": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workspace",
+            "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+            "sources": [
+              "projects/rust-tui/src/main.rs"
+            ]
+          },
+          "requirements": [
+            {
+              "id": "TUI-01",
+              "title": "TUI-01",
+              "text": "TUI-01：使用 `--state <绝对路径>` 打开已有的 UTF-8 状态文件；缺少参数、文件不存在或格式错误时，退出码为 2，标准错误给出说明，不进入交互画面。每行格式为 `id|title|done`，id 是唯一的非空 ASCII 字母数字串，title 为 1 至 40 个可打印 ASCII 字符，done 为 `0` 或 `1`；文件至少有一项。"
+            },
+            {
+              "id": "TUI-02",
+              "title": "TUI-02",
+              "text": "TUI-02：在至少 80 列、24 行的真实终端，显示标题、全部可见项目的名称与完成状态、当前选中项及操作提示。文字应可读，选中项的文字与背景不能同色；标题、列表、提示和状态行不得互相遮挡。项目多于可见行数时仍能通过上下移动找到每一项。"
+            },
+            {
+              "id": "TUI-03",
+              "title": "TUI-03",
+              "text": "TUI-03：`j`/下箭头选择下一项，`k`/上箭头选择上一项；到达首尾时保持在边界。当前选中项有明确可见的标识；切换选择不修改文件。"
+            },
+            {
+              "id": "TUI-04",
+              "title": "TUI-04",
+              "text": "TUI-04：按空格切换当前选中项的完成状态，画面立即反映结果，状态文件也保存结果。再次按空格可恢复原状态；其他项不受影响。"
+            },
+            {
+              "id": "TUI-05",
+              "title": "TUI-05",
+              "text": "TUI-05：按 `q` 正常退出、恢复终端状态，退出码 0。若未切换状态，原文件字节不变；程序不在状态文件目录留下临时文件。"
+            },
+            {
+              "id": "TUI-06",
+              "title": "TUI-06",
+              "text": "TUI-06：终端小于 40 列或 10 行时应显示可读的尺寸不足提示，仍能按 `q` 退出，不发生布局遮挡或程序崩溃。终端重新放大后恢复正常列表。"
+            }
+          ],
+          "reverse_rules": [],
+          "change": {
+            "inventory": {
+              "schema": "acceptance-project-source-inventory-v1",
+              "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+              "project_id": "rust-tui",
+              "source_paths": [
+                "projects/rust-tui/src/main.rs"
+              ],
+              "source_hashes": {
+                "projects/rust-tui/src/main.rs": "d0b38b8eae43e7580069b69eda21b972dec5d0164570a235594a575c3b722c50"
+              },
+              "change_scope": {
+                "kind": "requirements-baseline",
+                "base_revision": null,
+                "changed_files": [],
+                "changed_lines": {},
+                "reason": "No PR or code-diff target in this requirements acceptance"
+              }
+            }
+          },
+          "scenarios": [
+            {
+              "id": "TUI-04-S01",
+              "title": "单项清单空格切换、即时显示并保存",
+              "priority": "P0",
+              "priority_reason": "普通单项清单无法正确切换、显示或保存完成状态，直接阻断主要业务操作。",
+              "description": "在满足颜色环境约束且至少80列24行的真实终端，分别打开仅含一个未完成项、仅含一个已完成项的合法状态文件，各按一次空格；无需额外操作，画面立即显示相反的完成状态，状态文件保存相同结果，项目的id和title不变。切换后的标题、项目名称、完成状态、选中标识、操作提示和状态行可见可读、无遮挡或裁切，排版层次清楚、间距与对齐合理，同类文字和控件样式一致，符合项目已有风格。",
+              "requirement_id": "TUI-04",
+              "kind": "BLACK_BOX"
+            }
+          ],
+          "bindings": [
+            {
+              "id": "TUI-04-S01-case",
+              "scenario_id": "TUI-04-S01",
+              "kind": "automated",
+              "title": "冻结测试命令",
+              "test_file": "projects/rust-tui/tests/tui04_single_toggle.py, projects/rust-tui/tests/llvm_coverage/adapter.py, projects/rust-tui/tests/llvm_coverage/direct.py, projects/rust-tui/tests/llvm_coverage/config.json, projects/rust-tui/tests/llvm_coverage/probe.rs, projects/rust-tui/tests/llvm_coverage/README.md",
+              "command": [
+                "/opt/homebrew/opt/python@3.14/bin/python3.14",
+                "projects/rust-tui/tests/tui04_single_toggle.py"
+              ]
+            }
+          ],
+          "case_results": [
+            {
+              "binding_id": "TUI-04-S01-case",
+              "status": "passed",
+              "actual": "冻结执行退出码 0",
+              "evidence_path": "/private/var/folders/jh/mt3s144j7wg98ww3zyqc1np00000gn/T/acceptance-rust-phase2b-offline-93duia0t/rust-tui/.acceptance/AT-20261020-v1-rust/records/evidence-8782d77e4cb248a9ab55df2ec203f922/cases/TUI-04-S01-2/execution/execution.log",
+              "evidence_url": "/api/evidence?acceptance_id=AT-20261020-v1-rust&trace=93a4e44705b2df4b&binding=TUI-04-S01-case&artifact=2690fe3ce2671128"
+            }
+          ],
+          "stage": "reviewed",
+          "judgment": {
+            "status": "passed",
+            "reason": "独立审查支持本单项切换场景通过，业务断言、冻结画面与本次覆盖率来源相互印证。",
+            "ui_review": {
+              "status": "passed",
+              "screenshot_paths": [
+                "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/frozen-evidence/8/initial-0-after-space.png",
+                "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/frozen-evidence/8/initial-0-before.png",
+                "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/frozen-evidence/8/initial-1-after-space.png",
+                "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/frozen-evidence/8/initial-1-before.png"
+              ],
+              "reason": "直接观察四图：两组分别由[ ]变[x]、[x]变[ ]，用户可完成切换任务。标题、完整项目名称、选择箭头、操作提示和底部状态均可读且无遮挡或裁切。标题颜色、分隔线和蓝底选中行形成清楚层次；等宽字体、左对齐及行距一致，底部状态与列表分区合理，单项留白未妨碍操作，达到本场景终端界面的基本视觉完成度。",
+              "screenshots": [
+                {
+                  "label": "initial-0-after-space.png",
+                  "url": "/api/ui-evidence?acceptance_id=AT-20261020-v1-rust&trace=93a4e44705b2df4b&sha256=d7b9b7d7e8ed820d2dde7863f622cf172db07cb69f2a0e30cdc1d3987fe81583"
+                },
+                {
+                  "label": "initial-0-before.png",
+                  "url": "/api/ui-evidence?acceptance_id=AT-20261020-v1-rust&trace=93a4e44705b2df4b&sha256=72d4088a952c32db18d387be1e6281647a8a744ef7c18c2974f63f6b6ea6f330"
+                },
+                {
+                  "label": "initial-1-after-space.png",
+                  "url": "/api/ui-evidence?acceptance_id=AT-20261020-v1-rust&trace=93a4e44705b2df4b&sha256=946377639e406da1f8fd62ca56031befc0ad3df5120c348a1aedbdd3ffcdfa5e"
+                },
+                {
+                  "label": "initial-1-before.png",
+                  "url": "/api/ui-evidence?acceptance_id=AT-20261020-v1-rust&trace=93a4e44705b2df4b&sha256=7ac667e27a71605db9fe05fff80eeccedf23199a3510bf2083eddc878fd6ef9e"
+                }
+              ]
+            }
+          },
+          "coverage": {
+            "schema": "project-tool-coverage-report-v1",
+            "protocol": "project-coverage-v1",
+            "prepared": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/coverage-2/prepared",
+            "prepared_sha256": "718e6011c1fca05038c241bf17de587a57cf3e617aba4f20b46af8535d1b66df",
+            "scene_id": "TUI-04-S01",
+            "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+            "source_hashes": {
+              "projects/rust-tui/src/main.rs": "d0b38b8eae43e7580069b69eda21b972dec5d0164570a235594a575c3b722c50"
+            },
+            "tools": [
+              {
+                "name": "rustc",
+                "version": "rustc 1.94.0 (4a4ef493e 2026-03-02)",
+                "role": "使用 instrument-coverage 和 link-dead-code 生成原生计数与源码映射"
+              },
+              {
+                "name": "llvm-profdata",
+                "version": "LLVM (http://llvm.org/):\n  LLVM version 21.1.8-rust-1.94.0-stable\n  Optimized build.",
+                "role": "合并原生 profile"
+              },
+              {
+                "name": "llvm-cov",
+                "version": "LLVM (http://llvm.org/):\n  LLVM version 21.1.8-rust-1.94.0-stable\n  Optimized build.",
+                "role": "提供源码行分母、命中数、百分比及原生导出"
+              }
+            ],
+            "collection_relation": "same_run",
+            "status": "measured",
+            "receipt_path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/execution.json",
+            "execution_sha256": "d2e2b14d864da95d1e708354afbbb04dab018164d74682d20994f4c812b74fae",
+            "raw_evidence": [
+              {
+                "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/native/product-binary",
+                "sha256": "5794ff5f197e3ed34af25e73e1a189c0c7236f386d28485db1e1bebe4dac9069"
+              },
+              {
+                "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/native/run-26077-3353984249793428757_0.profraw",
+                "sha256": "47922b560b07f16f55bfd28c7ed4aedc5f1bb1dfaee6542ad952ab0c656fac94"
+              },
+              {
+                "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/native/run-26295-3353984249793428757_0.profraw",
+                "sha256": "9eb5a7529ed27334e0ae68d0122cd76752c1ab9f87894f385430845fba8f570f"
+              },
+              {
+                "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/native/llvm-native-archive/merged.profdata",
+                "sha256": "c4e94c2ad8beceab718412fc324377686470d26bfe7f47d55acd647c7ec4409b"
+              },
+              {
+                "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/native/llvm-native-archive/native-export.stdout",
+                "sha256": "48bfa18d49e32fa72f2058aefa0a7d5d75c6bf0719e6e56056d3882da7794207"
+              },
+              {
+                "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/native/llvm-native-archive/native-summary.stdout",
+                "sha256": "42a65e05b933ef59667cbeb6164d5e0000d7859938d7441826a475fb97e25152"
+              },
+              {
+                "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/native/llvm-native-archive/processing.json",
+                "sha256": "1d2c8ea45d8ffd7e071ed8f527ae8ebf4c1acb2eb1fa3fa6efbb216f1ce9184c"
+              }
+            ],
+            "components": [
+              {
+                "id": "rust-tui",
+                "label": "Rust TUI (LLVM)",
+                "source_paths": [
+                  "projects/rust-tui/src/main.rs"
+                ],
+                "line": {
+                  "status": "measured",
+                  "covered": 96,
+                  "total": 128,
+                  "pct": 75
+                },
+                "branch": {
+                  "status": "unavailable",
+                  "reason": "Stable rustc instrument-coverage emits no branch mapping; LLVM reports zero branch units"
+                }
+              }
+            ],
+            "collection": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/collection.json",
+              "sha256": "b26dc273a837235a40ff875d5b765614b0b10d1e48bc6c0b037331fb99f89f81"
+            },
+            "execution_request": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/coverage-request.json",
+              "sha256": "214e2c0f89397d5ca847d53272041d00727a97b44d8e09dbe2ade5cc87cfaf70"
+            },
+            "report_path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/coverage-report.json",
+            "verified": true,
+            "capture_note": "独立补采记录；业务结论和原执行时间保持不变。"
+          },
+          "progress_folder": "/private/var/folders/jh/mt3s144j7wg98ww3zyqc1np00000gn/T/acceptance-rust-phase2b-offline-93duia0t/rust-tui/.acceptance/AT-20261020-v1-rust/records/evidence-8782d77e4cb248a9ab55df2ec203f922/cases/TUI-04-S01-2",
+          "attempt_number": 0,
+          "progress_updated_at": "2026-10-20T03:31:38.545086+00:00",
+          "attempt_id": "冻结执行",
+          "generated_at": "2026-10-20T03:35:38.218284+00:00",
+          "progress_kind": "case",
+          "progress_state": "done",
+          "workflow_origin": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/request.frozen.json"
+        }
+      ],
+      "case_history": [
+        {
+          "schema": "delivery-trace-v1",
+          "provisional": true,
+          "project": {
+            "id": "rust-tui",
+            "label": "workspace",
+            "root": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workspace",
+            "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+            "sources": [
+              "projects/rust-tui/src/main.rs"
+            ]
+          },
+          "requirements": [
+            {
+              "id": "TUI-01",
+              "title": "TUI-01",
+              "text": "TUI-01：使用 `--state <绝对路径>` 打开已有的 UTF-8 状态文件；缺少参数、文件不存在或格式错误时，退出码为 2，标准错误给出说明，不进入交互画面。每行格式为 `id|title|done`，id 是唯一的非空 ASCII 字母数字串，title 为 1 至 40 个可打印 ASCII 字符，done 为 `0` 或 `1`；文件至少有一项。"
+            },
+            {
+              "id": "TUI-02",
+              "title": "TUI-02",
+              "text": "TUI-02：在至少 80 列、24 行的真实终端，显示标题、全部可见项目的名称与完成状态、当前选中项及操作提示。文字应可读，选中项的文字与背景不能同色；标题、列表、提示和状态行不得互相遮挡。项目多于可见行数时仍能通过上下移动找到每一项。"
+            },
+            {
+              "id": "TUI-03",
+              "title": "TUI-03",
+              "text": "TUI-03：`j`/下箭头选择下一项，`k`/上箭头选择上一项；到达首尾时保持在边界。当前选中项有明确可见的标识；切换选择不修改文件。"
+            },
+            {
+              "id": "TUI-04",
+              "title": "TUI-04",
+              "text": "TUI-04：按空格切换当前选中项的完成状态，画面立即反映结果，状态文件也保存结果。再次按空格可恢复原状态；其他项不受影响。"
+            },
+            {
+              "id": "TUI-05",
+              "title": "TUI-05",
+              "text": "TUI-05：按 `q` 正常退出、恢复终端状态，退出码 0。若未切换状态，原文件字节不变；程序不在状态文件目录留下临时文件。"
+            },
+            {
+              "id": "TUI-06",
+              "title": "TUI-06",
+              "text": "TUI-06：终端小于 40 列或 10 行时应显示可读的尺寸不足提示，仍能按 `q` 退出，不发生布局遮挡或程序崩溃。终端重新放大后恢复正常列表。"
+            }
+          ],
+          "reverse_rules": [],
+          "change": {
+            "inventory": {
+              "schema": "acceptance-project-source-inventory-v1",
+              "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+              "project_id": "rust-tui",
+              "source_paths": [
+                "projects/rust-tui/src/main.rs"
+              ],
+              "source_hashes": {
+                "projects/rust-tui/src/main.rs": "d0b38b8eae43e7580069b69eda21b972dec5d0164570a235594a575c3b722c50"
+              },
+              "change_scope": {
+                "kind": "requirements-baseline",
+                "base_revision": null,
+                "changed_files": [],
+                "changed_lines": {},
+                "reason": "No PR or code-diff target in this requirements acceptance"
+              }
+            }
+          },
+          "scenarios": [
+            {
+              "id": "TUI-02-S01",
+              "title": "最低规定尺寸下的基本列表呈现",
+              "priority": "P0",
+              "priority_reason": "普通清单的名称、完成状态或当前选择不可辨认，会直接阻断用户浏览并确认操作对象。",
+              "description": "在80列、24行的真实彩色终端打开无需滚动的有效清单，使用普通短名称并包含已完成和未完成项；应显示标题、全部项目的准确名称与完成状态、当前选择及操作提示。标题、列表、提示和状态行可见可读、互不遮挡或裁切，选中文字与背景不同色，排版层次清楚、间距与对齐合理、同类文字和标识样式一致，并符合项目已有风格。",
+              "requirement_id": "TUI-02",
+              "kind": "BLACK_BOX"
+            }
+          ],
+          "bindings": [
+            {
+              "id": "TUI-02-S01-case",
+              "scenario_id": "TUI-02-S01",
+              "kind": "automated",
+              "title": "冻结测试命令",
+              "test_file": "projects/rust-tui/tests/tui02_basic_list.py, projects/rust-tui/tests/tui04_single_toggle.py, projects/rust-tui/tests/llvm_coverage/adapter.py, projects/rust-tui/tests/llvm_coverage/direct.py, projects/rust-tui/tests/llvm_coverage/config.json, projects/rust-tui/tests/llvm_coverage/probe.rs, projects/rust-tui/tests/llvm_coverage/README.md",
+              "command": [
+                "/opt/homebrew/opt/python@3.14/bin/python3.14",
+                "projects/rust-tui/tests/tui02_basic_list.py"
+              ]
+            }
+          ],
+          "case_results": [
+            {
+              "binding_id": "TUI-02-S01-case",
+              "status": "executed",
+              "actual": "执行退出码 0",
+              "evidence_path": "/private/var/folders/jh/mt3s144j7wg98ww3zyqc1np00000gn/T/acceptance-rust-phase2b-offline-93duia0t/rust-tui/.acceptance/AT-20261020-v1-rust/records/evidence-8782d77e4cb248a9ab55df2ec203f922/cases/TUI-02-S01-1/execution/execution.log",
+              "evidence_url": "/api/evidence?acceptance_id=AT-20261020-v1-rust&trace=f7c2eb9e456d5396&binding=TUI-02-S01-case&artifact=ac45d7f15e5688bb"
+            }
+          ],
+          "stage": "reviewed",
+          "judgment": {
+            "status": "product_bug",
+            "reason": "机械执行成功，但冻结截图直接证明选中项不可读，本场景存在产品缺陷。",
+            "ui_review": {
+              "status": "failed",
+              "screenshot_paths": [
+                "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/frozen-evidence/7/tui02-01-open.png",
+                "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/frozen-evidence/7/tui02-02-after-j.png"
+              ],
+              "reason": "已直接观察两张图片。标题、操作提示、未选中列表及底部状态行清楚，区域互不遮挡或裁切，等宽字体、行距和对齐一致，层次合理。但两种关键状态下选中行均只剩灰色实心条，文字、完成标识和选择符不可见，用户无法确认当前操作对象，违反明确可读性要求。",
+              "screenshots": [
+                {
+                  "label": "tui02-01-open.png",
+                  "url": "/api/ui-evidence?acceptance_id=AT-20261020-v1-rust&trace=f7c2eb9e456d5396&sha256=5ea47926f8509337bcd014c36e0c96055d55d26d4dbc1982a1df35e029c1cdaa"
+                },
+                {
+                  "label": "tui02-02-after-j.png",
+                  "url": "/api/ui-evidence?acceptance_id=AT-20261020-v1-rust&trace=f7c2eb9e456d5396&sha256=de77b8f5f4e3c421c3abaf65dba0406c34e503d3cf1d20e3a2c88a05976c149d"
+                }
+              ]
+            }
+          },
+          "coverage": {
+            "schema": "project-tool-coverage-report-v1",
+            "protocol": "project-coverage-v1",
+            "prepared": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/coverage-2/prepared",
+            "prepared_sha256": "718e6011c1fca05038c241bf17de587a57cf3e617aba4f20b46af8535d1b66df",
+            "scene_id": "TUI-02-S01",
+            "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+            "source_hashes": {
+              "projects/rust-tui/src/main.rs": "d0b38b8eae43e7580069b69eda21b972dec5d0164570a235594a575c3b722c50"
+            },
+            "tools": [
+              {
+                "name": "rustc",
+                "version": "rustc 1.94.0 (4a4ef493e 2026-03-02)",
+                "role": "使用 instrument-coverage 和 link-dead-code 生成原生计数与源码映射"
+              },
+              {
+                "name": "llvm-profdata",
+                "version": "LLVM (http://llvm.org/):\n  LLVM version 21.1.8-rust-1.94.0-stable\n  Optimized build.",
+                "role": "合并原生 profile"
+              },
+              {
+                "name": "llvm-cov",
+                "version": "LLVM (http://llvm.org/):\n  LLVM version 21.1.8-rust-1.94.0-stable\n  Optimized build.",
+                "role": "提供源码行分母、命中数、百分比及原生导出"
+              }
+            ],
+            "collection_relation": "same_run",
+            "status": "measured",
+            "receipt_path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/execution/execution.json",
+            "execution_sha256": "ebbf35de2924056abfd94032cc1b8e1536d0d822d540c664a78531fb61a993e1",
+            "raw_evidence": [
+              {
+                "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/execution/native/product-binary",
+                "sha256": "dfd7f10ff53809ec7d384d60d6a31c0879cfb57d9ea46a244ccbc157cf02e086"
+              },
+              {
+                "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/execution/native/run-50508-3353984249793428757_0.profraw",
+                "sha256": "431d67398e4380e016fa3b64cb8e647840236f0fbd5ec17aa94ad30b9fbfa54f"
+              },
+              {
+                "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/execution/native/llvm-native-archive/merged.profdata",
+                "sha256": "5ae869eb35ba560b2239e2895316dad34d5015112c7fdd30883997b7e1269a58"
+              },
+              {
+                "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/execution/native/llvm-native-archive/native-export.stdout",
+                "sha256": "0bc28a5ba34289cee6d87a10da9444c0cd6849baecb958b54214af426a6af3bb"
+              },
+              {
+                "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/execution/native/llvm-native-archive/native-summary.stdout",
+                "sha256": "70456f8e5ec23f5fbf0ad863cea7d1e4eca66c2d358fe1ae1491c8587b4e327a"
+              },
+              {
+                "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/execution/native/llvm-native-archive/processing.json",
+                "sha256": "9cf5f2ea4317d9b099ead9134ceea4402543a5cbde9efbb7ef076a4982004a5d"
+              }
+            ],
+            "components": [
+              {
+                "id": "rust-tui",
+                "label": "Rust TUI (LLVM)",
+                "source_paths": [
+                  "projects/rust-tui/src/main.rs"
+                ],
+                "line": {
+                  "status": "measured",
+                  "covered": 84,
+                  "total": 128,
+                  "pct": 65.625
+                },
+                "branch": {
+                  "status": "unavailable",
+                  "reason": "Stable rustc instrument-coverage emits no branch mapping; LLVM reports zero branch units"
+                }
+              }
+            ],
+            "collection": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/execution/collection.json",
+              "sha256": "dc201b345d9e87c7e6d4591803df5485763ad38b55ecaa106de77950a161f4c7"
+            },
+            "execution_request": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/execution/coverage-request.json",
+              "sha256": "5ab49b4c51672acd5ae6bd5b050da6ace62bdd63573e5c5f7e41cf1ac34ad816"
+            },
+            "report_path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/execution/coverage-report.json",
+            "verified": true,
+            "capture_note": "独立补采记录；业务结论和原执行时间保持不变。"
+          },
+          "progress_folder": "/private/var/folders/jh/mt3s144j7wg98ww3zyqc1np00000gn/T/acceptance-rust-phase2b-offline-93duia0t/rust-tui/.acceptance/AT-20261020-v1-rust/records/evidence-8782d77e4cb248a9ab55df2ec203f922/cases/TUI-02-S01-1",
+          "attempt_number": 0,
+          "progress_updated_at": "2026-10-20T03:43:11.238167+00:00",
+          "attempt_id": "execution",
+          "generated_at": "2026-10-20T03:46:18.900914+00:00",
+          "progress_kind": "case",
+          "progress_state": "done",
+          "workflow_origin": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/request.frozen.json",
+          "executed_scene_ids": [
+            "TUI-02-S01"
+          ],
+          "judgment_confirmed": true,
+          "judgment_confirmed_at": "2026-10-20T03:47:29.942Z"
+        },
+        {
+          "schema": "delivery-trace-v1",
+          "provisional": true,
+          "project": {
+            "id": "rust-tui",
+            "label": "workspace",
+            "root": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workspace",
+            "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+            "sources": [
+              "projects/rust-tui/src/main.rs"
+            ]
+          },
+          "requirements": [
+            {
+              "id": "TUI-01",
+              "title": "TUI-01",
+              "text": "TUI-01：使用 `--state <绝对路径>` 打开已有的 UTF-8 状态文件；缺少参数、文件不存在或格式错误时，退出码为 2，标准错误给出说明，不进入交互画面。每行格式为 `id|title|done`，id 是唯一的非空 ASCII 字母数字串，title 为 1 至 40 个可打印 ASCII 字符，done 为 `0` 或 `1`；文件至少有一项。"
+            },
+            {
+              "id": "TUI-02",
+              "title": "TUI-02",
+              "text": "TUI-02：在至少 80 列、24 行的真实终端，显示标题、全部可见项目的名称与完成状态、当前选中项及操作提示。文字应可读，选中项的文字与背景不能同色；标题、列表、提示和状态行不得互相遮挡。项目多于可见行数时仍能通过上下移动找到每一项。"
+            },
+            {
+              "id": "TUI-03",
+              "title": "TUI-03",
+              "text": "TUI-03：`j`/下箭头选择下一项，`k`/上箭头选择上一项；到达首尾时保持在边界。当前选中项有明确可见的标识；切换选择不修改文件。"
+            },
+            {
+              "id": "TUI-04",
+              "title": "TUI-04",
+              "text": "TUI-04：按空格切换当前选中项的完成状态，画面立即反映结果，状态文件也保存结果。再次按空格可恢复原状态；其他项不受影响。"
+            },
+            {
+              "id": "TUI-05",
+              "title": "TUI-05",
+              "text": "TUI-05：按 `q` 正常退出、恢复终端状态，退出码 0。若未切换状态，原文件字节不变；程序不在状态文件目录留下临时文件。"
+            },
+            {
+              "id": "TUI-06",
+              "title": "TUI-06",
+              "text": "TUI-06：终端小于 40 列或 10 行时应显示可读的尺寸不足提示，仍能按 `q` 退出，不发生布局遮挡或程序崩溃。终端重新放大后恢复正常列表。"
+            }
+          ],
+          "reverse_rules": [],
+          "change": {
+            "inventory": {
+              "schema": "acceptance-project-source-inventory-v1",
+              "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+              "project_id": "rust-tui",
+              "source_paths": [
+                "projects/rust-tui/src/main.rs"
+              ],
+              "source_hashes": {
+                "projects/rust-tui/src/main.rs": "d0b38b8eae43e7580069b69eda21b972dec5d0164570a235594a575c3b722c50"
+              },
+              "change_scope": {
+                "kind": "requirements-baseline",
+                "base_revision": null,
+                "changed_files": [],
+                "changed_lines": {},
+                "reason": "No PR or code-diff target in this requirements acceptance"
+              }
+            }
+          },
+          "scenarios": [
+            {
+              "id": "TUI-04-S01",
+              "title": "单项清单空格切换、即时显示并保存",
+              "priority": "P0",
+              "priority_reason": "普通单项清单无法正确切换、显示或保存完成状态，直接阻断主要业务操作。",
+              "description": "在满足颜色环境约束且至少80列24行的真实终端，分别打开仅含一个未完成项、仅含一个已完成项的合法状态文件，各按一次空格；无需额外操作，画面立即显示相反的完成状态，状态文件保存相同结果，项目的id和title不变。切换后的标题、项目名称、完成状态、选中标识、操作提示和状态行可见可读、无遮挡或裁切，排版层次清楚、间距与对齐合理，同类文字和控件样式一致，符合项目已有风格。",
+              "requirement_id": "TUI-04",
+              "kind": "BLACK_BOX"
+            }
+          ],
+          "bindings": [
+            {
+              "id": "TUI-04-S01-case",
+              "scenario_id": "TUI-04-S01",
+              "kind": "automated",
+              "title": "冻结测试命令",
+              "test_file": "projects/rust-tui/tests/tui04_single_toggle.py, projects/rust-tui/tests/llvm_coverage/adapter.py, projects/rust-tui/tests/llvm_coverage/direct.py, projects/rust-tui/tests/llvm_coverage/config.json, projects/rust-tui/tests/llvm_coverage/probe.rs, projects/rust-tui/tests/llvm_coverage/README.md",
+              "command": [
+                "/opt/homebrew/opt/python@3.14/bin/python3.14",
+                "projects/rust-tui/tests/tui04_single_toggle.py"
+              ]
+            }
+          ],
+          "case_results": [
+            {
+              "binding_id": "TUI-04-S01-case",
+              "status": "executed",
+              "actual": "执行退出码 0",
+              "evidence_path": "/private/var/folders/jh/mt3s144j7wg98ww3zyqc1np00000gn/T/acceptance-rust-phase2b-offline-93duia0t/rust-tui/.acceptance/AT-20261020-v1-rust/records/evidence-8782d77e4cb248a9ab55df2ec203f922/cases/TUI-04-S01-2/execution/execution.log",
+              "evidence_url": "/api/evidence?acceptance_id=AT-20261020-v1-rust&trace=93a4e44705b2df4b&binding=TUI-04-S01-case&artifact=2690fe3ce2671128"
+            }
+          ],
+          "stage": "reviewed",
+          "judgment": {
+            "status": "passed",
+            "reason": "独立审查支持本单项切换场景通过，业务断言、冻结画面与本次覆盖率来源相互印证。",
+            "ui_review": {
+              "status": "passed",
+              "screenshot_paths": [
+                "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/frozen-evidence/8/initial-0-after-space.png",
+                "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/frozen-evidence/8/initial-0-before.png",
+                "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/frozen-evidence/8/initial-1-after-space.png",
+                "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/frozen-evidence/8/initial-1-before.png"
+              ],
+              "reason": "直接观察四图：两组分别由[ ]变[x]、[x]变[ ]，用户可完成切换任务。标题、完整项目名称、选择箭头、操作提示和底部状态均可读且无遮挡或裁切。标题颜色、分隔线和蓝底选中行形成清楚层次；等宽字体、左对齐及行距一致，底部状态与列表分区合理，单项留白未妨碍操作，达到本场景终端界面的基本视觉完成度。",
+              "screenshots": [
+                {
+                  "label": "initial-0-after-space.png",
+                  "url": "/api/ui-evidence?acceptance_id=AT-20261020-v1-rust&trace=93a4e44705b2df4b&sha256=d7b9b7d7e8ed820d2dde7863f622cf172db07cb69f2a0e30cdc1d3987fe81583"
+                },
+                {
+                  "label": "initial-0-before.png",
+                  "url": "/api/ui-evidence?acceptance_id=AT-20261020-v1-rust&trace=93a4e44705b2df4b&sha256=72d4088a952c32db18d387be1e6281647a8a744ef7c18c2974f63f6b6ea6f330"
+                },
+                {
+                  "label": "initial-1-after-space.png",
+                  "url": "/api/ui-evidence?acceptance_id=AT-20261020-v1-rust&trace=93a4e44705b2df4b&sha256=946377639e406da1f8fd62ca56031befc0ad3df5120c348a1aedbdd3ffcdfa5e"
+                },
+                {
+                  "label": "initial-1-before.png",
+                  "url": "/api/ui-evidence?acceptance_id=AT-20261020-v1-rust&trace=93a4e44705b2df4b&sha256=7ac667e27a71605db9fe05fff80eeccedf23199a3510bf2083eddc878fd6ef9e"
+                }
+              ]
+            }
+          },
+          "coverage": {
+            "schema": "project-tool-coverage-report-v1",
+            "protocol": "project-coverage-v1",
+            "prepared": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/coverage-2/prepared",
+            "prepared_sha256": "718e6011c1fca05038c241bf17de587a57cf3e617aba4f20b46af8535d1b66df",
+            "scene_id": "TUI-04-S01",
+            "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+            "source_hashes": {
+              "projects/rust-tui/src/main.rs": "d0b38b8eae43e7580069b69eda21b972dec5d0164570a235594a575c3b722c50"
+            },
+            "tools": [
+              {
+                "name": "rustc",
+                "version": "rustc 1.94.0 (4a4ef493e 2026-03-02)",
+                "role": "使用 instrument-coverage 和 link-dead-code 生成原生计数与源码映射"
+              },
+              {
+                "name": "llvm-profdata",
+                "version": "LLVM (http://llvm.org/):\n  LLVM version 21.1.8-rust-1.94.0-stable\n  Optimized build.",
+                "role": "合并原生 profile"
+              },
+              {
+                "name": "llvm-cov",
+                "version": "LLVM (http://llvm.org/):\n  LLVM version 21.1.8-rust-1.94.0-stable\n  Optimized build.",
+                "role": "提供源码行分母、命中数、百分比及原生导出"
+              }
+            ],
+            "collection_relation": "same_run",
+            "status": "measured",
+            "receipt_path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/execution.json",
+            "execution_sha256": "d2e2b14d864da95d1e708354afbbb04dab018164d74682d20994f4c812b74fae",
+            "raw_evidence": [
+              {
+                "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/native/product-binary",
+                "sha256": "5794ff5f197e3ed34af25e73e1a189c0c7236f386d28485db1e1bebe4dac9069"
+              },
+              {
+                "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/native/run-26077-3353984249793428757_0.profraw",
+                "sha256": "47922b560b07f16f55bfd28c7ed4aedc5f1bb1dfaee6542ad952ab0c656fac94"
+              },
+              {
+                "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/native/run-26295-3353984249793428757_0.profraw",
+                "sha256": "9eb5a7529ed27334e0ae68d0122cd76752c1ab9f87894f385430845fba8f570f"
+              },
+              {
+                "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/native/llvm-native-archive/merged.profdata",
+                "sha256": "c4e94c2ad8beceab718412fc324377686470d26bfe7f47d55acd647c7ec4409b"
+              },
+              {
+                "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/native/llvm-native-archive/native-export.stdout",
+                "sha256": "48bfa18d49e32fa72f2058aefa0a7d5d75c6bf0719e6e56056d3882da7794207"
+              },
+              {
+                "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/native/llvm-native-archive/native-summary.stdout",
+                "sha256": "42a65e05b933ef59667cbeb6164d5e0000d7859938d7441826a475fb97e25152"
+              },
+              {
+                "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/native/llvm-native-archive/processing.json",
+                "sha256": "1d2c8ea45d8ffd7e071ed8f527ae8ebf4c1acb2eb1fa3fa6efbb216f1ce9184c"
+              }
+            ],
+            "components": [
+              {
+                "id": "rust-tui",
+                "label": "Rust TUI (LLVM)",
+                "source_paths": [
+                  "projects/rust-tui/src/main.rs"
+                ],
+                "line": {
+                  "status": "measured",
+                  "covered": 96,
+                  "total": 128,
+                  "pct": 75
+                },
+                "branch": {
+                  "status": "unavailable",
+                  "reason": "Stable rustc instrument-coverage emits no branch mapping; LLVM reports zero branch units"
+                }
+              }
+            ],
+            "collection": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/collection.json",
+              "sha256": "b26dc273a837235a40ff875d5b765614b0b10d1e48bc6c0b037331fb99f89f81"
+            },
+            "execution_request": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/coverage-request.json",
+              "sha256": "214e2c0f89397d5ca847d53272041d00727a97b44d8e09dbe2ade5cc87cfaf70"
+            },
+            "report_path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/coverage-report.json",
+            "verified": true,
+            "capture_note": "独立补采记录；业务结论和原执行时间保持不变。"
+          },
+          "progress_folder": "/private/var/folders/jh/mt3s144j7wg98ww3zyqc1np00000gn/T/acceptance-rust-phase2b-offline-93duia0t/rust-tui/.acceptance/AT-20261020-v1-rust/records/evidence-8782d77e4cb248a9ab55df2ec203f922/cases/TUI-04-S01-2",
+          "attempt_number": 0,
+          "progress_updated_at": "2026-10-20T03:31:38.545086+00:00",
+          "attempt_id": "execution",
+          "generated_at": "2026-10-20T03:34:12.038083+00:00",
+          "progress_kind": "case",
+          "progress_state": "done",
+          "workflow_origin": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/request.frozen.json",
+          "executed_scene_ids": [
+            "TUI-04-S01"
+          ],
+          "judgment_confirmed": true,
+          "judgment_confirmed_at": "2026-10-20T03:35:37.169Z"
+        }
+      ]
+    },
+    "coverage": [
+      {
+        "project_id": "rust-tui",
+        "project_label": "workspace",
+        "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+        "profile": "718e6011c1fca05038c241bf17de587a57cf3e617aba4f20b46af8535d1b66df",
+        "last_capture_at": "2026-10-20T03:46:18.900914+00:00",
+        "scenes": 26,
+        "scenes_with_coverage": 2,
+        "scopes": {
+          "project": {
+            "status": "measured",
+            "components": [
+              {
+                "id": "rust-tui",
+                "label": "Rust TUI (LLVM)",
+                "source_paths": [
+                  "projects/rust-tui/src/main.rs"
+                ],
+                "line": {
+                  "status": "measured",
+                  "covered": 100,
+                  "total": 128,
+                  "pct": 78.125
+                },
+                "branch": {
+                  "status": "unavailable",
+                  "reason": "Stable rustc instrument-coverage emits no branch mapping; LLVM reports zero branch units"
+                }
+              }
+            ]
+          },
+          "changed_files": {
+            "status": "unavailable",
+            "reason": "No PR or code-diff target in this requirements acceptance"
+          },
+          "changed_lines": {
+            "status": "unavailable",
+            "reason": "No PR or code-diff target in this requirements acceptance"
+          }
+        },
+        "tools": [
+          {
+            "name": "rustc",
+            "version": "rustc 1.94.0 (4a4ef493e 2026-03-02)",
+            "role": "使用 instrument-coverage 和 link-dead-code 生成原生计数与源码映射"
+          },
+          {
+            "name": "llvm-profdata",
+            "version": "LLVM (http://llvm.org/):\n  LLVM version 21.1.8-rust-1.94.0-stable\n  Optimized build.",
+            "role": "合并原生 profile"
+          },
+          {
+            "name": "llvm-cov",
+            "version": "LLVM (http://llvm.org/):\n  LLVM version 21.1.8-rust-1.94.0-stable\n  Optimized build.",
+            "role": "提供源码行分母、命中数、百分比及原生导出"
+          }
+        ],
+        "verified_reports": [
+          {
+            "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/execution/coverage-report.json",
+            "sha256": "4c76e97606ca7491b9c528d2c0491c3ec438e27c56b800e3a69f44a190c612b6"
+          },
+          {
+            "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/coverage-report.json",
+            "sha256": "9c9c99a46d0b80b757667dac6758d3f2f7a7c16b210ce068a150af8a924d8ee2"
+          }
+        ],
+        "scenes_without_collection": 24,
+        "collection_note": "覆盖率来自新采集尝试；旧验收结论与无覆盖率记录仍保留。"
+      }
+    ],
+    "project_state": {
+      "schema": "project-scene-state-v1",
+      "traces": [
+        {
+          "schema": "delivery-trace-v1",
+          "provisional": false,
+          "project": {
+            "id": "rust-tui",
+            "label": "workspace",
+            "root": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workspace",
+            "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+            "sources": [
+              "projects/rust-tui/src/main.rs"
+            ]
+          },
+          "requirements": [
+            {
+              "id": "TUI-01",
+              "title": "TUI-01",
+              "text": "TUI-01：使用 `--state <绝对路径>` 打开已有的 UTF-8 状态文件；缺少参数、文件不存在或格式错误时，退出码为 2，标准错误给出说明，不进入交互画面。每行格式为 `id|title|done`，id 是唯一的非空 ASCII 字母数字串，title 为 1 至 40 个可打印 ASCII 字符，done 为 `0` 或 `1`；文件至少有一项。"
+            },
+            {
+              "id": "TUI-02",
+              "title": "TUI-02",
+              "text": "TUI-02：在至少 80 列、24 行的真实终端，显示标题、全部可见项目的名称与完成状态、当前选中项及操作提示。文字应可读，选中项的文字与背景不能同色；标题、列表、提示和状态行不得互相遮挡。项目多于可见行数时仍能通过上下移动找到每一项。"
+            },
+            {
+              "id": "TUI-03",
+              "title": "TUI-03",
+              "text": "TUI-03：`j`/下箭头选择下一项，`k`/上箭头选择上一项；到达首尾时保持在边界。当前选中项有明确可见的标识；切换选择不修改文件。"
+            },
+            {
+              "id": "TUI-04",
+              "title": "TUI-04",
+              "text": "TUI-04：按空格切换当前选中项的完成状态，画面立即反映结果，状态文件也保存结果。再次按空格可恢复原状态；其他项不受影响。"
+            },
+            {
+              "id": "TUI-05",
+              "title": "TUI-05",
+              "text": "TUI-05：按 `q` 正常退出、恢复终端状态，退出码 0。若未切换状态，原文件字节不变；程序不在状态文件目录留下临时文件。"
+            },
+            {
+              "id": "TUI-06",
+              "title": "TUI-06",
+              "text": "TUI-06：终端小于 40 列或 10 行时应显示可读的尺寸不足提示，仍能按 `q` 退出，不发生布局遮挡或程序崩溃。终端重新放大后恢复正常列表。"
+            }
+          ],
+          "reverse_rules": [],
+          "change": {
+            "inventory": {
+              "schema": "acceptance-project-source-inventory-v1",
+              "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+              "project_id": "rust-tui",
+              "source_paths": [
+                "projects/rust-tui/src/main.rs"
+              ],
+              "source_hashes": {
+                "projects/rust-tui/src/main.rs": "d0b38b8eae43e7580069b69eda21b972dec5d0164570a235594a575c3b722c50"
+              },
+              "change_scope": {
+                "kind": "requirements-baseline",
+                "base_revision": null,
+                "changed_files": [],
+                "changed_lines": {},
+                "reason": "No PR or code-diff target in this requirements acceptance"
+              }
+            }
+          },
+          "scenarios": [
+            {
+              "id": "TUI-02-S01",
+              "title": "最低规定尺寸下的基本列表呈现",
+              "priority": "P0",
+              "priority_reason": "普通清单的名称、完成状态或当前选择不可辨认，会直接阻断用户浏览并确认操作对象。",
+              "description": "在80列、24行的真实彩色终端打开无需滚动的有效清单，使用普通短名称并包含已完成和未完成项；应显示标题、全部项目的准确名称与完成状态、当前选择及操作提示。标题、列表、提示和状态行可见可读、互不遮挡或裁切，选中文字与背景不同色，排版层次清楚、间距与对齐合理、同类文字和标识样式一致，并符合项目已有风格。",
+              "requirement_id": "TUI-02",
+              "kind": "BLACK_BOX"
+            }
+          ],
+          "bindings": [
+            {
+              "id": "TUI-02-S01-case",
+              "scenario_id": "TUI-02-S01",
+              "kind": "automated",
+              "title": "冻结测试命令",
+              "test_file": "projects/rust-tui/tests/tui02_basic_list.py, projects/rust-tui/tests/tui04_single_toggle.py, projects/rust-tui/tests/llvm_coverage/adapter.py, projects/rust-tui/tests/llvm_coverage/direct.py, projects/rust-tui/tests/llvm_coverage/config.json, projects/rust-tui/tests/llvm_coverage/probe.rs, projects/rust-tui/tests/llvm_coverage/README.md",
+              "command": [
+                "/opt/homebrew/opt/python@3.14/bin/python3.14",
+                "projects/rust-tui/tests/tui02_basic_list.py"
+              ]
+            }
+          ],
+          "case_results": [
+            {
+              "binding_id": "TUI-02-S01-case",
+              "status": "passed",
+              "actual": "冻结执行退出码 0",
+              "evidence_path": "/private/var/folders/jh/mt3s144j7wg98ww3zyqc1np00000gn/T/acceptance-rust-phase2b-offline-93duia0t/rust-tui/.acceptance/AT-20261020-v1-rust/records/evidence-8782d77e4cb248a9ab55df2ec203f922/cases/TUI-02-S01-1/execution/execution.log",
+              "evidence_url": "/api/evidence?acceptance_id=AT-20261020-v1-rust&trace=f7c2eb9e456d5396&binding=TUI-02-S01-case&artifact=ac45d7f15e5688bb"
+            }
+          ],
+          "stage": "reviewed",
+          "judgment": {
+            "status": "product_bug",
+            "reason": "机械执行成功，但冻结截图直接证明选中项不可读，本场景存在产品缺陷。",
+            "ui_review": {
+              "status": "failed",
+              "screenshot_paths": [
+                "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/frozen-evidence/7/tui02-01-open.png",
+                "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/frozen-evidence/7/tui02-02-after-j.png"
+              ],
+              "reason": "已直接观察两张图片。标题、操作提示、未选中列表及底部状态行清楚，区域互不遮挡或裁切，等宽字体、行距和对齐一致，层次合理。但两种关键状态下选中行均只剩灰色实心条，文字、完成标识和选择符不可见，用户无法确认当前操作对象，违反明确可读性要求。",
+              "screenshots": [
+                {
+                  "label": "tui02-01-open.png",
+                  "url": "/api/ui-evidence?acceptance_id=AT-20261020-v1-rust&trace=f7c2eb9e456d5396&sha256=5ea47926f8509337bcd014c36e0c96055d55d26d4dbc1982a1df35e029c1cdaa"
+                },
+                {
+                  "label": "tui02-02-after-j.png",
+                  "url": "/api/ui-evidence?acceptance_id=AT-20261020-v1-rust&trace=f7c2eb9e456d5396&sha256=de77b8f5f4e3c421c3abaf65dba0406c34e503d3cf1d20e3a2c88a05976c149d"
+                }
+              ]
+            }
+          },
+          "coverage": {
+            "schema": "project-tool-coverage-report-v1",
+            "protocol": "project-coverage-v1",
+            "prepared": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/coverage-2/prepared",
+            "prepared_sha256": "718e6011c1fca05038c241bf17de587a57cf3e617aba4f20b46af8535d1b66df",
+            "scene_id": "TUI-02-S01",
+            "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+            "source_hashes": {
+              "projects/rust-tui/src/main.rs": "d0b38b8eae43e7580069b69eda21b972dec5d0164570a235594a575c3b722c50"
+            },
+            "tools": [
+              {
+                "name": "rustc",
+                "version": "rustc 1.94.0 (4a4ef493e 2026-03-02)",
+                "role": "使用 instrument-coverage 和 link-dead-code 生成原生计数与源码映射"
+              },
+              {
+                "name": "llvm-profdata",
+                "version": "LLVM (http://llvm.org/):\n  LLVM version 21.1.8-rust-1.94.0-stable\n  Optimized build.",
+                "role": "合并原生 profile"
+              },
+              {
+                "name": "llvm-cov",
+                "version": "LLVM (http://llvm.org/):\n  LLVM version 21.1.8-rust-1.94.0-stable\n  Optimized build.",
+                "role": "提供源码行分母、命中数、百分比及原生导出"
+              }
+            ],
+            "collection_relation": "same_run",
+            "status": "measured",
+            "receipt_path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/execution/execution.json",
+            "execution_sha256": "ebbf35de2924056abfd94032cc1b8e1536d0d822d540c664a78531fb61a993e1",
+            "raw_evidence": [
+              {
+                "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/execution/native/product-binary",
+                "sha256": "dfd7f10ff53809ec7d384d60d6a31c0879cfb57d9ea46a244ccbc157cf02e086"
+              },
+              {
+                "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/execution/native/run-50508-3353984249793428757_0.profraw",
+                "sha256": "431d67398e4380e016fa3b64cb8e647840236f0fbd5ec17aa94ad30b9fbfa54f"
+              },
+              {
+                "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/execution/native/llvm-native-archive/merged.profdata",
+                "sha256": "5ae869eb35ba560b2239e2895316dad34d5015112c7fdd30883997b7e1269a58"
+              },
+              {
+                "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/execution/native/llvm-native-archive/native-export.stdout",
+                "sha256": "0bc28a5ba34289cee6d87a10da9444c0cd6849baecb958b54214af426a6af3bb"
+              },
+              {
+                "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/execution/native/llvm-native-archive/native-summary.stdout",
+                "sha256": "70456f8e5ec23f5fbf0ad863cea7d1e4eca66c2d358fe1ae1491c8587b4e327a"
+              },
+              {
+                "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/execution/native/llvm-native-archive/processing.json",
+                "sha256": "9cf5f2ea4317d9b099ead9134ceea4402543a5cbde9efbb7ef076a4982004a5d"
+              }
+            ],
+            "components": [
+              {
+                "id": "rust-tui",
+                "label": "Rust TUI (LLVM)",
+                "source_paths": [
+                  "projects/rust-tui/src/main.rs"
+                ],
+                "line": {
+                  "status": "measured",
+                  "covered": 84,
+                  "total": 128,
+                  "pct": 65.625
+                },
+                "branch": {
+                  "status": "unavailable",
+                  "reason": "Stable rustc instrument-coverage emits no branch mapping; LLVM reports zero branch units"
+                }
+              }
+            ],
+            "collection": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/execution/collection.json",
+              "sha256": "dc201b345d9e87c7e6d4591803df5485763ad38b55ecaa106de77950a161f4c7"
+            },
+            "execution_request": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/execution/coverage-request.json",
+              "sha256": "5ab49b4c51672acd5ae6bd5b050da6ace62bdd63573e5c5f7e41cf1ac34ad816"
+            },
+            "report_path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/execution/coverage-report.json",
+            "verified": true,
+            "capture_note": "独立补采记录；业务结论和原执行时间保持不变。"
+          },
+          "progress_folder": "/private/var/folders/jh/mt3s144j7wg98ww3zyqc1np00000gn/T/acceptance-rust-phase2b-offline-93duia0t/rust-tui/.acceptance/AT-20261020-v1-rust/records/evidence-8782d77e4cb248a9ab55df2ec203f922/cases/TUI-02-S01-1",
+          "attempt_number": 0,
+          "progress_updated_at": "2026-10-20T03:43:11.238167+00:00",
+          "attempt_id": "冻结执行",
+          "generated_at": "2026-10-20T03:47:30.313859+00:00",
+          "progress_kind": "case",
+          "progress_state": "done",
+          "workflow_origin": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/request.frozen.json",
+          "execution_known": true,
+          "judgment_source": {
+            "attempt_id": "execution",
+            "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+            "confirmed_at": "2026-10-20T03:47:29.942Z"
+          },
+          "current_links": {},
+          "result_category": "product_bug"
+        },
+        {
+          "schema": "delivery-trace-v1",
+          "provisional": false,
+          "project": {
+            "id": "rust-tui",
+            "label": "workspace",
+            "root": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workspace",
+            "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+            "sources": [
+              "projects/rust-tui/src/main.rs"
+            ]
+          },
+          "requirements": [
+            {
+              "id": "TUI-01",
+              "title": "TUI-01",
+              "text": "TUI-01：使用 `--state <绝对路径>` 打开已有的 UTF-8 状态文件；缺少参数、文件不存在或格式错误时，退出码为 2，标准错误给出说明，不进入交互画面。每行格式为 `id|title|done`，id 是唯一的非空 ASCII 字母数字串，title 为 1 至 40 个可打印 ASCII 字符，done 为 `0` 或 `1`；文件至少有一项。"
+            },
+            {
+              "id": "TUI-02",
+              "title": "TUI-02",
+              "text": "TUI-02：在至少 80 列、24 行的真实终端，显示标题、全部可见项目的名称与完成状态、当前选中项及操作提示。文字应可读，选中项的文字与背景不能同色；标题、列表、提示和状态行不得互相遮挡。项目多于可见行数时仍能通过上下移动找到每一项。"
+            },
+            {
+              "id": "TUI-03",
+              "title": "TUI-03",
+              "text": "TUI-03：`j`/下箭头选择下一项，`k`/上箭头选择上一项；到达首尾时保持在边界。当前选中项有明确可见的标识；切换选择不修改文件。"
+            },
+            {
+              "id": "TUI-04",
+              "title": "TUI-04",
+              "text": "TUI-04：按空格切换当前选中项的完成状态，画面立即反映结果，状态文件也保存结果。再次按空格可恢复原状态；其他项不受影响。"
+            },
+            {
+              "id": "TUI-05",
+              "title": "TUI-05",
+              "text": "TUI-05：按 `q` 正常退出、恢复终端状态，退出码 0。若未切换状态，原文件字节不变；程序不在状态文件目录留下临时文件。"
+            },
+            {
+              "id": "TUI-06",
+              "title": "TUI-06",
+              "text": "TUI-06：终端小于 40 列或 10 行时应显示可读的尺寸不足提示，仍能按 `q` 退出，不发生布局遮挡或程序崩溃。终端重新放大后恢复正常列表。"
+            }
+          ],
+          "reverse_rules": [],
+          "change": {
+            "inventory": {
+              "schema": "acceptance-project-source-inventory-v1",
+              "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+              "project_id": "rust-tui",
+              "source_paths": [
+                "projects/rust-tui/src/main.rs"
+              ],
+              "source_hashes": {
+                "projects/rust-tui/src/main.rs": "d0b38b8eae43e7580069b69eda21b972dec5d0164570a235594a575c3b722c50"
+              },
+              "change_scope": {
+                "kind": "requirements-baseline",
+                "base_revision": null,
+                "changed_files": [],
+                "changed_lines": {},
+                "reason": "No PR or code-diff target in this requirements acceptance"
+              }
+            }
+          },
+          "scenarios": [
+            {
+              "id": "TUI-04-S01",
+              "title": "单项清单空格切换、即时显示并保存",
+              "priority": "P0",
+              "priority_reason": "普通单项清单无法正确切换、显示或保存完成状态，直接阻断主要业务操作。",
+              "description": "在满足颜色环境约束且至少80列24行的真实终端，分别打开仅含一个未完成项、仅含一个已完成项的合法状态文件，各按一次空格；无需额外操作，画面立即显示相反的完成状态，状态文件保存相同结果，项目的id和title不变。切换后的标题、项目名称、完成状态、选中标识、操作提示和状态行可见可读、无遮挡或裁切，排版层次清楚、间距与对齐合理，同类文字和控件样式一致，符合项目已有风格。",
+              "requirement_id": "TUI-04",
+              "kind": "BLACK_BOX"
+            }
+          ],
+          "bindings": [
+            {
+              "id": "TUI-04-S01-case",
+              "scenario_id": "TUI-04-S01",
+              "kind": "automated",
+              "title": "冻结测试命令",
+              "test_file": "projects/rust-tui/tests/tui04_single_toggle.py, projects/rust-tui/tests/llvm_coverage/adapter.py, projects/rust-tui/tests/llvm_coverage/direct.py, projects/rust-tui/tests/llvm_coverage/config.json, projects/rust-tui/tests/llvm_coverage/probe.rs, projects/rust-tui/tests/llvm_coverage/README.md",
+              "command": [
+                "/opt/homebrew/opt/python@3.14/bin/python3.14",
+                "projects/rust-tui/tests/tui04_single_toggle.py"
+              ]
+            }
+          ],
+          "case_results": [
+            {
+              "binding_id": "TUI-04-S01-case",
+              "status": "passed",
+              "actual": "冻结执行退出码 0",
+              "evidence_path": "/private/var/folders/jh/mt3s144j7wg98ww3zyqc1np00000gn/T/acceptance-rust-phase2b-offline-93duia0t/rust-tui/.acceptance/AT-20261020-v1-rust/records/evidence-8782d77e4cb248a9ab55df2ec203f922/cases/TUI-04-S01-2/execution/execution.log",
+              "evidence_url": "/api/evidence?acceptance_id=AT-20261020-v1-rust&trace=93a4e44705b2df4b&binding=TUI-04-S01-case&artifact=2690fe3ce2671128"
+            }
+          ],
+          "stage": "reviewed",
+          "judgment": {
+            "status": "passed",
+            "reason": "独立审查支持本单项切换场景通过，业务断言、冻结画面与本次覆盖率来源相互印证。",
+            "ui_review": {
+              "status": "passed",
+              "screenshot_paths": [
+                "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/frozen-evidence/8/initial-0-after-space.png",
+                "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/frozen-evidence/8/initial-0-before.png",
+                "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/frozen-evidence/8/initial-1-after-space.png",
+                "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/frozen-evidence/8/initial-1-before.png"
+              ],
+              "reason": "直接观察四图：两组分别由[ ]变[x]、[x]变[ ]，用户可完成切换任务。标题、完整项目名称、选择箭头、操作提示和底部状态均可读且无遮挡或裁切。标题颜色、分隔线和蓝底选中行形成清楚层次；等宽字体、左对齐及行距一致，底部状态与列表分区合理，单项留白未妨碍操作，达到本场景终端界面的基本视觉完成度。",
+              "screenshots": [
+                {
+                  "label": "initial-0-after-space.png",
+                  "url": "/api/ui-evidence?acceptance_id=AT-20261020-v1-rust&trace=93a4e44705b2df4b&sha256=d7b9b7d7e8ed820d2dde7863f622cf172db07cb69f2a0e30cdc1d3987fe81583"
+                },
+                {
+                  "label": "initial-0-before.png",
+                  "url": "/api/ui-evidence?acceptance_id=AT-20261020-v1-rust&trace=93a4e44705b2df4b&sha256=72d4088a952c32db18d387be1e6281647a8a744ef7c18c2974f63f6b6ea6f330"
+                },
+                {
+                  "label": "initial-1-after-space.png",
+                  "url": "/api/ui-evidence?acceptance_id=AT-20261020-v1-rust&trace=93a4e44705b2df4b&sha256=946377639e406da1f8fd62ca56031befc0ad3df5120c348a1aedbdd3ffcdfa5e"
+                },
+                {
+                  "label": "initial-1-before.png",
+                  "url": "/api/ui-evidence?acceptance_id=AT-20261020-v1-rust&trace=93a4e44705b2df4b&sha256=7ac667e27a71605db9fe05fff80eeccedf23199a3510bf2083eddc878fd6ef9e"
+                }
+              ]
+            }
+          },
+          "coverage": {
+            "schema": "project-tool-coverage-report-v1",
+            "protocol": "project-coverage-v1",
+            "prepared": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/coverage-2/prepared",
+            "prepared_sha256": "718e6011c1fca05038c241bf17de587a57cf3e617aba4f20b46af8535d1b66df",
+            "scene_id": "TUI-04-S01",
+            "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+            "source_hashes": {
+              "projects/rust-tui/src/main.rs": "d0b38b8eae43e7580069b69eda21b972dec5d0164570a235594a575c3b722c50"
+            },
+            "tools": [
+              {
+                "name": "rustc",
+                "version": "rustc 1.94.0 (4a4ef493e 2026-03-02)",
+                "role": "使用 instrument-coverage 和 link-dead-code 生成原生计数与源码映射"
+              },
+              {
+                "name": "llvm-profdata",
+                "version": "LLVM (http://llvm.org/):\n  LLVM version 21.1.8-rust-1.94.0-stable\n  Optimized build.",
+                "role": "合并原生 profile"
+              },
+              {
+                "name": "llvm-cov",
+                "version": "LLVM (http://llvm.org/):\n  LLVM version 21.1.8-rust-1.94.0-stable\n  Optimized build.",
+                "role": "提供源码行分母、命中数、百分比及原生导出"
+              }
+            ],
+            "collection_relation": "same_run",
+            "status": "measured",
+            "receipt_path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/execution.json",
+            "execution_sha256": "d2e2b14d864da95d1e708354afbbb04dab018164d74682d20994f4c812b74fae",
+            "raw_evidence": [
+              {
+                "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/native/product-binary",
+                "sha256": "5794ff5f197e3ed34af25e73e1a189c0c7236f386d28485db1e1bebe4dac9069"
+              },
+              {
+                "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/native/run-26077-3353984249793428757_0.profraw",
+                "sha256": "47922b560b07f16f55bfd28c7ed4aedc5f1bb1dfaee6542ad952ab0c656fac94"
+              },
+              {
+                "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/native/run-26295-3353984249793428757_0.profraw",
+                "sha256": "9eb5a7529ed27334e0ae68d0122cd76752c1ab9f87894f385430845fba8f570f"
+              },
+              {
+                "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/native/llvm-native-archive/merged.profdata",
+                "sha256": "c4e94c2ad8beceab718412fc324377686470d26bfe7f47d55acd647c7ec4409b"
+              },
+              {
+                "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/native/llvm-native-archive/native-export.stdout",
+                "sha256": "48bfa18d49e32fa72f2058aefa0a7d5d75c6bf0719e6e56056d3882da7794207"
+              },
+              {
+                "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/native/llvm-native-archive/native-summary.stdout",
+                "sha256": "42a65e05b933ef59667cbeb6164d5e0000d7859938d7441826a475fb97e25152"
+              },
+              {
+                "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/native/llvm-native-archive/processing.json",
+                "sha256": "1d2c8ea45d8ffd7e071ed8f527ae8ebf4c1acb2eb1fa3fa6efbb216f1ce9184c"
+              }
+            ],
+            "components": [
+              {
+                "id": "rust-tui",
+                "label": "Rust TUI (LLVM)",
+                "source_paths": [
+                  "projects/rust-tui/src/main.rs"
+                ],
+                "line": {
+                  "status": "measured",
+                  "covered": 96,
+                  "total": 128,
+                  "pct": 75
+                },
+                "branch": {
+                  "status": "unavailable",
+                  "reason": "Stable rustc instrument-coverage emits no branch mapping; LLVM reports zero branch units"
+                }
+              }
+            ],
+            "collection": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/collection.json",
+              "sha256": "b26dc273a837235a40ff875d5b765614b0b10d1e48bc6c0b037331fb99f89f81"
+            },
+            "execution_request": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/coverage-request.json",
+              "sha256": "214e2c0f89397d5ca847d53272041d00727a97b44d8e09dbe2ade5cc87cfaf70"
+            },
+            "report_path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/coverage-report.json",
+            "verified": true,
+            "capture_note": "独立补采记录；业务结论和原执行时间保持不变。"
+          },
+          "progress_folder": "/private/var/folders/jh/mt3s144j7wg98ww3zyqc1np00000gn/T/acceptance-rust-phase2b-offline-93duia0t/rust-tui/.acceptance/AT-20261020-v1-rust/records/evidence-8782d77e4cb248a9ab55df2ec203f922/cases/TUI-04-S01-2",
+          "attempt_number": 0,
+          "progress_updated_at": "2026-10-20T03:31:38.545086+00:00",
+          "attempt_id": "冻结执行",
+          "generated_at": "2026-10-20T03:35:38.218284+00:00",
+          "progress_kind": "case",
+          "progress_state": "done",
+          "workflow_origin": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/request.frozen.json",
+          "execution_known": true,
+          "judgment_source": {
+            "attempt_id": "execution",
+            "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+            "confirmed_at": "2026-10-20T03:35:37.169Z"
+          },
+          "current_links": {},
+          "result_category": "passed"
+        },
+        {
+          "schema": "delivery-trace-v1",
+          "generated_at": "2026-10-20T02:56:56.182677+00:00",
+          "project": {
+            "id": "rust-tui",
+            "label": "终端清单",
+            "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+            "root": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui"
+          },
+          "requirements": [
+            {
+              "id": "TUI-01",
+              "title": "TUI-01",
+              "text": "TUI-01：使用 `--state <绝对路径>` 打开已有的 UTF-8 状态文件；缺少参数、文件不存在或格式错误时，退出码为 2，标准错误给出说明，不进入交互画面。每行格式为 `id|title|done`，id 是唯一的非空 ASCII 字母数字串，title 为 1 至 40 个可打印 ASCII 字符，done 为 `0` 或 `1`；文件至少有一项。"
+            },
+            {
+              "id": "TUI-02",
+              "title": "TUI-02",
+              "text": "TUI-02：在至少 80 列、24 行的真实终端，显示标题、全部可见项目的名称与完成状态、当前选中项及操作提示。文字应可读，选中项的文字与背景不能同色；标题、列表、提示和状态行不得互相遮挡。项目多于可见行数时仍能通过上下移动找到每一项。"
+            },
+            {
+              "id": "TUI-03",
+              "title": "TUI-03",
+              "text": "TUI-03：`j`/下箭头选择下一项，`k`/上箭头选择上一项；到达首尾时保持在边界。当前选中项有明确可见的标识；切换选择不修改文件。"
+            },
+            {
+              "id": "TUI-04",
+              "title": "TUI-04",
+              "text": "TUI-04：按空格切换当前选中项的完成状态，画面立即反映结果，状态文件也保存结果。再次按空格可恢复原状态；其他项不受影响。"
+            },
+            {
+              "id": "TUI-05",
+              "title": "TUI-05",
+              "text": "TUI-05：按 `q` 正常退出、恢复终端状态，退出码 0。若未切换状态，原文件字节不变；程序不在状态文件目录留下临时文件。"
+            },
+            {
+              "id": "TUI-06",
+              "title": "TUI-06",
+              "text": "TUI-06：终端小于 40 列或 10 行时应显示可读的尺寸不足提示，仍能按 `q` 退出，不发生布局遮挡或程序崩溃。终端重新放大后恢复正常列表。"
+            }
+          ],
+          "reverse_rules": [],
+          "scenarios": [
+            {
+              "id": "TUI-01-S01",
+              "requirement_id": "TUI-01",
+              "title": "通过绝对路径加载正常清单",
+              "description": "使用 --state 指定已有 UTF-8 文件的绝对路径，文件包含 A1|Plan|0 和 B2|Review|1 两条记录；程序进入交互画面，载入的项目名称与完成状态分别对应输入。加载后的主要内容与操作提示可见可读、无遮挡或裁切，排版层次清晰、间距与对齐合理、字体与控件样式一致，具有基本视觉完成度并符合项目已有风格。",
+              "priority": "P0"
+            }
+          ],
+          "bindings": [],
+          "case_results": [],
+          "attempt_id": "catalog",
+          "stage": "scenario_self_checked",
+          "judgment": {
+            "status": "not_run",
+            "reason": "尚无用例执行记录。"
+          },
+          "coverage": {
+            "status": "pending"
+          },
+          "execution_known": false,
+          "provisional": false,
+          "result_category": "not_run"
+        },
+        {
+          "schema": "delivery-trace-v1",
+          "generated_at": "2026-10-20T02:56:56.182677+00:00",
+          "project": {
+            "id": "rust-tui",
+            "label": "终端清单",
+            "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+            "root": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui"
+          },
+          "requirements": [
+            {
+              "id": "TUI-01",
+              "title": "TUI-01",
+              "text": "TUI-01：使用 `--state <绝对路径>` 打开已有的 UTF-8 状态文件；缺少参数、文件不存在或格式错误时，退出码为 2，标准错误给出说明，不进入交互画面。每行格式为 `id|title|done`，id 是唯一的非空 ASCII 字母数字串，title 为 1 至 40 个可打印 ASCII 字符，done 为 `0` 或 `1`；文件至少有一项。"
+            },
+            {
+              "id": "TUI-02",
+              "title": "TUI-02",
+              "text": "TUI-02：在至少 80 列、24 行的真实终端，显示标题、全部可见项目的名称与完成状态、当前选中项及操作提示。文字应可读，选中项的文字与背景不能同色；标题、列表、提示和状态行不得互相遮挡。项目多于可见行数时仍能通过上下移动找到每一项。"
+            },
+            {
+              "id": "TUI-03",
+              "title": "TUI-03",
+              "text": "TUI-03：`j`/下箭头选择下一项，`k`/上箭头选择上一项；到达首尾时保持在边界。当前选中项有明确可见的标识；切换选择不修改文件。"
+            },
+            {
+              "id": "TUI-04",
+              "title": "TUI-04",
+              "text": "TUI-04：按空格切换当前选中项的完成状态，画面立即反映结果，状态文件也保存结果。再次按空格可恢复原状态；其他项不受影响。"
+            },
+            {
+              "id": "TUI-05",
+              "title": "TUI-05",
+              "text": "TUI-05：按 `q` 正常退出、恢复终端状态，退出码 0。若未切换状态，原文件字节不变；程序不在状态文件目录留下临时文件。"
+            },
+            {
+              "id": "TUI-06",
+              "title": "TUI-06",
+              "text": "TUI-06：终端小于 40 列或 10 行时应显示可读的尺寸不足提示，仍能按 `q` 退出，不发生布局遮挡或程序崩溃。终端重新放大后恢复正常列表。"
+            }
+          ],
+          "reverse_rules": [],
+          "scenarios": [
+            {
+              "id": "TUI-01-S02",
+              "requirement_id": "TUI-01",
+              "title": "接受合法标识的边界与字符组合",
+              "description": "以绝对路径打开其他字段均合法的 UTF-8 文件，包含单字符字母、纯数字、大小写字母与数字混合以及长度为 41 的字母数字 id；这些记录均成功载入，不对 id 额外施加标题长度限制。加载后的主要内容与操作提示可见可读、无遮挡或裁切，排版层次清晰、间距与对齐合理、字体与控件样式一致，具有基本视觉完成度并符合项目已有风格。",
+              "priority": "P1"
+            }
+          ],
+          "bindings": [],
+          "case_results": [],
+          "attempt_id": "catalog",
+          "stage": "scenario_self_checked",
+          "judgment": {
+            "status": "not_run",
+            "reason": "尚无用例执行记录。"
+          },
+          "coverage": {
+            "status": "pending"
+          },
+          "execution_known": false,
+          "provisional": false,
+          "result_category": "not_run"
+        },
+        {
+          "schema": "delivery-trace-v1",
+          "generated_at": "2026-10-20T02:56:56.182677+00:00",
+          "project": {
+            "id": "rust-tui",
+            "label": "终端清单",
+            "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+            "root": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui"
+          },
+          "requirements": [
+            {
+              "id": "TUI-01",
+              "title": "TUI-01",
+              "text": "TUI-01：使用 `--state <绝对路径>` 打开已有的 UTF-8 状态文件；缺少参数、文件不存在或格式错误时，退出码为 2，标准错误给出说明，不进入交互画面。每行格式为 `id|title|done`，id 是唯一的非空 ASCII 字母数字串，title 为 1 至 40 个可打印 ASCII 字符，done 为 `0` 或 `1`；文件至少有一项。"
+            },
+            {
+              "id": "TUI-02",
+              "title": "TUI-02",
+              "text": "TUI-02：在至少 80 列、24 行的真实终端，显示标题、全部可见项目的名称与完成状态、当前选中项及操作提示。文字应可读，选中项的文字与背景不能同色；标题、列表、提示和状态行不得互相遮挡。项目多于可见行数时仍能通过上下移动找到每一项。"
+            },
+            {
+              "id": "TUI-03",
+              "title": "TUI-03",
+              "text": "TUI-03：`j`/下箭头选择下一项，`k`/上箭头选择上一项；到达首尾时保持在边界。当前选中项有明确可见的标识；切换选择不修改文件。"
+            },
+            {
+              "id": "TUI-04",
+              "title": "TUI-04",
+              "text": "TUI-04：按空格切换当前选中项的完成状态，画面立即反映结果，状态文件也保存结果。再次按空格可恢复原状态；其他项不受影响。"
+            },
+            {
+              "id": "TUI-05",
+              "title": "TUI-05",
+              "text": "TUI-05：按 `q` 正常退出、恢复终端状态，退出码 0。若未切换状态，原文件字节不变；程序不在状态文件目录留下临时文件。"
+            },
+            {
+              "id": "TUI-06",
+              "title": "TUI-06",
+              "text": "TUI-06：终端小于 40 列或 10 行时应显示可读的尺寸不足提示，仍能按 `q` 退出，不发生布局遮挡或程序崩溃。终端重新放大后恢复正常列表。"
+            }
+          ],
+          "reverse_rules": [],
+          "scenarios": [
+            {
+              "id": "TUI-01-S03",
+              "requirement_id": "TUI-01",
+              "title": "接受标题长度边界与可打印字符",
+              "description": "以绝对路径打开合法 UTF-8 文件，分别包含单个空格标题、单个 ~ 标题，以及恰好 40 个可打印 ASCII 字符且含内部空格和标点的标题，本场景不使用分隔符 | 作为标题内容；所有记录均载入，空格标题对应的记录存在，其他标题内容与完成状态对应输入。加载后的主要内容与操作提示可见可读、无遮挡或裁切，排版层次清晰、间距与对齐合理、字体与控件样式一致，具有基本视觉完成度并符合项目已有风格。",
+              "priority": "P1"
+            }
+          ],
+          "bindings": [],
+          "case_results": [],
+          "attempt_id": "catalog",
+          "stage": "scenario_self_checked",
+          "judgment": {
+            "status": "not_run",
+            "reason": "尚无用例执行记录。"
+          },
+          "coverage": {
+            "status": "pending"
+          },
+          "execution_known": false,
+          "provisional": false,
+          "result_category": "not_run"
+        },
+        {
+          "schema": "delivery-trace-v1",
+          "generated_at": "2026-10-20T02:56:56.182677+00:00",
+          "project": {
+            "id": "rust-tui",
+            "label": "终端清单",
+            "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+            "root": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui"
+          },
+          "requirements": [
+            {
+              "id": "TUI-01",
+              "title": "TUI-01",
+              "text": "TUI-01：使用 `--state <绝对路径>` 打开已有的 UTF-8 状态文件；缺少参数、文件不存在或格式错误时，退出码为 2，标准错误给出说明，不进入交互画面。每行格式为 `id|title|done`，id 是唯一的非空 ASCII 字母数字串，title 为 1 至 40 个可打印 ASCII 字符，done 为 `0` 或 `1`；文件至少有一项。"
+            },
+            {
+              "id": "TUI-02",
+              "title": "TUI-02",
+              "text": "TUI-02：在至少 80 列、24 行的真实终端，显示标题、全部可见项目的名称与完成状态、当前选中项及操作提示。文字应可读，选中项的文字与背景不能同色；标题、列表、提示和状态行不得互相遮挡。项目多于可见行数时仍能通过上下移动找到每一项。"
+            },
+            {
+              "id": "TUI-03",
+              "title": "TUI-03",
+              "text": "TUI-03：`j`/下箭头选择下一项，`k`/上箭头选择上一项；到达首尾时保持在边界。当前选中项有明确可见的标识；切换选择不修改文件。"
+            },
+            {
+              "id": "TUI-04",
+              "title": "TUI-04",
+              "text": "TUI-04：按空格切换当前选中项的完成状态，画面立即反映结果，状态文件也保存结果。再次按空格可恢复原状态；其他项不受影响。"
+            },
+            {
+              "id": "TUI-05",
+              "title": "TUI-05",
+              "text": "TUI-05：按 `q` 正常退出、恢复终端状态，退出码 0。若未切换状态，原文件字节不变；程序不在状态文件目录留下临时文件。"
+            },
+            {
+              "id": "TUI-06",
+              "title": "TUI-06",
+              "text": "TUI-06：终端小于 40 列或 10 行时应显示可读的尺寸不足提示，仍能按 `q` 退出，不发生布局遮挡或程序崩溃。终端重新放大后恢复正常列表。"
+            }
+          ],
+          "reverse_rules": [],
+          "scenarios": [
+            {
+              "id": "TUI-01-S04",
+              "requirement_id": "TUI-01",
+              "title": "缺少状态参数时拒绝启动",
+              "description": "分别在未提供 --state 和提供 --state 但缺少路径值时启动；每种情况均以退出码 2 结束，标准错误说明缺少参数，不进入交互画面。终端中的错误说明可见可读、无遮挡或裁切，排版层次清晰、间距与对齐合理、文字样式一致，具有基本视觉完成度并符合项目已有风格。",
+              "priority": "P1"
+            }
+          ],
+          "bindings": [],
+          "case_results": [],
+          "attempt_id": "catalog",
+          "stage": "scenario_self_checked",
+          "judgment": {
+            "status": "not_run",
+            "reason": "尚无用例执行记录。"
+          },
+          "coverage": {
+            "status": "pending"
+          },
+          "execution_known": false,
+          "provisional": false,
+          "result_category": "not_run"
+        },
+        {
+          "schema": "delivery-trace-v1",
+          "generated_at": "2026-10-20T02:56:56.182677+00:00",
+          "project": {
+            "id": "rust-tui",
+            "label": "终端清单",
+            "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+            "root": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui"
+          },
+          "requirements": [
+            {
+              "id": "TUI-01",
+              "title": "TUI-01",
+              "text": "TUI-01：使用 `--state <绝对路径>` 打开已有的 UTF-8 状态文件；缺少参数、文件不存在或格式错误时，退出码为 2，标准错误给出说明，不进入交互画面。每行格式为 `id|title|done`，id 是唯一的非空 ASCII 字母数字串，title 为 1 至 40 个可打印 ASCII 字符，done 为 `0` 或 `1`；文件至少有一项。"
+            },
+            {
+              "id": "TUI-02",
+              "title": "TUI-02",
+              "text": "TUI-02：在至少 80 列、24 行的真实终端，显示标题、全部可见项目的名称与完成状态、当前选中项及操作提示。文字应可读，选中项的文字与背景不能同色；标题、列表、提示和状态行不得互相遮挡。项目多于可见行数时仍能通过上下移动找到每一项。"
+            },
+            {
+              "id": "TUI-03",
+              "title": "TUI-03",
+              "text": "TUI-03：`j`/下箭头选择下一项，`k`/上箭头选择上一项；到达首尾时保持在边界。当前选中项有明确可见的标识；切换选择不修改文件。"
+            },
+            {
+              "id": "TUI-04",
+              "title": "TUI-04",
+              "text": "TUI-04：按空格切换当前选中项的完成状态，画面立即反映结果，状态文件也保存结果。再次按空格可恢复原状态；其他项不受影响。"
+            },
+            {
+              "id": "TUI-05",
+              "title": "TUI-05",
+              "text": "TUI-05：按 `q` 正常退出、恢复终端状态，退出码 0。若未切换状态，原文件字节不变；程序不在状态文件目录留下临时文件。"
+            },
+            {
+              "id": "TUI-06",
+              "title": "TUI-06",
+              "text": "TUI-06：终端小于 40 列或 10 行时应显示可读的尺寸不足提示，仍能按 `q` 退出，不发生布局遮挡或程序崩溃。终端重新放大后恢复正常列表。"
+            }
+          ],
+          "reverse_rules": [],
+          "scenarios": [
+            {
+              "id": "TUI-01-S05",
+              "requirement_id": "TUI-01",
+              "title": "状态文件不存在时拒绝启动",
+              "description": "使用 --state 指向不存在文件的绝对路径；程序以退出码 2 结束，标准错误说明文件不存在，不进入交互画面。终端中的错误说明可见可读、无遮挡或裁切，排版层次清晰、间距与对齐合理、文字样式一致，具有基本视觉完成度并符合项目已有风格。",
+              "priority": "P1"
+            }
+          ],
+          "bindings": [],
+          "case_results": [],
+          "attempt_id": "catalog",
+          "stage": "scenario_self_checked",
+          "judgment": {
+            "status": "not_run",
+            "reason": "尚无用例执行记录。"
+          },
+          "coverage": {
+            "status": "pending"
+          },
+          "execution_known": false,
+          "provisional": false,
+          "result_category": "not_run"
+        },
+        {
+          "schema": "delivery-trace-v1",
+          "generated_at": "2026-10-20T02:56:56.182677+00:00",
+          "project": {
+            "id": "rust-tui",
+            "label": "终端清单",
+            "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+            "root": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui"
+          },
+          "requirements": [
+            {
+              "id": "TUI-01",
+              "title": "TUI-01",
+              "text": "TUI-01：使用 `--state <绝对路径>` 打开已有的 UTF-8 状态文件；缺少参数、文件不存在或格式错误时，退出码为 2，标准错误给出说明，不进入交互画面。每行格式为 `id|title|done`，id 是唯一的非空 ASCII 字母数字串，title 为 1 至 40 个可打印 ASCII 字符，done 为 `0` 或 `1`；文件至少有一项。"
+            },
+            {
+              "id": "TUI-02",
+              "title": "TUI-02",
+              "text": "TUI-02：在至少 80 列、24 行的真实终端，显示标题、全部可见项目的名称与完成状态、当前选中项及操作提示。文字应可读，选中项的文字与背景不能同色；标题、列表、提示和状态行不得互相遮挡。项目多于可见行数时仍能通过上下移动找到每一项。"
+            },
+            {
+              "id": "TUI-03",
+              "title": "TUI-03",
+              "text": "TUI-03：`j`/下箭头选择下一项，`k`/上箭头选择上一项；到达首尾时保持在边界。当前选中项有明确可见的标识；切换选择不修改文件。"
+            },
+            {
+              "id": "TUI-04",
+              "title": "TUI-04",
+              "text": "TUI-04：按空格切换当前选中项的完成状态，画面立即反映结果，状态文件也保存结果。再次按空格可恢复原状态；其他项不受影响。"
+            },
+            {
+              "id": "TUI-05",
+              "title": "TUI-05",
+              "text": "TUI-05：按 `q` 正常退出、恢复终端状态，退出码 0。若未切换状态，原文件字节不变；程序不在状态文件目录留下临时文件。"
+            },
+            {
+              "id": "TUI-06",
+              "title": "TUI-06",
+              "text": "TUI-06：终端小于 40 列或 10 行时应显示可读的尺寸不足提示，仍能按 `q` 退出，不发生布局遮挡或程序崩溃。终端重新放大后恢复正常列表。"
+            }
+          ],
+          "reverse_rules": [],
+          "scenarios": [
+            {
+              "id": "TUI-01-S06",
+              "requirement_id": "TUI-01",
+              "title": "拒绝空文件与不完整记录结构",
+              "description": "分别提供空文件，以及在合法记录后含缺少分隔字段的记录或中间空行的 UTF-8 文件；每种情况均以退出码 2 结束，标准错误说明内容格式问题，不进入交互画面，也不只载入合法前缀。终端中的错误说明可见可读、无遮挡或裁切，排版层次清晰、间距与对齐合理、文字样式一致，具有基本视觉完成度并符合项目已有风格。",
+              "priority": "P1"
+            }
+          ],
+          "bindings": [],
+          "case_results": [],
+          "attempt_id": "catalog",
+          "stage": "scenario_self_checked",
+          "judgment": {
+            "status": "not_run",
+            "reason": "尚无用例执行记录。"
+          },
+          "coverage": {
+            "status": "pending"
+          },
+          "execution_known": false,
+          "provisional": false,
+          "result_category": "not_run"
+        },
+        {
+          "schema": "delivery-trace-v1",
+          "generated_at": "2026-10-20T02:56:56.182677+00:00",
+          "project": {
+            "id": "rust-tui",
+            "label": "终端清单",
+            "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+            "root": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui"
+          },
+          "requirements": [
+            {
+              "id": "TUI-01",
+              "title": "TUI-01",
+              "text": "TUI-01：使用 `--state <绝对路径>` 打开已有的 UTF-8 状态文件；缺少参数、文件不存在或格式错误时，退出码为 2，标准错误给出说明，不进入交互画面。每行格式为 `id|title|done`，id 是唯一的非空 ASCII 字母数字串，title 为 1 至 40 个可打印 ASCII 字符，done 为 `0` 或 `1`；文件至少有一项。"
+            },
+            {
+              "id": "TUI-02",
+              "title": "TUI-02",
+              "text": "TUI-02：在至少 80 列、24 行的真实终端，显示标题、全部可见项目的名称与完成状态、当前选中项及操作提示。文字应可读，选中项的文字与背景不能同色；标题、列表、提示和状态行不得互相遮挡。项目多于可见行数时仍能通过上下移动找到每一项。"
+            },
+            {
+              "id": "TUI-03",
+              "title": "TUI-03",
+              "text": "TUI-03：`j`/下箭头选择下一项，`k`/上箭头选择上一项；到达首尾时保持在边界。当前选中项有明确可见的标识；切换选择不修改文件。"
+            },
+            {
+              "id": "TUI-04",
+              "title": "TUI-04",
+              "text": "TUI-04：按空格切换当前选中项的完成状态，画面立即反映结果，状态文件也保存结果。再次按空格可恢复原状态；其他项不受影响。"
+            },
+            {
+              "id": "TUI-05",
+              "title": "TUI-05",
+              "text": "TUI-05：按 `q` 正常退出、恢复终端状态，退出码 0。若未切换状态，原文件字节不变；程序不在状态文件目录留下临时文件。"
+            },
+            {
+              "id": "TUI-06",
+              "title": "TUI-06",
+              "text": "TUI-06：终端小于 40 列或 10 行时应显示可读的尺寸不足提示，仍能按 `q` 退出，不发生布局遮挡或程序崩溃。终端重新放大后恢复正常列表。"
+            }
+          ],
+          "reverse_rules": [],
+          "scenarios": [
+            {
+              "id": "TUI-01-S07",
+              "requirement_id": "TUI-01",
+              "title": "拒绝空标识与非法标识字符",
+              "description": "在其他内容合法的 UTF-8 文件中，分别设置空 id，以及含空格、连字符、下划线或非 ASCII 字符的 id；每种情况均以退出码 2 结束，标准错误说明格式或标识问题，不进入交互画面。终端中的错误说明可见可读、无遮挡或裁切，排版层次清晰、间距与对齐合理、文字样式一致，具有基本视觉完成度并符合项目已有风格。",
+              "priority": "P1"
+            }
+          ],
+          "bindings": [],
+          "case_results": [],
+          "attempt_id": "catalog",
+          "stage": "scenario_self_checked",
+          "judgment": {
+            "status": "not_run",
+            "reason": "尚无用例执行记录。"
+          },
+          "coverage": {
+            "status": "pending"
+          },
+          "execution_known": false,
+          "provisional": false,
+          "result_category": "not_run"
+        },
+        {
+          "schema": "delivery-trace-v1",
+          "generated_at": "2026-10-20T02:56:56.182677+00:00",
+          "project": {
+            "id": "rust-tui",
+            "label": "终端清单",
+            "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+            "root": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui"
+          },
+          "requirements": [
+            {
+              "id": "TUI-01",
+              "title": "TUI-01",
+              "text": "TUI-01：使用 `--state <绝对路径>` 打开已有的 UTF-8 状态文件；缺少参数、文件不存在或格式错误时，退出码为 2，标准错误给出说明，不进入交互画面。每行格式为 `id|title|done`，id 是唯一的非空 ASCII 字母数字串，title 为 1 至 40 个可打印 ASCII 字符，done 为 `0` 或 `1`；文件至少有一项。"
+            },
+            {
+              "id": "TUI-02",
+              "title": "TUI-02",
+              "text": "TUI-02：在至少 80 列、24 行的真实终端，显示标题、全部可见项目的名称与完成状态、当前选中项及操作提示。文字应可读，选中项的文字与背景不能同色；标题、列表、提示和状态行不得互相遮挡。项目多于可见行数时仍能通过上下移动找到每一项。"
+            },
+            {
+              "id": "TUI-03",
+              "title": "TUI-03",
+              "text": "TUI-03：`j`/下箭头选择下一项，`k`/上箭头选择上一项；到达首尾时保持在边界。当前选中项有明确可见的标识；切换选择不修改文件。"
+            },
+            {
+              "id": "TUI-04",
+              "title": "TUI-04",
+              "text": "TUI-04：按空格切换当前选中项的完成状态，画面立即反映结果，状态文件也保存结果。再次按空格可恢复原状态；其他项不受影响。"
+            },
+            {
+              "id": "TUI-05",
+              "title": "TUI-05",
+              "text": "TUI-05：按 `q` 正常退出、恢复终端状态，退出码 0。若未切换状态，原文件字节不变；程序不在状态文件目录留下临时文件。"
+            },
+            {
+              "id": "TUI-06",
+              "title": "TUI-06",
+              "text": "TUI-06：终端小于 40 列或 10 行时应显示可读的尺寸不足提示，仍能按 `q` 退出，不发生布局遮挡或程序崩溃。终端重新放大后恢复正常列表。"
+            }
+          ],
+          "reverse_rules": [],
+          "scenarios": [
+            {
+              "id": "TUI-01-S08",
+              "requirement_id": "TUI-01",
+              "title": "拒绝重复标识",
+              "description": "提供两条 id 完全相同、标题及完成状态不同且各字段分别合法的 UTF-8 记录；程序以退出码 2 结束，标准错误说明重复标识或格式问题，不进入交互画面，不以去重或覆盖记录代替拒绝。终端中的错误说明可见可读、无遮挡或裁切，排版层次清晰、间距与对齐合理、文字样式一致，具有基本视觉完成度并符合项目已有风格。",
+              "priority": "P1"
+            }
+          ],
+          "bindings": [],
+          "case_results": [],
+          "attempt_id": "catalog",
+          "stage": "scenario_self_checked",
+          "judgment": {
+            "status": "not_run",
+            "reason": "尚无用例执行记录。"
+          },
+          "coverage": {
+            "status": "pending"
+          },
+          "execution_known": false,
+          "provisional": false,
+          "result_category": "not_run"
+        },
+        {
+          "schema": "delivery-trace-v1",
+          "generated_at": "2026-10-20T02:56:56.182677+00:00",
+          "project": {
+            "id": "rust-tui",
+            "label": "终端清单",
+            "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+            "root": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui"
+          },
+          "requirements": [
+            {
+              "id": "TUI-01",
+              "title": "TUI-01",
+              "text": "TUI-01：使用 `--state <绝对路径>` 打开已有的 UTF-8 状态文件；缺少参数、文件不存在或格式错误时，退出码为 2，标准错误给出说明，不进入交互画面。每行格式为 `id|title|done`，id 是唯一的非空 ASCII 字母数字串，title 为 1 至 40 个可打印 ASCII 字符，done 为 `0` 或 `1`；文件至少有一项。"
+            },
+            {
+              "id": "TUI-02",
+              "title": "TUI-02",
+              "text": "TUI-02：在至少 80 列、24 行的真实终端，显示标题、全部可见项目的名称与完成状态、当前选中项及操作提示。文字应可读，选中项的文字与背景不能同色；标题、列表、提示和状态行不得互相遮挡。项目多于可见行数时仍能通过上下移动找到每一项。"
+            },
+            {
+              "id": "TUI-03",
+              "title": "TUI-03",
+              "text": "TUI-03：`j`/下箭头选择下一项，`k`/上箭头选择上一项；到达首尾时保持在边界。当前选中项有明确可见的标识；切换选择不修改文件。"
+            },
+            {
+              "id": "TUI-04",
+              "title": "TUI-04",
+              "text": "TUI-04：按空格切换当前选中项的完成状态，画面立即反映结果，状态文件也保存结果。再次按空格可恢复原状态；其他项不受影响。"
+            },
+            {
+              "id": "TUI-05",
+              "title": "TUI-05",
+              "text": "TUI-05：按 `q` 正常退出、恢复终端状态，退出码 0。若未切换状态，原文件字节不变；程序不在状态文件目录留下临时文件。"
+            },
+            {
+              "id": "TUI-06",
+              "title": "TUI-06",
+              "text": "TUI-06：终端小于 40 列或 10 行时应显示可读的尺寸不足提示，仍能按 `q` 退出，不发生布局遮挡或程序崩溃。终端重新放大后恢复正常列表。"
+            }
+          ],
+          "reverse_rules": [],
+          "scenarios": [
+            {
+              "id": "TUI-01-S09",
+              "requirement_id": "TUI-01",
+              "title": "拒绝非法标题长度与字符",
+              "description": "在其他内容合法的 UTF-8 文件中，分别设置空标题、41 个可打印 ASCII 字符的标题，以及含制表符、DEL 或中文字符的标题；每种情况均以退出码 2 结束，标准错误说明标题或格式问题，不进入交互画面。终端中的错误说明可见可读、无遮挡或裁切，排版层次清晰、间距与对齐合理、文字样式一致，具有基本视觉完成度并符合项目已有风格。",
+              "priority": "P1"
+            }
+          ],
+          "bindings": [],
+          "case_results": [],
+          "attempt_id": "catalog",
+          "stage": "scenario_self_checked",
+          "judgment": {
+            "status": "not_run",
+            "reason": "尚无用例执行记录。"
+          },
+          "coverage": {
+            "status": "pending"
+          },
+          "execution_known": false,
+          "provisional": false,
+          "result_category": "not_run"
+        },
+        {
+          "schema": "delivery-trace-v1",
+          "generated_at": "2026-10-20T02:56:56.182677+00:00",
+          "project": {
+            "id": "rust-tui",
+            "label": "终端清单",
+            "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+            "root": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui"
+          },
+          "requirements": [
+            {
+              "id": "TUI-01",
+              "title": "TUI-01",
+              "text": "TUI-01：使用 `--state <绝对路径>` 打开已有的 UTF-8 状态文件；缺少参数、文件不存在或格式错误时，退出码为 2，标准错误给出说明，不进入交互画面。每行格式为 `id|title|done`，id 是唯一的非空 ASCII 字母数字串，title 为 1 至 40 个可打印 ASCII 字符，done 为 `0` 或 `1`；文件至少有一项。"
+            },
+            {
+              "id": "TUI-02",
+              "title": "TUI-02",
+              "text": "TUI-02：在至少 80 列、24 行的真实终端，显示标题、全部可见项目的名称与完成状态、当前选中项及操作提示。文字应可读，选中项的文字与背景不能同色；标题、列表、提示和状态行不得互相遮挡。项目多于可见行数时仍能通过上下移动找到每一项。"
+            },
+            {
+              "id": "TUI-03",
+              "title": "TUI-03",
+              "text": "TUI-03：`j`/下箭头选择下一项，`k`/上箭头选择上一项；到达首尾时保持在边界。当前选中项有明确可见的标识；切换选择不修改文件。"
+            },
+            {
+              "id": "TUI-04",
+              "title": "TUI-04",
+              "text": "TUI-04：按空格切换当前选中项的完成状态，画面立即反映结果，状态文件也保存结果。再次按空格可恢复原状态；其他项不受影响。"
+            },
+            {
+              "id": "TUI-05",
+              "title": "TUI-05",
+              "text": "TUI-05：按 `q` 正常退出、恢复终端状态，退出码 0。若未切换状态，原文件字节不变；程序不在状态文件目录留下临时文件。"
+            },
+            {
+              "id": "TUI-06",
+              "title": "TUI-06",
+              "text": "TUI-06：终端小于 40 列或 10 行时应显示可读的尺寸不足提示，仍能按 `q` 退出，不发生布局遮挡或程序崩溃。终端重新放大后恢复正常列表。"
+            }
+          ],
+          "reverse_rules": [],
+          "scenarios": [
+            {
+              "id": "TUI-01-S10",
+              "requirement_id": "TUI-01",
+              "title": "拒绝非法完成状态",
+              "description": "在其他内容合法的 UTF-8 文件中，分别将 done 设为空值、2、01 或带前导空格的 0；每种情况均以退出码 2 结束，标准错误说明完成状态或格式问题，不进入交互画面。终端中的错误说明可见可读、无遮挡或裁切，排版层次清晰、间距与对齐合理、文字样式一致，具有基本视觉完成度并符合项目已有风格。",
+              "priority": "P1"
+            }
+          ],
+          "bindings": [],
+          "case_results": [],
+          "attempt_id": "catalog",
+          "stage": "scenario_self_checked",
+          "judgment": {
+            "status": "not_run",
+            "reason": "尚无用例执行记录。"
+          },
+          "coverage": {
+            "status": "pending"
+          },
+          "execution_known": false,
+          "provisional": false,
+          "result_category": "not_run"
+        },
+        {
+          "schema": "delivery-trace-v1",
+          "generated_at": "2026-10-20T02:56:56.182677+00:00",
+          "project": {
+            "id": "rust-tui",
+            "label": "终端清单",
+            "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+            "root": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui"
+          },
+          "requirements": [
+            {
+              "id": "TUI-01",
+              "title": "TUI-01",
+              "text": "TUI-01：使用 `--state <绝对路径>` 打开已有的 UTF-8 状态文件；缺少参数、文件不存在或格式错误时，退出码为 2，标准错误给出说明，不进入交互画面。每行格式为 `id|title|done`，id 是唯一的非空 ASCII 字母数字串，title 为 1 至 40 个可打印 ASCII 字符，done 为 `0` 或 `1`；文件至少有一项。"
+            },
+            {
+              "id": "TUI-02",
+              "title": "TUI-02",
+              "text": "TUI-02：在至少 80 列、24 行的真实终端，显示标题、全部可见项目的名称与完成状态、当前选中项及操作提示。文字应可读，选中项的文字与背景不能同色；标题、列表、提示和状态行不得互相遮挡。项目多于可见行数时仍能通过上下移动找到每一项。"
+            },
+            {
+              "id": "TUI-03",
+              "title": "TUI-03",
+              "text": "TUI-03：`j`/下箭头选择下一项，`k`/上箭头选择上一项；到达首尾时保持在边界。当前选中项有明确可见的标识；切换选择不修改文件。"
+            },
+            {
+              "id": "TUI-04",
+              "title": "TUI-04",
+              "text": "TUI-04：按空格切换当前选中项的完成状态，画面立即反映结果，状态文件也保存结果。再次按空格可恢复原状态；其他项不受影响。"
+            },
+            {
+              "id": "TUI-05",
+              "title": "TUI-05",
+              "text": "TUI-05：按 `q` 正常退出、恢复终端状态，退出码 0。若未切换状态，原文件字节不变；程序不在状态文件目录留下临时文件。"
+            },
+            {
+              "id": "TUI-06",
+              "title": "TUI-06",
+              "text": "TUI-06：终端小于 40 列或 10 行时应显示可读的尺寸不足提示，仍能按 `q` 退出，不发生布局遮挡或程序崩溃。终端重新放大后恢复正常列表。"
+            }
+          ],
+          "reverse_rules": [],
+          "scenarios": [
+            {
+              "id": "TUI-01-S11",
+              "requirement_id": "TUI-01",
+              "title": "拒绝非 UTF-8 状态文件",
+              "description": "以绝对路径打开在标题位置含非法 UTF-8 字节序列、其余记录结构合法的已有文件；程序以退出码 2 结束，标准错误说明编码或格式问题，不进入交互画面。终端中的错误说明可见可读、无遮挡或裁切，排版层次清晰、间距与对齐合理、文字样式一致，具有基本视觉完成度并符合项目已有风格。",
+              "priority": "P1"
+            }
+          ],
+          "bindings": [],
+          "case_results": [],
+          "attempt_id": "catalog",
+          "stage": "scenario_self_checked",
+          "judgment": {
+            "status": "not_run",
+            "reason": "尚无用例执行记录。"
+          },
+          "coverage": {
+            "status": "pending"
+          },
+          "execution_known": false,
+          "provisional": false,
+          "result_category": "not_run"
+        },
+        {
+          "schema": "delivery-trace-v1",
+          "generated_at": "2026-10-20T02:56:56.182677+00:00",
+          "project": {
+            "id": "rust-tui",
+            "label": "终端清单",
+            "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+            "root": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui"
+          },
+          "requirements": [
+            {
+              "id": "TUI-01",
+              "title": "TUI-01",
+              "text": "TUI-01：使用 `--state <绝对路径>` 打开已有的 UTF-8 状态文件；缺少参数、文件不存在或格式错误时，退出码为 2，标准错误给出说明，不进入交互画面。每行格式为 `id|title|done`，id 是唯一的非空 ASCII 字母数字串，title 为 1 至 40 个可打印 ASCII 字符，done 为 `0` 或 `1`；文件至少有一项。"
+            },
+            {
+              "id": "TUI-02",
+              "title": "TUI-02",
+              "text": "TUI-02：在至少 80 列、24 行的真实终端，显示标题、全部可见项目的名称与完成状态、当前选中项及操作提示。文字应可读，选中项的文字与背景不能同色；标题、列表、提示和状态行不得互相遮挡。项目多于可见行数时仍能通过上下移动找到每一项。"
+            },
+            {
+              "id": "TUI-03",
+              "title": "TUI-03",
+              "text": "TUI-03：`j`/下箭头选择下一项，`k`/上箭头选择上一项；到达首尾时保持在边界。当前选中项有明确可见的标识；切换选择不修改文件。"
+            },
+            {
+              "id": "TUI-04",
+              "title": "TUI-04",
+              "text": "TUI-04：按空格切换当前选中项的完成状态，画面立即反映结果，状态文件也保存结果。再次按空格可恢复原状态；其他项不受影响。"
+            },
+            {
+              "id": "TUI-05",
+              "title": "TUI-05",
+              "text": "TUI-05：按 `q` 正常退出、恢复终端状态，退出码 0。若未切换状态，原文件字节不变；程序不在状态文件目录留下临时文件。"
+            },
+            {
+              "id": "TUI-06",
+              "title": "TUI-06",
+              "text": "TUI-06：终端小于 40 列或 10 行时应显示可读的尺寸不足提示，仍能按 `q` 退出，不发生布局遮挡或程序崩溃。终端重新放大后恢复正常列表。"
+            }
+          ],
+          "reverse_rules": [],
+          "scenarios": [
+            {
+              "id": "TUI-02-S02",
+              "requirement_id": "TUI-02",
+              "title": "超出可见行数时双向浏览全部项目",
+              "description": "在80列、24行的真实彩色终端打开项目数超过列表可见容量的有效清单，使用可区分的普通短名称和混合完成状态；通过向下、向上移动分别浏览完整清单，每项均能进入可见区域，当前选中项始终可见，各可见项的名称与完成状态对应正确。浏览过程中标题、列表、提示和状态行可见可读、互不遮挡或裁切，选中文字与背景不同色，排版层次清楚、间距与对齐合理、同类文字和标识样式一致，并符合项目已有风格。",
+              "priority": "P1"
+            }
+          ],
+          "bindings": [],
+          "case_results": [],
+          "attempt_id": "catalog",
+          "stage": "scenario_self_checked",
+          "judgment": {
+            "status": "not_run",
+            "reason": "尚无用例执行记录。"
+          },
+          "coverage": {
+            "status": "pending"
+          },
+          "execution_known": false,
+          "provisional": false,
+          "result_category": "not_run"
+        },
+        {
+          "schema": "delivery-trace-v1",
+          "generated_at": "2026-10-20T02:56:56.182677+00:00",
+          "project": {
+            "id": "rust-tui",
+            "label": "终端清单",
+            "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+            "root": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui"
+          },
+          "requirements": [
+            {
+              "id": "TUI-01",
+              "title": "TUI-01",
+              "text": "TUI-01：使用 `--state <绝对路径>` 打开已有的 UTF-8 状态文件；缺少参数、文件不存在或格式错误时，退出码为 2，标准错误给出说明，不进入交互画面。每行格式为 `id|title|done`，id 是唯一的非空 ASCII 字母数字串，title 为 1 至 40 个可打印 ASCII 字符，done 为 `0` 或 `1`；文件至少有一项。"
+            },
+            {
+              "id": "TUI-02",
+              "title": "TUI-02",
+              "text": "TUI-02：在至少 80 列、24 行的真实终端，显示标题、全部可见项目的名称与完成状态、当前选中项及操作提示。文字应可读，选中项的文字与背景不能同色；标题、列表、提示和状态行不得互相遮挡。项目多于可见行数时仍能通过上下移动找到每一项。"
+            },
+            {
+              "id": "TUI-03",
+              "title": "TUI-03",
+              "text": "TUI-03：`j`/下箭头选择下一项，`k`/上箭头选择上一项；到达首尾时保持在边界。当前选中项有明确可见的标识；切换选择不修改文件。"
+            },
+            {
+              "id": "TUI-04",
+              "title": "TUI-04",
+              "text": "TUI-04：按空格切换当前选中项的完成状态，画面立即反映结果，状态文件也保存结果。再次按空格可恢复原状态；其他项不受影响。"
+            },
+            {
+              "id": "TUI-05",
+              "title": "TUI-05",
+              "text": "TUI-05：按 `q` 正常退出、恢复终端状态，退出码 0。若未切换状态，原文件字节不变；程序不在状态文件目录留下临时文件。"
+            },
+            {
+              "id": "TUI-06",
+              "title": "TUI-06",
+              "text": "TUI-06：终端小于 40 列或 10 行时应显示可读的尺寸不足提示，仍能按 `q` 退出，不发生布局遮挡或程序崩溃。终端重新放大后恢复正常列表。"
+            }
+          ],
+          "reverse_rules": [],
+          "scenarios": [
+            {
+              "id": "TUI-02-S03",
+              "requirement_id": "TUI-02",
+              "title": "合法长名称与符号仍可完整辨识",
+              "description": "在80列、24行的真实彩色终端展示两个均为40个可打印ASCII字符、包含空格和方括号且仅末字符不同的合法名称，名称不含字段分隔符；使两项分别处于选中和未选中状态，两个完整名称及各自完成状态均应清楚呈现，末字符和符号可辨认。标题、列表、提示和状态行可见可读、互不遮挡或裁切，选中文字与背景不同色，排版层次清楚、间距与对齐合理、同类文字和标识样式一致，并符合项目已有风格。",
+              "priority": "P1"
+            }
+          ],
+          "bindings": [],
+          "case_results": [],
+          "attempt_id": "catalog",
+          "stage": "scenario_self_checked",
+          "judgment": {
+            "status": "not_run",
+            "reason": "尚无用例执行记录。"
+          },
+          "coverage": {
+            "status": "pending"
+          },
+          "execution_known": false,
+          "provisional": false,
+          "result_category": "not_run"
+        },
+        {
+          "schema": "delivery-trace-v1",
+          "generated_at": "2026-10-20T02:56:56.182677+00:00",
+          "project": {
+            "id": "rust-tui",
+            "label": "终端清单",
+            "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+            "root": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui"
+          },
+          "requirements": [
+            {
+              "id": "TUI-01",
+              "title": "TUI-01",
+              "text": "TUI-01：使用 `--state <绝对路径>` 打开已有的 UTF-8 状态文件；缺少参数、文件不存在或格式错误时，退出码为 2，标准错误给出说明，不进入交互画面。每行格式为 `id|title|done`，id 是唯一的非空 ASCII 字母数字串，title 为 1 至 40 个可打印 ASCII 字符，done 为 `0` 或 `1`；文件至少有一项。"
+            },
+            {
+              "id": "TUI-02",
+              "title": "TUI-02",
+              "text": "TUI-02：在至少 80 列、24 行的真实终端，显示标题、全部可见项目的名称与完成状态、当前选中项及操作提示。文字应可读，选中项的文字与背景不能同色；标题、列表、提示和状态行不得互相遮挡。项目多于可见行数时仍能通过上下移动找到每一项。"
+            },
+            {
+              "id": "TUI-03",
+              "title": "TUI-03",
+              "text": "TUI-03：`j`/下箭头选择下一项，`k`/上箭头选择上一项；到达首尾时保持在边界。当前选中项有明确可见的标识；切换选择不修改文件。"
+            },
+            {
+              "id": "TUI-04",
+              "title": "TUI-04",
+              "text": "TUI-04：按空格切换当前选中项的完成状态，画面立即反映结果，状态文件也保存结果。再次按空格可恢复原状态；其他项不受影响。"
+            },
+            {
+              "id": "TUI-05",
+              "title": "TUI-05",
+              "text": "TUI-05：按 `q` 正常退出、恢复终端状态，退出码 0。若未切换状态，原文件字节不变；程序不在状态文件目录留下临时文件。"
+            },
+            {
+              "id": "TUI-06",
+              "title": "TUI-06",
+              "text": "TUI-06：终端小于 40 列或 10 行时应显示可读的尺寸不足提示，仍能按 `q` 退出，不发生布局遮挡或程序崩溃。终端重新放大后恢复正常列表。"
+            }
+          ],
+          "reverse_rules": [],
+          "scenarios": [
+            {
+              "id": "TUI-03-S01",
+              "requirement_id": "TUI-03",
+              "title": "四种方向键逐项切换选择",
+              "description": "在至少80列、24行的合规终端加载名称可区分且无需滚动的多项有效数据，每次从存在对应相邻项的位置分别按j、下箭头、k、上箭头；前两者各选中紧邻下一项，后两者各选中紧邻上一项，明确的当前项标识随选择移动。各次选择后的项目文字、选中标识和操作提示均可见可读、无遮挡或裁切，排版层次、间距、对齐和文字样式一致性合理，符合项目已有风格并具基本视觉完成度。",
+              "priority": "P0"
+            }
+          ],
+          "bindings": [],
+          "case_results": [],
+          "attempt_id": "catalog",
+          "stage": "scenario_self_checked",
+          "judgment": {
+            "status": "not_run",
+            "reason": "尚无用例执行记录。"
+          },
+          "coverage": {
+            "status": "pending"
+          },
+          "execution_known": false,
+          "provisional": false,
+          "result_category": "not_run"
+        },
+        {
+          "schema": "delivery-trace-v1",
+          "generated_at": "2026-10-20T02:56:56.182677+00:00",
+          "project": {
+            "id": "rust-tui",
+            "label": "终端清单",
+            "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+            "root": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui"
+          },
+          "requirements": [
+            {
+              "id": "TUI-01",
+              "title": "TUI-01",
+              "text": "TUI-01：使用 `--state <绝对路径>` 打开已有的 UTF-8 状态文件；缺少参数、文件不存在或格式错误时，退出码为 2，标准错误给出说明，不进入交互画面。每行格式为 `id|title|done`，id 是唯一的非空 ASCII 字母数字串，title 为 1 至 40 个可打印 ASCII 字符，done 为 `0` 或 `1`；文件至少有一项。"
+            },
+            {
+              "id": "TUI-02",
+              "title": "TUI-02",
+              "text": "TUI-02：在至少 80 列、24 行的真实终端，显示标题、全部可见项目的名称与完成状态、当前选中项及操作提示。文字应可读，选中项的文字与背景不能同色；标题、列表、提示和状态行不得互相遮挡。项目多于可见行数时仍能通过上下移动找到每一项。"
+            },
+            {
+              "id": "TUI-03",
+              "title": "TUI-03",
+              "text": "TUI-03：`j`/下箭头选择下一项，`k`/上箭头选择上一项；到达首尾时保持在边界。当前选中项有明确可见的标识；切换选择不修改文件。"
+            },
+            {
+              "id": "TUI-04",
+              "title": "TUI-04",
+              "text": "TUI-04：按空格切换当前选中项的完成状态，画面立即反映结果，状态文件也保存结果。再次按空格可恢复原状态；其他项不受影响。"
+            },
+            {
+              "id": "TUI-05",
+              "title": "TUI-05",
+              "text": "TUI-05：按 `q` 正常退出、恢复终端状态，退出码 0。若未切换状态，原文件字节不变；程序不在状态文件目录留下临时文件。"
+            },
+            {
+              "id": "TUI-06",
+              "title": "TUI-06",
+              "text": "TUI-06：终端小于 40 列或 10 行时应显示可读的尺寸不足提示，仍能按 `q` 退出，不发生布局遮挡或程序崩溃。终端重新放大后恢复正常列表。"
+            }
+          ],
+          "reverse_rules": [],
+          "scenarios": [
+            {
+              "id": "TUI-03-S02",
+              "requirement_id": "TUI-03",
+              "title": "首尾及单项列表保持边界",
+              "description": "在至少80列、24行的合规终端使用多项有效数据，首项选中时分别按k和上箭头仍选中首项，末项选中时分别按j和下箭头仍选中末项；仅有一项时，四种选择键均保持该项选中。各边界状态的项目文字、明确的选中标识和操作提示均可见可读、无遮挡或裁切，排版层次、间距、对齐和文字样式一致性合理，符合项目已有风格并具基本视觉完成度。",
+              "priority": "P1"
+            }
+          ],
+          "bindings": [],
+          "case_results": [],
+          "attempt_id": "catalog",
+          "stage": "scenario_self_checked",
+          "judgment": {
+            "status": "not_run",
+            "reason": "尚无用例执行记录。"
+          },
+          "coverage": {
+            "status": "pending"
+          },
+          "execution_known": false,
+          "provisional": false,
+          "result_category": "not_run"
+        },
+        {
+          "schema": "delivery-trace-v1",
+          "generated_at": "2026-10-20T02:56:56.182677+00:00",
+          "project": {
+            "id": "rust-tui",
+            "label": "终端清单",
+            "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+            "root": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui"
+          },
+          "requirements": [
+            {
+              "id": "TUI-01",
+              "title": "TUI-01",
+              "text": "TUI-01：使用 `--state <绝对路径>` 打开已有的 UTF-8 状态文件；缺少参数、文件不存在或格式错误时，退出码为 2，标准错误给出说明，不进入交互画面。每行格式为 `id|title|done`，id 是唯一的非空 ASCII 字母数字串，title 为 1 至 40 个可打印 ASCII 字符，done 为 `0` 或 `1`；文件至少有一项。"
+            },
+            {
+              "id": "TUI-02",
+              "title": "TUI-02",
+              "text": "TUI-02：在至少 80 列、24 行的真实终端，显示标题、全部可见项目的名称与完成状态、当前选中项及操作提示。文字应可读，选中项的文字与背景不能同色；标题、列表、提示和状态行不得互相遮挡。项目多于可见行数时仍能通过上下移动找到每一项。"
+            },
+            {
+              "id": "TUI-03",
+              "title": "TUI-03",
+              "text": "TUI-03：`j`/下箭头选择下一项，`k`/上箭头选择上一项；到达首尾时保持在边界。当前选中项有明确可见的标识；切换选择不修改文件。"
+            },
+            {
+              "id": "TUI-04",
+              "title": "TUI-04",
+              "text": "TUI-04：按空格切换当前选中项的完成状态，画面立即反映结果，状态文件也保存结果。再次按空格可恢复原状态；其他项不受影响。"
+            },
+            {
+              "id": "TUI-05",
+              "title": "TUI-05",
+              "text": "TUI-05：按 `q` 正常退出、恢复终端状态，退出码 0。若未切换状态，原文件字节不变；程序不在状态文件目录留下临时文件。"
+            },
+            {
+              "id": "TUI-06",
+              "title": "TUI-06",
+              "text": "TUI-06：终端小于 40 列或 10 行时应显示可读的尺寸不足提示，仍能按 `q` 退出，不发生布局遮挡或程序崩溃。终端重新放大后恢复正常列表。"
+            }
+          ],
+          "reverse_rules": [],
+          "scenarios": [
+            {
+              "id": "TUI-03-S03",
+              "requirement_id": "TUI-03",
+              "title": "切换选择保留原文件",
+              "description": "在至少80列、24行的合规终端加载包含不同项目及两种完成状态的有效文件，仅用四种选择键实际切换项目，不切换完成状态；程序仍在交互中时，每次选择后的状态文件全部字节均与进入交互前一致。选择后的项目文字、明确的选中标识和操作提示均可见可读、无遮挡或裁切，排版层次、间距、对齐和文字样式一致性合理，符合项目已有风格并具基本视觉完成度。",
+              "priority": "P0"
+            }
+          ],
+          "bindings": [],
+          "case_results": [],
+          "attempt_id": "catalog",
+          "stage": "scenario_self_checked",
+          "judgment": {
+            "status": "not_run",
+            "reason": "尚无用例执行记录。"
+          },
+          "coverage": {
+            "status": "pending"
+          },
+          "execution_known": false,
+          "provisional": false,
+          "result_category": "not_run"
+        },
+        {
+          "schema": "delivery-trace-v1",
+          "generated_at": "2026-10-20T02:56:56.182677+00:00",
+          "project": {
+            "id": "rust-tui",
+            "label": "终端清单",
+            "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+            "root": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui"
+          },
+          "requirements": [
+            {
+              "id": "TUI-01",
+              "title": "TUI-01",
+              "text": "TUI-01：使用 `--state <绝对路径>` 打开已有的 UTF-8 状态文件；缺少参数、文件不存在或格式错误时，退出码为 2，标准错误给出说明，不进入交互画面。每行格式为 `id|title|done`，id 是唯一的非空 ASCII 字母数字串，title 为 1 至 40 个可打印 ASCII 字符，done 为 `0` 或 `1`；文件至少有一项。"
+            },
+            {
+              "id": "TUI-02",
+              "title": "TUI-02",
+              "text": "TUI-02：在至少 80 列、24 行的真实终端，显示标题、全部可见项目的名称与完成状态、当前选中项及操作提示。文字应可读，选中项的文字与背景不能同色；标题、列表、提示和状态行不得互相遮挡。项目多于可见行数时仍能通过上下移动找到每一项。"
+            },
+            {
+              "id": "TUI-03",
+              "title": "TUI-03",
+              "text": "TUI-03：`j`/下箭头选择下一项，`k`/上箭头选择上一项；到达首尾时保持在边界。当前选中项有明确可见的标识；切换选择不修改文件。"
+            },
+            {
+              "id": "TUI-04",
+              "title": "TUI-04",
+              "text": "TUI-04：按空格切换当前选中项的完成状态，画面立即反映结果，状态文件也保存结果。再次按空格可恢复原状态；其他项不受影响。"
+            },
+            {
+              "id": "TUI-05",
+              "title": "TUI-05",
+              "text": "TUI-05：按 `q` 正常退出、恢复终端状态，退出码 0。若未切换状态，原文件字节不变；程序不在状态文件目录留下临时文件。"
+            },
+            {
+              "id": "TUI-06",
+              "title": "TUI-06",
+              "text": "TUI-06：终端小于 40 列或 10 行时应显示可读的尺寸不足提示，仍能按 `q` 退出，不发生布局遮挡或程序崩溃。终端重新放大后恢复正常列表。"
+            }
+          ],
+          "reverse_rules": [],
+          "scenarios": [
+            {
+              "id": "TUI-04-S02",
+              "requirement_id": "TUI-04",
+              "title": "再次空格恢复原完成状态",
+              "description": "在满足颜色环境约束且至少80列24行的真实终端，以合法单项清单中已由一次空格从未完成变为已完成并保存的状态为前提，再按一次空格；画面立即恢复未完成状态，状态文件也恢复该项原来的完成状态，id和title保持不变。恢复后的标题、项目名称、完成状态、选中标识、操作提示和状态行可见可读、无遮挡或裁切，排版层次清楚、间距与对齐合理，同类文字和控件样式一致，符合项目已有风格。",
+              "priority": "P1"
+            }
+          ],
+          "bindings": [],
+          "case_results": [],
+          "attempt_id": "catalog",
+          "stage": "scenario_self_checked",
+          "judgment": {
+            "status": "not_run",
+            "reason": "尚无用例执行记录。"
+          },
+          "coverage": {
+            "status": "pending"
+          },
+          "execution_known": false,
+          "provisional": false,
+          "result_category": "not_run"
+        },
+        {
+          "schema": "delivery-trace-v1",
+          "generated_at": "2026-10-20T02:56:56.182677+00:00",
+          "project": {
+            "id": "rust-tui",
+            "label": "终端清单",
+            "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+            "root": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui"
+          },
+          "requirements": [
+            {
+              "id": "TUI-01",
+              "title": "TUI-01",
+              "text": "TUI-01：使用 `--state <绝对路径>` 打开已有的 UTF-8 状态文件；缺少参数、文件不存在或格式错误时，退出码为 2，标准错误给出说明，不进入交互画面。每行格式为 `id|title|done`，id 是唯一的非空 ASCII 字母数字串，title 为 1 至 40 个可打印 ASCII 字符，done 为 `0` 或 `1`；文件至少有一项。"
+            },
+            {
+              "id": "TUI-02",
+              "title": "TUI-02",
+              "text": "TUI-02：在至少 80 列、24 行的真实终端，显示标题、全部可见项目的名称与完成状态、当前选中项及操作提示。文字应可读，选中项的文字与背景不能同色；标题、列表、提示和状态行不得互相遮挡。项目多于可见行数时仍能通过上下移动找到每一项。"
+            },
+            {
+              "id": "TUI-03",
+              "title": "TUI-03",
+              "text": "TUI-03：`j`/下箭头选择下一项，`k`/上箭头选择上一项；到达首尾时保持在边界。当前选中项有明确可见的标识；切换选择不修改文件。"
+            },
+            {
+              "id": "TUI-04",
+              "title": "TUI-04",
+              "text": "TUI-04：按空格切换当前选中项的完成状态，画面立即反映结果，状态文件也保存结果。再次按空格可恢复原状态；其他项不受影响。"
+            },
+            {
+              "id": "TUI-05",
+              "title": "TUI-05",
+              "text": "TUI-05：按 `q` 正常退出、恢复终端状态，退出码 0。若未切换状态，原文件字节不变；程序不在状态文件目录留下临时文件。"
+            },
+            {
+              "id": "TUI-06",
+              "title": "TUI-06",
+              "text": "TUI-06：终端小于 40 列或 10 行时应显示可读的尺寸不足提示，仍能按 `q` 退出，不发生布局遮挡或程序崩溃。终端重新放大后恢复正常列表。"
+            }
+          ],
+          "reverse_rules": [],
+          "scenarios": [
+            {
+              "id": "TUI-04-S03",
+              "requirement_id": "TUI-04",
+              "title": "多项清单只修改当前选中项",
+              "description": "在满足颜色环境约束且至少80列24行的真实终端，打开三个项目的合法清单，预先选中未完成的中间项，另外两项分别为未完成和已完成；按一次空格后，中间项在画面和文件中变为已完成，另外两项的名称与完成状态显示不变，文件中的记录仍完整存在且id、title、done及顺序均保持不变。切换后的标题、各项目名称与完成状态、选中标识、操作提示和状态行可见可读、无遮挡或裁切，排版层次清楚、间距与对齐合理，同类文字和控件样式一致，符合项目已有风格。",
+              "priority": "P0"
+            }
+          ],
+          "bindings": [],
+          "case_results": [],
+          "attempt_id": "catalog",
+          "stage": "scenario_self_checked",
+          "judgment": {
+            "status": "not_run",
+            "reason": "尚无用例执行记录。"
+          },
+          "coverage": {
+            "status": "pending"
+          },
+          "execution_known": false,
+          "provisional": false,
+          "result_category": "not_run"
+        },
+        {
+          "schema": "delivery-trace-v1",
+          "generated_at": "2026-10-20T02:56:56.182677+00:00",
+          "project": {
+            "id": "rust-tui",
+            "label": "终端清单",
+            "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+            "root": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui"
+          },
+          "requirements": [
+            {
+              "id": "TUI-01",
+              "title": "TUI-01",
+              "text": "TUI-01：使用 `--state <绝对路径>` 打开已有的 UTF-8 状态文件；缺少参数、文件不存在或格式错误时，退出码为 2，标准错误给出说明，不进入交互画面。每行格式为 `id|title|done`，id 是唯一的非空 ASCII 字母数字串，title 为 1 至 40 个可打印 ASCII 字符，done 为 `0` 或 `1`；文件至少有一项。"
+            },
+            {
+              "id": "TUI-02",
+              "title": "TUI-02",
+              "text": "TUI-02：在至少 80 列、24 行的真实终端，显示标题、全部可见项目的名称与完成状态、当前选中项及操作提示。文字应可读，选中项的文字与背景不能同色；标题、列表、提示和状态行不得互相遮挡。项目多于可见行数时仍能通过上下移动找到每一项。"
+            },
+            {
+              "id": "TUI-03",
+              "title": "TUI-03",
+              "text": "TUI-03：`j`/下箭头选择下一项，`k`/上箭头选择上一项；到达首尾时保持在边界。当前选中项有明确可见的标识；切换选择不修改文件。"
+            },
+            {
+              "id": "TUI-04",
+              "title": "TUI-04",
+              "text": "TUI-04：按空格切换当前选中项的完成状态，画面立即反映结果，状态文件也保存结果。再次按空格可恢复原状态；其他项不受影响。"
+            },
+            {
+              "id": "TUI-05",
+              "title": "TUI-05",
+              "text": "TUI-05：按 `q` 正常退出、恢复终端状态，退出码 0。若未切换状态，原文件字节不变；程序不在状态文件目录留下临时文件。"
+            },
+            {
+              "id": "TUI-06",
+              "title": "TUI-06",
+              "text": "TUI-06：终端小于 40 列或 10 行时应显示可读的尺寸不足提示，仍能按 `q` 退出，不发生布局遮挡或程序崩溃。终端重新放大后恢复正常列表。"
+            }
+          ],
+          "reverse_rules": [],
+          "scenarios": [
+            {
+              "id": "TUI-05-S01",
+              "requirement_id": "TUI-05",
+              "title": "正常退出并恢复终端",
+              "description": "从已知终端状态打开普通有效状态文件，在正常列表中按 `q`，程序正常结束且退出码为 0；程序改变的终端模式、回显、光标可见性等状态恢复到启动前，后续终端交互正常。退出前主要内容与退出提示可见可读、无遮挡或裁切，层次、间距、对齐及文字样式合理一致，符合项目已有风格；退出后终端显示和输入可正常辨认。",
+              "priority": "P0"
+            }
+          ],
+          "bindings": [],
+          "case_results": [],
+          "attempt_id": "catalog",
+          "stage": "scenario_self_checked",
+          "judgment": {
+            "status": "not_run",
+            "reason": "尚无用例执行记录。"
+          },
+          "coverage": {
+            "status": "pending"
+          },
+          "execution_known": false,
+          "provisional": false,
+          "result_category": "not_run"
+        },
+        {
+          "schema": "delivery-trace-v1",
+          "generated_at": "2026-10-20T02:56:56.182677+00:00",
+          "project": {
+            "id": "rust-tui",
+            "label": "终端清单",
+            "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+            "root": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui"
+          },
+          "requirements": [
+            {
+              "id": "TUI-01",
+              "title": "TUI-01",
+              "text": "TUI-01：使用 `--state <绝对路径>` 打开已有的 UTF-8 状态文件；缺少参数、文件不存在或格式错误时，退出码为 2，标准错误给出说明，不进入交互画面。每行格式为 `id|title|done`，id 是唯一的非空 ASCII 字母数字串，title 为 1 至 40 个可打印 ASCII 字符，done 为 `0` 或 `1`；文件至少有一项。"
+            },
+            {
+              "id": "TUI-02",
+              "title": "TUI-02",
+              "text": "TUI-02：在至少 80 列、24 行的真实终端，显示标题、全部可见项目的名称与完成状态、当前选中项及操作提示。文字应可读，选中项的文字与背景不能同色；标题、列表、提示和状态行不得互相遮挡。项目多于可见行数时仍能通过上下移动找到每一项。"
+            },
+            {
+              "id": "TUI-03",
+              "title": "TUI-03",
+              "text": "TUI-03：`j`/下箭头选择下一项，`k`/上箭头选择上一项；到达首尾时保持在边界。当前选中项有明确可见的标识；切换选择不修改文件。"
+            },
+            {
+              "id": "TUI-04",
+              "title": "TUI-04",
+              "text": "TUI-04：按空格切换当前选中项的完成状态，画面立即反映结果，状态文件也保存结果。再次按空格可恢复原状态；其他项不受影响。"
+            },
+            {
+              "id": "TUI-05",
+              "title": "TUI-05",
+              "text": "TUI-05：按 `q` 正常退出、恢复终端状态，退出码 0。若未切换状态，原文件字节不变；程序不在状态文件目录留下临时文件。"
+            },
+            {
+              "id": "TUI-06",
+              "title": "TUI-06",
+              "text": "TUI-06：终端小于 40 列或 10 行时应显示可读的尺寸不足提示，仍能按 `q` 退出，不发生布局遮挡或程序崩溃。终端重新放大后恢复正常列表。"
+            }
+          ],
+          "reverse_rules": [],
+          "scenarios": [
+            {
+              "id": "TUI-05-S02",
+              "requirement_id": "TUI-05",
+              "title": "未切换状态时原文件字节不变",
+              "description": "以已确认合法的状态文件为原始基线，启动后不切换任何项目的完成状态，按 `q` 退出，原文件仍存在且全部字节与启动前一致。退出前主要内容与退出提示可见可读、无遮挡或裁切，层次、间距、对齐及文字样式合理一致，符合项目已有风格；退出后终端显示和输入可正常辨认。",
+              "priority": "P1"
+            }
+          ],
+          "bindings": [],
+          "case_results": [],
+          "attempt_id": "catalog",
+          "stage": "scenario_self_checked",
+          "judgment": {
+            "status": "not_run",
+            "reason": "尚无用例执行记录。"
+          },
+          "coverage": {
+            "status": "pending"
+          },
+          "execution_known": false,
+          "provisional": false,
+          "result_category": "not_run"
+        },
+        {
+          "schema": "delivery-trace-v1",
+          "generated_at": "2026-10-20T02:56:56.182677+00:00",
+          "project": {
+            "id": "rust-tui",
+            "label": "终端清单",
+            "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+            "root": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui"
+          },
+          "requirements": [
+            {
+              "id": "TUI-01",
+              "title": "TUI-01",
+              "text": "TUI-01：使用 `--state <绝对路径>` 打开已有的 UTF-8 状态文件；缺少参数、文件不存在或格式错误时，退出码为 2，标准错误给出说明，不进入交互画面。每行格式为 `id|title|done`，id 是唯一的非空 ASCII 字母数字串，title 为 1 至 40 个可打印 ASCII 字符，done 为 `0` 或 `1`；文件至少有一项。"
+            },
+            {
+              "id": "TUI-02",
+              "title": "TUI-02",
+              "text": "TUI-02：在至少 80 列、24 行的真实终端，显示标题、全部可见项目的名称与完成状态、当前选中项及操作提示。文字应可读，选中项的文字与背景不能同色；标题、列表、提示和状态行不得互相遮挡。项目多于可见行数时仍能通过上下移动找到每一项。"
+            },
+            {
+              "id": "TUI-03",
+              "title": "TUI-03",
+              "text": "TUI-03：`j`/下箭头选择下一项，`k`/上箭头选择上一项；到达首尾时保持在边界。当前选中项有明确可见的标识；切换选择不修改文件。"
+            },
+            {
+              "id": "TUI-04",
+              "title": "TUI-04",
+              "text": "TUI-04：按空格切换当前选中项的完成状态，画面立即反映结果，状态文件也保存结果。再次按空格可恢复原状态；其他项不受影响。"
+            },
+            {
+              "id": "TUI-05",
+              "title": "TUI-05",
+              "text": "TUI-05：按 `q` 正常退出、恢复终端状态，退出码 0。若未切换状态，原文件字节不变；程序不在状态文件目录留下临时文件。"
+            },
+            {
+              "id": "TUI-06",
+              "title": "TUI-06",
+              "text": "TUI-06：终端小于 40 列或 10 行时应显示可读的尺寸不足提示，仍能按 `q` 退出，不发生布局遮挡或程序崩溃。终端重新放大后恢复正常列表。"
+            }
+          ],
+          "reverse_rules": [],
+          "scenarios": [
+            {
+              "id": "TUI-05-S03",
+              "requirement_id": "TUI-05",
+              "title": "退出后不遗留临时文件",
+              "description": "分别以未切换状态、已完成一次合法切换并保存的会话为条件，按 `q` 退出后，状态文件目录均不残留本程序创建的临时文件；已有目录内容作为识别新增残留的基线。退出前主要内容与退出提示可见可读、无遮挡或裁切，层次、间距、对齐及文字样式合理一致，符合项目已有风格；退出后终端显示和输入可正常辨认。",
+              "priority": "P2"
+            }
+          ],
+          "bindings": [],
+          "case_results": [],
+          "attempt_id": "catalog",
+          "stage": "scenario_self_checked",
+          "judgment": {
+            "status": "not_run",
+            "reason": "尚无用例执行记录。"
+          },
+          "coverage": {
+            "status": "pending"
+          },
+          "execution_known": false,
+          "provisional": false,
+          "result_category": "not_run"
+        },
+        {
+          "schema": "delivery-trace-v1",
+          "generated_at": "2026-10-20T02:56:56.182677+00:00",
+          "project": {
+            "id": "rust-tui",
+            "label": "终端清单",
+            "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+            "root": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui"
+          },
+          "requirements": [
+            {
+              "id": "TUI-01",
+              "title": "TUI-01",
+              "text": "TUI-01：使用 `--state <绝对路径>` 打开已有的 UTF-8 状态文件；缺少参数、文件不存在或格式错误时，退出码为 2，标准错误给出说明，不进入交互画面。每行格式为 `id|title|done`，id 是唯一的非空 ASCII 字母数字串，title 为 1 至 40 个可打印 ASCII 字符，done 为 `0` 或 `1`；文件至少有一项。"
+            },
+            {
+              "id": "TUI-02",
+              "title": "TUI-02",
+              "text": "TUI-02：在至少 80 列、24 行的真实终端，显示标题、全部可见项目的名称与完成状态、当前选中项及操作提示。文字应可读，选中项的文字与背景不能同色；标题、列表、提示和状态行不得互相遮挡。项目多于可见行数时仍能通过上下移动找到每一项。"
+            },
+            {
+              "id": "TUI-03",
+              "title": "TUI-03",
+              "text": "TUI-03：`j`/下箭头选择下一项，`k`/上箭头选择上一项；到达首尾时保持在边界。当前选中项有明确可见的标识；切换选择不修改文件。"
+            },
+            {
+              "id": "TUI-04",
+              "title": "TUI-04",
+              "text": "TUI-04：按空格切换当前选中项的完成状态，画面立即反映结果，状态文件也保存结果。再次按空格可恢复原状态；其他项不受影响。"
+            },
+            {
+              "id": "TUI-05",
+              "title": "TUI-05",
+              "text": "TUI-05：按 `q` 正常退出、恢复终端状态，退出码 0。若未切换状态，原文件字节不变；程序不在状态文件目录留下临时文件。"
+            },
+            {
+              "id": "TUI-06",
+              "title": "TUI-06",
+              "text": "TUI-06：终端小于 40 列或 10 行时应显示可读的尺寸不足提示，仍能按 `q` 退出，不发生布局遮挡或程序崩溃。终端重新放大后恢复正常列表。"
+            }
+          ],
+          "reverse_rules": [],
+          "scenarios": [
+            {
+              "id": "TUI-06-S01",
+              "requirement_id": "TUI-06",
+              "title": "任一维不足时显示可读提示",
+              "description": "使用有效状态文件，分别在39列24行、80列9行、39列9行启动，并验证从80列24行运行状态缩至这些尺寸；各条件下均显示尺寸不足提示，程序不崩溃。尺寸不足提示完整可见、文字可读，不被其他内容遮挡或裁切；排版层次、间距和对齐合理，字体与提示样式协调一致，符合项目已有风格并具备基本视觉完成度。",
+              "priority": "P1"
+            }
+          ],
+          "bindings": [],
+          "case_results": [],
+          "attempt_id": "catalog",
+          "stage": "scenario_self_checked",
+          "judgment": {
+            "status": "not_run",
+            "reason": "尚无用例执行记录。"
+          },
+          "coverage": {
+            "status": "pending"
+          },
+          "execution_known": false,
+          "provisional": false,
+          "result_category": "not_run"
+        },
+        {
+          "schema": "delivery-trace-v1",
+          "generated_at": "2026-10-20T02:56:56.182677+00:00",
+          "project": {
+            "id": "rust-tui",
+            "label": "终端清单",
+            "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+            "root": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui"
+          },
+          "requirements": [
+            {
+              "id": "TUI-01",
+              "title": "TUI-01",
+              "text": "TUI-01：使用 `--state <绝对路径>` 打开已有的 UTF-8 状态文件；缺少参数、文件不存在或格式错误时，退出码为 2，标准错误给出说明，不进入交互画面。每行格式为 `id|title|done`，id 是唯一的非空 ASCII 字母数字串，title 为 1 至 40 个可打印 ASCII 字符，done 为 `0` 或 `1`；文件至少有一项。"
+            },
+            {
+              "id": "TUI-02",
+              "title": "TUI-02",
+              "text": "TUI-02：在至少 80 列、24 行的真实终端，显示标题、全部可见项目的名称与完成状态、当前选中项及操作提示。文字应可读，选中项的文字与背景不能同色；标题、列表、提示和状态行不得互相遮挡。项目多于可见行数时仍能通过上下移动找到每一项。"
+            },
+            {
+              "id": "TUI-03",
+              "title": "TUI-03",
+              "text": "TUI-03：`j`/下箭头选择下一项，`k`/上箭头选择上一项；到达首尾时保持在边界。当前选中项有明确可见的标识；切换选择不修改文件。"
+            },
+            {
+              "id": "TUI-04",
+              "title": "TUI-04",
+              "text": "TUI-04：按空格切换当前选中项的完成状态，画面立即反映结果，状态文件也保存结果。再次按空格可恢复原状态；其他项不受影响。"
+            },
+            {
+              "id": "TUI-05",
+              "title": "TUI-05",
+              "text": "TUI-05：按 `q` 正常退出、恢复终端状态，退出码 0。若未切换状态，原文件字节不变；程序不在状态文件目录留下临时文件。"
+            },
+            {
+              "id": "TUI-06",
+              "title": "TUI-06",
+              "text": "TUI-06：终端小于 40 列或 10 行时应显示可读的尺寸不足提示，仍能按 `q` 退出，不发生布局遮挡或程序崩溃。终端重新放大后恢复正常列表。"
+            }
+          ],
+          "reverse_rules": [],
+          "scenarios": [
+            {
+              "id": "TUI-06-S02",
+              "requirement_id": "TUI-06",
+              "title": "尺寸不足状态仍可退出",
+              "description": "在39列9行的尺寸不足提示状态按q，程序应响应并退出，无须先放大终端，且不发生崩溃。退出前的尺寸不足提示完整可见、文字可读，不被其他内容遮挡或裁切；排版层次、间距和对齐合理，字体与提示样式协调一致，符合项目已有风格并具备基本视觉完成度。",
+              "priority": "P1"
+            }
+          ],
+          "bindings": [],
+          "case_results": [],
+          "attempt_id": "catalog",
+          "stage": "scenario_self_checked",
+          "judgment": {
+            "status": "not_run",
+            "reason": "尚无用例执行记录。"
+          },
+          "coverage": {
+            "status": "pending"
+          },
+          "execution_known": false,
+          "provisional": false,
+          "result_category": "not_run"
+        },
+        {
+          "schema": "delivery-trace-v1",
+          "generated_at": "2026-10-20T02:56:56.182677+00:00",
+          "project": {
+            "id": "rust-tui",
+            "label": "终端清单",
+            "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+            "root": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui"
+          },
+          "requirements": [
+            {
+              "id": "TUI-01",
+              "title": "TUI-01",
+              "text": "TUI-01：使用 `--state <绝对路径>` 打开已有的 UTF-8 状态文件；缺少参数、文件不存在或格式错误时，退出码为 2，标准错误给出说明，不进入交互画面。每行格式为 `id|title|done`，id 是唯一的非空 ASCII 字母数字串，title 为 1 至 40 个可打印 ASCII 字符，done 为 `0` 或 `1`；文件至少有一项。"
+            },
+            {
+              "id": "TUI-02",
+              "title": "TUI-02",
+              "text": "TUI-02：在至少 80 列、24 行的真实终端，显示标题、全部可见项目的名称与完成状态、当前选中项及操作提示。文字应可读，选中项的文字与背景不能同色；标题、列表、提示和状态行不得互相遮挡。项目多于可见行数时仍能通过上下移动找到每一项。"
+            },
+            {
+              "id": "TUI-03",
+              "title": "TUI-03",
+              "text": "TUI-03：`j`/下箭头选择下一项，`k`/上箭头选择上一项；到达首尾时保持在边界。当前选中项有明确可见的标识；切换选择不修改文件。"
+            },
+            {
+              "id": "TUI-04",
+              "title": "TUI-04",
+              "text": "TUI-04：按空格切换当前选中项的完成状态，画面立即反映结果，状态文件也保存结果。再次按空格可恢复原状态；其他项不受影响。"
+            },
+            {
+              "id": "TUI-05",
+              "title": "TUI-05",
+              "text": "TUI-05：按 `q` 正常退出、恢复终端状态，退出码 0。若未切换状态，原文件字节不变；程序不在状态文件目录留下临时文件。"
+            },
+            {
+              "id": "TUI-06",
+              "title": "TUI-06",
+              "text": "TUI-06：终端小于 40 列或 10 行时应显示可读的尺寸不足提示，仍能按 `q` 退出，不发生布局遮挡或程序崩溃。终端重新放大后恢复正常列表。"
+            }
+          ],
+          "reverse_rules": [],
+          "scenarios": [
+            {
+              "id": "TUI-06-S03",
+              "requirement_id": "TUI-06",
+              "title": "重新放大后恢复正常列表",
+              "description": "对小尺寸启动及正常运行后缩小形成的尺寸不足状态，分别将仅列不足、仅行不足和两维均不足的终端放大至80列24行；无需重启即恢复正常列表，尺寸不足提示不再遮盖列表，程序不崩溃。恢复后的项目名称、完成状态、当前选中标识及操作提示可见可读，标题、列表、提示和状态行互不遮挡或裁切；排版层次、间距和对齐合理，字体与提示样式协调一致，符合项目已有风格并具备基本视觉完成度。",
+              "priority": "P1"
+            }
+          ],
+          "bindings": [],
+          "case_results": [],
+          "attempt_id": "catalog",
+          "stage": "scenario_self_checked",
+          "judgment": {
+            "status": "not_run",
+            "reason": "尚无用例执行记录。"
+          },
+          "coverage": {
+            "status": "pending"
+          },
+          "execution_known": false,
+          "provisional": false,
+          "result_category": "not_run"
+        },
+        {
+          "schema": "delivery-trace-v1",
+          "generated_at": "2026-10-20T02:56:56.182677+00:00",
+          "project": {
+            "id": "rust-tui",
+            "label": "终端清单",
+            "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+            "root": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui"
+          },
+          "requirements": [
+            {
+              "id": "TUI-01",
+              "title": "TUI-01",
+              "text": "TUI-01：使用 `--state <绝对路径>` 打开已有的 UTF-8 状态文件；缺少参数、文件不存在或格式错误时，退出码为 2，标准错误给出说明，不进入交互画面。每行格式为 `id|title|done`，id 是唯一的非空 ASCII 字母数字串，title 为 1 至 40 个可打印 ASCII 字符，done 为 `0` 或 `1`；文件至少有一项。"
+            },
+            {
+              "id": "TUI-02",
+              "title": "TUI-02",
+              "text": "TUI-02：在至少 80 列、24 行的真实终端，显示标题、全部可见项目的名称与完成状态、当前选中项及操作提示。文字应可读，选中项的文字与背景不能同色；标题、列表、提示和状态行不得互相遮挡。项目多于可见行数时仍能通过上下移动找到每一项。"
+            },
+            {
+              "id": "TUI-03",
+              "title": "TUI-03",
+              "text": "TUI-03：`j`/下箭头选择下一项，`k`/上箭头选择上一项；到达首尾时保持在边界。当前选中项有明确可见的标识；切换选择不修改文件。"
+            },
+            {
+              "id": "TUI-04",
+              "title": "TUI-04",
+              "text": "TUI-04：按空格切换当前选中项的完成状态，画面立即反映结果，状态文件也保存结果。再次按空格可恢复原状态；其他项不受影响。"
+            },
+            {
+              "id": "TUI-05",
+              "title": "TUI-05",
+              "text": "TUI-05：按 `q` 正常退出、恢复终端状态，退出码 0。若未切换状态，原文件字节不变；程序不在状态文件目录留下临时文件。"
+            },
+            {
+              "id": "TUI-06",
+              "title": "TUI-06",
+              "text": "TUI-06：终端小于 40 列或 10 行时应显示可读的尺寸不足提示，仍能按 `q` 退出，不发生布局遮挡或程序崩溃。终端重新放大后恢复正常列表。"
+            }
+          ],
+          "reverse_rules": [],
+          "scenarios": [],
+          "bindings": [],
+          "case_results": [],
+          "attempt_id": "catalog",
+          "stage": "scenario_self_checked",
+          "judgment": {
+            "status": "not_run"
+          },
+          "coverage": {
+            "status": "pending"
+          }
+        }
+      ],
+      "projects": [
+        {
+          "project_id": "rust-tui",
+          "scenario_count": 26,
+          "executed_count": 2,
+          "not_executed_count": 24,
+          "passed": 1,
+          "product_bug": 1,
+          "accepted_risk": 0,
+          "needs_attention": 0,
+          "pending_review": 0,
+          "requirement_count": 6,
+          "admitted_rule_count": 0,
+          "pending_rule_count": 0,
+          "result_count": 2,
+          "reconciled": true
+        }
+      ]
+    },
+    "warnings": [
+      "TUI-01：title 为 1 至 40 个可打印 ASCII 字符；本项专门记录标题含 | 的边界：| 属于可打印 ASCII，同时又是字段分隔符；输入未明确此类标题的文件表示及分隔合同。固定三字段与允许标题包含分隔符的解释产生不同验收结果，尚不能确定该子域的可信输入与通过判据，不能视为已覆盖。",
+      "场景设计仍有 1 项必达义务缺口；相关需求不可宣称完整验收。"
+    ],
+    "design_gaps": [
+      {
+        "requirement_id": "TUI-01",
+        "quote": "title 为 1 至 40 个可打印 ASCII 字符",
+        "reason": "本项专门记录标题含 | 的边界：| 属于可打印 ASCII，同时又是字段分隔符；输入未明确此类标题的文件表示及分隔合同。固定三字段与允许标题包含分隔符的解释产生不同验收结果，尚不能确定该子域的可信输入与通过判据，不能视为已覆盖。"
+      }
+    ],
+    "denominator_complete": true,
+    "current_acceptance_id": null,
+    "current_error": null,
+    "scope": {
+      "schema": "acceptance-scope-v1",
+      "acceptance_id": "AT-20261020-v1-rust",
+      "version": 2,
+      "previous_sha256": "e5f4df1a67d8943fdfa9245c2bac0415945a2ff6f9f5f74e39c3a8bf792c29e3",
+      "created_at": "2026-10-20T02:13:38.812339+00:00",
+      "basis": "修正第一阶段执行暂停不是整项验收排除项，并清除跨项目 UI 条件；用户 2026-10-20 指定所有六项需求",
+      "scope": {
+        "target": {
+          "type": "requirements",
+          "project": "rust-tui",
+          "revision": "be952659c7d93018e26793daf2e58fa8321601f4"
+        },
+        "requirements": [
+          {
+            "id": "TUI-01",
+            "text": "TUI-01：使用 `--state <绝对路径>` 打开已有的 UTF-8 状态文件；缺少参数、文件不存在或格式错误时，退出码为 2，标准错误给出说明，不进入交互画面。每行格式为 `id|title|done`，id 是唯一的非空 ASCII 字母数字串，title 为 1 至 40 个可打印 ASCII 字符，done 为 `0` 或 `1`；文件至少有一项。"
+          },
+          {
+            "id": "TUI-02",
+            "text": "TUI-02：在至少 80 列、24 行的真实终端，显示标题、全部可见项目的名称与完成状态、当前选中项及操作提示。文字应可读，选中项的文字与背景不能同色；标题、列表、提示和状态行不得互相遮挡。项目多于可见行数时仍能通过上下移动找到每一项。"
+          },
+          {
+            "id": "TUI-03",
+            "text": "TUI-03：`j`/下箭头选择下一项，`k`/上箭头选择上一项；到达首尾时保持在边界。当前选中项有明确可见的标识；切换选择不修改文件。"
+          },
+          {
+            "id": "TUI-04",
+            "text": "TUI-04：按空格切换当前选中项的完成状态，画面立即反映结果，状态文件也保存结果。再次按空格可恢复原状态；其他项不受影响。"
+          },
+          {
+            "id": "TUI-05",
+            "text": "TUI-05：按 `q` 正常退出、恢复终端状态，退出码 0。若未切换状态，原文件字节不变；程序不在状态文件目录留下临时文件。"
+          },
+          {
+            "id": "TUI-06",
+            "text": "TUI-06：终端小于 40 列或 10 行时应显示可读的尺寸不足提示，仍能按 `q` 退出，不发生布局遮挡或程序崩溃。终端重新放大后恢复正常列表。"
+          }
+        ],
+        "source": "docs/requirements.md",
+        "exclusions": [],
+        "user_decision": "本次验收覆盖六项需求；第一阶段仅完成分析、场景和项目准备，暂不执行业务场景。Rust UI 场景同时包含操作、可读、无遮挡和布局检查。"
+      }
+    },
+    "workspace": null
+  }
+}

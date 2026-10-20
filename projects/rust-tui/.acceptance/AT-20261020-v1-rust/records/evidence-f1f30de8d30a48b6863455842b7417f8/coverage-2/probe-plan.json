@@ -1,0 +1,55 @@
+{
+  "schema": "project-coverage-probe-plan-v1",
+  "routes": [
+    {
+      "id": "rust-native-process",
+      "source_paths": [
+        "projects/rust-tui/src/main.rs"
+      ],
+      "zero": {
+        "collect": [
+          "/opt/homebrew/bin/python3",
+          "{workspace}/projects/rust-tui/tests/llvm_coverage/adapter.py",
+          "probe-collect",
+          "{raw_dir}",
+          "zero"
+        ],
+        "adapter": [
+          "/opt/homebrew/bin/python3",
+          "{workspace}/projects/rust-tui/tests/llvm_coverage/adapter.py",
+          "probe-read",
+          "{raw_dir}"
+        ],
+        "direct": [
+          "/opt/homebrew/bin/python3",
+          "{workspace}/projects/rust-tui/tests/llvm_coverage/direct.py",
+          "{raw_dir}"
+        ]
+      },
+      "nonzero": {
+        "collect": [
+          "/opt/homebrew/bin/python3",
+          "{workspace}/projects/rust-tui/tests/llvm_coverage/adapter.py",
+          "probe-collect",
+          "{raw_dir}",
+          "nonzero"
+        ],
+        "adapter": [
+          "/opt/homebrew/bin/python3",
+          "{workspace}/projects/rust-tui/tests/llvm_coverage/adapter.py",
+          "probe-read",
+          "{raw_dir}"
+        ],
+        "direct": [
+          "/opt/homebrew/bin/python3",
+          "{workspace}/projects/rust-tui/tests/llvm_coverage/direct.py",
+          "{raw_dir}"
+        ]
+      }
+    }
+  ],
+  "runtime_manifest": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/runtime-4/runtime/runtime.json",
+  "runtime_sha256": "633a6709953472d6d92896e60e74f0e00c7c19b1959ff3fbf6cb70996d1af31d",
+  "workspace": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workspace",
+  "revision": "be952659c7d93018e26793daf2e58fa8321601f4"
+}

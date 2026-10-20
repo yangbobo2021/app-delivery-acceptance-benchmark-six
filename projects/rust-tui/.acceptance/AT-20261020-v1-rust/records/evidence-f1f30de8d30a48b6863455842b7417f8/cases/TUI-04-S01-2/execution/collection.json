@@ -1,0 +1,14 @@
+{
+  "started": true,
+  "complete": true,
+  "exit_code": 0,
+  "command": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "projects/rust-tui/tests/tui04_single_toggle.py"
+  ],
+  "binary": {
+    "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/execution/native/product-binary",
+    "sha256": "5794ff5f197e3ed34af25e73e1a189c0c7236f386d28485db1e1bebe4dac9069"
+  },
+  "session_sha256": "214e2c0f89397d5ca847d53272041d00727a97b44d8e09dbe2ade5cc87cfaf70"
+}

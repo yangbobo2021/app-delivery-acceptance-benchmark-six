@@ -1,0 +1,127 @@
+{
+  "schema": "project-coverage-probe-plan-v1",
+  "routes": [
+    {
+      "id": "electron-main-store",
+      "source_paths": [
+        "projects/electron-desktop/src/main.ts",
+        "projects/electron-desktop/src/store.ts"
+      ],
+      "zero": {
+        "collect": [
+          "/opt/homebrew/bin/node",
+          "{workspace}/projects/electron-desktop/tests/coverage-tools/probe.cjs",
+          "collect",
+          "{raw_dir}",
+          "{probe_dir}",
+          "zero",
+          "main"
+        ],
+        "adapter": [
+          "/opt/homebrew/bin/node",
+          "{workspace}/projects/electron-desktop/tests/coverage-tools/probe.cjs",
+          "read",
+          "{raw_dir}",
+          "{probe_dir}",
+          "zero",
+          "main"
+        ],
+        "direct": [
+          "/opt/homebrew/bin/node",
+          "{workspace}/projects/electron-desktop/tests/coverage-tools/direct.cjs",
+          "{raw_dir}",
+          "main"
+        ]
+      },
+      "nonzero": {
+        "collect": [
+          "/opt/homebrew/bin/node",
+          "{workspace}/projects/electron-desktop/tests/coverage-tools/probe.cjs",
+          "collect",
+          "{raw_dir}",
+          "{probe_dir}",
+          "nonzero",
+          "main"
+        ],
+        "adapter": [
+          "/opt/homebrew/bin/node",
+          "{workspace}/projects/electron-desktop/tests/coverage-tools/probe.cjs",
+          "read",
+          "{raw_dir}",
+          "{probe_dir}",
+          "nonzero",
+          "main"
+        ],
+        "direct": [
+          "/opt/homebrew/bin/node",
+          "{workspace}/projects/electron-desktop/tests/coverage-tools/direct.cjs",
+          "{raw_dir}",
+          "main"
+        ]
+      }
+    },
+    {
+      "id": "electron-renderer-and-isolated-preload",
+      "source_paths": [
+        "projects/electron-desktop/src/preload.ts",
+        "projects/electron-desktop/src/renderer.ts"
+      ],
+      "zero": {
+        "collect": [
+          "/opt/homebrew/bin/node",
+          "{workspace}/projects/electron-desktop/tests/coverage-tools/probe.cjs",
+          "collect",
+          "{raw_dir}",
+          "{probe_dir}",
+          "zero",
+          "renderer"
+        ],
+        "adapter": [
+          "/opt/homebrew/bin/node",
+          "{workspace}/projects/electron-desktop/tests/coverage-tools/probe.cjs",
+          "read",
+          "{raw_dir}",
+          "{probe_dir}",
+          "zero",
+          "renderer"
+        ],
+        "direct": [
+          "/opt/homebrew/bin/node",
+          "{workspace}/projects/electron-desktop/tests/coverage-tools/direct.cjs",
+          "{raw_dir}",
+          "renderer"
+        ]
+      },
+      "nonzero": {
+        "collect": [
+          "/opt/homebrew/bin/node",
+          "{workspace}/projects/electron-desktop/tests/coverage-tools/probe.cjs",
+          "collect",
+          "{raw_dir}",
+          "{probe_dir}",
+          "nonzero",
+          "renderer"
+        ],
+        "adapter": [
+          "/opt/homebrew/bin/node",
+          "{workspace}/projects/electron-desktop/tests/coverage-tools/probe.cjs",
+          "read",
+          "{raw_dir}",
+          "{probe_dir}",
+          "nonzero",
+          "renderer"
+        ],
+        "direct": [
+          "/opt/homebrew/bin/node",
+          "{workspace}/projects/electron-desktop/tests/coverage-tools/direct.cjs",
+          "{raw_dir}",
+          "renderer"
+        ]
+      }
+    }
+  ],
+  "runtime_manifest": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/runtime-1/runtime/runtime.json",
+  "runtime_sha256": "d145d999758e9839d9f1ca3338bb6f21099cf56f637b58a80025565e80928575",
+  "workspace": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workspace",
+  "revision": "be952659c7d93018e26793daf2e58fa8321601f4"
+}

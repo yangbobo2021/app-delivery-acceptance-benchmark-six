@@ -1,0 +1,21 @@
+{
+  "command": [
+    "/opt/homebrew/bin/node",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workspace/projects/electron-desktop/tests/coverage-tools/probe.cjs",
+    "read",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/coverage-2/probes/electron-main-store/nonzero/raw",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/coverage-2/probes/electron-main-store/nonzero",
+    "nonzero",
+    "main"
+  ],
+  "cwd": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workspace",
+  "exit_code": 0,
+  "stdout": {
+    "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/coverage-2/probes/electron-main-store/nonzero/adapter/stdout.txt",
+    "sha256": "11d395fd81749da0b42faec75048a4e74f65c7427fab2410d50d5250217166d4"
+  },
+  "stderr": {
+    "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/coverage-2/probes/electron-main-store/nonzero/adapter/stderr.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

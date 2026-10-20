@@ -1,0 +1,93 @@
+{
+  "schema": "project-tool-coverage-report-v1",
+  "protocol": "project-coverage-v1",
+  "prepared": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/coverage-v3/output/prepared",
+  "prepared_sha256": "317638f68cd9c34a78c5c283771ba54bfdb0f2c34c2d8d0a3b3a91c902f790c3",
+  "scene_id": "INV-02-S02",
+  "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+  "source_hashes": {
+    "projects/python-cli/invoice/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "projects/python-cli/invoice/__main__.py": "252c6574b1687570e0d1a43afc6d17d3fddff15e1effceff86ded16d2b761d43",
+    "projects/python-cli/invoice/totals.py": "f636bf0630ce37b44cd8bb580623ff13008672e3437e0ec0c67863ea4bdd6a3c"
+  },
+  "tools": [
+    {
+      "name": "coverage.py",
+      "version": "7.16.2",
+      "role": "原生行与分支采集、子进程插桩、数据库合并及统计；适配器使用公开 API，独立 reader 使用官方 CLI。已通过最小启动自检核对实际版本和安装文件摘要。"
+    }
+  ],
+  "collection_relation": "same_run",
+  "status": "measured",
+  "receipt_path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/case-inv-02-s02-v1/execution/execution.json",
+  "execution_sha256": "5477b6ea667bc8ce5cc8ab986b76e568c8355146cd06fe40fa8ca940804235f5",
+  "raw_evidence": [
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/case-inv-02-s02-v1/execution/native/.coverage.bobos-MacBook-Air-2_local.pid34244.X4wj7C8x.H7JxAxIe7JXh",
+      "sha256": "0801159e14cdf54bdeb6aebf0cb48ad8588806634a9f26417649a7f32487edf4"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/case-inv-02-s02-v1/execution/native/.coverage.bobos-MacBook-Air-2_local.pid34246.XFPjMKix.HNQIp837rWOh",
+      "sha256": "c6c43e38c3997ef99815887d400928295e206b7f207846309b4fde679bcc87b1"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/case-inv-02-s02-v1/execution/native/.coverage.bobos-MacBook-Air-2_local.pid34251.XbBW9Ykx.HyMMc1BDNK1h",
+      "sha256": "bdd7ba90da210a1a1f387124c33f3c32afe94a3daa2cbe13058cd991427019f1"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/case-inv-02-s02-v1/execution/native/lifecycle.json",
+      "sha256": "26ba1753157687aaad7ebd54f068f1b3efa2555e8e6322109137c551bfc30e3c"
+    }
+  ],
+  "collection_lifecycle": {
+    "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/case-inv-02-s02-v1/execution/native/lifecycle.json",
+    "sha256": "26ba1753157687aaad7ebd54f068f1b3efa2555e8e6322109137c551bfc30e3c"
+  },
+  "execution_request": {
+    "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/case-inv-02-s02-v1/execution/coverage-request.json",
+    "sha256": "b4371b49f67427062421b22b34e3f8cf16d006c7bd483d3734b905af591bee77"
+  },
+  "components": [
+    {
+      "id": "projects/python-cli/invoice/__main__.py",
+      "label": "projects/python-cli/invoice/__main__.py",
+      "source_paths": [
+        "projects/python-cli/invoice/__main__.py"
+      ],
+      "line": {
+        "status": "measured",
+        "covered": 30,
+        "total": 37,
+        "pct": 81.08108108108108
+      },
+      "branch": {
+        "status": "measured",
+        "covered": 7,
+        "total": 12,
+        "pct": 58.333333333333336
+      }
+    },
+    {
+      "id": "projects/python-cli/invoice/totals.py",
+      "label": "projects/python-cli/invoice/totals.py",
+      "source_paths": [
+        "projects/python-cli/invoice/totals.py"
+      ],
+      "line": {
+        "status": "measured",
+        "covered": 4,
+        "total": 7,
+        "pct": 57.142857142857146
+      },
+      "branch": {
+        "status": "measured",
+        "covered": 0,
+        "total": 2,
+        "pct": 0.0
+      }
+    }
+  ],
+  "report_path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/case-inv-02-s02-v1/execution/coverage-report.json",
+  "report_sha256": "b29847486fbada0496e1af8eef6c00f636e822cfcefbd9bef6912466bc36b0fa",
+  "capture_end": "2026-10-20T03:39:35.146189+00:00"
+}

@@ -1,0 +1,107 @@
+{
+  "schema": "frozen-scene-evidence-v1",
+  "files": [
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/frozen-evidence/0/execution.log",
+      "sha256": "02f42a729d3396ddd4f2f16340d915928d4c9dc78746c6e358cfc450b0cc48a1",
+      "source": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/execution/execution.log"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/frozen-evidence/0/execution.json",
+      "sha256": "5fb4214021b0250f00bcede78eeb0862a056fea1d40039e00ac5a6a5239a855b",
+      "source": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/execution/execution.json"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/frozen-evidence/1/collection.json",
+      "sha256": "6b3070bd35e0588d7291e73741582ffbcaed2c558e497ee3446b41359a353186",
+      "source": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/execution/native/collection.json"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/frozen-evidence/2/lifecycle-76435.json",
+      "sha256": "bd7900a320374b9da129322b334f553850a38c00e47a5d2856eccb2930e96f9e",
+      "source": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/execution/native/lifecycle-76435.json"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/frozen-evidence/3/run-context.json",
+      "sha256": "4fe2923c16abd5eda9e10c64f72de0761fc415007f635331bf9bbe4c15d4d084",
+      "source": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/execution/native/run-context.json"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/frozen-evidence/4/snapshot-1637249d-34e9-43d6-951b-3cafbd227c2e-0.05644737013582857.json",
+      "sha256": "dc8db0e94ee9b5bab1f3532cbdfd8755fc619a054924b3fe3256253282c4b865",
+      "source": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/execution/native/snapshot-1637249d-34e9-43d6-951b-3cafbd227c2e-0.05644737013582857.json"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/frozen-evidence/5/snapshot-1637249d-34e9-43d6-951b-3cafbd227c2e-0.8764101907661399.json",
+      "sha256": "47baadfe30c6fe726ff83859ee6cece863f6fc4a582b019e823716e3b1bf7004",
+      "source": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/execution/native/snapshot-1637249d-34e9-43d6-951b-3cafbd227c2e-0.8764101907661399.json"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/frozen-evidence/6/snapshot-main-76435.json",
+      "sha256": "d60c52e5da1e3b8040a2a040373dd31615af44c8b03d22a598f066ba756627a1",
+      "source": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/execution/native/snapshot-main-76435.json"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/frozen-evidence/7/stop.json",
+      "sha256": "28656352e7d34a3c1c4965b64f5aac8ae8259bd6bfda63ebe92fed5d03dc1547",
+      "source": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/execution/native/stop.json"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/frozen-evidence/8/01-empty.png",
+      "sha256": "6180fbbb6e01785d610dc1499f376b1049256cefc9f582012e63ac75a8de36de",
+      "source": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/fresh-execution/screenshots/01-empty.png"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/frozen-evidence/8/02-first-entered.png",
+      "sha256": "9725c9d5e041c379bd0e4fb214d51dc1adba621e36c36c60c75510617630ec50",
+      "source": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/fresh-execution/screenshots/02-first-entered.png"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/frozen-evidence/8/02-first-new.png",
+      "sha256": "c992436e98e61d3a0f1f0a74657bcec022b42590e4f44f67f5af709b9f78d863",
+      "source": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/fresh-execution/screenshots/02-first-new.png"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/frozen-evidence/8/02-first-saved.png",
+      "sha256": "b3894c444543798362e1094ecc713fd76dc39384cbe765dab1eccb0e5e60db86",
+      "source": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/fresh-execution/screenshots/02-first-saved.png"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/frozen-evidence/8/03-second-entered.png",
+      "sha256": "f5ef920f5d97e2408888eda4acbe9a5b526e9a42986633317e244400d0cc3e77",
+      "source": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/fresh-execution/screenshots/03-second-entered.png"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/frozen-evidence/8/03-second-new.png",
+      "sha256": "e26b38e75c3a1cfae78c700d9bb4aafd6a845934014033d9417c6d37e75079ef",
+      "source": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/fresh-execution/screenshots/03-second-new.png"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/frozen-evidence/8/03-second-saved.png",
+      "sha256": "21a46bee15eabb7b70c3863c31a2ea1efb64c07183e0598405ff9270faecb02a",
+      "source": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/fresh-execution/screenshots/03-second-saved.png"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/frozen-evidence/8/04-first-selected.png",
+      "sha256": "f6732740ec5b20eeec6964944c02ba00998ec40e1cf494c8bf9ca6b3ab347425",
+      "source": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/fresh-execution/screenshots/04-first-selected.png"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/frozen-evidence/8/05-second-selected.png",
+      "sha256": "477a4f50a80e528239978d9ba96fdf43813dd64d3e16b619975c1e32b2029ad7",
+      "source": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/fresh-execution/screenshots/05-second-selected.png"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/frozen-evidence/8/06-first-reselected.png",
+      "sha256": "f6732740ec5b20eeec6964944c02ba00998ec40e1cf494c8bf9ca6b3ab347425",
+      "source": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/fresh-execution/screenshots/06-first-reselected.png"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/frozen-evidence/8/states.json",
+      "sha256": "4627b2521927e83839f82f436ffcd113de16149c9fdc1ccd35cf5211abb57131",
+      "source": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/fresh-execution/screenshots/states.json"
+    }
+  ],
+  "source_execution_sha256": "5fb4214021b0250f00bcede78eeb0862a056fea1d40039e00ac5a6a5239a855b",
+  "coverage_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/coverage-report.json"
+}

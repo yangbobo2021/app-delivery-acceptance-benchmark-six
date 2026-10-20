@@ -1,0 +1,146 @@
+{
+  "schema": "project-runtime-preparation-v1",
+  "status": "ready",
+  "acceptance": {
+    "project_root": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api",
+    "id": "AT-20261020-v1-go",
+    "scope_sha256": "329eac4378c0a038183af4d580170cdffcfe8ce63ca27737987a0d724a257c64",
+    "knowledge_receipt": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/knowledge-reads/b7dd7b8f639a4b5d880aff080ac60376.json"
+  },
+  "workspace": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workspace",
+  "runtime_root": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/runtime-v2/output/runtime/runtime",
+  "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+  "components": [],
+  "test_roots": [
+    "projects/go-api/tests"
+  ],
+  "platform": {
+    "system": "Darwin",
+    "machine": "arm64"
+  },
+  "dependency_hashes": {
+    "projects/go-api/go.mod": "27e7d3a47354eff0fe808a9360ed16d0a2103ccc03e1940e0f2c7d7ea2215175"
+  },
+  "knowledge_receipt": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/knowledge-reads/b7dd7b8f639a4b5d880aff080ac60376.json",
+  "knowledge_read_sha256": "d1c49e314f6b276c3ebc29da7cf11c531bd42d34485c0a3effd7b0e62aac0d1b",
+  "knowledge_used": [
+    "INDEX.md",
+    "workflows/INDEX.md",
+    "workflows/runtime.md"
+  ],
+  "spec_path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/runtime-v2/output/agent-spec.json",
+  "spec_sha256": "695eb4c93dd83202c3ba00489c1bc4244a4012d5f949bdd14133117729ee2c34",
+  "recipe_candidate": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/runtime-v2/output/runtime/recipe-candidate.md",
+  "recipe_candidate_sha256": "8c35bcfc464bd1d5859d98955f9ff0c885d8154e92591544a1ac59dae2509dc4",
+  "setup": [
+    {
+      "command": [
+        "/opt/homebrew/bin/python3",
+        "-c",
+        "import pathlib,sys\nroot=pathlib.Path(sys.argv[1])\nfor name in ('bin','go-cache','go-mod-cache','tmp'):\n    (root/name).mkdir(parents=True,exist_ok=True)",
+        "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/runtime-v2/output/runtime/runtime"
+      ],
+      "cwd": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workspace",
+      "env": {},
+      "timeout_seconds": 30,
+      "exit_code": 0,
+      "seconds": 0.022,
+      "log": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/runtime-v2/output/runtime/setup-00.log",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/opt/homebrew/bin/go",
+        "build",
+        "-mod=readonly",
+        "-o",
+        "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/runtime-v2/output/runtime/runtime/bin/stock",
+        "."
+      ],
+      "cwd": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workspace/projects/go-api",
+      "env": {
+        "GOCACHE": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/runtime-v2/output/runtime/runtime/go-cache",
+        "GOMODCACHE": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/runtime-v2/output/runtime/runtime/go-mod-cache",
+        "GOTMPDIR": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/runtime-v2/output/runtime/runtime/tmp",
+        "GOTOOLCHAIN": "local",
+        "GOENV": "off",
+        "GOWORK": "off",
+        "GOFLAGS": "",
+        "GOPROXY": "off",
+        "GOSUMDB": "off",
+        "CGO_ENABLED": "0"
+      },
+      "timeout_seconds": 180,
+      "exit_code": 0,
+      "seconds": 6.953,
+      "log": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/runtime-v2/output/runtime/setup-01.log",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "executables": [
+    {
+      "name": "go",
+      "path": "/opt/homebrew/bin/go",
+      "resolved_path": "/opt/homebrew/Cellar/go/1.25.7/libexec/bin/go",
+      "sha256": "e7e7888a12754a27c27c6a4e525282966875c41b0200177aa1aaeede53e90a11",
+      "version_command": [
+        "/opt/homebrew/bin/go",
+        "version"
+      ],
+      "version_output": "go version go1.25.7 darwin/arm64",
+      "version_receipt": {
+        "command": [
+          "/opt/homebrew/bin/go",
+          "version"
+        ],
+        "cwd": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workspace",
+        "env": {},
+        "timeout_seconds": 30,
+        "exit_code": 0,
+        "seconds": 0.009,
+        "log": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/runtime-v2/output/runtime/version-00.log",
+        "output_sha256": "1466857eb08563bab0dd0e24c04ff15a173f9dcfca659737759d4dce842d7210"
+      }
+    },
+    {
+      "name": "python3",
+      "path": "/opt/homebrew/bin/python3",
+      "resolved_path": "/opt/homebrew/Cellar/python@3.14/3.14.2_1/Frameworks/Python.framework/Versions/3.14/bin/python3.14",
+      "sha256": "00c07e4d31048b15eebbe4c883f229338c5b2d598e9ee061da39b7fccba20cad",
+      "version_command": [
+        "/opt/homebrew/bin/python3",
+        "--version"
+      ],
+      "version_output": "Python 3.14.2",
+      "version_receipt": {
+        "command": [
+          "/opt/homebrew/bin/python3",
+          "--version"
+        ],
+        "cwd": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workspace",
+        "env": {},
+        "timeout_seconds": 30,
+        "exit_code": 0,
+        "seconds": 0.011,
+        "log": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/runtime-v2/output/runtime/version-01.log",
+        "output_sha256": "154ebd4b103b23b709d31a51461b80e35b5bd7da5e24dd86d6616727a32aa244"
+      }
+    }
+  ],
+  "smoke": {
+    "command": [
+      "/opt/homebrew/bin/python3",
+      "-c",
+      "import http.client,pathlib,socket,subprocess,sys,tempfile,time\nbinary=sys.argv[1]\nwith tempfile.TemporaryDirectory(prefix='stock-smoke-',dir=sys.argv[2]) as work:\n    with socket.socket() as listener:\n        listener.bind(('127.0.0.1',0))\n        port=listener.getsockname()[1]\n    with tempfile.TemporaryFile(mode='w+b',dir=work) as log:\n        process=subprocess.Popen([binary,'--port',str(port),'--state-dir',str(pathlib.Path(work)/'state')],stdout=log,stderr=subprocess.STDOUT)\n        try:\n            deadline=time.monotonic()+15\n            while True:\n                if process.poll() is not None:\n                    log.seek(0)\n                    raise RuntimeError('server exited: '+log.read().decode(errors='replace'))\n                connection=http.client.HTTPConnection('127.0.0.1',port,timeout=1)\n                try:\n                    connection.request('GET','/__runtime_smoke__')\n                    response=connection.getresponse()\n                    if process.poll() is not None:\n                        raise RuntimeError('server exited during smoke')\n                    print('HTTP transport ready')\n                    break\n                except (OSError,http.client.HTTPException):\n                    if time.monotonic()>=deadline:\n                        log.seek(0)\n                        raise RuntimeError('server readiness timeout: '+log.read().decode(errors='replace'))\n                    time.sleep(0.05)\n                finally:\n                    connection.close()\n        finally:\n            if process.poll() is None:\n                process.terminate()\n            try:\n                process.wait(timeout=5)\n            except subprocess.TimeoutExpired:\n                process.kill()\n                process.wait(timeout=5)",
+      "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/runtime-v2/output/runtime/runtime/bin/stock",
+      "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/runtime-v2/output/runtime/runtime/tmp"
+    ],
+    "cwd": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workspace/projects/go-api",
+    "env": {},
+    "timeout_seconds": 30,
+    "exit_code": 0,
+    "seconds": 0.502,
+    "log": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/runtime-v2/output/runtime/smoke.log",
+    "output_sha256": "c62146d28243d629f751b97fdb9bc7748c7f3a119eb8558ed800a596541d7637"
+  }
+}

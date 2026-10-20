@@ -1,0 +1,21 @@
+{
+  "java": "/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home/bin/java",
+  "javac": "/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home/bin/javac",
+  "tools": {
+    "agent": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/coverage-1/toolchain/agent.jar",
+      "sha256": "115e8e6e6593ca3a9892dfef695df4d487c706e59e71e64dc0ab95716ee02622",
+      "url": "https://repo.maven.apache.org/maven2/org/jacoco/org.jacoco.agent/0.8.12/org.jacoco.agent-0.8.12-runtime.jar"
+    },
+    "cli": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/coverage-1/toolchain/cli.jar",
+      "sha256": "594c01125b84864a7fc5a9efab19b71b7de36b27346863f6d7cd0cd45400ceb0",
+      "url": "https://repo.maven.apache.org/maven2/org/jacoco/org.jacoco.cli/0.8.12/org.jacoco.cli-0.8.12-nodeps.jar"
+    }
+  },
+  "version": "0.8.12.202403310830",
+  "official_docs": [
+    "https://www.jacoco.org/jacoco/trunk/doc/agent.html",
+    "https://www.jacoco.org/jacoco/trunk/doc/cli.html"
+  ]
+}

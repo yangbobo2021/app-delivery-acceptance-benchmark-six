@@ -1,0 +1,36 @@
+{
+  "status": "passed_local",
+  "test_files": [
+    "projects/go-api/tests/stock_02_s01.py",
+    "projects/go-api/tests/coverage/adapter.py",
+    "projects/go-api/tests/coverage/direct.py",
+    "projects/go-api/tests/coverage/probe.py",
+    "projects/go-api/tests/coverage/launcher.py",
+    "projects/go-api/tests/coverage/harness_test.go.txt"
+  ],
+  "test_command": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "projects/go-api/tests/stock_02_s01.py"
+  ],
+  "test_env": {},
+  "observations": [
+    "统一调试入口执行完成，退出码为0；使用本次新建状态目录及独立端口，运行环境变量由入口和覆盖率适配器注入。",
+    "初始 GET /stock 返回200，available为10。",
+    "ordinary-order-a预留3返回201，request_id、quantity与输入一致，available为7；随后 GET /stock 返回200及available=7。",
+    "ordinary-order-b预留2返回201，request_id、quantity与输入一致，available为5；随后 GET /stock 返回200及available=5。",
+    "21项检查全部通过，原始HTTP响应已保存；服务正常退出，退出码为0，覆盖率进程收尾完整。",
+    "Go原生语句覆盖率为47/70；行和分支覆盖率均为unavailable。仅新增本场景测试文件，未修改产品源码。"
+  ],
+  "evidence_paths": [
+    "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/case-stock-02-s01-v1/case/debug/stock-02-s01-request-01.json",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/case-stock-02-s01-v1/case/debug/attempt-cd0e03f914c64dc2bbb941c6dede6f65/state/stock-02-s01/observations.json",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/case-stock-02-s01-v1/case/debug/attempt-cd0e03f914c64dc2bbb941c6dede6f65/execution/execution.json",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/case-stock-02-s01-v1/case/debug/attempt-cd0e03f914c64dc2bbb941c6dede6f65/execution/collection.json",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/case-stock-02-s01-v1/case/debug/attempt-cd0e03f914c64dc2bbb941c6dede6f65/execution/coverage-report.json"
+  ],
+  "limitations": [
+    "本地通过仍需调度器冻结重跑和独立审查。",
+    "复跑须通过已准备的统一入口注入STOCK_BINARY和全新ACCEPTANCE_CASE_ROOT。"
+  ],
+  "reason": "两次合法预留均正确返回并累计扣减，独立库存查询一致，执行及收尾均成功。"
+}

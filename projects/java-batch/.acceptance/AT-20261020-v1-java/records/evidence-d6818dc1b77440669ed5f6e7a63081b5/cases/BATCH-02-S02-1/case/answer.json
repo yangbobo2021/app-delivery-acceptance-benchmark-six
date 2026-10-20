@@ -1,0 +1,37 @@
+{
+  "status": "product_failure",
+  "test_files": [
+    "projects/java-batch/tests/test_batch_02_s02.py",
+    "projects/java-batch/tests/coverage_adapter.py",
+    "projects/java-batch/tests/coverage_probe.py",
+    "projects/java-batch/tests/coverage_direct.py",
+    "projects/java-batch/tests/coverage-tools.json",
+    "projects/java-batch/tests/CoverageProbe.java"
+  ],
+  "test_command": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "projects/java-batch/tests/test_batch_02_s02.py"
+  ],
+  "test_env": {
+    "BATCH_SCENE_ROOT": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/case/replay-state-01"
+  },
+  "observations": [
+    "统一调试入口实际执行一次；编译成功，业务 CLI 退出0，应用标准错误为空，测试及调试入口退出1。",
+    "给定四行输入实际生成 acct_A,310,3；场景要求金额190、笔数2，非相邻重复事件被再次计入。",
+    "acct_B 实际金额50、笔数1，符合场景要求；输出账户身份、CSV表头及排序检查通过，输入保持原样。",
+    "同次 JaCoCo 0.8.12.202403310830 报告标记 measured：行46/63，分支24/44；原生执行数据已保留。",
+    "仅新增本场景测试，保留此前测试；未修改产品源码。产物全部保留，无清理操作。"
+  ],
+  "evidence_paths": [
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/case/debug/request-01.json",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/case/debug/attempt-6f276564ebc84a24a2671f73284c579b/state/batch-02-s02/observations.json",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/case/debug/attempt-6f276564ebc84a24a2671f73284c579b/state/batch-02-s02/report.csv",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/case/debug/attempt-6f276564ebc84a24a2671f73284c579b/execution/coverage-report.json",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/case/debug/attempt-6f276564ebc84a24a2671f73284c579b/execution/run-response.json"
+  ],
+  "limitations": [
+    "结论限于BATCH-02-S02，待调度器冻结重跑及独立审查。",
+    "重跑须使用新的BATCH_SCENE_ROOT；统一入口负责绑定隔离目录及注入覆盖率环境。"
+  ],
+  "reason": "真实CLI将非相邻的完全重复事件再次计入acct_A，使金额和笔数分别虚增120和1。"
+}

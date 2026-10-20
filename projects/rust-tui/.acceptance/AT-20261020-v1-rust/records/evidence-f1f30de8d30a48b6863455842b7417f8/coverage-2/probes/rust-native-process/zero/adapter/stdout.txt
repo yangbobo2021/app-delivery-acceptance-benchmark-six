@@ -1,0 +1,1 @@
+{"schema": "coverage-probe-normalized-v1", "components": [{"id": "rust-tui", "source_paths": ["projects/rust-tui/src/main.rs"], "metrics": {"line": {"status": "measured", "covered": 0, "total": 128}, "branch": {"status": "unavailable", "reason": "Stable rustc instrument-coverage emits no branch mapping; LLVM reports zero branch units"}}}]}

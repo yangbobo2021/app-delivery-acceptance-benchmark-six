@@ -1,0 +1,20 @@
+{
+  "started": true,
+  "complete": true,
+  "route": "subprocess",
+  "exit_code": 1,
+  "native": [
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/case-inv-02-s02-v1/execution/native/.coverage.bobos-MacBook-Air-2_local.pid34244.X4wj7C8x.H7JxAxIe7JXh",
+      "sha256": "0801159e14cdf54bdeb6aebf0cb48ad8588806634a9f26417649a7f32487edf4"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/case-inv-02-s02-v1/execution/native/.coverage.bobos-MacBook-Air-2_local.pid34246.XFPjMKix.HNQIp837rWOh",
+      "sha256": "c6c43e38c3997ef99815887d400928295e206b7f207846309b4fde679bcc87b1"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/case-inv-02-s02-v1/execution/native/.coverage.bobos-MacBook-Air-2_local.pid34251.XbBW9Ykx.HyMMc1BDNK1h",
+      "sha256": "bdd7ba90da210a1a1f387124c33f3c32afe94a3daa2cbe13058cd991427019f1"
+    }
+  ]
+}

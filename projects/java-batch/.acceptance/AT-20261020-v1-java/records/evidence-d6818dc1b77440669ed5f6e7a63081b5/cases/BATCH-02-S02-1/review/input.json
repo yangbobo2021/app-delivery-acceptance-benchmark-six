@@ -1,0 +1,138 @@
+{
+  "acceptance": {
+    "project_root": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch",
+    "id": "AT-20261020-v1-java",
+    "scope_sha256": "bcdef962ff8a9739376cbf6d9fa684161ab5f2baebac7a144b7df35802d2e0a8",
+    "knowledge_receipt": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/knowledge-reads/1b976d2e17cd4034aac9b2df8408ddb7.json"
+  },
+  "requirement": {
+    "id": "BATCH-02",
+    "title": "BATCH-02",
+    "text": "BATCH-02：对每个 account 汇总金额与不同 event_id 的笔数。相同 event_id、account、amount_cents 的重复行只处理一次；相同 event_id 对应不同内容时整批失败。账户名大小写敏感。"
+  },
+  "scene": {
+    "id": "BATCH-02-S02",
+    "title": "非相邻重复事件只计一次",
+    "priority": "P1",
+    "priority_reason": "重复记录被再次计入会虚增账户收款金额和事件笔数，使含重复数据的汇总失真。",
+    "description": "输入依次包含 e1/acct_A/120、e2/acct_A/70、e3/acct_B/50，以及再次出现的 e1/acct_A/120，执行批处理。acct_A 总金额须为190、笔数2，acct_B 总金额须为50、笔数1，非相邻的完全重复行不得增加金额或笔数。",
+    "requirement_id": "BATCH-02",
+    "kind": "BLACK_BOX"
+  },
+  "business_goal": "通过本地批处理读取 UTF-8 收款事件 CSV，去重并按账户生成精确、排序稳定的收款汇总，遇到错误时整批失败并保护原有文件。",
+  "confirmed_scope": {
+    "included_requirement_ids": [
+      "BATCH-01",
+      "BATCH-02",
+      "BATCH-03",
+      "BATCH-04",
+      "BATCH-05",
+      "BATCH-06"
+    ],
+    "exclusions": [
+      "连接网络或数据库。",
+      "支持 CSV 引号语法。",
+      "覆盖已存在的输出文件。"
+    ],
+    "limitations": [
+      "“普通本地机器”的配置及处理 1000 条合法记录的完成时限未明确。",
+      "输入材料未提供当前实现满足全部业务规则的验证结果。"
+    ]
+  },
+  "related_requirements": [
+    {
+      "id": "BATCH-03",
+      "title": "BATCH-03",
+      "text": "BATCH-03：成功时输出 UTF-8 CSV，表头固定为 `account,total_cents,event_count`，账户按字典序排列；退出码 0，标准错误为空。所有金额使用精确整数，输出每次相同。"
+    },
+    {
+      "id": "BATCH-04",
+      "title": "BATCH-04",
+      "text": "BATCH-04：任何参数、读取或数据错误都以退出码 2 失败，标准错误给出非空说明，不生成部分输出。若输出路径已存在，不覆盖它；输入文件保持原样。"
+    },
+    {
+      "id": "BATCH-06",
+      "title": "BATCH-06",
+      "text": "BATCH-06：有 1000 条合法记录的文件应在普通本地机器上完成处理；空行、列数错误、无数据行都应给出 BATCH-04 规定的失败反馈。"
+    }
+  ],
+  "scenario_source_path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/scenario-BATCH-02-3/scenarios.current.json",
+  "scenario_source_sha256": "64f122040b692ade02744d890336a080ca620563d20a1c5f39e50b6ce6a4eb21",
+  "scenario_self_check": "internal",
+  "local_loopback_required": false,
+  "ui_acceptance": {
+    "required": false,
+    "visual_expectation": "",
+    "source_sha256": "d1c551b57268d499531a66633b72c0b2acc93a6d88fcd0f486eff16297d29074"
+  },
+  "coverage": {
+    "policy": "required",
+    "protocol": "project-coverage-v1",
+    "prepared": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/coverage-3/prepared",
+    "prepared_sha256": "70ff143f5ab0656d032f01925b7c25c7895122dc2a01458720166f50875aa652",
+    "inventory_path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/inventory-1/inventory.json",
+    "required_test_files": {
+      "projects/java-batch/tests/coverage_adapter.py": "f3765b08d82276bef098c330cc8e03862a9e830b67d6b13579085a2128a47fd5",
+      "projects/java-batch/tests/coverage_probe.py": "155c16ab80c4c2faef73990f17113258ce096d2bb64cda3ae27f04de02001b66",
+      "projects/java-batch/tests/coverage_direct.py": "38169a29bd082e2f360506e36916977faac7d9db7ca6d583baedec174b79e2ae",
+      "projects/java-batch/tests/coverage-tools.json": "99056c8fe296124911e894676e517417dac8f804780a1b9ec4fbeb88724a8c9e",
+      "projects/java-batch/tests/CoverageProbe.java": "41e45dde2c57465a6d17895863e9fd61f422d501d5f0933ae7b2db83e5231038"
+    },
+    "acceptance": {
+      "project_root": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch",
+      "id": "AT-20261020-v1-java",
+      "scope_sha256": "bcdef962ff8a9739376cbf6d9fa684161ab5f2baebac7a144b7df35802d2e0a8",
+      "knowledge_receipt": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/knowledge-reads/330bbb86cec2498fa3f9d8ad8a1d00fc.json"
+    },
+    "scene_id": "BATCH-02-S02",
+    "revision": "be952659c7d93018e26793daf2e58fa8321601f4"
+  },
+  "runtime": {
+    "manifest": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/runtime-3/runtime/runtime.json",
+    "sha256": "c32028802a95762200553651237eaf560ef0585ff02f16f130272646f09c04f1"
+  },
+  "debug_environment": {
+    "fresh_env_root_key": "BATCH_SCENE_ROOT",
+    "evidence_env_dir_keys": [
+      "BATCH_SCENE_ROOT"
+    ]
+  },
+  "frozen_revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+  "test_files": [
+    "projects/java-batch/tests/CoverageProbe.java",
+    "projects/java-batch/tests/coverage-tools.json",
+    "projects/java-batch/tests/coverage_adapter.py",
+    "projects/java-batch/tests/coverage_direct.py",
+    "projects/java-batch/tests/coverage_probe.py",
+    "projects/java-batch/tests/test_batch_02_s02.py",
+    "projects/java-batch/tests/test_batch_03_s01.py"
+  ],
+  "artifact_scope": "isolated_worktree",
+  "execution_evidence_paths": [
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/frozen-evidence/0/execution.log",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/frozen-evidence/0/execution.json",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/frozen-evidence/1/BatchReport$Event.class",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/frozen-evidence/2/BatchReport$Total.class",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/frozen-evidence/3/BatchReport.class",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/frozen-evidence/4/session.exec",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/frozen-evidence/5/batch-02-s02/classes/benchmark/BatchReport$Event.class",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/frozen-evidence/5/batch-02-s02/classes/benchmark/BatchReport$Total.class",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/frozen-evidence/5/batch-02-s02/classes/benchmark/BatchReport.class",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/frozen-evidence/5/batch-02-s02/compile.stderr",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/frozen-evidence/5/batch-02-s02/compile.stdout",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/frozen-evidence/5/batch-02-s02/events.csv",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/frozen-evidence/5/batch-02-s02/observations.json",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/frozen-evidence/5/batch-02-s02/process.stderr.application",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/frozen-evidence/5/batch-02-s02/process.stderr.raw",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/frozen-evidence/5/batch-02-s02/process.stdout",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/frozen-evidence/5/batch-02-s02/report.csv",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/execution/execution.log"
+  ],
+  "frozen_evidence_manifest": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/frozen-evidence.json",
+  "frozen_execution_receipt": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/execution/execution.json",
+  "frozen_execution_log": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/execution/execution.log",
+  "coverage_result_path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/coverage-report.json",
+  "agent_result_path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/case/answer.json",
+  "scope_note": "Phase 2B selected BATCH-02-S02 only. Verify nonadjacent identical e1/acct_A/120 repeat is counted once, while intervening e2/acct_A/70 and e3/acct_B/50 are counted. Use fresh isolated input/output, real Java CLI, independent oracle and same-run JaCoCo. Do not run other scenes.",
+  "handoff_gate_path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/handoff-gate.json"
+}

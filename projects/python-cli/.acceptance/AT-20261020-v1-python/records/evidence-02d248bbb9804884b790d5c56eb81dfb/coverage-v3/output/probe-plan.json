@@ -1,0 +1,115 @@
+{
+  "schema": "project-coverage-probe-plan-v1",
+  "routes": [
+    {
+      "id": "python-inprocess-import",
+      "source_paths": [
+        "projects/python-cli/invoice/__main__.py",
+        "projects/python-cli/invoice/totals.py"
+      ],
+      "zero": {
+        "collect": [
+          "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/runtime-v2/output/runtime/runtime/venv/bin/python",
+          "-B",
+          "{workspace}/projects/python-cli/tests/coverage_support/collect.py",
+          "zero",
+          "{raw_dir}",
+          "inprocess"
+        ],
+        "adapter": [
+          "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/runtime-v2/output/runtime/runtime/venv/bin/python",
+          "-B",
+          "{workspace}/projects/python-cli/tests/coverage_support/adapter.py",
+          "probe-read",
+          "{raw_dir}"
+        ],
+        "direct": [
+          "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/runtime-v2/output/runtime/runtime/venv/bin/python",
+          "-B",
+          "{workspace}/projects/python-cli/tests/coverage_support/direct.py",
+          "{raw_dir}"
+        ]
+      },
+      "nonzero": {
+        "collect": [
+          "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/runtime-v2/output/runtime/runtime/venv/bin/python",
+          "-B",
+          "{workspace}/projects/python-cli/tests/coverage_support/collect.py",
+          "nonzero",
+          "{raw_dir}",
+          "inprocess"
+        ],
+        "adapter": [
+          "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/runtime-v2/output/runtime/runtime/venv/bin/python",
+          "-B",
+          "{workspace}/projects/python-cli/tests/coverage_support/adapter.py",
+          "probe-read",
+          "{raw_dir}"
+        ],
+        "direct": [
+          "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/runtime-v2/output/runtime/runtime/venv/bin/python",
+          "-B",
+          "{workspace}/projects/python-cli/tests/coverage_support/direct.py",
+          "{raw_dir}"
+        ]
+      }
+    },
+    {
+      "id": "python-subprocess",
+      "source_paths": [
+        "projects/python-cli/invoice/__main__.py",
+        "projects/python-cli/invoice/totals.py"
+      ],
+      "zero": {
+        "collect": [
+          "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/runtime-v2/output/runtime/runtime/venv/bin/python",
+          "-B",
+          "{workspace}/projects/python-cli/tests/coverage_support/collect.py",
+          "zero",
+          "{raw_dir}",
+          "subprocess"
+        ],
+        "adapter": [
+          "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/runtime-v2/output/runtime/runtime/venv/bin/python",
+          "-B",
+          "{workspace}/projects/python-cli/tests/coverage_support/adapter.py",
+          "probe-read",
+          "{raw_dir}"
+        ],
+        "direct": [
+          "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/runtime-v2/output/runtime/runtime/venv/bin/python",
+          "-B",
+          "{workspace}/projects/python-cli/tests/coverage_support/direct.py",
+          "{raw_dir}"
+        ]
+      },
+      "nonzero": {
+        "collect": [
+          "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/runtime-v2/output/runtime/runtime/venv/bin/python",
+          "-B",
+          "{workspace}/projects/python-cli/tests/coverage_support/collect.py",
+          "nonzero",
+          "{raw_dir}",
+          "subprocess"
+        ],
+        "adapter": [
+          "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/runtime-v2/output/runtime/runtime/venv/bin/python",
+          "-B",
+          "{workspace}/projects/python-cli/tests/coverage_support/adapter.py",
+          "probe-read",
+          "{raw_dir}"
+        ],
+        "direct": [
+          "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/runtime-v2/output/runtime/runtime/venv/bin/python",
+          "-B",
+          "{workspace}/projects/python-cli/tests/coverage_support/direct.py",
+          "{raw_dir}"
+        ]
+      }
+    }
+  ],
+  "runtime_manifest": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/runtime-v2/output/runtime/runtime.json",
+  "runtime_sha256": "e7396daf12304ca20738b06dd112709022fb64c44f6efc74b8f84cf98799e1c7",
+  "workspace": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workspace",
+  "revision": "be952659c7d93018e26793daf2e58fa8321601f4"
+}

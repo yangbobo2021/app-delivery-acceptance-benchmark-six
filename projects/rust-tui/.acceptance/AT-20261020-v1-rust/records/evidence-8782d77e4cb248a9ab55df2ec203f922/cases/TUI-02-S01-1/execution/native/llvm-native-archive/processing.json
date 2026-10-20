@@ -1,0 +1,58 @@
+{
+  "schema": "llvm-native-archive-v1",
+  "binary": {
+    "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/execution/native/product-binary",
+    "sha256": "dfd7f10ff53809ec7d384d60d6a31c0879cfb57d9ea46a244ccbc157cf02e086"
+  },
+  "profiles": [
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/execution/native/run-50508-3353984249793428757_0.profraw",
+      "sha256": "431d67398e4380e016fa3b64cb8e647840236f0fbd5ec17aa94ad30b9fbfa54f"
+    }
+  ],
+  "merged": {
+    "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/execution/native/llvm-native-archive/merged.profdata",
+    "sha256": "5ae869eb35ba560b2239e2895316dad34d5015112c7fdd30883997b7e1269a58"
+  },
+  "commands": [
+    [
+      "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/coverage-1/llvm-setup/llvm-tools-1.94.0-aarch64-apple-darwin/llvm-tools-preview/lib/rustlib/aarch64-apple-darwin/bin/llvm-profdata",
+      "merge",
+      "-sparse",
+      "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/execution/native/run-50508-3353984249793428757_0.profraw",
+      "-o",
+      "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/execution/native/llvm-native-archive/merged.profdata"
+    ],
+    [
+      "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/coverage-1/llvm-setup/llvm-tools-1.94.0-aarch64-apple-darwin/llvm-tools-preview/lib/rustlib/aarch64-apple-darwin/bin/llvm-cov",
+      "export",
+      "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/execution/native/product-binary",
+      "-instr-profile=/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/execution/native/llvm-native-archive/merged.profdata"
+    ],
+    [
+      "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/coverage-1/llvm-setup/llvm-tools-1.94.0-aarch64-apple-darwin/llvm-tools-preview/lib/rustlib/aarch64-apple-darwin/bin/llvm-cov",
+      "export",
+      "--summary-only",
+      "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/execution/native/product-binary",
+      "-instr-profile=/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/execution/native/llvm-native-archive/merged.profdata"
+    ]
+  ],
+  "export": {
+    "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/execution/native/llvm-native-archive/native-export.stdout",
+    "sha256": "0bc28a5ba34289cee6d87a10da9444c0cd6849baecb958b54214af426a6af3bb"
+  },
+  "summary": {
+    "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/execution/native/llvm-native-archive/native-summary.stdout",
+    "sha256": "70456f8e5ec23f5fbf0ad863cea7d1e4eca66c2d358fe1ae1491c8587b4e327a"
+  },
+  "tools": [
+    {
+      "name": "llvm-profdata",
+      "version": "LLVM (http://llvm.org/):\n  LLVM version 21.1.8-rust-1.94.0-stable\n  Optimized build."
+    },
+    {
+      "name": "llvm-cov",
+      "version": "LLVM (http://llvm.org/):\n  LLVM version 21.1.8-rust-1.94.0-stable\n  Optimized build."
+    }
+  ]
+}

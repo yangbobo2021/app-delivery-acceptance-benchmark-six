@@ -1,0 +1,55 @@
+{
+  "schema": "project-coverage-summary-snapshot-v1",
+  "reports": [
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/execution/coverage-report.json",
+      "sha256": "86d407d3cfa7d58ed69dd79b2fe3fd93e41a6b506def81ab3f3a54fdef341675"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-03-S01-2/execution/coverage-report.json",
+      "sha256": "bdb26b1e2fe5f24307d9b7ae5152e65a9fabbee6cbee58be07c3d96777b20e4c"
+    }
+  ],
+  "prepared_sha256": "70ff143f5ab0656d032f01925b7c25c7895122dc2a01458720166f50875aa652",
+  "summary": {
+    "tools": [
+      {
+        "name": "JaCoCo",
+        "version": "0.8.12.202403310830",
+        "role": "JVM agent 原生 exec 采集；CLI execinfo 校验、report 行/分支计数、merge 合并。已通过适配器 --self-check 核验实际 CLI 版本及工具文件哈希。"
+      }
+    ],
+    "scopes": {
+      "project": {
+        "status": "measured",
+        "components": [
+          {
+            "id": "java-batch",
+            "label": "BatchReport.java (JaCoCo source-file counters)",
+            "source_paths": [
+              "projects/java-batch/src/main/java/benchmark/BatchReport.java"
+            ],
+            "line": {
+              "status": "measured",
+              "covered": 46,
+              "total": 63
+            },
+            "branch": {
+              "status": "measured",
+              "covered": 24,
+              "total": 44
+            }
+          }
+        ]
+      },
+      "changed_files": {
+        "status": "unavailable",
+        "reason": "Requirements baseline inventory has no code diff; changed scope is undefined"
+      },
+      "changed_lines": {
+        "status": "unavailable",
+        "reason": "Requirements baseline inventory has no code diff; changed scope is undefined"
+      }
+    }
+  }
+}

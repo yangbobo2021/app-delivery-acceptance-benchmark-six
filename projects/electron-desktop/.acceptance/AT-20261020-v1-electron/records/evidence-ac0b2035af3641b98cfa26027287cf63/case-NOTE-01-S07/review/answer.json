@@ -1,0 +1,29 @@
+{
+  "status": "product_bug",
+  "coverage": "功能断言覆盖新增后两条记录并存、独立 ID、分别选择及原标题/正文保留，能够识别覆盖旧记录等错误。覆盖率关联本次 S07 冻结执行，采集正常结束；总体报告为 incomplete，构建工具未测，不能称为全项目覆盖。覆盖率不替代 UI 判断。",
+  "oracle": "记录保留与独立选择依据 NOTE-01；预期标题、正文来自测试自带的两组固定夹具，不从产品输出生成。可读性与字体协调依据本次明确的 UI 验收要求，不强加品牌或配色。",
+  "evidence": "冻结命令退出码为 0。测试启动真实 Electron，通过鼠标、文本输入操作编辑器及保存按钮，经过产品 preload/IPC 路径；冻结状态记录证明两条不同 ID 的便签可以来回选择，完整标题、正文与夹具一致。但截图直接证明保存第二条后列表标题异常缩小，功能成功不足以支持整体通过。",
+  "ui_review": {
+    "status": "failed",
+    "screenshot_paths": [
+      "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/frozen-evidence/8/01-empty.png",
+      "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/frozen-evidence/8/02-first-entered.png",
+      "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/frozen-evidence/8/02-first-new.png",
+      "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/frozen-evidence/8/02-first-saved.png",
+      "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/frozen-evidence/8/03-second-entered.png",
+      "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/frozen-evidence/8/03-second-new.png",
+      "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/frozen-evidence/8/03-second-saved.png",
+      "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/frozen-evidence/8/04-first-selected.png",
+      "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/frozen-evidence/8/05-second-selected.png"
+    ],
+    "reason": "直接观察九张附图：编辑器标题、正文及 New/Save/Delete 均完整可见，无明显遮挡或裁切；双栏、留白、对齐、圆角及按钮样式整体协调。第一条保存时列表标题清晰；第二条保存后，两条列表标题同时变成极小字，切换选择后持续存在，明显破坏可读性与字体一致性。冻结窗口为 850×650、DPR=2；对应产品样式在列表有两个按钮时设置 font-size:6px。自动化完成了保存和选择，但用户依靠列表辨认便签受到实际妨碍。"
+  },
+  "findings": [
+    {
+      "kind": "product",
+      "reason": "保存第二条普通便签即可复现：两条列表标题骤然缩小，选择任一便签后仍保持极小字号。截图与单条状态形成直接对照；src/index.html 的 #notes:has(button + button) button 规则设置 6px 字号，与观察一致。这是关键导航内容的可读性缺陷。",
+      "requested_change": "移除多条便签时异常缩小字号的规则，使列表标题在新增和切换后持续清晰、与其他控件字体协调；保留现有业务断言，修复后重新冻结相同场景的截图供复核。"
+    }
+  ],
+  "summary": "新增保留旧记录的功能证据可靠，但冻结截图证明双条列表标题存在可读性缺陷，整体判为产品问题。"
+}

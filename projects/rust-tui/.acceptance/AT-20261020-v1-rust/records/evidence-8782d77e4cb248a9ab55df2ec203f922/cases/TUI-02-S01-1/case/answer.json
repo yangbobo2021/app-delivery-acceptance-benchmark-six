@@ -1,0 +1,38 @@
+{
+  "status": "product_failure",
+  "test_files": [
+    "projects/rust-tui/tests/tui02_basic_list.py",
+    "projects/rust-tui/tests/tui04_single_toggle.py",
+    "projects/rust-tui/tests/llvm_coverage/adapter.py",
+    "projects/rust-tui/tests/llvm_coverage/direct.py",
+    "projects/rust-tui/tests/llvm_coverage/config.json",
+    "projects/rust-tui/tests/llvm_coverage/probe.rs",
+    "projects/rust-tui/tests/llvm_coverage/README.md"
+  ],
+  "test_command": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "projects/rust-tui/tests/tui02_basic_list.py"
+  ],
+  "test_env": {},
+  "observations": [
+    "统一调试入口执行完成，机械检查退出码为0；真实PTY为80×24，TERM=xterm-256color，NO_COLOR未设置。",
+    "原生窗口边界为598,291,1168,662。输入包含Buy milk（未完成）、Read book（已完成）、Water plants（未完成）。",
+    "人工检查打开截图：首项呈实心灰色色块，选中文字、名称及完成标识不可辨认。",
+    "人工检查按j后的截图：第二项呈同样灰色色块；第一项恢复可读，第二项名称及完成标识不可辨认，违反TUI-02选择对比度和全部项目可读要求。",
+    "两个状态中的标题、操作提示、未选中项和底部状态行可读，未见互相遮挡或裁切；列表对齐、间距和未选中项样式一致。",
+    "实际输入为j后q；状态文件始终未变，产品正常退出，终端恢复成功，清理无异常。",
+    "同次业务执行已生成原生LLVM覆盖率报告；行指标为measured，分支指标为unavailable。仅新增本场景测试，保留既有测试，未修改产品源码。"
+  ],
+  "evidence_paths": [
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/case/debug/attempt-da92b8a1964a400598327f58bc929dfb/state/screens/tui02-01-open.png",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/case/debug/attempt-da92b8a1964a400598327f58bc929dfb/state/screens/tui02-02-after-j.png",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/case/debug/attempt-da92b8a1964a400598327f58bc929dfb/state/tui02-basic-list/observations.json",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/case/debug/attempt-da92b8a1964a400598327f58bc929dfb/execution/coverage-report.json"
+  ],
+  "limitations": [
+    "所列截图为本地调试观察，不是正式验收证据；需调度器正式执行并独立复审。",
+    "正式命令通过宿主绑定的TUI_SCREENSHOT_DIR保存截图；TUI_CASE_ROOT和覆盖率二进制等运行绑定由统一入口提供。",
+    "命令退出码反映机械检查与清理结果；视觉缺陷由截图人工审查判定，不由自动断言代替。"
+  ],
+  "reason": "真实80×24终端中，选中项的文字与背景视觉同色，导致名称和完成状态不可辨认。"
+}

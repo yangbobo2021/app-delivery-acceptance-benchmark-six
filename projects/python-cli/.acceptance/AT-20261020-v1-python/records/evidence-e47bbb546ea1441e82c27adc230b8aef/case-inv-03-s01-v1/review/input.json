@@ -1,0 +1,118 @@
+{
+  "acceptance": {
+    "project_root": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli",
+    "id": "AT-20261020-v1-python",
+    "scope_sha256": "023b3255e8b891df0f4a70b2034ef3ed79289ebde4b8beb447855df2d8790d06",
+    "knowledge_receipt": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/knowledge-reads/dd03876a7b0c4d05aaad27a77449e469.json"
+  },
+  "requirement": {
+    "id": "INV-03",
+    "title": "INV-03",
+    "text": "INV-03：成功时标准输出为一个 JSON 对象，字段为 `totals`（account 到整数总额的对象）与 `row_count`（数据行数），退出码为 0。JSON 键顺序及空白不作要求，标准错误为空。"
+  },
+  "scene": {
+    "id": "INV-03-S01",
+    "title": "成功结果以单个 JSON 对象交付",
+    "priority": "P0",
+    "priority_reason": "成功输出无法解析或 totals 结构错误，会使主要汇总结果无法按约定读取。",
+    "description": "使用三条普通合法记录：acct1 对应 120、30，acct2 对应 50，执行汇总。标准输出完整解析为单个 JSON 对象，字段为 totals 和 row_count；totals 是账号到整数总额的对象，内容为 acct1 对应 150、acct2 对应 50，不混入日志、提示或第二个 JSON 值。",
+    "requirement_id": "INV-03",
+    "kind": "BLACK_BOX"
+  },
+  "business_goal": "提供无需联网的 UTF-8 CSV 金额汇总 CLI，严格校验输入，按大小写敏感的账号精确汇总整数金额，输出可重复的 JSON 结果，并保证失败时不泄露部分汇总、不改写输入或在输入目录产生文件。",
+  "confirmed_scope": {
+    "included_requirement_ids": [
+      "INV-01",
+      "INV-02",
+      "INV-03",
+      "INV-04",
+      "INV-05",
+      "INV-06"
+    ],
+    "exclusions": [
+      "成功输出 JSON 的键顺序及空白格式不作要求。",
+      "错误诊断的具体措辞不作要求。"
+    ],
+    "limitations": [
+      "历史运行环境验证仅覆盖 be95265，当前版本的运行入口及行为尚未验证。"
+    ]
+  },
+  "related_requirements": [
+    {
+      "id": "INV-02",
+      "title": "INV-02",
+      "text": "INV-02：按 account 汇总所有记录的 amount_cents，使用精确整数计算。一个 account 的结果可以超过 32 位有符号整数最大值。"
+    },
+    {
+      "id": "INV-06",
+      "title": "INV-06",
+      "text": "INV-06：同一输入重复执行得到相同汇总。账号大小写敏感，`A` 与 `a` 分开统计；不对 account 做大小写转换。"
+    }
+  ],
+  "scenario_source_path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/scenarios-inv-03-v2/output/scenarios.current.json",
+  "scenario_source_sha256": "2e8ca0786320af1d215e42078efb9d57dcfce4fbb8a036108376ab3a859c3b33",
+  "scenario_self_check": "internal",
+  "local_loopback_required": false,
+  "ui_acceptance": {
+    "required": false,
+    "visual_expectation": "",
+    "source_sha256": "80ffd05ef6caa3f4e4220771a721524eb00cd7025c3401cc924d7b78ef93f528"
+  },
+  "coverage": {
+    "policy": "required",
+    "protocol": "project-coverage-v1",
+    "prepared": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/coverage-v3/output/prepared",
+    "prepared_sha256": "317638f68cd9c34a78c5c283771ba54bfdb0f2c34c2d8d0a3b3a91c902f790c3",
+    "inventory_path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/coverage-v2/inventory.json",
+    "required_test_files": {
+      "projects/python-cli/tests/coverage_support/adapter.py": "e59a25ebbeeeb654aa2ebba80335f65587b4b6f66ca735598c6cd0ce5010e4fd",
+      "projects/python-cli/tests/coverage_support/collect.py": "88d83549ff74386cce54a2ff56a4f6e627b1cfe94b82d195d96c1bfc0fffd453",
+      "projects/python-cli/tests/coverage_support/direct.py": "a6b228ad2269606157517eff132ac706478eeb2c41889829783c4b030991b0e0",
+      "projects/python-cli/tests/coverage_support/coverage-requirements.txt": "b69684abad190dea565783e8534d6116e82e1811a0d2b9f1bf99f9613ee83c28",
+      "projects/python-cli/tests/coverage_support/tool-lock.json": "a371e32285e70c144219cc531644e1d4e790b9e7f2981fbd8c701acc0dbde3c6",
+      "projects/python-cli/tests/coverage_support/README.md": "96ff3a7e817bd2cc9818b9b496feddf018c3febaf6c8c1ed72c45fb1d73090e4"
+    },
+    "acceptance": {
+      "project_root": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli",
+      "id": "AT-20261020-v1-python",
+      "scope_sha256": "023b3255e8b891df0f4a70b2034ef3ed79289ebde4b8beb447855df2d8790d06",
+      "knowledge_receipt": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/knowledge-reads/dd03876a7b0c4d05aaad27a77449e469.json"
+    },
+    "scene_id": "INV-03-S01",
+    "revision": "be952659c7d93018e26793daf2e58fa8321601f4"
+  },
+  "runtime": {
+    "manifest": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/runtime-v2/output/runtime/runtime.json",
+    "sha256": "e7396daf12304ca20738b06dd112709022fb64c44f6efc74b8f84cf98799e1c7"
+  },
+  "debug_environment": {
+    "fresh_env_root_key": "ACCEPTANCE_CASE_ROOT"
+  },
+  "frozen_revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+  "test_files": [
+    "projects/python-cli/tests/coverage_support/README.md",
+    "projects/python-cli/tests/coverage_support/adapter.py",
+    "projects/python-cli/tests/coverage_support/collect.py",
+    "projects/python-cli/tests/coverage_support/coverage-requirements.txt",
+    "projects/python-cli/tests/coverage_support/direct.py",
+    "projects/python-cli/tests/coverage_support/tool-lock.json",
+    "projects/python-cli/tests/test_inv_03_s01.py"
+  ],
+  "artifact_scope": "isolated_worktree",
+  "execution_evidence_paths": [
+    "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/case-inv-03-s01-v1/frozen-evidence/0/execution.log",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/case-inv-03-s01-v1/frozen-evidence/0/execution.json",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/case-inv-03-s01-v1/frozen-evidence/1/.coverage.bobos-MacBook-Air-2_local.pid46015.X6zTD0qx.H7JxAxIe7JXh",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/case-inv-03-s01-v1/frozen-evidence/2/.coverage.bobos-MacBook-Air-2_local.pid46017.X3HG7DIx.HNQIp837rWOh",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/case-inv-03-s01-v1/frozen-evidence/3/.coverage.bobos-MacBook-Air-2_local.pid46019.XPjJbLcx.HyMMc1BDNK1h",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/case-inv-03-s01-v1/frozen-evidence/4/lifecycle.json",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/case-inv-03-s01-v1/execution/execution.log"
+  ],
+  "frozen_evidence_manifest": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/case-inv-03-s01-v1/frozen-evidence.json",
+  "frozen_execution_receipt": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/case-inv-03-s01-v1/execution/execution.json",
+  "frozen_execution_log": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/case-inv-03-s01-v1/execution/execution.log",
+  "coverage_result_path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/case-inv-03-s01-v1/coverage-report.json",
+  "agent_result_path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/case-inv-03-s01-v1/case/answer.json",
+  "scope_note": "Only the frozen INV-03-S01 scene; verify full CLI stdout JSON and its totals.",
+  "handoff_gate_path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/case-inv-03-s01-v1/handoff-gate.json"
+}

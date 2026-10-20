@@ -1,0 +1,19 @@
+{
+  "command": [
+    "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/runtime-v2/output/runtime/runtime/venv/bin/python",
+    "-B",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workspace/projects/python-cli/tests/coverage_support/adapter.py",
+    "probe-read",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/coverage-v3/output/probes/python-inprocess-import/zero/raw"
+  ],
+  "cwd": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workspace",
+  "exit_code": 0,
+  "stdout": {
+    "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/coverage-v3/output/probes/python-inprocess-import/zero/adapter/stdout.txt",
+    "sha256": "a23426e2124ead2104f47a5981d14314804b719431a6dfa8e41e78e3f0c74d9a"
+  },
+  "stderr": {
+    "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/coverage-v3/output/probes/python-inprocess-import/zero/adapter/stderr.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

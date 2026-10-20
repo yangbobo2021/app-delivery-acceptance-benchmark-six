@@ -1,0 +1,14 @@
+{
+  "started": true,
+  "complete": true,
+  "exit_code": 0,
+  "command": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "projects/rust-tui/tests/tui02_basic_list.py"
+  ],
+  "binary": {
+    "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/execution/native/product-binary",
+    "sha256": "dfd7f10ff53809ec7d384d60d6a31c0879cfb57d9ea46a244ccbc157cf02e086"
+  },
+  "session_sha256": "5ab49b4c51672acd5ae6bd5b050da6ace62bdd63573e5c5f7e41cf1ac34ad816"
+}

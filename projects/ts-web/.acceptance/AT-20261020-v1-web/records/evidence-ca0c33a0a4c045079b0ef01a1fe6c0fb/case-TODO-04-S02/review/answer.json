@@ -1,0 +1,35 @@
+{
+  "status": "product_bug",
+  "coverage": "测试覆盖两组独立夹具、三个过滤选项及返回 All，能识别按过滤结果错误计数的实现，并检查条目身份及完成状态。覆盖率绑定本次冻结执行，采集完整；Istanbul instrument 6.0.3 插桩、esbuild 0.28.2 转译、Istanbul coverage 3.2.2 合并统计，app.ts 行22/22、分支9/10。覆盖率不代表业务通过。",
+  "oracle": "TODO-04原文明确要求统计所有待办中的未完成总数。两组夹具均通过真实UI建立两条未完成任务，因此所有过滤下预期均为2；过滤后无可见条目不等于全量空列表。列表和状态断言来自TODO-02、TODO-03，可读性来自business_goal及本次UI验收要求，无需新增合同。",
+  "evidence": "真实Chromium在1280×800访问本地产品服务，通过表单添加、复选框完成和按钮过滤；覆盖率仅注入产品源码计数。冻结命令退出1，日志与states.json一致：mixed/Completed及active-only/Completed实际均为0，预期2；其余过滤及返回All计数为2，条目与完成状态断言通过。cleanupErrors为空、serverStderr为空，失败来自产品。app.ts的render使用visible计算剩余数，与观察相符。",
+  "ui_review": {
+    "status": "failed",
+    "screenshot_paths": [
+      "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-04-S02/frozen-evidence/18/active-only-01-before.png",
+      "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-04-S02/frozen-evidence/18/active-only-02-added.png",
+      "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-04-S02/frozen-evidence/18/active-only-03-all.png",
+      "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-04-S02/frozen-evidence/18/active-only-04-active.png",
+      "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-04-S02/frozen-evidence/18/active-only-05-completed.png",
+      "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-04-S02/frozen-evidence/18/mixed-02-added.png",
+      "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-04-S02/frozen-evidence/18/mixed-03-all.png",
+      "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-04-S02/frozen-evidence/18/mixed-04-active.png",
+      "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-04-S02/frozen-evidence/18/mixed-05-completed.png",
+      "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-04-S02/frozen-evidence/18/mixed-06-all.png"
+    ],
+    "reason": "直接观察全部10张附图：卡片层次、留白、行间距与对齐合理，字体和按钮样式一致，输入框、过滤按钮、计数及删除控件均完整可见，未见遮挡或裁切。但mixed-03-all、mixed-05-completed及mixed-06-all中的已完成标题接近白底颜色，难以辨认，违反必要内容可读要求；Completed下计数同时错误，用户无法可靠判断剩余任务。此缺陷属于可用性，不是配色偏好。"
+  },
+  "findings": [
+    {
+      "kind": "product",
+      "reason": "两组夹具切换Completed后均显示Remaining: 0，而全量仍有两条未完成任务，违反TODO-04。",
+      "requested_change": "从全量tasks计算未完成总数，过滤仅影响可见列表；保留现有跨过滤计数和状态断言。"
+    },
+    {
+      "kind": "product",
+      "reason": "已完成任务在All和Completed视图中的标题几乎融入白色背景，冻结图片直接证明内容难以阅读。",
+      "requested_change": "调整已完成标题样式，使文字保持清楚可读，并核验All和Completed两个状态。"
+    }
+  ],
+  "summary": "冻结证据可靠地证明全量计数错误，并直接揭示已完成任务标题可读性缺陷，场景不能通过。"
+}

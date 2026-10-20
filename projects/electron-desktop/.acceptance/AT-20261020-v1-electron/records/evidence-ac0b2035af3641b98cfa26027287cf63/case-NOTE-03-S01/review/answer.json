@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "coverage": "本场景覆盖空目录首次保存、完全退出、同目录重启和选择后全文恢复；断言能够识别丢失、重复、标题或正文改变。未扩展评价删除持久化及跨目录隔离。覆盖率绑定本次冻结执行及两个应用进程的原始快照；使用 istanbul-lib-instrument 6.0.3、esbuild 0.28.2、istanbul-lib-source-maps 5.0.6 和 istanbul-lib-coverage 3.2.2。build.mjs 未采集，整体如实标为 incomplete，不作为全项目覆盖或业务通过依据。",
+  "oracle": "标题、正文跨完全退出重启保持一致直接来自 NOTE-03；选择操作来自 NOTE-01。完整预期使用测试预先固定的普通中文标题和两行正文，不从产品返回值生成。视觉判据依据本次明确提出的可用性与美观要求，未添加特定品牌或像素规格。",
+  "evidence": "冻结执行退出码为 0，日志记录 1 项测试通过。测试经真实 Electron 窗口鼠标与文本输入触发产品 renderer→preload→IPC→Store 路径，无业务响应替换。两次启动均使用同一独立目录；首次进程 79819 正常退出且进程组消失后启动 79823。重启后列表保留单条记录，选择后标题“周三工作安排”和含换行的完整正文逐字匹配原始输入；冻结状态与截图一致。",
+  "ui_review": {
+    "status": "passed",
+    "screenshot_paths": [
+      "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-03-S01/frozen-evidence/12/01-empty.png",
+      "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-03-S01/frozen-evidence/12/02-entered.png",
+      "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-03-S01/frozen-evidence/12/03-saved.png",
+      "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-03-S01/frozen-evidence/12/04-restarted.png",
+      "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-03-S01/frozen-evidence/12/05-restored-selected.png"
+    ],
+    "reason": "直接观察五张冻结图片：空态、输入态、保存态、重启列表态和重新选择态均完整清晰。记录的窗口为 850×650、内容视口为 850×622、像素比为 2。标题、两行正文、列表项及三个操作按钮均无遮挡或裁切。左右面板对齐，标题层次、字段间距、字体、圆角和边框一致，保存按钮突出，输入焦点及列表交互状态清楚，具备合理的基本视觉完成度。重启后编辑器为空，选择列表项后恢复全文，用户任务能够完成。"
+  },
+  "findings": [],
+  "summary": "独立审查支持本场景通过；首次保存的单条便签跨完全退出重启后内容一致，关键界面可用且视觉完成度合理。"
+}

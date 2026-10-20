@@ -1,0 +1,174 @@
+{
+  "schema": "project-coverage-probe-report-v1",
+  "plan": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/coverage-v3/output/probe-plan.json",
+  "plan_sha256": "5bdf0c5337c2758e24f78935a1d591928b58bb515672915e16983ddee3257bda",
+  "runtime_manifest": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/runtime-v2/output/runtime/runtime.json",
+  "runtime_sha256": "e7396daf12304ca20738b06dd112709022fb64c44f6efc74b8f84cf98799e1c7",
+  "workspace": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workspace",
+  "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+  "routes": [
+    {
+      "id": "python-inprocess-import",
+      "source_paths": [
+        "projects/python-cli/invoice/__main__.py",
+        "projects/python-cli/invoice/totals.py"
+      ],
+      "probes": {
+        "zero": {
+          "status": "passed",
+          "receipts": {
+            "collect": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/coverage-v3/output/probes/python-inprocess-import/zero/collect/receipt.json",
+              "sha256": "d752f0f9ba370df99e0d023037781b8c571ca7bf8c53201ed55dd628d00b4304"
+            },
+            "adapter": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/coverage-v3/output/probes/python-inprocess-import/zero/adapter/receipt.json",
+              "sha256": "758ed7b8680b54f7707f93e87bc76800f63ea4233597206ae6f5c60349282345"
+            },
+            "direct": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/coverage-v3/output/probes/python-inprocess-import/zero/direct/receipt.json",
+              "sha256": "035bddeec5f4f5ce8dc9f62826bc4cdda7be49826a2644462a7b491422e09793"
+            }
+          },
+          "native": [
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/coverage-v3/output/probes/python-inprocess-import/zero/raw/.coverage.bobos-MacBook-Air-2_local.pid21274.XJzRF4rx.HY2MBqhZeeSh",
+              "sha256": "81c1871bf75db8aa149bf912f0139d6c81b6f01b91dad24073278961c550751a"
+            },
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/coverage-v3/output/probes/python-inprocess-import/zero/raw/coverage.ini",
+              "sha256": "18a0642b0ece7751365729e161b1332ca0473a9ac5d5c92d5540e3e88d76886f"
+            },
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/coverage-v3/output/probes/python-inprocess-import/zero/raw/failure-paths.json",
+              "sha256": "f90ee4fc34869e1e743a9632ee5c6b1dbab63444a8799b85722ee5fb35b25da7"
+            },
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/coverage-v3/output/probes/python-inprocess-import/zero/raw/lifecycle.json",
+              "sha256": "75b96241d03a502da55486c6f44893190b0e3a779542de7728a72306573f44a6"
+            }
+          ],
+          "normalized_sha256": "a23426e2124ead2104f47a5981d14314804b719431a6dfa8e41e78e3f0c74d9a"
+        },
+        "nonzero": {
+          "status": "passed",
+          "receipts": {
+            "collect": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/coverage-v3/output/probes/python-inprocess-import/nonzero/collect/receipt.json",
+              "sha256": "10190508363a7e6fa42e26a183e91f65001e6e6eb34d73dae5c5df9bd61f7ca6"
+            },
+            "adapter": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/coverage-v3/output/probes/python-inprocess-import/nonzero/adapter/receipt.json",
+              "sha256": "3eea199108f5711bb29a69d0a2c3faa73c4d2529a7d6c7299ca9d919954deeec"
+            },
+            "direct": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/coverage-v3/output/probes/python-inprocess-import/nonzero/direct/receipt.json",
+              "sha256": "f6721cff776fffbd5ba22ef0a5f35d72b437cc51e8d4c25bf4b58b9a8cd317f0"
+            }
+          },
+          "native": [
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/coverage-v3/output/probes/python-inprocess-import/nonzero/raw/.coverage.bobos-MacBook-Air-2_local.pid21281.XCpMH3Cx.Hs9Hf1czgVRh",
+              "sha256": "a0859d56bb0fa369e241e71dde4ad5ce566cf09bec79cee69a393e8a4160a2c7"
+            },
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/coverage-v3/output/probes/python-inprocess-import/nonzero/raw/coverage.ini",
+              "sha256": "e2b229add20ff8e8208b4155caa4f9e78da9e7282ebc4df65c941483ac86cc7a"
+            },
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/coverage-v3/output/probes/python-inprocess-import/nonzero/raw/lifecycle.json",
+              "sha256": "7678ef42843dce78fc7bc63ae8ed018c105bb1d3baae008af5025a7da0f1969c"
+            }
+          ],
+          "normalized_sha256": "a73360a25cae4ec85e96e29041fb4019a901dbd616ea93d704c1844e6c46ce32"
+        }
+      }
+    },
+    {
+      "id": "python-subprocess",
+      "source_paths": [
+        "projects/python-cli/invoice/__main__.py",
+        "projects/python-cli/invoice/totals.py"
+      ],
+      "probes": {
+        "zero": {
+          "status": "passed",
+          "receipts": {
+            "collect": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/coverage-v3/output/probes/python-subprocess/zero/collect/receipt.json",
+              "sha256": "ee9c41a3025860a8eabff7b8046e914b1b9d91c07ba2cef757dddca08b50bda3"
+            },
+            "adapter": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/coverage-v3/output/probes/python-subprocess/zero/adapter/receipt.json",
+              "sha256": "59a52d6ae8c6da918bc10861e395bf8ba0669a3bc1e886f86dad97c50cd7b97f"
+            },
+            "direct": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/coverage-v3/output/probes/python-subprocess/zero/direct/receipt.json",
+              "sha256": "86138831d3ac255626ace574a9cbda5789a9955f23308d502ffc8dba0a4dd421"
+            }
+          },
+          "native": [
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/coverage-v3/output/probes/python-subprocess/zero/raw/.coverage.bobos-MacBook-Air-2_local.pid21286.XPJyGWzx.HY2MBqhZeeSh",
+              "sha256": "75e2baf559dea795d46051f11e9816af08a928ce4e567f7e4da5e41e0a14e387"
+            },
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/coverage-v3/output/probes/python-subprocess/zero/raw/.coverage.bobos-MacBook-Air-2_local.pid21287.XFyNg9Dx.HNQIp837rWOh",
+              "sha256": "a9ffd5a599d73046a86bd0dd08422372f6a923d76b8481d21d0dc1dcec04c9dc"
+            },
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/coverage-v3/output/probes/python-subprocess/zero/raw/coverage.ini",
+              "sha256": "1d92d693e58944877aa46a4872efcc5023aa7c2d6043a557025082ac88eadae8"
+            },
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/coverage-v3/output/probes/python-subprocess/zero/raw/failure-paths.json",
+              "sha256": "f90ee4fc34869e1e743a9632ee5c6b1dbab63444a8799b85722ee5fb35b25da7"
+            },
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/coverage-v3/output/probes/python-subprocess/zero/raw/lifecycle.json",
+              "sha256": "1c79a5f5b826ab4bd6159d888f0704bcbbae43ad1cec0c22cd0957e4f11a5268"
+            }
+          ],
+          "normalized_sha256": "a23426e2124ead2104f47a5981d14314804b719431a6dfa8e41e78e3f0c74d9a"
+        },
+        "nonzero": {
+          "status": "passed",
+          "receipts": {
+            "collect": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/coverage-v3/output/probes/python-subprocess/nonzero/collect/receipt.json",
+              "sha256": "d4ad9f14cc4767f8db191426f76d283dce5f95b06b1bd40992e99c9bdedac744"
+            },
+            "adapter": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/coverage-v3/output/probes/python-subprocess/nonzero/adapter/receipt.json",
+              "sha256": "550cc39d174357adfb370b191612036bd48e286f0bb52bbb67d9cd5f0e36aa27"
+            },
+            "direct": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/coverage-v3/output/probes/python-subprocess/nonzero/direct/receipt.json",
+              "sha256": "e574e9599eec870f33d6028b40eb0072e2c042d13124d8eae7018fac3e623152"
+            }
+          },
+          "native": [
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/coverage-v3/output/probes/python-subprocess/nonzero/raw/.coverage.bobos-MacBook-Air-2_local.pid21292.XjEGAANx.HY2MBqhZeeSh",
+              "sha256": "1da05d38bebc81c3875f2842c2ed01dac37c62bd2ef774723ec0abc94cdcd5cf"
+            },
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/coverage-v3/output/probes/python-subprocess/nonzero/raw/.coverage.bobos-MacBook-Air-2_local.pid21293.XlvFqcwx.Hi0d9IlQ4Anh",
+              "sha256": "c71656ae443e2d371739f4a1141c814f030bc789f788d94ea88a7e10005c28ba"
+            },
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/coverage-v3/output/probes/python-subprocess/nonzero/raw/coverage.ini",
+              "sha256": "19795379bc04062620d405cc8aa2cbd5cf4cc70bd5e415ca06545a658acb7c81"
+            },
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/coverage-v3/output/probes/python-subprocess/nonzero/raw/lifecycle.json",
+              "sha256": "623e6e123d2aa4f2a388aefb8ad5b6029abe4c78a6f74cfc5c245039c6e3e45e"
+            }
+          ],
+          "normalized_sha256": "a73360a25cae4ec85e96e29041fb4019a901dbd616ea93d704c1844e6c46ce32"
+        }
+      }
+    }
+  ],
+  "status": "ready"
+}

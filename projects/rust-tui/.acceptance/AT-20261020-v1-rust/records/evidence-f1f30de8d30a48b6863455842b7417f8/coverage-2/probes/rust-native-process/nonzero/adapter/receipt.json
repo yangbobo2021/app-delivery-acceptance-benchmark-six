@@ -1,0 +1,18 @@
+{
+  "command": [
+    "/opt/homebrew/bin/python3",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workspace/projects/rust-tui/tests/llvm_coverage/adapter.py",
+    "probe-read",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/coverage-2/probes/rust-native-process/nonzero/raw"
+  ],
+  "cwd": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workspace",
+  "exit_code": 0,
+  "stdout": {
+    "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/coverage-2/probes/rust-native-process/nonzero/adapter/stdout.txt",
+    "sha256": "8d316b1b237818823ce241d7059b6f163f60afd401d86111d2686a752a8523bd"
+  },
+  "stderr": {
+    "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/coverage-2/probes/rust-native-process/nonzero/adapter/stderr.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

@@ -1,0 +1,1 @@
+{"schema": "coverage-probe-normalized-v1", "components": [{"id": "java-batch", "source_paths": ["projects/java-batch/src/main/java/benchmark/BatchReport.java"], "metrics": {"line": {"status": "measured", "covered": 2, "total": 63}, "branch": {"status": "measured", "covered": 0, "total": 44}}}]}

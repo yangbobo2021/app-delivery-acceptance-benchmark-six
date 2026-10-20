@@ -1,0 +1,27 @@
+# Project coverage adapter
+
+Install pinned tools with `npm ci --prefix projects/ts-web/tests/coverage-tools` in each acceptance workspace after verifying the independent runtime manifest. Keep installation in that acceptance workspace. No product source or product dependency manifest is changed. The coverage-tools directory is trackable; the earlier coverage directory and failed-attempt evidence remain untouched.
+
+The browser registration uses Istanbul's supported `coverageGlobalScope:'globalThis', coverageGlobalScopeFunc:false` options. The default evaluated Function is incompatible with this app's CSP. The zero browser probe uses `page.addScriptTag({content: registration})` on a blank isolated document, since the generated registration is a script with multiple statements, not a Playwright evaluate expression. These repairs require host zero/nonzero route verification and the final profile verification before activation.
+
+The APIs used are `istanbul-lib-instrument.createInstrumenter({parserPlugins:['typescript']}).instrumentSync`, `lastFileCoverage`, `istanbul-lib-coverage.createCoverageMap`, `merge`, `fileCoverageFor(...).toSummary()`, and `esbuild.transformSync` with the TypeScript loader. Instrumentation occurs before type stripping; the source filename and every unit location come directly from Istanbul's TypeScript AST instrumentation, with no custom source-map reconstruction or metric arithmetic. HTML is non-executable for JS coverage.
+
+Official references:
+
+- https://github.com/istanbuljs/istanbuljs/tree/main/packages/istanbul-lib-instrument
+- https://github.com/istanbuljs/istanbuljs/tree/main/packages/istanbul-lib-coverage
+- https://nodejs.org/api/module.html#moduleregisterhooksoptions
+- https://playwright.dev/docs/api/class-browsercontext#browser-context-route
+- https://esbuild.github.io/api/#transform
+
+`adapter.cjs startup-check <evidence.json>` is a non-business API and failure-state smoke. Formal operations are `verify-preparation`, `run`, `finish`, `verify-report`, `summarize`, followed by request and response JSON paths. Profiles bind standard `spec.runtime_manifest` and `spec.probe_report`, not legacy private fields. Tool lockfiles and all helpers are frozen as adapters.
+
+The probe runner is `probe.cjs collect <server|browser|build> <zero|nonzero> <raw-dir> <runtime-manifest>`. The host creates raw-dir. Zero probes run only the instrumenter's generated registration function, extracted by Babel AST compiler APIs; they save an actual Node/Chromium `__coverage__` snapshot containing the original file's zero counters. Product statements are not executed. Nonzero probes start the actual server, load/reload an empty app page, or execute the existing build entry, with no task business interactions. `probe.cjs read ...` uses the adapter normalization; `direct.cjs <route> <raw-dir>` independently reads the same immutable snapshots through Istanbul without importing the adapter. Readers write only stdout.
+
+The formal process route inherits the Node preload through NODE_OPTIONS, instruments only declared project JS files through synchronous module load hooks, and flushes on normal exit or the existing smoke's SIGTERM cleanup. Every process has start/end records. The browser route uses the runtime's pinned Playwright Chromium launch and isolated contexts, intercepts app.js with an equivalent original-TS instrumented build, and records snapshots before navigation, page/context/browser close and on pagehide. Repeated snapshots for the same document overwrite a stable document key; different documents are merged by Istanbul. Context start/end and capture errors make failed teardown visible. Abrupt process death, unclosed contexts, or missing snapshots never activate a generated zero baseline in formal reports. A test failure keeps its exit code while completed counters remain usable.
+
+Each probe writes `failure-path-evidence.json` outside raw-dir to check absent route, missing snapshot, and incomplete teardown propagation using the native snapshot from that probe. The startup smoke also preserves its API/failure-state receipt in the current coverage workflow directory. Neither is business coverage.
+
+The project scope includes the executable build script. A business session that does not execute the build has unavailable build-script metrics and an incomplete project report; real server/app metrics remain usable. No PR changed-file or changed-line scope is declared by this baseline inventory; summary returns unavailable instead of substituting project percentages. Only Playwright Chromium launch with managed contexts and inherited Node child processes is supported by this lifecycle adapter. Other browser entry paths, workers, detached processes replacing NODE_OPTIONS, abrupt native process kills, or navigation bypassing managed page APIs can leave incomplete evidence. External navigations preserve a pagehide snapshot on a best-effort basis; prefer the managed goto/reload/close methods for reliable flushing.
+
+All raw bytes, exact commands, lifecycle files and per-document snapshots belong to one execution. `verify-report` rereads native data, uses Istanbul to recompute, and compares the normalized metrics. `artifact_map` resolves only byte-matching archived copies and preserves the original report bytes. Rebuild the runtime and reinstall the pinned lock in a new acceptance; never reuse another acceptance's probe conclusion.

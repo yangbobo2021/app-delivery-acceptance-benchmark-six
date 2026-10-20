@@ -1,0 +1,33 @@
+{
+  "status": "product_bug",
+  "coverage": "断言能识别同标题连带删除，并验证删除对象正文、目标消失及另一条原始 ID/标题/正文保留；本次在删除后失败，未执行到剩余便签重选。覆盖率绑定本次 NOTE-01-S06 冻结执行，采集完成；使用 Istanbul instrument 6.0.3、source-maps 5.0.6、coverage 3.2.2 及 esbuild 0.28.2。整体报告为 incomplete，构建工具未覆盖，不能据此宣称全项目覆盖或业务通过。",
+  "oracle": "NOTE-01 原文明确要求独立且不变的 ID、同标题便签独立删除。两段不同正文来自测试独立夹具，并在删除前分别选择核实。实际失败是删除后列表清空，直接违反原文，不依赖错误文案、列表顺序或删除后的默认编辑器状态。UI 可读性与基本视觉完成度依据本次用户明确要求。",
+  "evidence": "测试通过真实 Electron 窗口分发鼠标和文本输入，未直接调用业务 IPC 或存储造结果。冻结 states.json 记录两个不同 ID，选择目标时正文为 A-17，另一条已核实为 B-28；点击 Delete 后 notes=[]，标题及正文清空，无错误提示。execution.log 在“only deletion target disappears”断言超时，退出码为 1；应用正常退出，无清理失败。store.ts 的 remove 按标题过滤，与实际连带删除一致。",
+  "ui_review": {
+    "status": "failed",
+    "screenshot_paths": [
+      "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S06/frozen-evidence/8/01-empty.png",
+      "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S06/frozen-evidence/8/02-target-entered.png",
+      "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S06/frozen-evidence/8/02-target-saved.png",
+      "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S06/frozen-evidence/8/03-survivor-entered.png",
+      "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S06/frozen-evidence/8/03-survivor-saved.png",
+      "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S06/frozen-evidence/8/04-survivor-selected.png",
+      "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S06/frozen-evidence/8/05-target-selected.png",
+      "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S06/frozen-evidence/8/failure.png"
+    ],
+    "reason": "直接观察全部八张图片：面板层次、留白、对齐、边框和操作按钮总体协调，编辑器正文及必要控件完整，无明显遮挡或裁切。但第二条保存后，两项列表标题同时变成极小文字，与单条状态及其余控件字号明显失衡，正常窗口下难以阅读；选择两条便签时缺陷持续。相关样式将多项列表字体设为 6px，佐证截图中的退化。删除后列表完全清空，用户无法完成保留并重选另一条的任务。"
+  },
+  "findings": [
+    {
+      "kind": "product",
+      "reason": "删除已通过正文确认的 A-17 便签，同时移除了不同 ID 的同标题 B-28 便签，违反 NOTE-01 的独立删除要求。",
+      "requested_change": "按所选便签 ID 删除，保留其他 ID 的记录；修复后重新冻结执行，验证剩余便签可选且 ID、标题及完整正文保持原值。"
+    },
+    {
+      "kind": "product",
+      "reason": "两条便签存在时列表标题字号骤降，冻结截图直接证明可读性及字体一致性退化，影响查找和选择。",
+      "requested_change": "移除多项列表触发的极小字号规则，保持列表标题清晰且与界面字体协调，并重新提供该状态的冻结截图。"
+    }
+  ],
+  "summary": "失败结论可靠：真实产品发生同标题连带删除，并存在多项列表文字过小的 UI 缺陷。"
+}

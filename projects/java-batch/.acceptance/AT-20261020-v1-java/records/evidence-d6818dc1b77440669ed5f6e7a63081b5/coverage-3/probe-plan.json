@@ -1,0 +1,117 @@
+{
+  "schema": "project-coverage-probe-plan-v1",
+  "routes": [
+    {
+      "id": "java-cli",
+      "source_paths": [
+        "projects/java-batch/src/main/java/benchmark/BatchReport.java"
+      ],
+      "zero": {
+        "collect": [
+          "/opt/homebrew/bin/python3",
+          "{workspace}/projects/java-batch/tests/coverage_probe.py",
+          "collect",
+          "zero",
+          "{raw_dir}",
+          "{probe_dir}",
+          "java-cli"
+        ],
+        "adapter": [
+          "/opt/homebrew/bin/python3",
+          "{workspace}/projects/java-batch/tests/coverage_probe.py",
+          "read",
+          "{raw_dir}",
+          "{probe_dir}/adapter-output"
+        ],
+        "direct": [
+          "/opt/homebrew/bin/python3",
+          "{workspace}/projects/java-batch/tests/coverage_direct.py",
+          "{raw_dir}",
+          "{probe_dir}/direct-output"
+        ]
+      },
+      "nonzero": {
+        "collect": [
+          "/opt/homebrew/bin/python3",
+          "{workspace}/projects/java-batch/tests/coverage_probe.py",
+          "collect",
+          "nonzero",
+          "{raw_dir}",
+          "{probe_dir}",
+          "java-cli"
+        ],
+        "adapter": [
+          "/opt/homebrew/bin/python3",
+          "{workspace}/projects/java-batch/tests/coverage_probe.py",
+          "read",
+          "{raw_dir}",
+          "{probe_dir}/adapter-output"
+        ],
+        "direct": [
+          "/opt/homebrew/bin/python3",
+          "{workspace}/projects/java-batch/tests/coverage_direct.py",
+          "{raw_dir}",
+          "{probe_dir}/direct-output"
+        ]
+      }
+    },
+    {
+      "id": "python-subprocess",
+      "source_paths": [
+        "projects/java-batch/src/main/java/benchmark/BatchReport.java"
+      ],
+      "zero": {
+        "collect": [
+          "/opt/homebrew/bin/python3",
+          "{workspace}/projects/java-batch/tests/coverage_probe.py",
+          "collect",
+          "zero",
+          "{raw_dir}",
+          "{probe_dir}",
+          "python-subprocess"
+        ],
+        "adapter": [
+          "/opt/homebrew/bin/python3",
+          "{workspace}/projects/java-batch/tests/coverage_probe.py",
+          "read",
+          "{raw_dir}",
+          "{probe_dir}/adapter-output"
+        ],
+        "direct": [
+          "/opt/homebrew/bin/python3",
+          "{workspace}/projects/java-batch/tests/coverage_direct.py",
+          "{raw_dir}",
+          "{probe_dir}/direct-output"
+        ]
+      },
+      "nonzero": {
+        "collect": [
+          "/opt/homebrew/bin/python3",
+          "{workspace}/projects/java-batch/tests/coverage_probe.py",
+          "collect",
+          "nonzero",
+          "{raw_dir}",
+          "{probe_dir}",
+          "python-subprocess"
+        ],
+        "adapter": [
+          "/opt/homebrew/bin/python3",
+          "{workspace}/projects/java-batch/tests/coverage_probe.py",
+          "read",
+          "{raw_dir}",
+          "{probe_dir}/adapter-output"
+        ],
+        "direct": [
+          "/opt/homebrew/bin/python3",
+          "{workspace}/projects/java-batch/tests/coverage_direct.py",
+          "{raw_dir}",
+          "{probe_dir}/direct-output"
+        ]
+      }
+    }
+  ],
+  "runtime_manifest": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/runtime-3/runtime/runtime.json",
+  "runtime_sha256": "c32028802a95762200553651237eaf560ef0585ff02f16f130272646f09c04f1",
+  "workspace": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workspace",
+  "revision": "be952659c7d93018e26793daf2e58fa8321601f4"
+}

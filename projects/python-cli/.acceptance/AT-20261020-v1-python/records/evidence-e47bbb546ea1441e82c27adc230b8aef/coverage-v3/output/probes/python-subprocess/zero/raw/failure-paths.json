@@ -1,0 +1,129 @@
+{
+  "tool_version": "7.16.2",
+  "failure_paths": [
+    {
+      "input": {
+        "started": false,
+        "complete": false,
+        "native": []
+      },
+      "status": "incomplete",
+      "reason": "collection route did not start",
+      "output": [
+        {
+          "id": "projects/python-cli/invoice/__main__.py",
+          "label": "projects/python-cli/invoice/__main__.py",
+          "source_paths": [
+            "projects/python-cli/invoice/__main__.py"
+          ],
+          "line": {
+            "status": "unavailable",
+            "reason": "collection route did not start"
+          },
+          "branch": {
+            "status": "unavailable",
+            "reason": "collection route did not start"
+          }
+        },
+        {
+          "id": "projects/python-cli/invoice/totals.py",
+          "label": "projects/python-cli/invoice/totals.py",
+          "source_paths": [
+            "projects/python-cli/invoice/totals.py"
+          ],
+          "line": {
+            "status": "unavailable",
+            "reason": "collection route did not start"
+          },
+          "branch": {
+            "status": "unavailable",
+            "reason": "collection route did not start"
+          }
+        }
+      ]
+    },
+    {
+      "input": {
+        "started": true,
+        "complete": true,
+        "native": []
+      },
+      "status": "incomplete",
+      "reason": "native snapshot missing; zero baseline is not an execution",
+      "output": [
+        {
+          "id": "projects/python-cli/invoice/__main__.py",
+          "label": "projects/python-cli/invoice/__main__.py",
+          "source_paths": [
+            "projects/python-cli/invoice/__main__.py"
+          ],
+          "line": {
+            "status": "unavailable",
+            "reason": "native snapshot missing; zero baseline is not an execution"
+          },
+          "branch": {
+            "status": "unavailable",
+            "reason": "native snapshot missing; zero baseline is not an execution"
+          }
+        },
+        {
+          "id": "projects/python-cli/invoice/totals.py",
+          "label": "projects/python-cli/invoice/totals.py",
+          "source_paths": [
+            "projects/python-cli/invoice/totals.py"
+          ],
+          "line": {
+            "status": "unavailable",
+            "reason": "native snapshot missing; zero baseline is not an execution"
+          },
+          "branch": {
+            "status": "unavailable",
+            "reason": "native snapshot missing; zero baseline is not an execution"
+          }
+        }
+      ]
+    },
+    {
+      "input": {
+        "started": true,
+        "complete": false,
+        "native": []
+      },
+      "status": "incomplete",
+      "reason": "collection finalization did not complete",
+      "output": [
+        {
+          "id": "projects/python-cli/invoice/__main__.py",
+          "label": "projects/python-cli/invoice/__main__.py",
+          "source_paths": [
+            "projects/python-cli/invoice/__main__.py"
+          ],
+          "line": {
+            "status": "unavailable",
+            "reason": "collection finalization did not complete"
+          },
+          "branch": {
+            "status": "unavailable",
+            "reason": "collection finalization did not complete"
+          }
+        },
+        {
+          "id": "projects/python-cli/invoice/totals.py",
+          "label": "projects/python-cli/invoice/totals.py",
+          "source_paths": [
+            "projects/python-cli/invoice/totals.py"
+          ],
+          "line": {
+            "status": "unavailable",
+            "reason": "collection finalization did not complete"
+          },
+          "branch": {
+            "status": "unavailable",
+            "reason": "collection finalization did not complete"
+          }
+        }
+      ]
+    }
+  ],
+  "business_executed": false
+}

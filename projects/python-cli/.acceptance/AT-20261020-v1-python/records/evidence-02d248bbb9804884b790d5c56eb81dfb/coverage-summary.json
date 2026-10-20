@@ -1,0 +1,76 @@
+{
+  "schema": "project-coverage-summary-snapshot-v1",
+  "reports": [
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/case-inv-02-s02-v1/execution/coverage-report.json",
+      "sha256": "b29847486fbada0496e1af8eef6c00f636e822cfcefbd9bef6912466bc36b0fa"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/case-inv-03-s01-v1/execution/coverage-report.json",
+      "sha256": "bb9352166bacb5309cecaaf08fc82ee6427b407502e0678eeaaeb20833217418"
+    }
+  ],
+  "prepared_sha256": "317638f68cd9c34a78c5c283771ba54bfdb0f2c34c2d8d0a3b3a91c902f790c3",
+  "summary": {
+    "tools": [
+      {
+        "name": "coverage.py",
+        "version": "7.16.2",
+        "role": "原生行与分支采集、子进程插桩、数据库合并及统计；适配器使用公开 API，独立 reader 使用官方 CLI。已通过最小启动自检核对实际版本和安装文件摘要。"
+      }
+    ],
+    "scopes": {
+      "project": {
+        "status": "measured",
+        "components": [
+          {
+            "id": "projects/python-cli/invoice/__main__.py",
+            "label": "projects/python-cli/invoice/__main__.py",
+            "source_paths": [
+              "projects/python-cli/invoice/__main__.py"
+            ],
+            "line": {
+              "status": "measured",
+              "covered": 30,
+              "total": 37,
+              "pct": 81.08108108108108
+            },
+            "branch": {
+              "status": "measured",
+              "covered": 7,
+              "total": 12,
+              "pct": 58.333333333333336
+            }
+          },
+          {
+            "id": "projects/python-cli/invoice/totals.py",
+            "label": "projects/python-cli/invoice/totals.py",
+            "source_paths": [
+              "projects/python-cli/invoice/totals.py"
+            ],
+            "line": {
+              "status": "measured",
+              "covered": 4,
+              "total": 7,
+              "pct": 57.142857142857146
+            },
+            "branch": {
+              "status": "measured",
+              "covered": 0,
+              "total": 2,
+              "pct": 0.0
+            }
+          }
+        ]
+      },
+      "changed_files": {
+        "status": "unavailable",
+        "reason": "This acceptance is based on original requirements at a fixed baseline, not a commit diff."
+      },
+      "changed_lines": {
+        "status": "unavailable",
+        "reason": "This acceptance is based on original requirements at a fixed baseline, not a commit diff."
+      }
+    }
+  }
+}

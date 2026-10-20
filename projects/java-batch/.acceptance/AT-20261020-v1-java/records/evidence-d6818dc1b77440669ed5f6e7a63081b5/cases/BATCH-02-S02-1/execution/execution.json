@@ -1,0 +1,49 @@
+{
+  "schema": "isolated-test-execution-v1",
+  "start_utc": "2026-10-20T03:40:58.324907+00:00",
+  "cwd": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workspace",
+  "command": [
+    "/opt/homebrew/bin/python3",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workspace/projects/java-batch/tests/coverage_adapter.py",
+    "run",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/execution/coverage-request.json",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/execution/run-response.json"
+  ],
+  "env_changes": {
+    "BATCH_SCENE_ROOT": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/fresh-execution"
+  },
+  "fresh_dirs": [
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/fresh-execution"
+  ],
+  "head_before": "be952659c7d93018e26793daf2e58fa8321601f4",
+  "tracked_changes_before": "",
+  "status_before": "?? projects/java-batch/tests/CoverageProbe.java\n?? projects/java-batch/tests/coverage-tools.json\n?? projects/java-batch/tests/coverage_adapter.py\n?? projects/java-batch/tests/coverage_direct.py\n?? projects/java-batch/tests/coverage_probe.py\n?? projects/java-batch/tests/test_batch_02_s02.py\n?? projects/java-batch/tests/test_batch_03_s01.py",
+  "test_file_sha256_before": {
+    "projects/java-batch/tests/CoverageProbe.java": "41e45dde2c57465a6d17895863e9fd61f422d501d5f0933ae7b2db83e5231038",
+    "projects/java-batch/tests/coverage-tools.json": "99056c8fe296124911e894676e517417dac8f804780a1b9ec4fbeb88724a8c9e",
+    "projects/java-batch/tests/coverage_adapter.py": "f3765b08d82276bef098c330cc8e03862a9e830b67d6b13579085a2128a47fd5",
+    "projects/java-batch/tests/coverage_direct.py": "38169a29bd082e2f360506e36916977faac7d9db7ca6d583baedec174b79e2ae",
+    "projects/java-batch/tests/coverage_probe.py": "155c16ab80c4c2faef73990f17113258ce096d2bb64cda3ae27f04de02001b66",
+    "projects/java-batch/tests/test_batch_02_s02.py": "26b99983e2e37ad1fdc0486ad12546bf5fb1af8ee42d3a015bd8f58b082a9b86",
+    "projects/java-batch/tests/test_batch_03_s01.py": "dc2726db41cd3e11f690de2a90a5d0b507d8befcea19561ce23b8b624b252685"
+  },
+  "coverage_session_path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/execution/coverage-request.json",
+  "coverage_session_sha256": "a1437a773a4044a25a0b57ee38f11b6742f88c99838f9a96ce18ead312073c11",
+  "child_pid": 36900,
+  "end_utc": "2026-10-20T03:41:00.454533+00:00",
+  "duration_seconds": 2.0789457500213757,
+  "exit_code": 1,
+  "head_after": "be952659c7d93018e26793daf2e58fa8321601f4",
+  "tracked_changes_after": "",
+  "status_after": "?? projects/java-batch/tests/CoverageProbe.java\n?? projects/java-batch/tests/coverage-tools.json\n?? projects/java-batch/tests/coverage_adapter.py\n?? projects/java-batch/tests/coverage_direct.py\n?? projects/java-batch/tests/coverage_probe.py\n?? projects/java-batch/tests/test_batch_02_s02.py\n?? projects/java-batch/tests/test_batch_03_s01.py",
+  "test_file_sha256_after": {
+    "projects/java-batch/tests/CoverageProbe.java": "41e45dde2c57465a6d17895863e9fd61f422d501d5f0933ae7b2db83e5231038",
+    "projects/java-batch/tests/coverage-tools.json": "99056c8fe296124911e894676e517417dac8f804780a1b9ec4fbeb88724a8c9e",
+    "projects/java-batch/tests/coverage_adapter.py": "f3765b08d82276bef098c330cc8e03862a9e830b67d6b13579085a2128a47fd5",
+    "projects/java-batch/tests/coverage_direct.py": "38169a29bd082e2f360506e36916977faac7d9db7ca6d583baedec174b79e2ae",
+    "projects/java-batch/tests/coverage_probe.py": "155c16ab80c4c2faef73990f17113258ce096d2bb64cda3ae27f04de02001b66",
+    "projects/java-batch/tests/test_batch_02_s02.py": "26b99983e2e37ad1fdc0486ad12546bf5fb1af8ee42d3a015bd8f58b082a9b86",
+    "projects/java-batch/tests/test_batch_03_s01.py": "dc2726db41cd3e11f690de2a90a5d0b507d8befcea19561ce23b8b624b252685"
+  },
+  "log_sha256": "59d03b9a51c1f4c8bb6c3dc38c21b95b2e4151d97e017813c835e5e1af52c6d8"
+}

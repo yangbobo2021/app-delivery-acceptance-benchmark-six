@@ -1,0 +1,66 @@
+{
+  "schema": "acceptance-scope-v1",
+  "acceptance_id": "AT-20261020-v1-go",
+  "version": 1,
+  "previous_sha256": null,
+  "created_at": "2026-10-20T02:10:22.388871+00:00",
+  "basis": "User's 2026-10-20 v1 baseline first-stage instruction",
+  "scope": {
+    "targets": [
+      {
+        "type": "requirements",
+        "project": "go-api",
+        "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+        "requirement_ids": [
+          "STOCK-01",
+          "STOCK-02",
+          "STOCK-03",
+          "STOCK-04",
+          "STOCK-05",
+          "STOCK-06"
+        ]
+      }
+    ],
+    "requirements": [
+      {
+        "id": "STOCK-01",
+        "title": "STOCK-01",
+        "text": "STOCK-01：`GET /stock` 返回 JSON `available`，表示当前可用库存，成功状态为 200。"
+      },
+      {
+        "id": "STOCK-02",
+        "title": "STOCK-02",
+        "text": "STOCK-02：`POST /reserve` 接收 JSON `request_id` 和 `quantity`。request_id 为非空字符串，quantity 为 1 至 10 的整数；合法且库存充足时以 201 返回 `request_id,quantity,available`，库存恰好减少该数量。"
+      },
+      {
+        "id": "STOCK-03",
+        "title": "STOCK-03",
+        "text": "STOCK-03：同 request_id、同 quantity 的成功预留重试，返回 200 及首次预留的响应内容，不再次扣减。相同 request_id 换 quantity 返回 409，不改变库存。"
+      },
+      {
+        "id": "STOCK-04",
+        "title": "STOCK-04",
+        "text": "STOCK-04：库存不足返回 409，不扣减。并发不同 request_id 的请求不能使库存为负；成功扣减总数不得超过初始库存。并发同 request_id 不得重复扣减。"
+      },
+      {
+        "id": "STOCK-05",
+        "title": "STOCK-05",
+        "text": "STOCK-05：缺失必填字段、坏 JSON、非整数/超范围 quantity 返回 400，不改变状态。额外 JSON 字段的接受或拒绝均允许。"
+      },
+      {
+        "id": "STOCK-06",
+        "title": "STOCK-06",
+        "text": "STOCK-06：在一次成功 HTTP 响应返回后正常关闭再启动，库存及成功 request_id 的幂等记录必须保留；不同状态目录互不影响。"
+      }
+    ],
+    "exclusions": [
+      "No business scene execution in this first stage."
+    ],
+    "user_decisions": [
+      {
+        "source": "2026-10-20 delegated task",
+        "text": "Run v1 baseline new acceptance first stage only; all six original requirements, scenario generation, independent runtime and coverage preparation, and catalog."
+      }
+    ]
+  }
+}

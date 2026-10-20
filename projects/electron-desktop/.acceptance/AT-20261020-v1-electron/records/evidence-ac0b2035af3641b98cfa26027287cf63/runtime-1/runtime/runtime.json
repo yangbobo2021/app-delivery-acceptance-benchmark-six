@@ -1,0 +1,150 @@
+{
+  "schema": "project-runtime-preparation-v1",
+  "status": "ready",
+  "acceptance": {
+    "project_root": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop",
+    "id": "AT-20261020-v1-electron",
+    "scope_sha256": "da964873eb7a7d3d002b8b783843d9ae5ae8655b59298495e6a547031e0a0e07",
+    "knowledge_receipt": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/knowledge-reads/0031b67b8ac940599c7f6c1af9083e3b.json"
+  },
+  "workspace": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workspace",
+  "runtime_root": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/runtime-1/runtime/runtime",
+  "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+  "components": [],
+  "test_roots": [
+    "projects/electron-desktop/tests"
+  ],
+  "platform": {
+    "system": "Darwin",
+    "machine": "arm64"
+  },
+  "dependency_hashes": {
+    "projects/electron-desktop/package.json": "8cb647cb5d61a1e5860926e941f7c9023245e485beaf1520bfb1eb37a465039a",
+    "projects/electron-desktop/package-lock.json": "577ffd8d17e62fcadd009f7818cfa2c6f4401467f9b7274490894872e54906f1"
+  },
+  "knowledge_receipt": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/knowledge-reads/0031b67b8ac940599c7f6c1af9083e3b.json",
+  "knowledge_read_sha256": "dc93014f2871112238bfd785fc5086e788b852607afba8538116f07021ce740b",
+  "knowledge_used": [
+    "INDEX.md"
+  ],
+  "spec_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/runtime-1/agent-spec.json",
+  "spec_sha256": "ba8e05c4311074ac23908fa4a46494a37cd67dbf6a73390f9ab02c7f4b6d8867",
+  "recipe_candidate": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/runtime-1/runtime/recipe-candidate.md",
+  "recipe_candidate_sha256": "dff366c3c92ddded7cfaa9589c3e010579fedccb187a50541ecb1645e8b80880",
+  "setup": [
+    {
+      "command": [
+        "/opt/homebrew/bin/npm",
+        "ci",
+        "--include=dev",
+        "--include=optional",
+        "--ignore-scripts=false",
+        "--no-audit",
+        "--no-fund",
+        "--cache",
+        "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/runtime-1/runtime/runtime/npm-cache"
+      ],
+      "cwd": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workspace/projects/electron-desktop",
+      "env": {},
+      "timeout_seconds": 600,
+      "exit_code": 0,
+      "seconds": 4.179,
+      "log": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/runtime-1/runtime/setup-00.log",
+      "output_sha256": "074311d840e49e0e5535f70e744579dbf72e758bae7d0a769f4f0cb555c03a05"
+    },
+    {
+      "command": [
+        "/opt/homebrew/bin/node",
+        "node_modules/electron/install.js"
+      ],
+      "cwd": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workspace/projects/electron-desktop",
+      "env": {
+        "ELECTRON_CACHE": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/runtime-1/runtime/runtime/electron-cache"
+      },
+      "timeout_seconds": 600,
+      "exit_code": 0,
+      "seconds": 1.661,
+      "log": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/runtime-1/runtime/setup-01.log",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/opt/homebrew/bin/npm",
+        "run",
+        "build"
+      ],
+      "cwd": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workspace/projects/electron-desktop",
+      "env": {},
+      "timeout_seconds": 120,
+      "exit_code": 0,
+      "seconds": 0.337,
+      "log": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/runtime-1/runtime/setup-02.log",
+      "output_sha256": "4398cecb1bff030090f0573402e96c5bdfd23c5913a75d8b02b07565d58d0789"
+    }
+  ],
+  "executables": [
+    {
+      "name": "node",
+      "path": "/opt/homebrew/bin/node",
+      "resolved_path": "/opt/homebrew/Cellar/node/25.5.0/bin/node",
+      "sha256": "45e39a9f8b22235cf7c4d88d49b8a8e8307297c6f1913e2b963327f771acdce3",
+      "version_command": [
+        "/opt/homebrew/bin/node",
+        "--version"
+      ],
+      "version_output": "v25.5.0",
+      "version_receipt": {
+        "command": [
+          "/opt/homebrew/bin/node",
+          "--version"
+        ],
+        "cwd": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workspace",
+        "env": {},
+        "timeout_seconds": 30,
+        "exit_code": 0,
+        "seconds": 0.022,
+        "log": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/runtime-1/runtime/version-00.log",
+        "output_sha256": "7115e8caf2f71e342b3dea758a733ed8a2eb89e8675bc5e9437f707763abe7b2"
+      }
+    },
+    {
+      "name": "npm",
+      "path": "/opt/homebrew/bin/npm",
+      "resolved_path": "/opt/homebrew/lib/node_modules/npm/bin/npm-cli.js",
+      "sha256": "8e5f6f3429f8cdbe693cdc29904e9d5a7b127a494bd15c804bd54c7403bfcbe7",
+      "version_command": [
+        "/opt/homebrew/bin/npm",
+        "--version"
+      ],
+      "version_output": "11.8.0",
+      "version_receipt": {
+        "command": [
+          "/opt/homebrew/bin/npm",
+          "--version"
+        ],
+        "cwd": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workspace",
+        "env": {},
+        "timeout_seconds": 30,
+        "exit_code": 0,
+        "seconds": 0.128,
+        "log": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/runtime-1/runtime/version-01.log",
+        "output_sha256": "b396e3e19de55c61b6773383a0a92ee45dd6cddcbec8a09d731a6f2caefa2c5b"
+      }
+    }
+  ],
+  "smoke": {
+    "command": [
+      "/opt/homebrew/bin/node",
+      "-e",
+      "const fs=require('node:fs');const path=require('node:path');const {spawn}=require('node:child_process');const {pathToFileURL}=require('node:url');const {setTimeout:delay}=require('node:timers/promises');async function loaded(target){return new Promise(resolve=>{const ws=new WebSocket(target.webSocketDebuggerUrl);let done=false;const finish=value=>{if(done)return;done=true;clearTimeout(timer);ws.close();resolve(value)};const timer=setTimeout(()=>finish(false),1500);ws.onopen=()=>ws.send(JSON.stringify({id:1,method:'Runtime.evaluate',params:{expression:'document.readyState',returnByValue:true}}));ws.onmessage=event=>{try{const message=JSON.parse(event.data);if(message.id===1)finish(message.result?.result?.value==='complete')}catch{finish(false)}};ws.onerror=()=>finish(false);ws.onclose=()=>finish(false)})};(async()=>{const root=process.argv[1];fs.mkdirSync(root,{recursive:true});const state=fs.mkdtempSync(path.join(root,'electron-smoke-'));const env={...process.env};delete env.ELECTRON_RUN_AS_NODE;let child;let closed=false;let launchError;let stderr='';let closePromise;try{const executable=require('electron');child=spawn(executable,['.','--user-data-dir',state,'--remote-debugging-port=0'],{cwd:process.cwd(),env,detached:true,stdio:['ignore','inherit','pipe']});closePromise=new Promise(resolve=>child.once('close',()=>{closed=true;resolve()}));child.once('error',error=>{launchError=error});child.stderr.on('data',data=>{stderr=(stderr+data.toString()).slice(-32768);process.stderr.write(data)});const expected=pathToFileURL(path.join(process.cwd(),'dist/index.html')).href;const deadline=Date.now()+30000;while(Date.now()<deadline){if(launchError)throw launchError;if(closed)throw Error('Electron exited before renderer readiness');const match=stderr.match(/DevTools listening on (ws:\\/\\/[^\\s]+)/);if(match){try{const endpoint=new URL(match[1]);const response=await fetch('http://'+endpoint.host+'/json/list',{signal:AbortSignal.timeout(1500)});if(response.ok){const targets=await response.json();const target=targets.find(item=>item.type==='page'&&item.url===expected&&item.webSocketDebuggerUrl);if(target&&await loaded(target)){console.log('SMOKE_OK: Electron application renderer is ready');return}}}catch{}}await delay(200)}throw Error('Electron renderer readiness timed out')}finally{if(child?.pid){try{process.kill(-child.pid,'SIGTERM')}catch{}await Promise.race([closePromise,delay(2000)]);try{process.kill(-child.pid,'SIGKILL')}catch{}await Promise.race([closePromise,delay(2000)])}if(!child?.pid||closed)fs.rmSync(state,{recursive:true,force:true});else console.error('Smoke state retained because process termination was not confirmed: '+state)}})().catch(error=>{console.error(error);process.exitCode=1});",
+      "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/runtime-1/runtime/runtime"
+    ],
+    "cwd": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workspace/projects/electron-desktop",
+    "env": {},
+    "timeout_seconds": 45,
+    "exit_code": 0,
+    "seconds": 7.21,
+    "log": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/runtime-1/runtime/smoke.log",
+    "output_sha256": "0e8ef329feaebe4b8a955bda1c3a4e78199dbc96d9d1bbf95dcd5756c8bb776d"
+  }
+}

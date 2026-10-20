@@ -1,0 +1,100 @@
+{
+  "mode": "create",
+  "session_id": "d2f11010-d937-4b29-b2cb-e2ee0ea0170a",
+  "model": "gpt-6.1-sol",
+  "effort": "high",
+  "playbook_version": "16.0.0",
+  "started_at": "2026-10-20T02:14:21.561Z",
+  "calls": [
+    {
+      "role": "analyst",
+      "started_at": "2026-10-20T02:14:21.707Z",
+      "duration_ms": 20805.640916999997,
+      "usage": {
+        "toolUses": 0,
+        "tokens": {
+          "coverage": "partial",
+          "totals": {
+            "input": {
+              "total": 21259,
+              "uncached": 8971,
+              "cacheRead": 12288,
+              "cacheWrite": 0
+            },
+            "output": {
+              "total": 741,
+              "visible": 514,
+              "reasoning": 227
+            }
+          }
+        }
+      },
+      "status": "success"
+    }
+  ],
+  "stages": [
+    {
+      "stage": "initialization",
+      "duration_ms": 23.045499999999947
+    },
+    {
+      "stage": "ready",
+      "duration_ms": 3.211500000000001
+    },
+    {
+      "stage": "analyze",
+      "duration_ms": 20991.125875
+    },
+    {
+      "stage": "failed",
+      "duration_ms": 8.850540999999794
+    }
+  ],
+  "tool_calls": 0,
+  "reviewer_calls": 0,
+  "judgment_model_calls": 0,
+  "prompt_characters": 3126,
+  "runtime_result": {
+    "outcome": "failed",
+    "state": {
+      "value": "failed",
+      "activeStateIds": [
+        "failed"
+      ],
+      "tags": [
+        "playbook.parked"
+      ],
+      "status": "active",
+      "quiescent": true,
+      "stateId": "failed"
+    },
+    "error": {
+      "name": "Error",
+      "message": "PREANALYSIS-PROTOTYPE governed outcome remains unresolved: repository-disposition-mismatch",
+      "cause": {
+        "code": "foreign-change",
+        "evidence": {
+          "required": "unchanged",
+          "observed": "concurrent-or-foreign-change",
+          "baselineHead": "be952659c7d93018e26793daf2e58fa8321601f4",
+          "afterHead": "be952659c7d93018e26793daf2e58fa8321601f4",
+          "paths": {
+            "changed": [
+              "projects/electron-desktop/.acceptance/AT-20261020-v1-electron/records/scope-0002.json",
+              "projects/electron-desktop/.acceptance/AT-20261020-v1-electron/scope.json",
+              "projects/python-cli/.acceptance/knowledge/INDEX.md",
+              "projects/python-cli/.acceptance/knowledge/workflows/INDEX.md",
+              "projects/python-cli/.acceptance/knowledge/workflows/runtime.md",
+              "projects/ts-web/.acceptance/AT-20261020-v1-web/records/scope-0002.json",
+              "projects/ts-web/.acceptance/AT-20261020-v1-web/scope.json"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "final_state": "failed",
+  "total_duration_ms": 21026.896249999998,
+  "finished_at": "2026-10-20T02:14:42.588Z",
+  "repository_status": "?? projects/electron-desktop/.acceptance/\n?? projects/go-api/.acceptance/\n?? projects/java-batch/.acceptance/\n?? projects/python-cli/.acceptance/\n?? projects/rust-tui/.acceptance/\n?? projects/ts-web/.acceptance/"
+}

@@ -1,0 +1,53 @@
+{
+  "cwd": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workspace",
+  "output": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/execution",
+  "files": [
+    "projects/rust-tui/tests/llvm_coverage/README.md",
+    "projects/rust-tui/tests/llvm_coverage/adapter.py",
+    "projects/rust-tui/tests/llvm_coverage/config.json",
+    "projects/rust-tui/tests/llvm_coverage/direct.py",
+    "projects/rust-tui/tests/llvm_coverage/probe.rs",
+    "projects/rust-tui/tests/tui02_basic_list.py",
+    "projects/rust-tui/tests/tui04_coverage_archive.py",
+    "projects/rust-tui/tests/tui04_single_toggle.py"
+  ],
+  "command": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "projects/rust-tui/tests/tui02_basic_list.py"
+  ],
+  "env": {
+    "TUI_CASE_ROOT": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/fresh-execution",
+    "TUI_SCREENSHOT_DIR": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/fresh-execution/screens"
+  },
+  "fresh_dirs": [
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/fresh-execution"
+  ],
+  "business_command_binding": null,
+  "coverage": {
+    "policy": "required",
+    "protocol": "project-coverage-v1",
+    "prepared": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/coverage-2/prepared",
+    "prepared_sha256": "718e6011c1fca05038c241bf17de587a57cf3e617aba4f20b46af8535d1b66df",
+    "inventory_path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/inventory-1/inventory.json",
+    "required_test_files": {
+      "projects/rust-tui/tests/llvm_coverage/adapter.py": "64a25205a14cb6da18e56cf72e20727be39a5b428cc4885b0d3400b3197ae7be",
+      "projects/rust-tui/tests/llvm_coverage/direct.py": "79d87b5d0acb21d19c5cc65adba9ad8589daa0b6b6d177f70c3d81d4c02f4b77",
+      "projects/rust-tui/tests/llvm_coverage/config.json": "6a013cc7e18a7fc515b16418d9746248a7eb92da57694c9b4d018298db53c64f",
+      "projects/rust-tui/tests/llvm_coverage/probe.rs": "f8d1e91662707575d459e4156edb72ee8d7c010d50a9d5a733b87224b39fe3c5",
+      "projects/rust-tui/tests/llvm_coverage/README.md": "95b8390be4987356a7b6e900d1b3b1799c373e0d872077650d5f806fd33434ca"
+    },
+    "acceptance": {
+      "project_root": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui",
+      "id": "AT-20261020-v1-rust",
+      "scope_sha256": "ca4cee68077fa3fcd17800b3de92a726464a509a76fcbd4ec5a94e1aa2e3fef4",
+      "knowledge_receipt": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/knowledge-reads/8e50dcbcc3ee4c73b778f3ab47109523.json"
+    },
+    "scene_id": "TUI-02-S01",
+    "revision": "be952659c7d93018e26793daf2e58fa8321601f4"
+  },
+  "prepared": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/coverage-2/prepared",
+  "scene_id": "TUI-02-S01",
+  "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+  "inventory_path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/inventory-1/inventory.json",
+  "prepared_sha256": "718e6011c1fca05038c241bf17de587a57cf3e617aba4f20b46af8535d1b66df"
+}

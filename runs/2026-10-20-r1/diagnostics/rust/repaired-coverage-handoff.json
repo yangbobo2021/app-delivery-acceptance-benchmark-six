@@ -1,0 +1,22 @@
+{
+  "schema": "project-coverage-agent-handoff-v1",
+  "status": "ready",
+  "runtime_manifest": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/runtime-4/runtime/runtime.json",
+  "runtime_sha256": "633a6709953472d6d92896e60e74f0e00c7c19b1959ff3fbf6cb70996d1af31d",
+  "prepared": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/coverage-2/prepared",
+  "prepared_sha256": "718e6011c1fca05038c241bf17de587a57cf3e617aba4f20b46af8535d1b66df",
+  "probe_report": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/coverage-2/probes/coverage-probes.json",
+  "expected_measured_sources": [
+    "projects/rust-tui/src/main.rs"
+  ],
+  "unmet_expected_sources": [],
+  "knowledge_candidate": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/coverage-2/knowledge-candidate.md",
+  "limitations": [
+    "本阶段仅执行 adapter.py --check，未提前执行完整探针或任何业务场景；宿主仍须运行探针、verify-preparation 及实际场景的完整采集生命周期。",
+    "稳定版 Rust 当前没有可用分支映射，branch 为 unavailable；requirements-baseline 未定义修改范围，changed_files 和 changed_lines 为 unavailable。",
+    "真实进程必须继承插桩构建和 LLVM_PROFILE_FILE 配置，并在收尾前退出。既有 Terminal 测试通过显式传递环境启动产品；本次非业务探针不操作 Terminal UI，实际入口传播须由宿主验证。",
+    "collect 会在 raw 目录之外保存 failure-paths.json，检查未启动、缺失快照、收尾中断均产生 incomplete/unavailable，并保留 LLVM 拒绝缺失 profile 的原始错误。",
+    "finish 已将同次原生合并数据、完整导出、摘要和处理记录加入 raw_evidence；本次仅补充适配器文档，未修改产品源码、运行环境、业务测试或共享知识。",
+    "此前本轮尝试列表为空；没有覆盖或重写历史证据。"
+  ]
+}

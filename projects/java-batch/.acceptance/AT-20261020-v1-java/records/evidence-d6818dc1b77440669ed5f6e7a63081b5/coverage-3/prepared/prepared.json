@@ -1,0 +1,79 @@
+{
+  "schema": "project-coverage-preparation-v1",
+  "entry": [
+    "/opt/homebrew/bin/python3",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workspace/projects/java-batch/tests/coverage_adapter.py"
+  ],
+  "adapter_files": {
+    "projects/java-batch/tests/coverage_adapter.py": "f3765b08d82276bef098c330cc8e03862a9e830b67d6b13579085a2128a47fd5",
+    "projects/java-batch/tests/coverage_probe.py": "155c16ab80c4c2faef73990f17113258ce096d2bb64cda3ae27f04de02001b66",
+    "projects/java-batch/tests/coverage_direct.py": "38169a29bd082e2f360506e36916977faac7d9db7ca6d583baedec174b79e2ae",
+    "projects/java-batch/tests/coverage-tools.json": "99056c8fe296124911e894676e517417dac8f804780a1b9ec4fbeb88724a8c9e",
+    "projects/java-batch/tests/CoverageProbe.java": "41e45dde2c57465a6d17895863e9fd61f422d501d5f0933ae7b2db83e5231038"
+  },
+  "tools": [
+    {
+      "name": "JaCoCo",
+      "version": "0.8.12.202403310830",
+      "role": "JVM agent 原生 exec 采集；CLI execinfo 校验、report 行/分支计数、merge 合并。已通过适配器 --self-check 核验实际 CLI 版本及工具文件哈希。"
+    }
+  ],
+  "source_dispositions": {
+    "projects/java-batch/src/main/java/benchmark/BatchReport.java": {
+      "kind": "measured",
+      "reason": "沿用 JaCoCo 原生源码文件计数。只读检查 coverage-2 证据：零命中为行 0/63、分支 0/44；类初始化定向命中为行 2/63、分支 0/44，具有独立 CLI 读取依据。当前源码与冻结哈希一致。本次修改后的适配器仍须通过宿主新探针和 verify-preparation，这些历史数字不作为本次业务覆盖率。"
+    }
+  },
+  "preparation_status": "ready",
+  "spec": {
+    "project_root": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workspace",
+    "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+    "components": {},
+    "source_hashes": {
+      "projects/java-batch/src/main/java/benchmark/BatchReport.java": "821ba9c5ed64ff2b72dad2c6bfa9ecfac7e5c42e646836f83ce32b89cf2ee2bb"
+    },
+    "inventory_path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/inventory-1/inventory.json",
+    "inventory_sha256": "c1b1229a4a3fd02ef24aaacfa2038d441f4d7b3b2bba0c5ab4add77e7da20997",
+    "registry_path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/coverage-3/registry.json",
+    "runtime_manifest": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/runtime-3/runtime/runtime.json",
+    "runtime_sha256": "c32028802a95762200553651237eaf560ef0585ff02f16f130272646f09c04f1",
+    "probe_report": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/coverage-3/probes/coverage-probes.json",
+    "probe_report_sha256": "d933ce15c9251d9bfaf958b9aab0b29a826fe5eab130e8c7b22c9a189c7b0d8d"
+  },
+  "preparation_evidence": [
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/coverage-3/probe-plan.json",
+      "sha256": "c15eca07f67e084c383aff3bd514ab0598dbe45fa049ff481d9bda31ce0d5bf4"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/coverage-3/probes/coverage-probes.json",
+      "sha256": "d933ce15c9251d9bfaf958b9aab0b29a826fe5eab130e8c7b22c9a189c7b0d8d"
+    }
+  ],
+  "artifact_aliases": {
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workspace/projects/java-batch/src/main/java/benchmark/BatchReport.java": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/coverage-3/frozen/projects/java-batch/src/main/java/benchmark/BatchReport.java",
+      "sha256": "821ba9c5ed64ff2b72dad2c6bfa9ecfac7e5c42e646836f83ce32b89cf2ee2bb"
+    },
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workspace/projects/java-batch/tests/coverage_adapter.py": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/coverage-3/frozen/projects/java-batch/tests/coverage_adapter.py",
+      "sha256": "f3765b08d82276bef098c330cc8e03862a9e830b67d6b13579085a2128a47fd5"
+    },
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workspace/projects/java-batch/tests/coverage_probe.py": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/coverage-3/frozen/projects/java-batch/tests/coverage_probe.py",
+      "sha256": "155c16ab80c4c2faef73990f17113258ce096d2bb64cda3ae27f04de02001b66"
+    },
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workspace/projects/java-batch/tests/coverage_direct.py": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/coverage-3/frozen/projects/java-batch/tests/coverage_direct.py",
+      "sha256": "38169a29bd082e2f360506e36916977faac7d9db7ca6d583baedec174b79e2ae"
+    },
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workspace/projects/java-batch/tests/coverage-tools.json": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/coverage-3/frozen/projects/java-batch/tests/coverage-tools.json",
+      "sha256": "99056c8fe296124911e894676e517417dac8f804780a1b9ec4fbeb88724a8c9e"
+    },
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workspace/projects/java-batch/tests/CoverageProbe.java": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/coverage-3/frozen/projects/java-batch/tests/CoverageProbe.java",
+      "sha256": "41e45dde2c57465a6d17895863e9fd61f422d501d5f0933ae7b2db83e5231038"
+    }
+  }
+}

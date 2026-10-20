@@ -1,0 +1,152 @@
+{
+  "schema": "isolated-scene-pipeline-state-v1",
+  "config_sha256": "3e78d94353ecb6698a061e7ce4192276748178cfad12a25364a5a1ea0dfd8aa2",
+  "bindings": {
+    "case_input": "f0808f5e7b173be3f8810d0b0583eb6746807f16e2a166ce2486162ae12e8d3a",
+    "guide": "09e07e711468f66ab992efdcc7c1c1d8fec0069737d013ecbfe5c1bab3fe5025",
+    "template_catalog": "6da973ba6c4503868a2a563a80ff177514a6889fb58dac8fa16bf70d71417a02"
+  },
+  "stages": {
+    "prepare": {
+      "status": "completed",
+      "started_at": "2026-10-20T03:57:56.329604+00:00",
+      "result": {
+        "root": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workspace",
+        "catalog": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/catalog.json",
+        "setup_seconds": 0,
+        "check_seconds": 0
+      },
+      "finished_at": "2026-10-20T03:58:08.357918+00:00"
+    },
+    "case": {
+      "status": "completed",
+      "started_at": "2026-10-20T03:58:08.982459+00:00",
+      "result": {
+        "metrics": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/case/metrics.json",
+        "answer": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/case/answer.json",
+        "seconds": 192.391805209,
+        "usage": {
+          "toolUses": 20,
+          "tokens": {
+            "coverage": "partial",
+            "totals": {
+              "input": {
+                "total": 816180,
+                "uncached": 53684,
+                "cacheRead": 762496,
+                "cacheWrite": 0
+              },
+              "output": {
+                "total": 6680,
+                "visible": 5238,
+                "reasoning": 1442
+              }
+            }
+          }
+        },
+        "tool_calls": 20,
+        "restarted_after_unavailable_session": false
+      },
+      "finished_at": "2026-10-20T04:01:23.503843+00:00"
+    },
+    "execution": {
+      "status": "completed",
+      "started_at": "2026-10-20T04:01:24.525510+00:00",
+      "result": {
+        "receipt": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/execution/execution.json",
+        "log": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/execution/execution.log",
+        "exit_code": 0,
+        "seconds": 4.081285040942021,
+        "test_files": [
+          "projects/electron-desktop/tests/coverage-tools/README.md",
+          "projects/electron-desktop/tests/coverage-tools/adapter.cjs",
+          "projects/electron-desktop/tests/coverage-tools/core.cjs",
+          "projects/electron-desktop/tests/coverage-tools/direct.cjs",
+          "projects/electron-desktop/tests/coverage-tools/electron-wrapper.cjs",
+          "projects/electron-desktop/tests/coverage-tools/launch.cjs",
+          "projects/electron-desktop/tests/coverage-tools/package-lock.json",
+          "projects/electron-desktop/tests/coverage-tools/package.json",
+          "projects/electron-desktop/tests/coverage-tools/probe.cjs",
+          "projects/electron-desktop/tests/coverage-tools/zero.html",
+          "projects/electron-desktop/tests/note-01-s06.test.cjs",
+          "projects/electron-desktop/tests/note-01-s07.test.cjs",
+          "projects/electron-desktop/tests/note-03-s01.test.cjs"
+        ]
+      },
+      "finished_at": "2026-10-20T04:02:50.705911+00:00"
+    },
+    "evidence": {
+      "status": "completed",
+      "started_at": "2026-10-20T04:02:51.375036+00:00",
+      "result": {
+        "manifest": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/frozen-evidence.json",
+        "paths": [
+          "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/frozen-evidence/0/execution.log",
+          "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/frozen-evidence/0/execution.json",
+          "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/frozen-evidence/1/collection.json",
+          "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/frozen-evidence/2/lifecycle-76435.json",
+          "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/frozen-evidence/3/run-context.json",
+          "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/frozen-evidence/4/snapshot-1637249d-34e9-43d6-951b-3cafbd227c2e-0.05644737013582857.json",
+          "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/frozen-evidence/5/snapshot-1637249d-34e9-43d6-951b-3cafbd227c2e-0.8764101907661399.json",
+          "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/frozen-evidence/6/snapshot-main-76435.json",
+          "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/frozen-evidence/7/stop.json",
+          "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/frozen-evidence/8/01-empty.png",
+          "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/frozen-evidence/8/02-first-entered.png",
+          "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/frozen-evidence/8/02-first-new.png",
+          "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/frozen-evidence/8/02-first-saved.png",
+          "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/frozen-evidence/8/03-second-entered.png",
+          "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/frozen-evidence/8/03-second-new.png",
+          "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/frozen-evidence/8/03-second-saved.png",
+          "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/frozen-evidence/8/04-first-selected.png",
+          "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/frozen-evidence/8/05-second-selected.png",
+          "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/frozen-evidence/8/06-first-reselected.png",
+          "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/frozen-evidence/8/states.json"
+        ],
+        "file_count": 20,
+        "bytes": 638926
+      },
+      "finished_at": "2026-10-20T04:03:02.941853+00:00"
+    },
+    "gate": {
+      "status": "completed",
+      "started_at": "2026-10-20T04:03:03.692286+00:00",
+      "result": {
+        "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/handoff-gate.json",
+        "seconds": 11.293
+      },
+      "finished_at": "2026-10-20T04:03:15.728519+00:00"
+    },
+    "review": {
+      "status": "completed",
+      "started_at": "2026-10-20T04:03:16.580482+00:00",
+      "result": {
+        "answer": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/review/answer.json",
+        "metrics": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/review/metrics.json",
+        "status": "product_bug",
+        "seconds": 79.1030135,
+        "usage": {
+          "toolUses": 8,
+          "tokens": {
+            "coverage": "partial",
+            "totals": {
+              "input": {
+                "total": 301175,
+                "uncached": 55415,
+                "cacheRead": 245760,
+                "cacheWrite": 0
+              },
+              "output": {
+                "total": 3281,
+                "visible": 2806,
+                "reasoning": 475
+              }
+            }
+          }
+        },
+        "tool_calls": 8,
+        "restarted_after_unavailable_session": false
+      },
+      "finished_at": "2026-10-20T04:04:36.965549+00:00"
+    }
+  }
+}

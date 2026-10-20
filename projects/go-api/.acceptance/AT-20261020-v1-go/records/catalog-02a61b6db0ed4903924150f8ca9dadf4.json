@@ -1,0 +1,310 @@
+{
+  "schema": "acceptance-catalog-v1",
+  "project": {
+    "id": "go-api",
+    "label": "库存预留 HTTP 服务",
+    "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+    "root": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api"
+  },
+  "requirements": [
+    {
+      "id": "STOCK-01",
+      "title": "STOCK-01",
+      "text": "STOCK-01：`GET /stock` 返回 JSON `available`，表示当前可用库存，成功状态为 200。"
+    },
+    {
+      "id": "STOCK-02",
+      "title": "STOCK-02",
+      "text": "STOCK-02：`POST /reserve` 接收 JSON `request_id` 和 `quantity`。request_id 为非空字符串，quantity 为 1 至 10 的整数；合法且库存充足时以 201 返回 `request_id,quantity,available`，库存恰好减少该数量。"
+    },
+    {
+      "id": "STOCK-03",
+      "title": "STOCK-03",
+      "text": "STOCK-03：同 request_id、同 quantity 的成功预留重试，返回 200 及首次预留的响应内容，不再次扣减。相同 request_id 换 quantity 返回 409，不改变库存。"
+    },
+    {
+      "id": "STOCK-04",
+      "title": "STOCK-04",
+      "text": "STOCK-04：库存不足返回 409，不扣减。并发不同 request_id 的请求不能使库存为负；成功扣减总数不得超过初始库存。并发同 request_id 不得重复扣减。"
+    },
+    {
+      "id": "STOCK-05",
+      "title": "STOCK-05",
+      "text": "STOCK-05：缺失必填字段、坏 JSON、非整数/超范围 quantity 返回 400，不改变状态。额外 JSON 字段的接受或拒绝均允许。"
+    },
+    {
+      "id": "STOCK-06",
+      "title": "STOCK-06",
+      "text": "STOCK-06：在一次成功 HTTP 响应返回后正常关闭再启动，库存及成功 request_id 的幂等记录必须保留；不同状态目录互不影响。"
+    }
+  ],
+  "reverse_rules": [],
+  "scenarios": [
+    {
+      "id": "STOCK-01-S01",
+      "title": "查询初始及正常预留后的当前库存",
+      "priority": "P0",
+      "priority_reason": "普通状态下无法查询或读数失真，直接影响用户获取当前可用库存这一主要能力。",
+      "description": "在独立状态目录的初始库存10状态下，以及从该状态完成一次数量3的合法成功预留后，分别请求 GET /stock。两次均返回200和包含 available 的合法JSON，available 分别为10和7。",
+      "requirement_id": "STOCK-01",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "STOCK-01-S02",
+      "title": "库存耗尽时仍返回零库存",
+      "priority": "P1",
+      "priority_reason": "仅库存耗尽时查询失败或零值缺失，会使用户无法确认已无可用库存，其他普通库存状态仍可查询。",
+      "description": "以合法成功预留将初始库存10恰好耗尽后，请求 GET /stock，返回200和包含 available 的合法JSON，available 为0，不能因零值而省略该字段。",
+      "requirement_id": "STOCK-01",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "STOCK-02-S01",
+      "title": "普通合法预留正确返回并累计扣减",
+      "priority": "P0",
+      "priority_reason": "普通合法请求无法成功或库存扣减错误，会直接破坏主要预留流程。",
+      "description": "初始库存为10，依次以不同的普通非空 request_id 预留3和2。两次均返回201，JSON中的 request_id、quantity 分别与本次输入一致，available 分别为7和5；每次通过 GET /stock 核对实际库存与该次 available 一致。",
+      "requirement_id": "STOCK-02",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "STOCK-02-S02",
+      "title": "数量上下界及恰好耗尽库存可成功",
+      "priority": "P1",
+      "priority_reason": "边界判断错误会拒绝合法的最小预留或整库存预留，限制明确允许的业务操作。",
+      "description": "分别在初始库存为10的独立状态中，以普通非空 request_id 预留1和10。两组均返回201，JSON中的 request_id、quantity 与输入一致，available 分别为9和0，GET /stock 所见库存也分别为9和0。",
+      "requirement_id": "STOCK-02",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "STOCK-02-S03",
+      "title": "特殊但非空的字符串标识可原样使用",
+      "priority": "P1",
+      "priority_reason": "额外限制或改写合法标识，会使这类调用无法成功或无法准确关联返回结果。",
+      "description": "分别在初始库存为10的独立状态中，使用仅含一个空格、含中文及引号和反斜杠且带首尾空格、由257个字母组成的 request_id，各预留3。每组均返回201，解析响应JSON后的 request_id 与输入字符串完全一致，quantity 为3、available 为7，GET /stock 所见库存为7。",
+      "requirement_id": "STOCK-02",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "STOCK-02-S04",
+      "title": "空字符串及非字符串标识不得触发预留",
+      "priority": "P1",
+      "priority_reason": "接受无效标识并扣减会使无效请求占用库存，违反输入约束及无效请求不改变状态的要求。",
+      "description": "分别在初始库存为10的独立状态中，提交 quantity 为3且 request_id 字段存在的请求，其值分别为空字符串、null、数字、布尔值、数组和对象。每组均应拒绝预留，不返回成功预留结果，GET /stock 所见库存保持10；不限定尚未约定的错误状态码和响应体格式。",
+      "requirement_id": "STOCK-02",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "STOCK-03-S01",
+      "title": "普通成功预留的同参重试",
+      "priority": "P0",
+      "priority_reason": "普通重试若失败或再次扣减，主要幂等预留闭环无法完成，调用方不能安全重试已成功请求。",
+      "description": "初始库存为10，以request_id=A、quantity=2成功预留并记录响应，随后串行重试相同请求。重试返回200，响应内容与首次成功响应一致，当前库存仍为8。",
+      "requirement_id": "STOCK-03",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "STOCK-03-S02",
+      "title": "库存变化后返回首次响应",
+      "priority": "P1",
+      "priority_reason": "后续预留改变库存后若重新生成响应，会丢失原请求的首次结果，使调用方收到错误的历史预留结果。",
+      "description": "初始库存为10，A以quantity=2成功预留并记录响应，再由不同request_id以quantity=1成功预留，使当前库存为7。重试A的原请求，返回200及首次成功响应内容，其中available仍为8，当前库存保持7。",
+      "requirement_id": "STOCK-03",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "STOCK-03-S03",
+      "title": "当前余额不足以重新预留时仍可重试",
+      "priority": "P1",
+      "priority_reason": "若把成功重试再次按库存充足条件校验，余额低于原数量的已成功请求将无法重试，影响合理的大额预留使用。",
+      "description": "初始库存为10，以request_id=A、quantity=6成功预留，当前库存为4。串行重试相同请求，仍返回200及首次成功响应内容，当前库存保持4，不因当前余额小于6而拒绝。",
+      "requirement_id": "STOCK-03",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "STOCK-03-S04",
+      "title": "同标识更换合法数量发生冲突",
+      "priority": "P1",
+      "priority_reason": "数量冲突若未受保护，会错误接受同一标识的另一笔扣减，或破坏原成功记录；这是有效主路径之外的重要冲突分支。",
+      "description": "初始库存为10，A以quantity=2成功预留并记录响应；保持库存充足，将同一request_id的quantity改为3提交，应返回409，库存仍为8。随后重试A的原quantity=2请求，应返回200及原首次成功响应，库存仍为8。",
+      "requirement_id": "STOCK-03",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "STOCK-04-S01",
+      "title": "库存不足返回409",
+      "priority": "P1",
+      "priority_reason": "不足库存的合法请求返回错误状态，会使调用方误判预留结果，影响明确要求的拒绝反馈。",
+      "description": "分别准备剩余库存为2和0的状态，使用全新request_id申请3件和1件；两组请求均应返回409。",
+      "requirement_id": "STOCK-04",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "STOCK-04-S02",
+      "title": "库存不足不消耗剩余库存",
+      "priority": "P0",
+      "priority_reason": "拒绝预留后仍扣减会未经成功预留消耗既有库存，直接破坏有限库存的业务守恒。",
+      "description": "分别准备剩余库存为2和0的状态，使用全新request_id申请3件和1件；请求完成后查询库存，两组库存应分别保持2和0。",
+      "requirement_id": "STOCK-04",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "STOCK-04-S03",
+      "title": "不同标识并发竞争不超扣",
+      "priority": "P0",
+      "priority_reason": "不同预留并发超扣会将超过初始10件的库存分配给成功请求，突破实际可供预留数量。",
+      "description": "从初始库存10开始，并发提交12个不同request_id、quantity均为1的合法请求；应成功预留合计10件，最终库存为0，响应及并发期间库存查询中可见的available均不得为负。",
+      "requirement_id": "STOCK-04",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "STOCK-04-S04",
+      "title": "同标识同数量并发只扣减一次",
+      "priority": "P0",
+      "priority_reason": "同一业务预留被并发重试重复扣减，会多次消耗有限库存，破坏一次预留对应一次扣减的关系。",
+      "description": "从库存10开始，对全新request_id以quantity为3并发提交多次预留；完成后再对该已成功标识并发提交相同数量的重试。两轮完成后库存均应为7，该标识累计仅扣减3件。",
+      "requirement_id": "STOCK-04",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "STOCK-04-S05",
+      "title": "同标识不同数量并发不形成两次扣减",
+      "priority": "P0",
+      "priority_reason": "若按标识与数量组合分别去重，同一标识可成功消耗两份库存，直接造成重复业务扣减。",
+      "description": "从库存10开始，以同一个全新request_id并发申请2件和3件；仅允许建立一次成功预留，以该次成功预留的quantity为q，最终库存应为10减q，不得同时扣减两笔数量。",
+      "requirement_id": "STOCK-04",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "STOCK-05-BB-001",
+      "title": "缺失必填字段被拒绝",
+      "priority": "P1",
+      "priority_reason": "缺字段请求被接受或改变库存，会使不完整请求产生预留副作用。",
+      "description": "在库存充足时，分别向 POST /reserve 提交仅缺 request_id、仅缺 quantity 及两者均缺失的 JSON，其余已提供字段取合法值。每组均返回 400，操作前后查询的可用库存相同。",
+      "requirement_id": "STOCK-05",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "STOCK-05-BB-002",
+      "title": "坏 JSON 被拒绝",
+      "priority": "P1",
+      "priority_reason": "解析失败后仍执行预留，会使未完整表达的请求占用库存。",
+      "description": "在库存充足时，分别向 POST /reserve 提交结构未闭合及包含非法分隔符的 JSON 请求体，预留字段使用普通合法值。每组均返回 400，操作前后查询的可用库存相同。",
+      "requirement_id": "STOCK-05",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "STOCK-05-BB-003",
+      "title": "非整数 quantity 被拒绝",
+      "priority": "P1",
+      "priority_reason": "错误转换或接受非整数值，会使非法数量进入预留处理并影响库存。",
+      "description": "使用合法的新 request_id，分别提交 quantity 为 1.5、字符串 \"2\"、true、null、空数组及空对象的预留请求。每组均返回 400，操作前后查询的可用库存相同。",
+      "requirement_id": "STOCK-05",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "STOCK-05-BB-004",
+      "title": "超范围 quantity 被拒绝",
+      "priority": "P1",
+      "priority_reason": "漏检数量范围会接受零数量、负数量或超过上限的请求，破坏约定的预留输入约束。",
+      "description": "在库存充足时，使用合法的新 request_id，分别提交 quantity 为 -1、0 和 11 的预留请求。每组均返回 400，操作前后查询的可用库存相同。",
+      "requirement_id": "STOCK-05",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "STOCK-05-BB-005",
+      "title": "无效请求不污染预留记录",
+      "priority": "P1",
+      "priority_reason": "库存数值即使未变，成功记录被污染仍会使已有请求无法正确重试，或使新请求标识无法正常使用。",
+      "description": "已有成功预留且仍有充足库存时，分别用其 request_id 提交缺少 quantity 的请求，以及用新 request_id 提交 quantity=0 的请求；两者均返回 400。原成功请求随后重试仍返回首次响应且不再扣减，新 request_id 随后以合法 quantity 请求仍能首次成功预留，无效请求不得改写、清除或新增预留记录。",
+      "requirement_id": "STOCK-05",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "STOCK-06-S01",
+      "title": "正常重启保留已扣库存",
+      "priority": "P0",
+      "priority_reason": "遗忘已扣库存会将已预留数量重新计为可用，破坏初始总量为10的库存账。",
+      "description": "在独立状态目录中成功预留3件，确认201响应完整返回后正常关闭，以同一状态目录重新启动；GET /stock 的 available 仍为7。",
+      "requirement_id": "STOCK-06",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "STOCK-06-S02",
+      "title": "正常重启后成功请求不重复扣减",
+      "priority": "P0",
+      "priority_reason": "成功标识丢失会使已完成的同一业务请求再次占用有限库存。",
+      "description": "成功预留3件并确认201响应完整返回后正常关闭，以同一状态目录重新启动；使用原 request_id 和 quantity 重试，应返回200，重试前后的可用库存均为7。",
+      "requirement_id": "STOCK-06",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "STOCK-06-S03",
+      "title": "正常重启保留首次响应内容",
+      "priority": "P1",
+      "priority_reason": "仅恢复标识而丢失首次响应，会使重试返回当前状态或其他记录，破坏成功请求的结果一致性。",
+      "description": "依次用不同 request_id 成功预留3件和2件，确认两次201响应完整返回后正常关闭并使用同一状态目录重启；重试第一笔请求，返回内容应与其首次响应一致，其中 quantity 为3、available 为7，不能替换为当前库存5或第二笔响应。",
+      "requirement_id": "STOCK-06",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "STOCK-06-S04",
+      "title": "正常重启保留成功标识的数量绑定",
+      "priority": "P0",
+      "priority_reason": "丢失成功标识与数量的绑定，会让改量重试绕过已有记录，对同一业务请求再次分配库存。",
+      "description": "成功预留3件并确认201响应完整返回后正常关闭，以同一状态目录重新启动；使用原 request_id 将 quantity 改为2提交，应返回409，可用库存保持7。",
+      "requirement_id": "STOCK-06",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "STOCK-06-S05",
+      "title": "不同目录分别维护库存",
+      "priority": "P0",
+      "priority_reason": "目录间覆盖库存账会遗忘某目录已完成的预留，将已分配数量重新计为可用。",
+      "description": "分别使用两个独立状态目录：先在A成功预留6件并正常关闭，再启动全新的B，其初始库存应为10；在B以另一 request_id 成功预留2件并正常关闭。随后分别重新启动A和B，库存应各为4和8，不能被另一目录的初始状态或预留结果覆盖。",
+      "requirement_id": "STOCK-06",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "STOCK-06-S06",
+      "title": "不同目录分别维护成功请求记录",
+      "priority": "P1",
+      "priority_reason": "跨目录串用成功记录会错误拒绝独立请求，或返回另一目录的成功结果。",
+      "description": "在全新的A目录中以某 request_id 成功预留2件，响应返回后正常关闭；在全新的B目录中使用相同 request_id 预留3件，应作为该目录的新请求返回201。B正常关闭后分别重启A和B，各自按原数量重试，应返回200及各自首次响应内容，A对应 quantity 为2、available 为8，B对应 quantity 为3、available 为7。",
+      "requirement_id": "STOCK-06",
+      "kind": "BLACK_BOX"
+    }
+  ],
+  "design_gaps": [],
+  "scope_scene_ids": [
+    "STOCK-01-S01",
+    "STOCK-01-S02",
+    "STOCK-02-S01",
+    "STOCK-02-S02",
+    "STOCK-02-S03",
+    "STOCK-02-S04",
+    "STOCK-03-S01",
+    "STOCK-03-S02",
+    "STOCK-03-S03",
+    "STOCK-03-S04",
+    "STOCK-04-S01",
+    "STOCK-04-S02",
+    "STOCK-04-S03",
+    "STOCK-04-S04",
+    "STOCK-04-S05",
+    "STOCK-05-BB-001",
+    "STOCK-05-BB-002",
+    "STOCK-05-BB-003",
+    "STOCK-05-BB-004",
+    "STOCK-05-BB-005",
+    "STOCK-06-S01",
+    "STOCK-06-S02",
+    "STOCK-06-S03",
+    "STOCK-06-S04",
+    "STOCK-06-S05",
+    "STOCK-06-S06"
+  ],
+  "acceptance_id": "AT-20261020-v1-go",
+  "scope_sha256": "329eac4378c0a038183af4d580170cdffcfe8ce63ca27737987a0d724a257c64",
+  "updated_at": "2026-10-20T02:34:51.724826+00:00"
+}

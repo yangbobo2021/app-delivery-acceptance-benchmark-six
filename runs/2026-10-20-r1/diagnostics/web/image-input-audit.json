@@ -1,0 +1,99 @@
+{
+  "schema": "phase2b-image-audit-v1",
+  "rows": [
+    {
+      "scene_id": "TODO-04-S02",
+      "requirement_id": "TODO-04",
+      "requirement_text": "显示所有待办中的未完成总数，不能只统计当前过滤结果。空列表时为 0。",
+      "verdict": "product_bug",
+      "ui_status": "failed",
+      "ui_reason": "直接观察全部10张附图：卡片层次、留白、行间距与对齐合理，字体和按钮样式一致，输入框、过滤按钮、计数及删除控件均完整可见，未见遮挡或裁切。但mixed-03-all、mixed-05-completed及mixed-06-all中的已完成标题接近白底颜色，难以辨认，违反必要内容可读要求；Completed下计数同时错误，用户无法可靠判断剩余任务。此缺陷属于可用性，不是配色偏好。",
+      "review_multimodal_input_count": 10,
+      "review_multimodal_inputs": [
+        {
+          "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-04-S02/frozen-evidence/18/active-only-01-before.png",
+          "sha256": "3e6e8a8c503e8fef71f79130e285f6fddb29b588d994ae5bff9f1b7aaba624ec"
+        },
+        {
+          "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-04-S02/frozen-evidence/18/active-only-02-added.png",
+          "sha256": "f212c511a86db7d6af971c453d8c8ad75549aad075bcca83298526dd78f73f20"
+        },
+        {
+          "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-04-S02/frozen-evidence/18/active-only-03-all.png",
+          "sha256": "f3df83773251cefbaca90f85963de6cc3883ba25d00bb7ab87a006d2203bb0f4"
+        },
+        {
+          "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-04-S02/frozen-evidence/18/active-only-04-active.png",
+          "sha256": "b21740192f89e619b9857ea2e8ce95cf78d4aeada8af568ab597859f692fc1cc"
+        },
+        {
+          "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-04-S02/frozen-evidence/18/active-only-05-completed.png",
+          "sha256": "0023473e5d479d11a2c1f0bcdd65bea32a43ed3d49c5753465a03841ab82f560"
+        },
+        {
+          "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-04-S02/frozen-evidence/18/mixed-02-added.png",
+          "sha256": "769eda270a56ad76a7b1b345d028575a01847e691fc670c656e39a903d75360f"
+        },
+        {
+          "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-04-S02/frozen-evidence/18/mixed-03-all.png",
+          "sha256": "64a3534ae5933f7f15806ceadb6b461f7bf2367b3f655c869823a2c0d2ac5b8a"
+        },
+        {
+          "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-04-S02/frozen-evidence/18/mixed-04-active.png",
+          "sha256": "072791f2bdda293b3864b48b3f22e192c7f40f8969c6eead18ed61623f296eaa"
+        },
+        {
+          "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-04-S02/frozen-evidence/18/mixed-05-completed.png",
+          "sha256": "8ab20443e6035040b2d5ba2d44f4db5f98448bce3da2902049bd73d2f00d7464"
+        },
+        {
+          "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-04-S02/frozen-evidence/18/mixed-06-all.png",
+          "sha256": "42abcc84a697acb33b9d040afe2fac5262f49a9bdcd46fdfee52b6ecacf4c7dc"
+        }
+      ],
+      "review_input_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-04-S02/review/input.json",
+      "review_metrics_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-04-S02/review/metrics.json",
+      "frozen_manifest_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-04-S02/frozen-evidence.json",
+      "frozen_execution_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-04-S02/execution/execution.json",
+      "coverage_status": "measured",
+      "coverage_relation": "same_run"
+    },
+    {
+      "scene_id": "TODO-02-S01",
+      "requirement_id": "TODO-02",
+      "requirement_text": "可以切换待办完成状态，再次切换可恢复未完成。两个标题相同的待办是不同条目，切换一个不影响另一个。",
+      "verdict": "product_bug",
+      "ui_status": "failed",
+      "ui_reason": "五图均已直接观察。输入、添加及恢复状态文字清楚，控件无遮挡或裁切；卡片层次、间距、对齐及字体控件样式协调。已完成时勾选状态清楚且仍可恢复，但任务标题几乎消失，不能清晰识别完成的是哪条任务，违反必要信息可读要求。",
+      "review_multimodal_input_count": 5,
+      "review_multimodal_inputs": [
+        {
+          "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-02-S01/frozen-evidence/15/01-before.png",
+          "sha256": "3e6e8a8c503e8fef71f79130e285f6fddb29b588d994ae5bff9f1b7aaba624ec"
+        },
+        {
+          "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-02-S01/frozen-evidence/15/02-input.png",
+          "sha256": "3f8f8f9a529cfa56e605599621212bc355a3a6768deef2b4d2b453594a8b807e"
+        },
+        {
+          "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-02-S01/frozen-evidence/15/03-uncompleted.png",
+          "sha256": "fe8fa7de8cfb0dc473ea166ec95d019e0c59e070b74c63b36ba2d0fe30bd4476"
+        },
+        {
+          "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-02-S01/frozen-evidence/15/04-completed.png",
+          "sha256": "1129ef02ae87c0e8fdf4e8575a656b33e16fd710bbcda063ce3a7346b77429fb"
+        },
+        {
+          "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-02-S01/frozen-evidence/15/05-restored.png",
+          "sha256": "8c155a1c12da75a27bf58b9c681f019226ce5d2cf2efd5aa1d5219dad4c22388"
+        }
+      ],
+      "review_input_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-02-S01/review/input.json",
+      "review_metrics_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-02-S01/review/metrics.json",
+      "frozen_manifest_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-02-S01/frozen-evidence.json",
+      "frozen_execution_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-02-S01/execution/execution.json",
+      "coverage_status": "measured",
+      "coverage_relation": "same_run"
+    }
+  ]
+}

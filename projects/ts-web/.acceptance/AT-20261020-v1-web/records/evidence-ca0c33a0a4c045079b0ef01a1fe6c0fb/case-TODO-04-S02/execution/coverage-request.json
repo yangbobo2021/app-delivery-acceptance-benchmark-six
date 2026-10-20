@@ -1,0 +1,60 @@
+{
+  "cwd": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workspace",
+  "output": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-04-S02/execution",
+  "files": [
+    "projects/ts-web/tests/coverage-tools/README.md",
+    "projects/ts-web/tests/coverage-tools/adapter.cjs",
+    "projects/ts-web/tests/coverage-tools/core.cjs",
+    "projects/ts-web/tests/coverage-tools/direct.cjs",
+    "projects/ts-web/tests/coverage-tools/package-lock.json",
+    "projects/ts-web/tests/coverage-tools/package.json",
+    "projects/ts-web/tests/coverage-tools/preload.cjs",
+    "projects/ts-web/tests/coverage-tools/probe.cjs",
+    "projects/ts-web/tests/todo-01-s01.test.cjs",
+    "projects/ts-web/tests/todo-04-s02.test.cjs"
+  ],
+  "command": [
+    "/opt/homebrew/bin/node",
+    "--test",
+    "projects/ts-web/tests/todo-04-s02.test.cjs"
+  ],
+  "env": {
+    "PLAYWRIGHT_BROWSERS_PATH": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/runtime-1/runtime/runtime/playwright-browsers",
+    "ACCEPTANCE_CASE_STATE": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-04-S02/fresh-execution",
+    "ACCEPTANCE_SCREENSHOT_DIR": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-04-S02/fresh-execution/screenshots"
+  },
+  "fresh_dirs": [
+    "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-04-S02/fresh-execution"
+  ],
+  "business_command_binding": null,
+  "coverage": {
+    "policy": "required",
+    "protocol": "project-coverage-v1",
+    "prepared": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/coverage-2/prepared",
+    "prepared_sha256": "69a754738d7b11a539ba62bd6c0b39b7056ecd4297cd25edb810d150725fc04c",
+    "inventory_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/coverage-inputs-1/inventory.json",
+    "required_test_files": {
+      "projects/ts-web/tests/coverage-tools/adapter.cjs": "c27b1675ea898ac63c2c63bf6f8b73bede9cbc104db212dcadd2e1e5f102ff12",
+      "projects/ts-web/tests/coverage-tools/core.cjs": "657b0ef75c727ab96fc51b88da47d2cc96472227c42b80d1055cc87e9a34eab6",
+      "projects/ts-web/tests/coverage-tools/direct.cjs": "6233dab314f29ba7b2520267191c3d6ac25d5c37ad384e9a00fa4ffadd52a09f",
+      "projects/ts-web/tests/coverage-tools/preload.cjs": "98f8f60979645cd3580d2f8a6afbb5e56c1449f1f0ec914f6d6f52e0dfc700bc",
+      "projects/ts-web/tests/coverage-tools/probe.cjs": "d14624872e795faf3a2e48ecd915d0a239c3f933494fb5f104a1c0aa3399cc55",
+      "projects/ts-web/tests/coverage-tools/package.json": "a6f29ab670d92fcbd00ad4597119b6948f6c289c705ed7f9844084380de8613a",
+      "projects/ts-web/tests/coverage-tools/package-lock.json": "fa68fac3322a94d31d3de97820d65d9fc15eed9ec9f2aafa081396a07007f359",
+      "projects/ts-web/tests/coverage-tools/README.md": "f7557582a72b2c714061eb79425960e2127ce59450947a59790f65401c39756f"
+    },
+    "acceptance": {
+      "project_root": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web",
+      "id": "AT-20261020-v1-web",
+      "scope_sha256": "64dfe822d5cf23a37b7f2e8b67cc197ef98b77b2f995362f0ff0883af79121a7",
+      "knowledge_receipt": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/knowledge-reads/924e087d817e4a3083149172ad3cb875.json"
+    },
+    "scene_id": "TODO-04-S02",
+    "revision": "be952659c7d93018e26793daf2e58fa8321601f4"
+  },
+  "prepared": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/coverage-2/prepared",
+  "scene_id": "TODO-04-S02",
+  "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+  "inventory_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/coverage-inputs-1/inventory.json",
+  "prepared_sha256": "69a754738d7b11a539ba62bd6c0b39b7056ecd4297cd25edb810d150725fc04c"
+}

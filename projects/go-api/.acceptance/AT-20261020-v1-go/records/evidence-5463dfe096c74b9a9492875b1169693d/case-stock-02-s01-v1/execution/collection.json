@@ -1,0 +1,32 @@
+{
+  "status": "complete",
+  "reason": "",
+  "processes": [
+    "59827"
+  ],
+  "command": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "projects/go-api/tests/stock_02_s01.py"
+  ],
+  "business_exit_code": 0,
+  "native": [
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/case-stock-02-s01-v1/execution/native/covcounters.92693296bbc058414674b6688e10b66b.59827.1792464672560270000",
+      "sha256": "2bc67817fdc41fe1e595b2bb346c6a49b3c7384aea20605ab5870917cd05ffe9"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/case-stock-02-s01-v1/execution/native/covmeta.92693296bbc058414674b6688e10b66b",
+      "sha256": "f3d7dccbcd63286cd940067e90455ef33c97ff5bd6dd342ceb60b1c01f7d38f0"
+    }
+  ],
+  "lifecycle": [
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/case-stock-02-s01-v1/execution/go-build/lifecycle/finished.59827",
+      "sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/case-stock-02-s01-v1/execution/go-build/lifecycle/started.59827",
+      "sha256": "7215d6397124cd2e246ff813cb428f300fc8d18328971a1c9f6d7394a9fcbb5d"
+    }
+  ]
+}

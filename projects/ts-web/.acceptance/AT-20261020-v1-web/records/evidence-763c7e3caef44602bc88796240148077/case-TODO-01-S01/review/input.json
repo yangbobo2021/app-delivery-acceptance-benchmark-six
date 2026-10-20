@@ -1,0 +1,154 @@
+{
+  "acceptance": {
+    "project_root": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web",
+    "id": "AT-20261020-v1-web",
+    "scope_sha256": "64dfe822d5cf23a37b7f2e8b67cc197ef98b77b2f995362f0ff0883af79121a7",
+    "knowledge_receipt": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/knowledge-reads/924e087d817e4a3083149172ad3cb875.json"
+  },
+  "requirement": {
+    "id": "TODO-01",
+    "title": "TODO-01",
+    "text": "输入非空标题并添加后，列表出现该待办。标题首尾空白会去除；全空白或去除后超过 80 个 Unicode 码点的标题不能添加，并显示可见错误。错误文案不作要求。"
+  },
+  "scene": {
+    "id": "TODO-01-S01",
+    "title": "添加普通非空标题",
+    "priority": "P0",
+    "priority_reason": "普通标题无法加入列表，直接阻断添加待办的主要用途。",
+    "description": "输入“买牛奶”并执行添加，列表出现标题为“买牛奶”的待办。输入区、添加控件和新增标题可见可读、无遮挡或裁切，控件可操作；排版层次清楚，间距、对齐、字体及控件样式协调一致，具有基本视觉完成度并符合项目已有风格。",
+    "requirement_id": "TODO-01",
+    "kind": "BLACK_BOX"
+  },
+  "business_goal": "提供可在真实浏览器中操作的本地待办管理功能，支持安全添加、完成状态切换、过滤、未完成总数统计和独立删除，并在刷新后保留数据、隔离不同浏览器存储上下文；必要信息与控件在正常桌面视口中可读、可操作且无遮挡。",
+  "confirmed_scope": {
+    "included_requirement_ids": [
+      "TODO-01",
+      "TODO-02",
+      "TODO-03",
+      "TODO-04",
+      "TODO-05",
+      "TODO-06"
+    ],
+    "exclusions": [
+      "后端服务与账户系统。",
+      "错误提示的具体文案要求。",
+      "列表排序规则及刷新后的默认过滤选项要求。",
+      "视觉风格、配色及装饰性布局的审美评价。"
+    ],
+    "limitations": [
+      "正常桌面视口的具体尺寸和目标浏览器范围未明确。",
+      "实际功能、持久化、存储隔离及界面表现尚未验证。"
+    ]
+  },
+  "related_requirements": [
+    {
+      "id": "TODO-02",
+      "title": "TODO-02",
+      "text": "可以切换待办完成状态，再次切换可恢复未完成。两个标题相同的待办是不同条目，切换一个不影响另一个。"
+    },
+    {
+      "id": "TODO-05",
+      "title": "TODO-05",
+      "text": "可以删除指定待办，删除其他同名待办不受影响。刷新页面后，条目、完成状态与删除结果保留；不同浏览器存储上下文互不影响。"
+    },
+    {
+      "id": "TODO-06",
+      "title": "TODO-06",
+      "text": "标题作为普通文本展示。`<img src=x onerror=alert(1)>` 是合法短标题，不得创建对应图片元素或执行其中代码。列表排序、视觉设计、刷新后默认过滤均不作要求。"
+    }
+  ],
+  "scenario_source_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/scenario-TODO-01/scenarios.current.json",
+  "scenario_source_sha256": "ec984a2c70da8ba1822c5261431f32a6ef05ccb6964b9940eb7fd075f6249d96",
+  "scenario_self_check": "internal",
+  "local_loopback_required": true,
+  "ui_acceptance": {
+    "required": true,
+    "visual_expectation": "输入区、添加控件和新增标题可见可读、无遮挡或裁切，控件可操作；排版层次清楚，间距、对齐、字体及控件样式协调一致，具有基本视觉完成度并符合项目已有风格。",
+    "source_sha256": "3bb8eeff5eba3f8535fc3333ddd0d52be2e2f6acad00bf9df4d4e98cb732a147",
+    "evidence_execution_relative_paths": [],
+    "evidence_env_dir_keys": [
+      "ACCEPTANCE_SCREENSHOT_DIR"
+    ]
+  },
+  "coverage": {
+    "policy": "required",
+    "protocol": "project-coverage-v1",
+    "prepared": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/coverage-2/prepared",
+    "prepared_sha256": "69a754738d7b11a539ba62bd6c0b39b7056ecd4297cd25edb810d150725fc04c",
+    "inventory_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/coverage-inputs-1/inventory.json",
+    "required_test_files": {
+      "projects/ts-web/tests/coverage-tools/adapter.cjs": "c27b1675ea898ac63c2c63bf6f8b73bede9cbc104db212dcadd2e1e5f102ff12",
+      "projects/ts-web/tests/coverage-tools/core.cjs": "657b0ef75c727ab96fc51b88da47d2cc96472227c42b80d1055cc87e9a34eab6",
+      "projects/ts-web/tests/coverage-tools/direct.cjs": "6233dab314f29ba7b2520267191c3d6ac25d5c37ad384e9a00fa4ffadd52a09f",
+      "projects/ts-web/tests/coverage-tools/preload.cjs": "98f8f60979645cd3580d2f8a6afbb5e56c1449f1f0ec914f6d6f52e0dfc700bc",
+      "projects/ts-web/tests/coverage-tools/probe.cjs": "d14624872e795faf3a2e48ecd915d0a239c3f933494fb5f104a1c0aa3399cc55",
+      "projects/ts-web/tests/coverage-tools/package.json": "a6f29ab670d92fcbd00ad4597119b6948f6c289c705ed7f9844084380de8613a",
+      "projects/ts-web/tests/coverage-tools/package-lock.json": "fa68fac3322a94d31d3de97820d65d9fc15eed9ec9f2aafa081396a07007f359",
+      "projects/ts-web/tests/coverage-tools/README.md": "f7557582a72b2c714061eb79425960e2127ce59450947a59790f65401c39756f"
+    },
+    "acceptance": {
+      "project_root": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web",
+      "id": "AT-20261020-v1-web",
+      "scope_sha256": "64dfe822d5cf23a37b7f2e8b67cc197ef98b77b2f995362f0ff0883af79121a7",
+      "knowledge_receipt": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/knowledge-reads/924e087d817e4a3083149172ad3cb875.json"
+    },
+    "scene_id": "TODO-01-S01",
+    "revision": "be952659c7d93018e26793daf2e58fa8321601f4"
+  },
+  "runtime": {
+    "manifest": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/runtime-1/runtime/runtime.json",
+    "sha256": "7d6cf053c8408677e106094b6f9187a9a562af8e2e559e76a7fa3493e60ece63"
+  },
+  "debug_environment": {
+    "fresh_env_root_key": "ACCEPTANCE_CASE_STATE",
+    "fresh_env_paths": {
+      "ACCEPTANCE_SCREENSHOT_DIR": "screenshots"
+    },
+    "evidence_env_dir_keys": [
+      "ACCEPTANCE_SCREENSHOT_DIR"
+    ]
+  },
+  "frozen_revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+  "test_files": [
+    "projects/ts-web/tests/coverage-tools/README.md",
+    "projects/ts-web/tests/coverage-tools/adapter.cjs",
+    "projects/ts-web/tests/coverage-tools/core.cjs",
+    "projects/ts-web/tests/coverage-tools/direct.cjs",
+    "projects/ts-web/tests/coverage-tools/package-lock.json",
+    "projects/ts-web/tests/coverage-tools/package.json",
+    "projects/ts-web/tests/coverage-tools/preload.cjs",
+    "projects/ts-web/tests/coverage-tools/probe.cjs",
+    "projects/ts-web/tests/todo-01-s01.test.cjs"
+  ],
+  "artifact_scope": "isolated_worktree",
+  "execution_evidence_paths": [
+    "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/frozen-evidence/0/execution.log",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/frozen-evidence/0/execution.json",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/frozen-evidence/1/node-70705.ended.json",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/frozen-evidence/2/node-70705.started.json",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/frozen-evidence/3/node-70706-browser-1-1792465125897-0.4644721991750367.coverage.json",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/frozen-evidence/4/node-70706-browser-context-666c285a-ea2b-4ca9-a73e-c3ec0cc0ab0a.ended.json",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/frozen-evidence/5/node-70706-browser-context-666c285a-ea2b-4ca9-a73e-c3ec0cc0ab0a.started.json",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/frozen-evidence/6/node-70706.ended.json",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/frozen-evidence/7/node-70706.started.json",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/frozen-evidence/8/node-70707.coverage.json",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/frozen-evidence/9/node-70707.ended.json",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/frozen-evidence/10/node-70707.started.json",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/frozen-evidence/11/node-70709.coverage.json",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/frozen-evidence/12/node-70709.ended.json",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/frozen-evidence/13/node-70709.started.json",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/frozen-evidence/14/collection-lifecycle.json",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/frozen-evidence/15/01-before.png",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/frozen-evidence/15/02-filled.png",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/frozen-evidence/15/03-added.png",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/frozen-evidence/15/states.json",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/execution/execution.log"
+  ],
+  "frozen_evidence_manifest": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/frozen-evidence.json",
+  "frozen_execution_receipt": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/execution/execution.json",
+  "frozen_execution_log": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/execution/execution.log",
+  "coverage_result_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/coverage-report.json",
+  "agent_result_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/case/answer.json",
+  "scope_note": "Execute only selected TODO-01-S01, real Chromium UI, capture pre/post screenshots and viewport context; visual judgment limited to readability, unobstructed operation and sensible layout.",
+  "handoff_gate_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/handoff-gate.json"
+}

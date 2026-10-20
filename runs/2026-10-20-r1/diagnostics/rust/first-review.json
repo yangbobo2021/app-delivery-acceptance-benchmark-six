@@ -1,0 +1,24 @@
+{
+  "status": "repair_required",
+  "coverage": "本场景两种初始状态的单次切换、即时显示、保存及身份保持均有支持；不外推同会话再次切换或多项互不影响。覆盖率绑定本次两个产品进程，报告行覆盖96/128（75%）、分支unavailable；但缺少冻结的原生工具报告，尚不满足强制归档规约。",
+  "oracle": "完成状态取反、立即显示和保存来自TUI-04；合法记录来自TUI-01。预期使用测试独立构造的id/title及1-initial计算，未读取产品实现生成答案，也未限定序列化换行格式。",
+  "evidence": "冻结执行退出码0。测试通过真实Terminal和80×24 PTY执行Cargo构建的产品CLI，TERM正确且未设置NO_COLOR；两次输入均为Space后q。约55毫秒观察到文件保存相反状态，id/title保持不变；四张冻结截图显示对应状态变化。",
+  "ui_review": {
+    "status": "passed",
+    "screenshot_paths": [
+      "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-1/frozen-evidence/4/initial-0-after-space.png",
+      "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-1/frozen-evidence/4/initial-0-before.png",
+      "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-1/frozen-evidence/4/initial-1-after-space.png",
+      "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-1/frozen-evidence/4/initial-1-before.png"
+    ],
+    "reason": "直接观察四图：两组分别显示[ ]→[x]与[x]→[ ]，名称完整且选中标识明确。标题、操作提示、分隔线、列表和底部状态形成清楚层次；等宽字体、左对齐及行距一致，蓝底选中行可读，无内容遮挡或裁切。单项清单的留白合理，支持完成当前任务。"
+  },
+  "findings": [
+    {
+      "kind": "evidence",
+      "reason": "adapter.py的native_metrics调用llvm-profdata merge及llvm-cov export --summary-only后，仅提取汇总字段，未保存原生导出报告；冻结清单也仅包含产品二进制、两个profraw和界面证据。虽有真实计数和工具调用代码，仍缺规约要求的原始工具报告。",
+      "requested_change": "使用现有冻结二进制及profraw，经已锁定的LLVM工具离线生成并归档原生报告、调用和处理记录，绑定本次执行；保留历史证据，不重跑业务、不自行计算覆盖率。"
+    }
+  ],
+  "summary": "本场景业务与UI证据支持通过，但覆盖率原生报告归档缺口需修补，未发现本场景产品缺陷。"
+}

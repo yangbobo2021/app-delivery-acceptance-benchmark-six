@@ -1,0 +1,28 @@
+{
+  "schema": "project-coverage-agent-request-v1",
+  "acceptance": {
+    "project_root": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch",
+    "id": "AT-20261020-v1-java",
+    "scope_sha256": "bcdef962ff8a9739376cbf6d9fa684161ab5f2baebac7a144b7df35802d2e0a8",
+    "knowledge_receipt": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/knowledge-reads/80761a657267457a9942006562921e03.json"
+  },
+  "runtime_manifest": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/runtime-3/runtime/runtime.json",
+  "runtime_sha256": "c32028802a95762200553651237eaf560ef0585ff02f16f130272646f09c04f1",
+  "workspace": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workspace",
+  "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+  "source_hashes": {
+    "projects/java-batch/src/main/java/benchmark/BatchReport.java": "821ba9c5ed64ff2b72dad2c6bfa9ecfac7e5c42e646836f83ce32b89cf2ee2bb"
+  },
+  "inventory_path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/inventory-1/inventory.json",
+  "inventory_sha256": "c1b1229a4a3fd02ef24aaacfa2038d441f4d7b3b2bba0c5ab4add77e7da20997",
+  "registry_path": "projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/coverage-2/registry.json",
+  "test_roots": [
+    "projects/java-batch/tests"
+  ],
+  "expected_measured_sources": [
+    "projects/java-batch/src/main/java/benchmark/BatchReport.java"
+  ],
+  "prior_attempts": [
+    "projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/coverage-1"
+  ]
+}

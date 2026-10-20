@@ -1,0 +1,95 @@
+{
+  "schema": "project-runtime-preparation-v1",
+  "status": "ready",
+  "acceptance": {
+    "project_root": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli",
+    "id": "AT-20261020-v1-python",
+    "scope_sha256": "023b3255e8b891df0f4a70b2034ef3ed79289ebde4b8beb447855df2d8790d06",
+    "knowledge_receipt": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/knowledge-reads/0c11217ef68d44f38abf61d670d30355.json"
+  },
+  "workspace": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workspace",
+  "runtime_root": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/runtime-v2/output/runtime/runtime",
+  "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+  "components": [],
+  "test_roots": [
+    "projects/python-cli/tests"
+  ],
+  "platform": {
+    "system": "Darwin",
+    "machine": "arm64"
+  },
+  "dependency_hashes": {},
+  "knowledge_receipt": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/knowledge-reads/0c11217ef68d44f38abf61d670d30355.json",
+  "knowledge_read_sha256": "bdc20c385f786e00e95ee39e586716fce8c084fe3723b88471302d56f4dc5613",
+  "knowledge_used": [
+    "INDEX.md",
+    "workflows/INDEX.md",
+    "workflows/runtime.md"
+  ],
+  "spec_path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/runtime-v2/output/agent-spec.json",
+  "spec_sha256": "43800f5fea34ca59e4b7f84c6623773664278fbd5f420cd0eb6ca17ce46e6a81",
+  "recipe_candidate": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/runtime-v2/output/runtime/recipe-candidate.md",
+  "recipe_candidate_sha256": "3ef982d05b83b991fbee68810334687858701a1952ec931e50cb4a20ad97f365",
+  "setup": [
+    {
+      "command": [
+        "/opt/homebrew/bin/python3",
+        "-I",
+        "-m",
+        "venv",
+        "--without-pip",
+        "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/runtime-v2/output/runtime/runtime/venv"
+      ],
+      "cwd": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workspace/projects/python-cli",
+      "env": {},
+      "timeout_seconds": 60,
+      "exit_code": 0,
+      "seconds": 0.068,
+      "log": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/runtime-v2/output/runtime/setup-00.log",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "executables": [
+    {
+      "name": "python",
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/runtime-v2/output/runtime/runtime/venv/bin/python",
+      "resolved_path": "/opt/homebrew/Cellar/python@3.14/3.14.2_1/Frameworks/Python.framework/Versions/3.14/bin/python3.14",
+      "sha256": "00c07e4d31048b15eebbe4c883f229338c5b2d598e9ee061da39b7fccba20cad",
+      "version_command": [
+        "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/runtime-v2/output/runtime/runtime/venv/bin/python",
+        "--version"
+      ],
+      "version_output": "Python 3.14.2",
+      "version_receipt": {
+        "command": [
+          "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/runtime-v2/output/runtime/runtime/venv/bin/python",
+          "--version"
+        ],
+        "cwd": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workspace",
+        "env": {},
+        "timeout_seconds": 30,
+        "exit_code": 0,
+        "seconds": 0.011,
+        "log": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/runtime-v2/output/runtime/version-00.log",
+        "output_sha256": "154ebd4b103b23b709d31a51461b80e35b5bd7da5e24dd86d6616727a32aa244"
+      }
+    }
+  ],
+  "smoke": {
+    "command": [
+      "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/runtime-v2/output/runtime/runtime/venv/bin/python",
+      "-B",
+      "-E",
+      "-m",
+      "invoice",
+      "--help"
+    ],
+    "cwd": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workspace/projects/python-cli",
+    "env": {},
+    "timeout_seconds": 15,
+    "exit_code": 0,
+    "seconds": 0.052,
+    "log": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/runtime-v2/output/runtime/smoke.log",
+    "output_sha256": "251ca53d5d42cd0b8dbc9a2ec03d5541dd9c5d3a6dadadfec790e59056a2df58"
+  }
+}

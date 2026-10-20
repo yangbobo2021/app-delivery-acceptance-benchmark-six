@@ -1,0 +1,15 @@
+{
+  "schema": "java-coverage-lifecycle-v1",
+  "command": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "projects/java-batch/tests/test_batch_03_s01.py"
+  ],
+  "scene_id": "BATCH-03-S01",
+  "prepared_sha256": "70ff143f5ab0656d032f01925b7c25c7895122dc2a01458720166f50875aa652",
+  "request": {
+    "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-03-S01-2/execution/coverage-request.json",
+    "sha256": "4b94f6a50008756d461aa0f8e936e5816d5936e41604c8bfe12fe8acac5c1946"
+  },
+  "complete": true,
+  "exit_code": 0
+}

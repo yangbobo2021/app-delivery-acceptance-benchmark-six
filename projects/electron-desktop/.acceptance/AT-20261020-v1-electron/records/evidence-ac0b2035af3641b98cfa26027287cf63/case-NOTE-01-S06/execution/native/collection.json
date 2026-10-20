@@ -1,0 +1,8 @@
+{
+  "complete": true,
+  "command_exit": {
+    "code": 1,
+    "signal": null
+  },
+  "reason": null
+}

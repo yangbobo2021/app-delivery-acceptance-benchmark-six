@@ -1,0 +1,172 @@
+{
+  "schema": "project-coverage-probe-report-v1",
+  "plan": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/coverage-3/probe-plan.json",
+  "plan_sha256": "c15eca07f67e084c383aff3bd514ab0598dbe45fa049ff481d9bda31ce0d5bf4",
+  "runtime_manifest": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/runtime-3/runtime/runtime.json",
+  "runtime_sha256": "c32028802a95762200553651237eaf560ef0585ff02f16f130272646f09c04f1",
+  "workspace": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workspace",
+  "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+  "routes": [
+    {
+      "id": "java-cli",
+      "source_paths": [
+        "projects/java-batch/src/main/java/benchmark/BatchReport.java"
+      ],
+      "probes": {
+        "zero": {
+          "status": "passed",
+          "receipts": {
+            "collect": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/coverage-3/probes/java-cli/zero/collect/receipt.json",
+              "sha256": "c4b7d70a39f0f617efe17ab7380e64b86e76ad79933897f4150a7f69ba20b277"
+            },
+            "adapter": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/coverage-3/probes/java-cli/zero/adapter/receipt.json",
+              "sha256": "3205308c982cacaada420171991d2f49c94db3fc98926f49abf93d4dd35630e7"
+            },
+            "direct": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/coverage-3/probes/java-cli/zero/direct/receipt.json",
+              "sha256": "e5c6b75aa2812ad630c126ee75e8869f5c6f3112ecf04294be1550449cfa5a4e"
+            }
+          },
+          "native": [
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/coverage-3/probes/java-cli/zero/raw/classes/benchmark/BatchReport$Event.class",
+              "sha256": "2526fca4e171296bd4591e80a387b784bda12f3a608ed78f264efab362d709b4"
+            },
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/coverage-3/probes/java-cli/zero/raw/classes/benchmark/BatchReport$Total.class",
+              "sha256": "a46ac18ac05a3f0eb00b5bc7b25b55c8bd255236992bb9d8f3b81dbca3fb6117"
+            },
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/coverage-3/probes/java-cli/zero/raw/classes/benchmark/BatchReport.class",
+              "sha256": "addc9bb93d27f41bd6b6f49b613eefe2b498ef3ff9abaa9efd2493c1d32ced2e"
+            },
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/coverage-3/probes/java-cli/zero/raw/session.exec",
+              "sha256": "f91370935bb4f76649fdb173672b746e4b185f57af8531beca8cda7b1e60ac88"
+            }
+          ],
+          "normalized_sha256": "39b72dab6b38581c3b3dd2c562bb3ca59cb2134507e46d714af0258478091e96"
+        },
+        "nonzero": {
+          "status": "passed",
+          "receipts": {
+            "collect": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/coverage-3/probes/java-cli/nonzero/collect/receipt.json",
+              "sha256": "0163ff59d75dc31b9b32504dff629c845e14eaba517362ba4d4a865f8dd85914"
+            },
+            "adapter": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/coverage-3/probes/java-cli/nonzero/adapter/receipt.json",
+              "sha256": "91bfdbc3d8bfa98e04fae4f6fa759c10102f2aba564d3df06d547d208e6a3bcd"
+            },
+            "direct": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/coverage-3/probes/java-cli/nonzero/direct/receipt.json",
+              "sha256": "abd780503283f5b1ba0f1f6b231936103f9585fcde276ae47b50abe502b364f0"
+            }
+          },
+          "native": [
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/coverage-3/probes/java-cli/nonzero/raw/classes/benchmark/BatchReport$Event.class",
+              "sha256": "2526fca4e171296bd4591e80a387b784bda12f3a608ed78f264efab362d709b4"
+            },
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/coverage-3/probes/java-cli/nonzero/raw/classes/benchmark/BatchReport$Total.class",
+              "sha256": "a46ac18ac05a3f0eb00b5bc7b25b55c8bd255236992bb9d8f3b81dbca3fb6117"
+            },
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/coverage-3/probes/java-cli/nonzero/raw/classes/benchmark/BatchReport.class",
+              "sha256": "addc9bb93d27f41bd6b6f49b613eefe2b498ef3ff9abaa9efd2493c1d32ced2e"
+            },
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/coverage-3/probes/java-cli/nonzero/raw/session.exec",
+              "sha256": "17c2163e7ae861002f86c7111c358f949c8834c18c87aea8132454c38a08d2ed"
+            }
+          ],
+          "normalized_sha256": "64b89dfac41ae57948c4e056a8ebb634a335de67cd4eb93c598b9c0e77a4300e"
+        }
+      }
+    },
+    {
+      "id": "python-subprocess",
+      "source_paths": [
+        "projects/java-batch/src/main/java/benchmark/BatchReport.java"
+      ],
+      "probes": {
+        "zero": {
+          "status": "passed",
+          "receipts": {
+            "collect": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/coverage-3/probes/python-subprocess/zero/collect/receipt.json",
+              "sha256": "c2a1bc1c81beade02b4b2c7b98b13d9955fb865df4c803f30e7ad211268a5b03"
+            },
+            "adapter": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/coverage-3/probes/python-subprocess/zero/adapter/receipt.json",
+              "sha256": "91d60224dcb54a26b9f61ed406787b6fa07dd699aec6ce9cb5952a41fbc99f2f"
+            },
+            "direct": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/coverage-3/probes/python-subprocess/zero/direct/receipt.json",
+              "sha256": "5b7489957cebfbf241d3bfee93cae48246a54d8b37e3bdbd75775d16d217c05d"
+            }
+          },
+          "native": [
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/coverage-3/probes/python-subprocess/zero/raw/classes/benchmark/BatchReport$Event.class",
+              "sha256": "2526fca4e171296bd4591e80a387b784bda12f3a608ed78f264efab362d709b4"
+            },
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/coverage-3/probes/python-subprocess/zero/raw/classes/benchmark/BatchReport$Total.class",
+              "sha256": "a46ac18ac05a3f0eb00b5bc7b25b55c8bd255236992bb9d8f3b81dbca3fb6117"
+            },
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/coverage-3/probes/python-subprocess/zero/raw/classes/benchmark/BatchReport.class",
+              "sha256": "addc9bb93d27f41bd6b6f49b613eefe2b498ef3ff9abaa9efd2493c1d32ced2e"
+            },
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/coverage-3/probes/python-subprocess/zero/raw/session.exec",
+              "sha256": "2d90f44405cd671c19248284dfaf827f687aadb3934304abe783056b54c226fd"
+            }
+          ],
+          "normalized_sha256": "39b72dab6b38581c3b3dd2c562bb3ca59cb2134507e46d714af0258478091e96"
+        },
+        "nonzero": {
+          "status": "passed",
+          "receipts": {
+            "collect": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/coverage-3/probes/python-subprocess/nonzero/collect/receipt.json",
+              "sha256": "9dd31ed8834bdd722c4615103be91316848d365c2ae11dbf8e323075b6105d9c"
+            },
+            "adapter": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/coverage-3/probes/python-subprocess/nonzero/adapter/receipt.json",
+              "sha256": "4951a772a1a21d3fafaa91ba4a8cf0d0543332aa07a1f5ec6063ca7f78bf34fd"
+            },
+            "direct": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/coverage-3/probes/python-subprocess/nonzero/direct/receipt.json",
+              "sha256": "c6981af5a398d066ca3b4213ccc8a709ee4edefa8822a986e8a15156cf6655ba"
+            }
+          },
+          "native": [
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/coverage-3/probes/python-subprocess/nonzero/raw/classes/benchmark/BatchReport$Event.class",
+              "sha256": "2526fca4e171296bd4591e80a387b784bda12f3a608ed78f264efab362d709b4"
+            },
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/coverage-3/probes/python-subprocess/nonzero/raw/classes/benchmark/BatchReport$Total.class",
+              "sha256": "a46ac18ac05a3f0eb00b5bc7b25b55c8bd255236992bb9d8f3b81dbca3fb6117"
+            },
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/coverage-3/probes/python-subprocess/nonzero/raw/classes/benchmark/BatchReport.class",
+              "sha256": "addc9bb93d27f41bd6b6f49b613eefe2b498ef3ff9abaa9efd2493c1d32ced2e"
+            },
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/coverage-3/probes/python-subprocess/nonzero/raw/session.exec",
+              "sha256": "600defd8e1ac98b8ed6462b0a0f858b51e0e40f59ac6862a4e9e25778b004fc2"
+            }
+          ],
+          "normalized_sha256": "64b89dfac41ae57948c4e056a8ebb634a335de67cd4eb93c598b9c0e77a4300e"
+        }
+      }
+    }
+  ],
+  "status": "ready"
+}

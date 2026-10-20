@@ -1,0 +1,24 @@
+{
+  "scene_id": "INV-02-S02",
+  "command": [
+    "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/runtime-v2/output/runtime/runtime/venv/bin/python",
+    "-B",
+    "-m",
+    "invoice",
+    "--input",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/case-inv-02-s02-v1/fresh-execution/inv-02-s02/boundary.csv"
+  ],
+  "cwd": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workspace/projects/python-cli",
+  "checks": {
+    "INV-03 exit code is zero": true,
+    "INV-03 stderr is empty": true,
+    "INV-03 complete stdout is one object": true,
+    "INV-03 fields are totals and row_count": true,
+    "INV-03 totals is an object": true,
+    "INV-02-S02 account identity": true,
+    "INV-02-S02 exact integer total is 2147483648": false,
+    "INV-03 data row count is 4": true
+  },
+  "exit_code": 0,
+  "passed": false
+}

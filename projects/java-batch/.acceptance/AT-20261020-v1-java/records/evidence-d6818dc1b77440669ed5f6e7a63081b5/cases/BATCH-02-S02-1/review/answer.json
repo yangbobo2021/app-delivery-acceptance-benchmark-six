@@ -1,0 +1,19 @@
+{
+  "status": "product_bug",
+  "coverage": "本场景断言能识别非相邻重复行被再次累计：同时检查两账户身份、金额与笔数，并核对成功输出合同。本次覆盖率请求、采集记录与冻结收据绑定同一场景；JaCoCo 0.8.12.202403310830 agent 采集、CLI report 统计，报告行命中46/63、分支命中24/44。覆盖率不替代业务判断。",
+  "oracle": "BATCH-02明确规定相同event_id、account、amount_cents只处理一次。独立夹具中去重后acct_A应为120+70=190分、2笔，acct_B为50分、1笔；表头、排序、成功退出码及空应用stderr来自BATCH-03，输入不变来自BATCH-04，未发现附加业务策略。",
+  "evidence": "冻结测试退出码1，唯一失败为acct_A金额与笔数。原始events.csv包含间隔两行后重复的e1/acct_A/120；真实Java CLI编译及运行均退出0，report.csv实际为acct_A,310,3和acct_B,50,1。其余检查通过。源码中相同事件通过冲突检查后仍执行金额累计和count++，与多计120分、1笔吻合，失败来自产品。",
+  "ui_review": {
+    "status": "not_applicable",
+    "screenshot_paths": [],
+    "reason": "目标不涉及 UI"
+  },
+  "findings": [
+    {
+      "kind": "product",
+      "reason": "完全相同的非相邻事件被重复累计，违反BATCH-02；冻结输出将acct_A应有的190分、2笔计为310分、3笔。",
+      "requested_change": "识别到已存在且内容相同的event_id时跳过累计；内容冲突时仍整批失败。修复后重新冻结执行本场景。"
+    }
+  ],
+  "summary": "产品去重缺陷证据充分，本场景失败结论可靠。"
+}

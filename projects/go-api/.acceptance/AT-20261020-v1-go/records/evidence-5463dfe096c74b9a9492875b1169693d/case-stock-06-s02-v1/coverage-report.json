@@ -1,0 +1,88 @@
+{
+  "schema": "project-tool-coverage-report-v1",
+  "protocol": "project-coverage-v1",
+  "prepared": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/coverage-v2/output/prepared",
+  "prepared_sha256": "96add1e99419275ab7c574d4496dd9ad17063812ebda885ad06a2dae6fefddf5",
+  "scene_id": "STOCK-06-S02",
+  "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+  "source_hashes": {
+    "projects/go-api/main.go": "7178bfc3e470cb27e0c1b0b816030411049cf0fa85b4cf90e5f106df892566ec"
+  },
+  "tools": [
+    {
+      "name": "Go native coverage toolchain",
+      "version": "go1.25.7",
+      "role": "go test 编译及原生快照采集；go tool covdata debugdump、percent、merge 负责语句分母、命中、百分比及合并。完整能力由宿主探针复核。"
+    }
+  ],
+  "collection_relation": "same_run",
+  "status": "measured",
+  "receipt_path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/case-stock-06-s02-v1/execution/execution.json",
+  "execution_sha256": "a09ef54faf45c421139020ccca58930203e3228b0e67d35642738a5cbe6a5e1d",
+  "raw_evidence": [
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/case-stock-06-s02-v1/execution/native/covcounters.92693296bbc058414674b6688e10b66b.46375.1792467888422718000",
+      "sha256": "c4279c47644172feaf9953a7fed4f8df8bb6c680ad5cfc46e97ff85ebf521724"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/case-stock-06-s02-v1/execution/native/covcounters.92693296bbc058414674b6688e10b66b.46391.1792467888494002000",
+      "sha256": "abb300eba6a16980d3d9d0b34d04200c3e59f20ae1f3d9c39ae891c99a93ae1a"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/case-stock-06-s02-v1/execution/native/covmeta.92693296bbc058414674b6688e10b66b",
+      "sha256": "f3d7dccbcd63286cd940067e90455ef33c97ff5bd6dd342ceb60b1c01f7d38f0"
+    }
+  ],
+  "components": [
+    {
+      "id": "go-api",
+      "label": "Go API",
+      "source_paths": [
+        "projects/go-api/main.go"
+      ],
+      "line": {
+        "status": "unavailable",
+        "reason": "Go native coverage measures statements, not executable lines"
+      },
+      "branch": {
+        "status": "unavailable",
+        "reason": "Go native coverage does not measure branches"
+      },
+      "statement": {
+        "status": "measured",
+        "label": "Go statements",
+        "covered": 47,
+        "total": 70,
+        "pct": 67.1,
+        "tool_output": "totalStmts: 70 coveredStmts: 47\n\tstock.local/app\t\tcoverage: 67.1% of statements\n"
+      }
+    }
+  ],
+  "session": {
+    "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/case-stock-06-s02-v1/execution/coverage-request.json",
+    "sha256": "1fcf92070f9e62fc0bc0c3ca67c513979feade8e9bff6a6959eff2089c2889b0"
+  },
+  "collection": {
+    "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/case-stock-06-s02-v1/execution/collection.json",
+    "sha256": "81077a5583993e6fcf46d8a6a5086b53b998a2132552d7bfea7e598f57f1afb4"
+  },
+  "lifecycle_0": {
+    "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/case-stock-06-s02-v1/execution/go-build/lifecycle/finished.46375",
+    "sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+  },
+  "lifecycle_1": {
+    "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/case-stock-06-s02-v1/execution/go-build/lifecycle/finished.46391",
+    "sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+  },
+  "lifecycle_2": {
+    "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/case-stock-06-s02-v1/execution/go-build/lifecycle/started.46375",
+    "sha256": "0a1cc05c6a5dafbc947b6108ae889e9fb8b3e0508e7ea69f61bb65adbf68207b"
+  },
+  "lifecycle_3": {
+    "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/case-stock-06-s02-v1/execution/go-build/lifecycle/started.46391",
+    "sha256": "ef59f2d06d911b54bb04d23c3afa6689fab009e7caa6add59a6607665d4854ee"
+  },
+  "report_path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/case-stock-06-s02-v1/execution/coverage-report.json",
+  "report_sha256": "9c6c5a093d122edb24e3c29986ef380f87795678206ea39b4c566e57842cdc86",
+  "capture_end": "2026-10-20T03:44:48.560521+00:00"
+}

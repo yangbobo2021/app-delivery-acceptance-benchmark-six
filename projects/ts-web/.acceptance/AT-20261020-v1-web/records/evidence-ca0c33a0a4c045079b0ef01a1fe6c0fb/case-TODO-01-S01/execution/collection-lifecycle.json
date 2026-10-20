@@ -1,0 +1,13 @@
+{
+  "complete": true,
+  "missing": [],
+  "errors": [],
+  "exit_code": 0,
+  "signal": null,
+  "interrupted": false,
+  "command": [
+    "/opt/homebrew/bin/node",
+    "--test",
+    "projects/ts-web/tests/todo-01-s01.test.cjs"
+  ]
+}

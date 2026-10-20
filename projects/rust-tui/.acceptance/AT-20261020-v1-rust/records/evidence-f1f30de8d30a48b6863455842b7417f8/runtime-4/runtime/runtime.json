@@ -1,0 +1,195 @@
+{
+  "schema": "project-runtime-preparation-v1",
+  "status": "ready",
+  "acceptance": {
+    "project_root": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui",
+    "id": "AT-20261020-v1-rust",
+    "scope_sha256": "ca4cee68077fa3fcd17800b3de92a726464a509a76fcbd4ec5a94e1aa2e3fef4",
+    "knowledge_receipt": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/knowledge-reads/3e5a23b5a1ed45cb8df0a947371680b3.json"
+  },
+  "workspace": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workspace",
+  "runtime_root": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/runtime-4/runtime/runtime",
+  "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+  "components": [],
+  "test_roots": [
+    "projects/rust-tui/tests"
+  ],
+  "platform": {
+    "system": "Darwin",
+    "machine": "arm64"
+  },
+  "dependency_hashes": {
+    "projects/rust-tui/Cargo.toml": "69bfdf59d9858a861e9a8396b729ab0490d33a0bb7ae14e6b9e4df9fea32a860",
+    "projects/rust-tui/Cargo.lock": "df26affda9d5e39755eb3a49cf9885307aefab89688289ca8cd044750edfd542"
+  },
+  "knowledge_receipt": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/knowledge-reads/3e5a23b5a1ed45cb8df0a947371680b3.json",
+  "knowledge_read_sha256": "1f10d5a14aeeef5e52f923cd42a041bd1fa69153cdbfdd724524cef4b0fe423c",
+  "knowledge_used": [
+    "INDEX.md"
+  ],
+  "spec_path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/runtime-4/agent-spec.json",
+  "spec_sha256": "1657e005d70fc17fed524dd422e989dfe229ca59438ff6f234047d70f5085e49",
+  "recipe_candidate": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/runtime-4/runtime/recipe-candidate.md",
+  "recipe_candidate_sha256": "75573cc6f7307f54eb3665250844b3f4d75fe3d196be72ceee1927752ca265f9",
+  "setup": [
+    {
+      "command": [
+        "/bin/mkdir",
+        "-p",
+        "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/runtime-4/runtime/runtime/cargo",
+        "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/runtime-4/runtime/runtime/target"
+      ],
+      "cwd": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workspace",
+      "env": {},
+      "timeout_seconds": 10,
+      "exit_code": 0,
+      "seconds": 0.003,
+      "log": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/runtime-4/runtime/setup-00.log",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/Users/boboyang/.rustup/toolchains/stable-aarch64-apple-darwin/bin/cargo",
+        "fetch",
+        "--locked",
+        "--target",
+        "aarch64-apple-darwin"
+      ],
+      "cwd": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workspace/projects/rust-tui",
+      "env": {
+        "CARGO_HOME": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/runtime-4/runtime/runtime/cargo",
+        "CARGO_TARGET_DIR": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/runtime-4/runtime/runtime/target",
+        "RUSTC": "/Users/boboyang/.rustup/toolchains/stable-aarch64-apple-darwin/bin/rustc",
+        "CARGO_HTTP_TIMEOUT": "30",
+        "CARGO_NET_RETRY": "2"
+      },
+      "timeout_seconds": 600,
+      "exit_code": 0,
+      "seconds": 199.545,
+      "log": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/runtime-4/runtime/setup-01.log",
+      "output_sha256": "b7527cb5b01c528239c731ee6f31f2f580d3815785305c670c3a2aadef524b7e"
+    },
+    {
+      "command": [
+        "/Users/boboyang/.rustup/toolchains/stable-aarch64-apple-darwin/bin/cargo",
+        "build",
+        "--locked",
+        "--offline"
+      ],
+      "cwd": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workspace/projects/rust-tui",
+      "env": {
+        "CARGO_HOME": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/runtime-4/runtime/runtime/cargo",
+        "CARGO_TARGET_DIR": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/runtime-4/runtime/runtime/target",
+        "RUSTC": "/Users/boboyang/.rustup/toolchains/stable-aarch64-apple-darwin/bin/rustc",
+        "RUSTFLAGS": "",
+        "CARGO_ENCODED_RUSTFLAGS": "",
+        "RUSTC_WRAPPER": "",
+        "RUSTC_WORKSPACE_WRAPPER": ""
+      },
+      "timeout_seconds": 600,
+      "exit_code": 0,
+      "seconds": 10.783,
+      "log": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/runtime-4/runtime/setup-02.log",
+      "output_sha256": "5df2d29ee6dc36fafc34de3021849940b84d2c177beb2609a4c6249680729630"
+    }
+  ],
+  "executables": [
+    {
+      "name": "cargo",
+      "path": "/Users/boboyang/.rustup/toolchains/stable-aarch64-apple-darwin/bin/cargo",
+      "resolved_path": "/Users/boboyang/.rustup/toolchains/stable-aarch64-apple-darwin/bin/cargo",
+      "sha256": "cb7151ab1c5fcd42648336a2c98020b1819b0993955c8ba3ed44494772a82bdf",
+      "version_command": [
+        "/Users/boboyang/.rustup/toolchains/stable-aarch64-apple-darwin/bin/cargo",
+        "--version"
+      ],
+      "version_output": "cargo 1.94.0 (85eff7c80 2026-01-15)",
+      "version_receipt": {
+        "command": [
+          "/Users/boboyang/.rustup/toolchains/stable-aarch64-apple-darwin/bin/cargo",
+          "--version"
+        ],
+        "cwd": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workspace",
+        "env": {},
+        "timeout_seconds": 30,
+        "exit_code": 0,
+        "seconds": 0.018,
+        "log": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/runtime-4/runtime/version-00.log",
+        "output_sha256": "6a36a8bf8bd42aa197681c3cbafaf785b3a6cf5ed0361cc7240a31c458d10db9"
+      }
+    },
+    {
+      "name": "rustc",
+      "path": "/Users/boboyang/.rustup/toolchains/stable-aarch64-apple-darwin/bin/rustc",
+      "resolved_path": "/Users/boboyang/.rustup/toolchains/stable-aarch64-apple-darwin/bin/rustc",
+      "sha256": "4f26ad57dcb9b12f9791317a1387e3e8d6ad803d4bd20fcdc65142a91e903d45",
+      "version_command": [
+        "/Users/boboyang/.rustup/toolchains/stable-aarch64-apple-darwin/bin/rustc",
+        "--version"
+      ],
+      "version_output": "rustc 1.94.0 (4a4ef493e 2026-03-02)",
+      "version_receipt": {
+        "command": [
+          "/Users/boboyang/.rustup/toolchains/stable-aarch64-apple-darwin/bin/rustc",
+          "--version"
+        ],
+        "cwd": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workspace",
+        "env": {},
+        "timeout_seconds": 30,
+        "exit_code": 0,
+        "seconds": 0.016,
+        "log": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/runtime-4/runtime/version-01.log",
+        "output_sha256": "180811dbcf1bba74093ba8715adf0136827be3e386a68eb2d066b446d2a47d1b"
+      }
+    },
+    {
+      "name": "python3",
+      "path": "/opt/homebrew/bin/python3",
+      "resolved_path": "/opt/homebrew/Cellar/python@3.14/3.14.2_1/Frameworks/Python.framework/Versions/3.14/bin/python3.14",
+      "sha256": "00c07e4d31048b15eebbe4c883f229338c5b2d598e9ee061da39b7fccba20cad",
+      "version_command": [
+        "/opt/homebrew/bin/python3",
+        "--version"
+      ],
+      "version_output": "Python 3.14.2",
+      "version_receipt": {
+        "command": [
+          "/opt/homebrew/bin/python3",
+          "--version"
+        ],
+        "cwd": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workspace",
+        "env": {},
+        "timeout_seconds": 30,
+        "exit_code": 0,
+        "seconds": 0.021,
+        "log": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/runtime-4/runtime/version-02.log",
+        "output_sha256": "154ebd4b103b23b709d31a51461b80e35b5bd7da5e24dd86d6616727a32aa244"
+      }
+    }
+  ],
+  "smoke": {
+    "command": [
+      "/opt/homebrew/bin/python3",
+      "-c",
+      "import errno, fcntl, os, pathlib, pty, select, signal, struct, sys, tempfile, termios, time\ncargo, runtime = sys.argv[1:]\nos.environ.pop('NO_COLOR', None)\nwith tempfile.TemporaryDirectory(prefix='tui-smoke-', dir=runtime) as directory:\n    state = pathlib.Path(directory) / 'checklist.txt'\n    state.write_text('smoke1|Environment smoke|0\\n', encoding='utf-8')\n    pid, fd = pty.fork()\n    if pid == 0:\n        try:\n            fcntl.ioctl(0, termios.TIOCSWINSZ, struct.pack('HHHH', 24, 80, 0, 0))\n            os.execv(cargo, [cargo, 'run', '--quiet', '--locked', '--offline', '--', '--state', str(state)])\n        except BaseException as error:\n            os.write(2, str(error).encode('utf-8', errors='replace'))\n            os._exit(127)\n    status = None\n    sent_quit = False\n    output = bytearray()\n    deadline = time.monotonic() + 25\n    try:\n        while True:\n            finished, child_status = os.waitpid(pid, os.WNOHANG)\n            if finished:\n                status = child_status\n                break\n            if time.monotonic() >= deadline:\n                raise TimeoutError('PTY startup/quit timed out')\n            if select.select([fd], [], [], 0.1)[0]:\n                try:\n                    data = os.read(fd, 65536)\n                except OSError as error:\n                    if error.errno != errno.EIO:\n                        raise\n                    data = b''\n                if data:\n                    output.extend(data)\n                    if not sent_quit:\n                        os.write(fd, b'q')\n                        sent_quit = True\n        if not sent_quit or os.waitstatus_to_exitcode(status) != 0:\n            raise RuntimeError('PTY startup/quit failed; output: ' + bytes(output).decode('utf-8', errors='replace'))\n        print('PTY startup/quit OK; captured bytes:', len(output))\n    finally:\n        if status is None:\n            try:\n                os.killpg(pid, signal.SIGKILL)\n            except ProcessLookupError:\n                pass\n            os.waitpid(pid, 0)\n        os.close(fd)\n",
+      "/Users/boboyang/.rustup/toolchains/stable-aarch64-apple-darwin/bin/cargo",
+      "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/runtime-4/runtime/runtime"
+    ],
+    "cwd": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workspace/projects/rust-tui",
+    "env": {
+      "CARGO_HOME": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/runtime-4/runtime/runtime/cargo",
+      "CARGO_TARGET_DIR": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/runtime-4/runtime/runtime/target",
+      "RUSTC": "/Users/boboyang/.rustup/toolchains/stable-aarch64-apple-darwin/bin/rustc",
+      "RUSTFLAGS": "",
+      "CARGO_ENCODED_RUSTFLAGS": "",
+      "RUSTC_WRAPPER": "",
+      "RUSTC_WORKSPACE_WRAPPER": "",
+      "TERM": "xterm-256color"
+    },
+    "timeout_seconds": 40,
+    "exit_code": 0,
+    "seconds": 0.533,
+    "log": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/runtime-4/runtime/smoke.log",
+    "output_sha256": "0bb8b268cd7fa763f93d79099a1e7566606032cdf7aee36572fd4a9a1e03bbec"
+  }
+}

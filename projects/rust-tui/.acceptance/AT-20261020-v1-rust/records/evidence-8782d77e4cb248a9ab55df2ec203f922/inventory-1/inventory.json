@@ -1,0 +1,18 @@
+{
+  "schema": "acceptance-project-source-inventory-v1",
+  "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+  "project_id": "rust-tui",
+  "source_paths": [
+    "projects/rust-tui/src/main.rs"
+  ],
+  "source_hashes": {
+    "projects/rust-tui/src/main.rs": "d0b38b8eae43e7580069b69eda21b972dec5d0164570a235594a575c3b722c50"
+  },
+  "change_scope": {
+    "kind": "requirements-baseline",
+    "base_revision": null,
+    "changed_files": [],
+    "changed_lines": {},
+    "reason": "No PR or code-diff target in this requirements acceptance"
+  }
+}

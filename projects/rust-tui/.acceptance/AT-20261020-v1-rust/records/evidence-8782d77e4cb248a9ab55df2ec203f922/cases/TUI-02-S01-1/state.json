@@ -1,0 +1,141 @@
+{
+  "schema": "isolated-scene-pipeline-state-v1",
+  "config_sha256": "39f3c3f182fa18279d03d48d0e33656082bd9385e629051c603c9693b364e124",
+  "bindings": {
+    "case_input": "cf821dbd780e50c0d2ef67887b9d92bf7329ccd6824e2810ef370bb55414df35",
+    "guide": "bcec87308b6b2564195bf6a2932b87292c27646b75479bfbfef3436c22bcfae6",
+    "template_catalog": "2979833bb41dbd58b786c9dbbd50cbc3bed33af81d5031f39833d099bc97428b"
+  },
+  "stages": {
+    "prepare": {
+      "status": "completed",
+      "started_at": "2026-10-20T03:43:11.317056+00:00",
+      "result": {
+        "root": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workspace",
+        "catalog": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/catalog.json",
+        "setup_seconds": 0,
+        "check_seconds": 0
+      },
+      "finished_at": "2026-10-20T03:43:13.826179+00:00"
+    },
+    "case": {
+      "status": "completed",
+      "started_at": "2026-10-20T03:43:14.385437+00:00",
+      "result": {
+        "metrics": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/case/metrics.json",
+        "answer": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/case/answer.json",
+        "seconds": 167.981561708,
+        "usage": {
+          "toolUses": 16,
+          "tokens": {
+            "coverage": "partial",
+            "totals": {
+              "input": {
+                "total": 687639,
+                "uncached": 35863,
+                "cacheRead": 651776,
+                "cacheWrite": 0
+              },
+              "output": {
+                "total": 6734,
+                "visible": 5536,
+                "reasoning": 1198
+              }
+            }
+          }
+        },
+        "tool_calls": 16,
+        "restarted_after_unavailable_session": false
+      },
+      "finished_at": "2026-10-20T03:46:03.823006+00:00"
+    },
+    "execution": {
+      "status": "completed",
+      "started_at": "2026-10-20T03:46:04.334989+00:00",
+      "result": {
+        "receipt": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/execution/execution.json",
+        "log": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/execution/execution.log",
+        "exit_code": 0,
+        "seconds": 12.466056582983583,
+        "test_files": [
+          "projects/rust-tui/tests/llvm_coverage/README.md",
+          "projects/rust-tui/tests/llvm_coverage/adapter.py",
+          "projects/rust-tui/tests/llvm_coverage/config.json",
+          "projects/rust-tui/tests/llvm_coverage/direct.py",
+          "projects/rust-tui/tests/llvm_coverage/probe.rs",
+          "projects/rust-tui/tests/tui02_basic_list.py",
+          "projects/rust-tui/tests/tui04_coverage_archive.py",
+          "projects/rust-tui/tests/tui04_single_toggle.py"
+        ]
+      },
+      "finished_at": "2026-10-20T03:46:28.128714+00:00"
+    },
+    "evidence": {
+      "status": "completed",
+      "started_at": "2026-10-20T03:46:28.560837+00:00",
+      "result": {
+        "manifest": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/frozen-evidence.json",
+        "paths": [
+          "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/frozen-evidence/0/execution.log",
+          "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/frozen-evidence/0/execution.json",
+          "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/frozen-evidence/1/product-binary",
+          "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/frozen-evidence/2/run-50508-3353984249793428757_0.profraw",
+          "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/frozen-evidence/3/merged.profdata",
+          "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/frozen-evidence/4/native-export.stdout",
+          "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/frozen-evidence/5/native-summary.stdout",
+          "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/frozen-evidence/6/processing.json",
+          "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/frozen-evidence/7/tui02-01-open.ansi",
+          "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/frozen-evidence/7/tui02-01-open.json",
+          "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/frozen-evidence/7/tui02-01-open.png",
+          "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/frozen-evidence/7/tui02-02-after-j.ansi",
+          "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/frozen-evidence/7/tui02-02-after-j.json",
+          "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/frozen-evidence/7/tui02-02-after-j.png"
+        ],
+        "file_count": 14,
+        "bytes": 10291074
+      },
+      "finished_at": "2026-10-20T03:46:30.767415+00:00"
+    },
+    "gate": {
+      "status": "completed",
+      "started_at": "2026-10-20T03:46:31.265639+00:00",
+      "result": {
+        "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/handoff-gate.json",
+        "seconds": 1.647
+      },
+      "finished_at": "2026-10-20T03:46:33.209862+00:00"
+    },
+    "review": {
+      "status": "completed",
+      "started_at": "2026-10-20T03:46:33.559380+00:00",
+      "result": {
+        "answer": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/review/answer.json",
+        "metrics": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/review/metrics.json",
+        "status": "product_bug",
+        "seconds": 55.805176958,
+        "usage": {
+          "toolUses": 8,
+          "tokens": {
+            "coverage": "partial",
+            "totals": {
+              "input": {
+                "total": 188056,
+                "uncached": 32920,
+                "cacheRead": 155136,
+                "cacheWrite": 0
+              },
+              "output": {
+                "total": 2222,
+                "visible": 2050,
+                "reasoning": 172
+              }
+            }
+          }
+        },
+        "tool_calls": 8,
+        "restarted_after_unavailable_session": false
+      },
+      "finished_at": "2026-10-20T03:47:30.313859+00:00"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "model": "gpt-6.1-sol",
+  "effort": "high",
+  "started_at": "2026-10-20T03:46:34.136Z",
+  "prompt_characters": 15684,
+  "image_inputs": [
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/frozen-evidence/7/tui02-01-open.png",
+      "sha256": "5ea47926f8509337bcd014c36e0c96055d55d26d4dbc1982a1df35e029c1cdaa"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/frozen-evidence/7/tui02-02-after-j.png",
+      "sha256": "de77b8f5f4e3c421c3abaf65dba0406c34e503d3cf1d20e3a2c88a05976c149d"
+    }
+  ],
+  "image_aliases": {},
+  "status": "success",
+  "usage": {
+    "toolUses": 8,
+    "tokens": {
+      "coverage": "partial",
+      "totals": {
+        "input": {
+          "total": 188056,
+          "uncached": 32920,
+          "cacheRead": 155136,
+          "cacheWrite": 0
+        },
+        "output": {
+          "total": 2222,
+          "visible": 2050,
+          "reasoning": 172
+        }
+      }
+    }
+  },
+  "seconds": 55.805176958,
+  "tool_calls": 8,
+  "finished_at": "2026-10-20T03:47:29.942Z"
+}

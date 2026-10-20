@@ -1,0 +1,11 @@
+{
+  "request": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-03-S01/execution/coverage-request.json",
+  "request_sha256": "83bc4257f76733edd5ab200acf810ace2d79f91ee4a35de808b3e5a8ced3a228",
+  "scene_id": "NOTE-03-S01",
+  "command": [
+    "/opt/homebrew/bin/node",
+    "--test",
+    "projects/electron-desktop/tests/note-03-s01.test.cjs"
+  ],
+  "prepared_sha256": "62282a63188bf6f1afaa51f79634519b13d7fa2ec6d4d79797033893b4892ffa"
+}

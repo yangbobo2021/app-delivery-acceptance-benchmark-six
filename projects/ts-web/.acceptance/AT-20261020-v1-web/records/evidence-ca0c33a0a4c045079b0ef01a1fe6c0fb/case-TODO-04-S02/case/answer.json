@@ -1,0 +1,38 @@
+{
+  "status": "product_failure",
+  "test_files": [
+    "projects/ts-web/tests/todo-04-s02.test.cjs",
+    "projects/ts-web/tests/coverage-tools/adapter.cjs",
+    "projects/ts-web/tests/coverage-tools/core.cjs",
+    "projects/ts-web/tests/coverage-tools/direct.cjs",
+    "projects/ts-web/tests/coverage-tools/preload.cjs",
+    "projects/ts-web/tests/coverage-tools/probe.cjs",
+    "projects/ts-web/tests/coverage-tools/package.json",
+    "projects/ts-web/tests/coverage-tools/package-lock.json",
+    "projects/ts-web/tests/coverage-tools/README.md"
+  ],
+  "test_command": [
+    "/opt/homebrew/bin/node",
+    "--test",
+    "projects/ts-web/tests/todo-04-s02.test.cjs"
+  ],
+  "test_env": {
+    "PLAYWRIGHT_BROWSERS_PATH": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/runtime-1/runtime/runtime/playwright-browsers"
+  },
+  "observations": [
+    "真实 Chromium、1280×800 视口；两组数据分别使用独立存储上下文，通过界面添加与切换完成状态。",
+    "两组数据在 All、Active 下均显示剩余 2；Completed 下均错误显示 0，包括没有可见条目的状态。返回 All 后恢复 2。",
+    "各过滤状态的条目身份与完成状态符合预期，返回 All 后状态未改变。",
+    "逐张人工查看六种过滤状态截图：过滤按钮、总数和未完成标题清晰无遮挡；混合数据的 All、Completed 状态下，已完成标题颜色极浅，难以辨读，不满足可读性判据。",
+    "完整用例通过统一调试入口执行，退出码为 1；清理无异常，覆盖率报告状态为 measured。保留前场景测试，未修改产品源码。"
+  ],
+  "evidence_paths": [
+    "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-04-S02/case/debug/attempt-139def7c8140480494a28dfdac3dc29b/state/screenshots",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-04-S02/case/debug/attempt-139def7c8140480494a28dfdac3dc29b/execution/command/execution.log",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-04-S02/case/debug/attempt-139def7c8140480494a28dfdac3dc29b/execution/coverage-report.json"
+  ],
+  "limitations": [
+    "当前截图属于本地调试资料，不作为正式执行证据。正式重跑由宿主绑定 ACCEPTANCE_SCREENSHOT_DIR，测试将向该目录生成截图及完整状态记录；仍需独立复审。"
+  ],
+  "reason": "Completed 过滤将全量未完成总数从 2 错报为 0，且已完成标题难以辨读。"
+}

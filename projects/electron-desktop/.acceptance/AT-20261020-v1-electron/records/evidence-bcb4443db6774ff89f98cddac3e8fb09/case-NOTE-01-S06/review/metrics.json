@@ -1,0 +1,64 @@
+{
+  "model": "gpt-6.1-sol",
+  "effort": "high",
+  "started_at": "2026-10-20T03:55:16.700Z",
+  "prompt_characters": 19383,
+  "image_inputs": [
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S06/frozen-evidence/8/01-empty.png",
+      "sha256": "6180fbbb6e01785d610dc1499f376b1049256cefc9f582012e63ac75a8de36de"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S06/frozen-evidence/8/02-target-entered.png",
+      "sha256": "34352a61430b5434d3ccc6b8ae05e6126eb11a3449547dc1ba879d19984d02ac"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S06/frozen-evidence/8/02-target-saved.png",
+      "sha256": "d3a642d49c31cea81e044c5033196ab2e61e5c0956ffdb8b843353ae5bf84786"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S06/frozen-evidence/8/03-survivor-entered.png",
+      "sha256": "46077d369e2a34442e89900673dd665992a758c2669b0a090144a1f29dfbcb96"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S06/frozen-evidence/8/03-survivor-saved.png",
+      "sha256": "ea31fb3602146431b5a2147964e56a40b84269848184b397c80371c3ed90357d"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S06/frozen-evidence/8/04-survivor-selected.png",
+      "sha256": "58547b59fb85fac783dd4faa2d59536513fa5cdf1288c25c193ef2371c8ff19b"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S06/frozen-evidence/8/05-target-selected.png",
+      "sha256": "2917d9cfdf231e5f3a63b162840c58166d4b5fd5319250cf38572a0eee604008"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S06/frozen-evidence/8/failure.png",
+      "sha256": "738e38265f26693a1f47540a308fd5685b8c181b291b2cf5a0f2b00def697c28"
+    }
+  ],
+  "image_aliases": {},
+  "status": "success",
+  "usage": {
+    "toolUses": 13,
+    "tokens": {
+      "coverage": "partial",
+      "totals": {
+        "input": {
+          "total": 342709,
+          "uncached": 44981,
+          "cacheRead": 297728,
+          "cacheWrite": 0
+        },
+        "output": {
+          "total": 3152,
+          "visible": 2796,
+          "reasoning": 356
+        }
+      }
+    }
+  },
+  "seconds": 86.677898833,
+  "tool_calls": 13,
+  "finished_at": "2026-10-20T03:56:43.378Z"
+}

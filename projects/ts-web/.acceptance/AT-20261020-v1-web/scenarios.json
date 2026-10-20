@@ -1,0 +1,311 @@
+{
+  "schema": "acceptance-catalog-v1",
+  "project": {
+    "id": "ts-web",
+    "label": "ts-web",
+    "root": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web",
+    "revision": "be952659c7d93018e26793daf2e58fa8321601f4"
+  },
+  "requirements": [
+    {
+      "id": "TODO-01",
+      "title": "TODO-01",
+      "text": "输入非空标题并添加后，列表出现该待办。标题首尾空白会去除；全空白或去除后超过 80 个 Unicode 码点的标题不能添加，并显示可见错误。错误文案不作要求。"
+    },
+    {
+      "id": "TODO-02",
+      "title": "TODO-02",
+      "text": "可以切换待办完成状态，再次切换可恢复未完成。两个标题相同的待办是不同条目，切换一个不影响另一个。"
+    },
+    {
+      "id": "TODO-03",
+      "title": "TODO-03",
+      "text": "提供全部、未完成、已完成三个过滤选项。可见列表与所选过滤一致；切换过滤不修改待办状态。"
+    },
+    {
+      "id": "TODO-04",
+      "title": "TODO-04",
+      "text": "显示所有待办中的未完成总数，不能只统计当前过滤结果。空列表时为 0。"
+    },
+    {
+      "id": "TODO-05",
+      "title": "TODO-05",
+      "text": "可以删除指定待办，删除其他同名待办不受影响。刷新页面后，条目、完成状态与删除结果保留；不同浏览器存储上下文互不影响。"
+    },
+    {
+      "id": "TODO-06",
+      "title": "TODO-06",
+      "text": "标题作为普通文本展示。`<img src=x onerror=alert(1)>` 是合法短标题，不得创建对应图片元素或执行其中代码。列表排序、视觉设计、刷新后默认过滤均不作要求。"
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "TODO-01-S01",
+      "title": "添加普通非空标题",
+      "priority": "P0",
+      "priority_reason": "普通标题无法加入列表，直接阻断添加待办的主要用途。",
+      "description": "输入“买牛奶”并执行添加，列表出现标题为“买牛奶”的待办。输入区、添加控件和新增标题可见可读、无遮挡或裁切，控件可操作；排版层次清楚，间距、对齐、字体及控件样式协调一致，具有基本视觉完成度并符合项目已有风格。",
+      "requirement_id": "TODO-01",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "TODO-01-S02",
+      "title": "去除标题首尾空白",
+      "priority": "P1",
+      "priority_reason": "带首尾空白的日常输入被拒绝或保存成错误标题，影响标题准确性，普通添加仍可完成。",
+      "description": "输入“  买 牛奶  ”并添加，列表出现标题为“买 牛奶”的待办，首尾普通空格去除，内部空格保留。输入区、添加控件和新增标题可见可读、无遮挡或裁切，控件可操作；排版层次清楚，间距、对齐、字体及控件样式协调一致，具有基本视觉完成度并符合项目已有风格。",
+      "requirement_id": "TODO-01",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "TODO-01-S03",
+      "title": "拒绝空标题与全空白标题",
+      "priority": "P1",
+      "priority_reason": "空标题进入列表会产生无法辨认的待办；全空白输入被拒绝却无反馈，会使用户无法判断添加失败。",
+      "description": "分别在标题为空和仅含普通空格时执行添加：两者均不新增待办，全空格输入还须显示可见错误；空标题的错误提示不作额外要求。输入区、添加控件及全空格输入对应的错误提示可见可读、无遮挡或裁切，控件可操作；排版层次清楚，间距、对齐、字体及控件样式协调一致，具有基本视觉完成度并符合项目已有风格。",
+      "requirement_id": "TODO-01",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "TODO-01-S04",
+      "title": "按码点拒绝超过长度上限的标题",
+      "priority": "P1",
+      "priority_reason": "超长标题被接受会违反输入限制；按字素计数可能漏放超限文本，拒绝无反馈则妨碍用户纠正输入。",
+      "description": "分别添加由81个“甲”和41组“e＋U+0301组合重音符”（共82个Unicode码点）构成的标题；两者均不得新增待办，并各自显示可见错误。输入区、添加控件及错误提示可见可读、无遮挡或裁切，控件可操作；排版层次清楚，间距、对齐、字体及控件样式协调一致，具有基本视觉完成度并符合项目已有风格。",
+      "requirement_id": "TODO-01",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "TODO-01-S05",
+      "title": "接受去除空白后恰好80码点的标题",
+      "priority": "P1",
+      "priority_reason": "把上限写成小于80、按字节或UTF-16代码单元计数、先计数后去空白，都会错误拒绝明确允许的标题。",
+      "description": "分别添加由80个“甲”构成的标题，以及首尾附普通空格、正文为80个“😀”（U+1F600）构成的标题；两者均成功出现在列表，正文完整，后者首尾空格去除。输入区、添加控件和新增标题可见可读、无遮挡或裁切，控件可操作；排版层次清楚，间距、对齐、字体及控件样式协调一致，具有基本视觉完成度并符合项目已有风格。",
+      "requirement_id": "TODO-01",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "TODO-02-S01",
+      "title": "完成状态可切换并恢复",
+      "priority": "P0",
+      "priority_reason": "普通待办无法完成或恢复未完成，会阻断日常状态管理主流程。",
+      "description": "准备一条普通标题的未完成待办，切换其完成状态后再次切换；该条目应先变为已完成，再恢复未完成，界面能够辨认当前状态。操作前后，标题和完成状态清晰可读，切换控件可见且可操作，均无遮挡或裁切；布局层次合理，间距与对齐协调，字体和控件样式一致，符合项目已有风格并具备基本视觉完成度。",
+      "requirement_id": "TODO-02",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "TODO-02-S02",
+      "title": "同名待办的状态切换互不影响",
+      "priority": "P1",
+      "priority_reason": "切换一条会连带改变同名条目的进度，导致同名待办无法独立管理，影响该类条目的状态准确性。",
+      "description": "分别准备两条同名待办均未完成、均已完成两组条件，每组仅切换其中一条；前者应仅该条目变为已完成，另一条仍未完成；后者应仅该条目恢复未完成，另一条仍已完成，两条待办均保留。操作前后，标题和完成状态清晰可读，切换控件可见且可操作，均无遮挡或裁切；布局层次合理，间距与对齐协调，字体和控件样式一致，符合项目已有风格并具备基本视觉完成度。",
+      "requirement_id": "TODO-02",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "TODO-03-S01",
+      "title": "混合状态列表按三种过滤展示",
+      "priority": "P0",
+      "priority_reason": "普通混合列表无法按完成状态正确筛选，直接阻断过滤功能的主要使用目的。",
+      "description": "准备标题可区分的未完成和已完成待办，分别选择全部、未完成、已完成：全部展示所有条目，未完成仅展示所有未完成条目，已完成仅展示所有已完成条目，无遗漏或混入。操作与结果状态下，过滤选项、相关控件及可见条目的标题和状态清晰可读，控件可操作且无遮挡或裁切；排版层次、间距、对齐合理，字体与控件样式协调一致，符合项目已有设计风格。",
+      "requirement_id": "TODO-03",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "TODO-03-S02",
+      "title": "无匹配条目时列表为空",
+      "priority": "P1",
+      "priority_reason": "合理常见的无匹配条件下仍展示其他状态条目，会误导用户判断筛选结果。",
+      "description": "分别准备仅含未完成条目、仅含已完成条目的列表，从全部切换到已完成、未完成过滤；两组均应不显示任何待办条目，不得残留先前列表或回退展示全部条目。操作与结果状态下，过滤选项和相关控件清晰可读、可操作且无遮挡或裁切，空列表区域与控件布局清楚；排版层次、间距、对齐合理，字体与控件样式协调一致，符合项目已有设计风格。",
+      "requirement_id": "TODO-03",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "TODO-03-S03",
+      "title": "切换过滤保留原有完成状态",
+      "priority": "P1",
+      "priority_reason": "过滤擅自改变已有完成状态，会破坏用户记录的处理进度，即使列表筛选仍能正常使用。",
+      "description": "准备标题可区分且同时包含两种完成状态的待办，记录各条目原状态，从全部依次切换到未完成、已完成并返回全部；每次切换后可见条目保持原状态，返回全部后所有原有条目的完成状态均与切换前一致，包括此前被隐藏的条目。操作与结果状态下，过滤选项、相关控件及可见条目的标题和状态清晰可读，控件可操作且无遮挡或裁切；排版层次、间距、对齐合理，字体与控件样式协调一致，符合项目已有设计风格。",
+      "requirement_id": "TODO-03",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "TODO-03-S04",
+      "title": "无待办时仍可使用三种过滤",
+      "priority": "P2",
+      "priority_reason": "无数据时过滤入口失效会影响空列表阶段的使用体验，但尚无待办需要筛选或保护。",
+      "description": "在没有任何待办的条件下，依次选择全部、未完成、已完成；三个选项均可使用，各选项下均无待办条目，切换过程不使过滤界面失效。操作与结果状态下，过滤选项和相关控件清晰可读、可操作且无遮挡或裁切，空列表区域与控件布局清楚；排版层次、间距、对齐合理，字体与控件样式协调一致，符合项目已有设计风格。",
+      "requirement_id": "TODO-03",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "TODO-04-S01",
+      "title": "未完成总数随条目和状态变化更新",
+      "priority": "P0",
+      "priority_reason": "普通增删和完成状态变化后统计错误，会使日常待办管理无法获得准确的剩余任务数。",
+      "description": "在全部过滤下，以普通标题准备两条未完成和一条已完成待办，总数应为2；添加一条未完成项后为3，将其完成后为2、恢复未完成后为3，删除该项后为2，再删除已完成项后仍为2。各结果状态下，总数、现有待办标题及所需操作控件应可见可读、可操作且无遮挡或裁切，排版层次清楚、间距与对齐合理，字体与控件一致，并符合项目已有设计风格。",
+      "requirement_id": "TODO-04",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "TODO-04-S02",
+      "title": "过滤不改变全量未完成总数",
+      "priority": "P1",
+      "priority_reason": "过滤时错误缩小统计范围会误报剩余任务，影响常用筛选操作中的判断，但全部视图仍可提供正确统计。",
+      "description": "分别以“两条未完成、一条已完成”和“仅两条未完成”为准备数据，切换全部、未完成、已完成过滤，总数始终应为2，包括后一组已完成过滤下没有可见条目的状态。各过滤状态下，总数、过滤选项及现有待办内容应可见可读，过滤控件可操作且无遮挡或裁切，排版层次清楚、间距与对齐合理，字体与控件一致，并符合项目已有设计风格。",
+      "requirement_id": "TODO-04",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "TODO-04-S03",
+      "title": "空列表明确显示零",
+      "priority": "P2",
+      "priority_reason": "空列表缺少0或残留旧数会误报空态；若非空列表统计正常，主要影响无任务时的状态确认。",
+      "description": "在全部过滤下，分别检查初始无任何待办的列表，以及删除最后一条未完成待办后形成的空列表，未完成总数均应明确显示为0。两种空态下，总数及继续操作所需控件应可见可读、可操作且无遮挡或裁切，排版层次清楚、间距与对齐合理，字体与控件一致，并符合项目已有设计风格。",
+      "requirement_id": "TODO-04",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "TODO-05-S01",
+      "title": "删除指定待办",
+      "priority": "P0",
+      "priority_reason": "普通待办无法被指定删除，直接阻断待办管理的主要删除操作。",
+      "description": "在全部列表中，分别以普通标题的未完成、已完成条目为目标执行删除；每组均应仅移除指定条目，其余条目的标题和完成状态不变。操作及结果状态下，标题、完成标识与必要控件可见可读、可操作且无遮挡或裁切，排版层次、间距、对齐、字体和控件一致性合理，具有基本视觉完成度并符合项目已有风格。",
+      "requirement_id": "TODO-05",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "TODO-05-S02",
+      "title": "删除同名条目保持独立",
+      "priority": "P0",
+      "priority_reason": "按标题误删会移除用户未指定删除的独立待办，且未确认恢复途径。",
+      "description": "准备标题相同、完成状态不同的两个条目，在全部列表中指定其中一个删除；被选条目消失，另一个仍保留原标题和完成状态，不得一并删除或删错对象。操作及结果状态下，标题、完成标识与必要控件可见可读、可操作且无遮挡或裁切，排版层次、间距、对齐、字体和控件一致性合理，具有基本视觉完成度并符合项目已有风格。",
+      "requirement_id": "TODO-05",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "TODO-05-S03",
+      "title": "刷新保留已有条目",
+      "priority": "P0",
+      "priority_reason": "普通刷新丢失已添加的待办内容，使用户记录无法持续保存。",
+      "description": "通过界面添加多个不同的普通标题待办，确认条目已出现后刷新页面，再选择全部列表核对；原有条目的标题和数量均保留，不得丢失、替换或额外复制。操作及结果状态下，标题、完成标识与必要控件可见可读、可操作且无遮挡或裁切，排版层次、间距、对齐、字体和控件一致性合理，具有基本视觉完成度并符合项目已有风格。",
+      "requirement_id": "TODO-05",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "TODO-05-S04",
+      "title": "刷新保留同名独立条目",
+      "priority": "P0",
+      "priority_reason": "刷新时按标题去重会丢失用户已有的独立待办，且未确认恢复途径。",
+      "description": "通过界面添加两个标题相同的待办，确认两个条目均存在后刷新页面，再选择全部列表核对；两个同名条目均应保留，不得合并成一个。操作及结果状态下，标题、完成标识与必要控件可见可读、可操作且无遮挡或裁切，排版层次、间距、对齐、字体和控件一致性合理，具有基本视觉完成度并符合项目已有风格。",
+      "requirement_id": "TODO-05",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "TODO-05-S05",
+      "title": "刷新保留最新完成状态",
+      "priority": "P1",
+      "priority_reason": "刷新回退完成状态会使已办与未办记录失真，影响用户继续处理待办。",
+      "description": "准备两个不同标题的条目，将一个切换为已完成，将另一个从已完成切回未完成；确认操作结果后刷新页面，再选择全部列表核对，各条目均保留刷新前的最新完成状态。操作及结果状态下，标题、完成标识与必要控件可见可读、可操作且无遮挡或裁切，排版层次、间距、对齐、字体和控件一致性合理，具有基本视觉完成度并符合项目已有风格。",
+      "requirement_id": "TODO-05",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "TODO-05-S06",
+      "title": "刷新保留删除结果",
+      "priority": "P1",
+      "priority_reason": "刷新使已删除待办重新出现，导致已处理的删除操作失效并需要重复清理。",
+      "description": "准备不同标题的两个条目，删除其中一个并确认另一条仍在；刷新页面后选择全部列表核对，被删除条目仍不存在，保留条目仍存在。操作及结果状态下，标题、完成标识与必要控件可见可读、可操作且无遮挡或裁切，排版层次、间距、对齐、字体和控件一致性合理，具有基本视觉完成度并符合项目已有风格。",
+      "requirement_id": "TODO-05",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "TODO-05-S07",
+      "title": "不同存储上下文保持隔离",
+      "priority": "P0",
+      "priority_reason": "跨上下文联动删除会移除另一上下文未授权删除的已有待办，且未确认恢复途径。",
+      "description": "准备两个独立浏览器存储上下文，各自通过界面建立同名待办及各自独有的条目，并使同名待办的完成状态不同；在其中一个上下文新增条目、切换其同名待办状态并删除该同名待办，随后刷新两个上下文并选择全部列表，操作方保留自身操作结果，另一方的条目、数量和完成状态均保持操作前一致，双方均不出现对方独有条目。操作及结果状态下，标题、完成标识与必要控件可见可读、可操作且无遮挡或裁切，排版层次、间距、对齐、字体和控件一致性合理，具有基本视觉完成度并符合项目已有风格。",
+      "requirement_id": "TODO-05",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "TODO-06-S01",
+      "title": "合法标记标题按原文展示",
+      "priority": "P1",
+      "priority_reason": "特殊合法标题被拒绝、改写或解析为图片，会使该类待办无法正确记录和辨认。",
+      "description": "添加标题 `<img src=x onerror=alert(1)>` 并查看该条目：应允许添加，完整显示输入的字面文本，不得生成与该标题对应的图片元素。操作及结果状态下，标题应可见可读，必要控件应可见、可操作，均无遮挡或裁切；排版层次、间距、对齐及字体与控件的一致性合理，具有基本视觉完成度并符合项目已有设计风格。",
+      "requirement_id": "TODO-06",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "TODO-06-S02",
+      "title": "标题中的事件代码不得执行",
+      "priority": "P0",
+      "priority_reason": "标题触发页面脚本执行，会越过用户文本与应用代码之间的信任边界。",
+      "description": "以 `<img src=x onerror=alert(1)>` 为标题添加待办并查看其展示状态，标题处理和展示过程中不得执行其中的事件代码或触发其 alert(1)。操作及结果状态下，标题应可见可读，必要控件应可见、可操作，均无遮挡或裁切；排版层次、间距、对齐及字体与控件的一致性合理，具有基本视觉完成度并符合项目已有设计风格。",
+      "requirement_id": "TODO-06",
+      "kind": "BLACK_BOX"
+    }
+  ],
+  "design_gaps": [],
+  "scenario_generation": "v4 internal self-check; no independent scenario review",
+  "target_sources": [
+    {
+      "target": "TODO-01",
+      "scenario_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/scenario-TODO-01/scenarios.current.json",
+      "selfcheck_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/scenario-TODO-01/selfcheck.current.json",
+      "terminal_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/scenario-TODO-01/terminal.json",
+      "scenario_sha256": "ec984a2c70da8ba1822c5261431f32a6ef05ccb6964b9940eb7fd075f6249d96",
+      "selfcheck_sha256": "3bb8eeff5eba3f8535fc3333ddd0d52be2e2f6acad00bf9df4d4e98cb732a147"
+    },
+    {
+      "target": "TODO-02",
+      "scenario_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/scenario-TODO-02/scenarios.current.json",
+      "selfcheck_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/scenario-TODO-02/selfcheck.current.json",
+      "terminal_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/scenario-TODO-02/terminal.json",
+      "scenario_sha256": "27257ee40f40b5d243667072dd7f0496de906d1b21ef6f365e9fd777643daf6e",
+      "selfcheck_sha256": "f64c67477e60e60ebee5aa060b6232509d3d30cf92025bb41ab3536dc4d324ca"
+    },
+    {
+      "target": "TODO-03",
+      "scenario_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/scenario-TODO-03/scenarios.current.json",
+      "selfcheck_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/scenario-TODO-03/selfcheck.current.json",
+      "terminal_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/scenario-TODO-03/terminal.json",
+      "scenario_sha256": "5f2ac0bf7c07ae78ffb02577bfc79f9ef994b0454aaeaf41ec4d42616f43e885",
+      "selfcheck_sha256": "c7a4b72d6ace08dd2eb00ec1ab10db26a2d176a60fc9ded89f2b0f7715515dd9"
+    },
+    {
+      "target": "TODO-04",
+      "scenario_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/scenario-TODO-04/scenarios.current.json",
+      "selfcheck_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/scenario-TODO-04/selfcheck.current.json",
+      "terminal_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/scenario-TODO-04/terminal.json",
+      "scenario_sha256": "aa7a6701679abd4cd926f847b42ba02d2bf020ebcb7ced6fcdb52de1f32a7458",
+      "selfcheck_sha256": "38ba545a29e09ee51109fdc6e28b05d909800d9aa549c294080d393ae3264da2"
+    },
+    {
+      "target": "TODO-05",
+      "scenario_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/scenario-TODO-05/scenarios.current.json",
+      "selfcheck_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/scenario-TODO-05/selfcheck.current.json",
+      "terminal_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/scenario-TODO-05/terminal.json",
+      "scenario_sha256": "8bd542622b5b867373fd8d3144c8315827e40b30107127e98029aa7c0b0e2cde",
+      "selfcheck_sha256": "0bbeb96d60b7ecc44a8d23e775f0152bfe93a1bc9b13d83b9bc3d2b0915129ed"
+    },
+    {
+      "target": "TODO-06",
+      "scenario_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/scenario-TODO-06/scenarios.current.json",
+      "selfcheck_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/scenario-TODO-06/selfcheck.current.json",
+      "terminal_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/scenario-TODO-06/terminal.json",
+      "scenario_sha256": "b9ec3b4c09745696ce15ec4d5457b66828d77ac4100688e1040495a05a4112a1",
+      "selfcheck_sha256": "5d5b389ec8c0171cb5914afa5edd51bc3e15b205e5cbb4b8fa0d277c305c3830"
+    }
+  ],
+  "cross_target_review": {
+    "ownership": "Each scene belongs to its named original requirement.",
+    "contradictions": "No conflicting expected outcomes identified across the six lists.",
+    "duplicate_purposes": "Related setup appears across targets, but checks have distinct target-owned assertions; no materially duplicate purpose retained."
+  },
+  "execution_status": "No business scenario executed in first phase.",
+  "acceptance_id": "AT-20261020-v1-web",
+  "scope_sha256": "64dfe822d5cf23a37b7f2e8b67cc197ef98b77b2f995362f0ff0883af79121a7",
+  "updated_at": "2026-10-20T02:38:39.465591+00:00"
+}

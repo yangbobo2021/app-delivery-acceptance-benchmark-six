@@ -1,0 +1,1 @@
+{"passed": false, "failures": ["BATCH-02-S02: acct_A total 190, count 2"], "observations": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-02-S02-1/fresh-execution/batch-02-s02/observations.json"}

@@ -1,0 +1,79 @@
+{
+  "schema": "project-coverage-preparation-v1",
+  "entry": [
+    "/opt/homebrew/bin/python3",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workspace/projects/go-api/tests/coverage/adapter.py"
+  ],
+  "adapter_files": {
+    "projects/go-api/tests/coverage/adapter.py": "ddcffcb93a866108d47ebe4aac81aed895cbb205f805067cffc8c5cdcf8529c3",
+    "projects/go-api/tests/coverage/direct.py": "a072cec1c42c4d66237dab6c76ff89f9fbff77bad30b93ce231fd18c83bb8b57",
+    "projects/go-api/tests/coverage/probe.py": "b1d534c6726cafd675b42c66827057b8862c19c6a69a82db4d438e51f4d8fd9b",
+    "projects/go-api/tests/coverage/launcher.py": "3b0e41f850552aa6d3fe445447899194727415d1fb584cce0c1d8e6edc4026eb",
+    "projects/go-api/tests/coverage/harness_test.go.txt": "b2ce14d3b433cf1be30cf60df7354829f6c14a30e8c2b795243f8bb47306e789"
+  },
+  "tools": [
+    {
+      "name": "Go native coverage toolchain",
+      "version": "go1.25.7",
+      "role": "go test 编译及原生快照采集；go tool covdata debugdump、percent、merge 负责语句分母、命中、百分比及合并。完整能力由宿主探针复核。"
+    }
+  ],
+  "source_dispositions": {
+    "projects/go-api/main.go": {
+      "kind": "measured",
+      "reason": "指定为原生语句覆盖率采集目标：逐字节复制冻结源码，以 Go 测试工具链插桩；测试夹具不计入产品分母。适配器与独立读取器读取同份 covmeta/covcounters，由 covdata 输出真实统计。须经宿主零／非零探针与 verify-preparation 验证后激活，此处不声明探针已通过。"
+    }
+  },
+  "preparation_status": "ready",
+  "spec": {
+    "project_root": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workspace",
+    "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+    "components": {},
+    "source_hashes": {
+      "projects/go-api/main.go": "7178bfc3e470cb27e0c1b0b816030411049cf0fa85b4cf90e5f106df892566ec"
+    },
+    "inventory_path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/coverage-v2/inventory.json",
+    "inventory_sha256": "ecabbedb450e8f5b21534377d59159941f0262c83ae8841a5c3d0b06d2bb6b8d",
+    "registry_path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/coverage-v2/registry/coverage-registry.json",
+    "runtime_manifest": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/runtime-v2/output/runtime/runtime.json",
+    "runtime_sha256": "7c9779b91ba116bb17863bef5cc9453fe01802f938098ad52935698c646b7f8c",
+    "probe_report": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/coverage-v2/output/probes/coverage-probes.json",
+    "probe_report_sha256": "293c59c994ae8354610f26830f37976de6e41f0df3064d3db40581583176891e"
+  },
+  "preparation_evidence": [
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/coverage-v2/output/probe-plan.json",
+      "sha256": "af227e6028d098ddf876a2f51793d6757b450b49c25115af5a527d14f41885e3"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/coverage-v2/output/probes/coverage-probes.json",
+      "sha256": "293c59c994ae8354610f26830f37976de6e41f0df3064d3db40581583176891e"
+    }
+  ],
+  "artifact_aliases": {
+    "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workspace/projects/go-api/main.go": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/coverage-v2/output/frozen/projects/go-api/main.go",
+      "sha256": "7178bfc3e470cb27e0c1b0b816030411049cf0fa85b4cf90e5f106df892566ec"
+    },
+    "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workspace/projects/go-api/tests/coverage/adapter.py": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/coverage-v2/output/frozen/projects/go-api/tests/coverage/adapter.py",
+      "sha256": "ddcffcb93a866108d47ebe4aac81aed895cbb205f805067cffc8c5cdcf8529c3"
+    },
+    "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workspace/projects/go-api/tests/coverage/direct.py": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/coverage-v2/output/frozen/projects/go-api/tests/coverage/direct.py",
+      "sha256": "a072cec1c42c4d66237dab6c76ff89f9fbff77bad30b93ce231fd18c83bb8b57"
+    },
+    "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workspace/projects/go-api/tests/coverage/probe.py": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/coverage-v2/output/frozen/projects/go-api/tests/coverage/probe.py",
+      "sha256": "b1d534c6726cafd675b42c66827057b8862c19c6a69a82db4d438e51f4d8fd9b"
+    },
+    "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workspace/projects/go-api/tests/coverage/launcher.py": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/coverage-v2/output/frozen/projects/go-api/tests/coverage/launcher.py",
+      "sha256": "3b0e41f850552aa6d3fe445447899194727415d1fb584cce0c1d8e6edc4026eb"
+    },
+    "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workspace/projects/go-api/tests/coverage/harness_test.go.txt": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/coverage-v2/output/frozen/projects/go-api/tests/coverage/harness_test.go.txt",
+      "sha256": "b2ce14d3b433cf1be30cf60df7354829f6c14a30e8c2b795243f8bb47306e789"
+    }
+  }
+}

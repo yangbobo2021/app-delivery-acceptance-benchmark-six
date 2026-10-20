@@ -1,0 +1,89 @@
+{
+  "schema": "project-coverage-preparation-v1",
+  "entry": [
+    "/opt/homebrew/bin/python3",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workspace/projects/rust-tui/tests/llvm_coverage/adapter.py"
+  ],
+  "adapter_files": {
+    "projects/rust-tui/tests/llvm_coverage/adapter.py": "64a25205a14cb6da18e56cf72e20727be39a5b428cc4885b0d3400b3197ae7be",
+    "projects/rust-tui/tests/llvm_coverage/direct.py": "79d87b5d0acb21d19c5cc65adba9ad8589daa0b6b6d177f70c3d81d4c02f4b77",
+    "projects/rust-tui/tests/llvm_coverage/config.json": "6a013cc7e18a7fc515b16418d9746248a7eb92da57694c9b4d018298db53c64f",
+    "projects/rust-tui/tests/llvm_coverage/probe.rs": "f8d1e91662707575d459e4156edb72ee8d7c010d50a9d5a733b87224b39fe3c5",
+    "projects/rust-tui/tests/llvm_coverage/README.md": "95b8390be4987356a7b6e900d1b3b1799c373e0d872077650d5f806fd33434ca"
+  },
+  "tools": [
+    {
+      "name": "rustc",
+      "version": "rustc 1.94.0 (4a4ef493e 2026-03-02)",
+      "role": "使用 instrument-coverage 和 link-dead-code 生成原生计数与源码映射"
+    },
+    {
+      "name": "llvm-profdata",
+      "version": "LLVM (http://llvm.org/):\n  LLVM version 21.1.8-rust-1.94.0-stable\n  Optimized build.",
+      "role": "合并原生 profile"
+    },
+    {
+      "name": "llvm-cov",
+      "version": "LLVM (http://llvm.org/):\n  LLVM version 21.1.8-rust-1.94.0-stable\n  Optimized build.",
+      "role": "提供源码行分母、命中数、百分比及原生导出"
+    }
+  ],
+  "source_dispositions": {
+    "projects/rust-tui/src/main.rs": {
+      "kind": "measured",
+      "reason": "沿用项目既有原生 LLVM 插桩和源码映射路线；运行环境及源码摘要已核对，适配器最小启动检查成功。下列探针保留未调用产品函数的零命中映射，并通过仅触及参数解析的非业务探针定向命中原文件；独立 reader 不导入适配器。该声明须由宿主本轮零/非零探针和完整准备验证确认，不代表业务覆盖率已采集。"
+    }
+  },
+  "preparation_status": "ready",
+  "spec": {
+    "project_root": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workspace",
+    "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+    "components": {},
+    "source_hashes": {
+      "projects/rust-tui/src/main.rs": "d0b38b8eae43e7580069b69eda21b972dec5d0164570a235594a575c3b722c50"
+    },
+    "inventory_path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/inventory-1/inventory.json",
+    "inventory_sha256": "75bb110eb6af9ebd2ab2b86dc731918e5ce7d178456764a895cf3dc9104f4162",
+    "registry_path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/coverage-2/registry.json",
+    "runtime_manifest": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/runtime-4/runtime/runtime.json",
+    "runtime_sha256": "633a6709953472d6d92896e60e74f0e00c7c19b1959ff3fbf6cb70996d1af31d",
+    "probe_report": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/coverage-2/probes/coverage-probes.json",
+    "probe_report_sha256": "b33e64fa09962adb05cedee45293447894d8cc6ad01ffe564078e49e5c1c58fc"
+  },
+  "preparation_evidence": [
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/coverage-2/probe-plan.json",
+      "sha256": "359c25a7974beed693ae875cc133f3da9260de166c2699b73ba4ddcf8e32b896"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/coverage-2/probes/coverage-probes.json",
+      "sha256": "b33e64fa09962adb05cedee45293447894d8cc6ad01ffe564078e49e5c1c58fc"
+    }
+  ],
+  "artifact_aliases": {
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workspace/projects/rust-tui/src/main.rs": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/coverage-2/frozen/projects/rust-tui/src/main.rs",
+      "sha256": "d0b38b8eae43e7580069b69eda21b972dec5d0164570a235594a575c3b722c50"
+    },
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workspace/projects/rust-tui/tests/llvm_coverage/adapter.py": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/coverage-2/frozen/projects/rust-tui/tests/llvm_coverage/adapter.py",
+      "sha256": "64a25205a14cb6da18e56cf72e20727be39a5b428cc4885b0d3400b3197ae7be"
+    },
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workspace/projects/rust-tui/tests/llvm_coverage/direct.py": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/coverage-2/frozen/projects/rust-tui/tests/llvm_coverage/direct.py",
+      "sha256": "79d87b5d0acb21d19c5cc65adba9ad8589daa0b6b6d177f70c3d81d4c02f4b77"
+    },
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workspace/projects/rust-tui/tests/llvm_coverage/config.json": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/coverage-2/frozen/projects/rust-tui/tests/llvm_coverage/config.json",
+      "sha256": "6a013cc7e18a7fc515b16418d9746248a7eb92da57694c9b4d018298db53c64f"
+    },
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workspace/projects/rust-tui/tests/llvm_coverage/probe.rs": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/coverage-2/frozen/projects/rust-tui/tests/llvm_coverage/probe.rs",
+      "sha256": "f8d1e91662707575d459e4156edb72ee8d7c010d50a9d5a733b87224b39fe3c5"
+    },
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workspace/projects/rust-tui/tests/llvm_coverage/README.md": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/coverage-2/frozen/projects/rust-tui/tests/llvm_coverage/README.md",
+      "sha256": "95b8390be4987356a7b6e900d1b3b1799c373e0d872077650d5f806fd33434ca"
+    }
+  }
+}

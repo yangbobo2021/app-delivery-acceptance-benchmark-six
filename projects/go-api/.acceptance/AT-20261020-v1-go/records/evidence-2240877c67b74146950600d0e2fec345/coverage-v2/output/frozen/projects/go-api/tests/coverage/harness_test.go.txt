@@ -1,0 +1,45 @@
+package main
+
+// This test-only lifecycle bridge leaves the copied product source byte-identical.
+// Go's testing runtime instruments product files and excludes all _test.go files.
+import (
+ "flag"
+ "fmt"
+ "net/http/httptest"
+ "os"
+ "os/signal"
+ "path/filepath"
+ "strconv"
+ "syscall"
+ "testing"
+)
+
+func TestMain(m *testing.M) {
+ args := os.Args
+ flag.Parse() // consume only test flags; launcher puts application flags after --
+ os.Args = append([]string{args[0]}, flag.Args()...)
+ pid := strconv.Itoa(os.Getpid())
+ life := os.Getenv("ACCEPTANCE_COVERAGE_LIFECYCLE")
+ if life == "" { fmt.Fprintln(os.Stderr, "missing coverage lifecycle directory"); os.Exit(97) }
+ if err := os.WriteFile(filepath.Join(life, "started."+pid), []byte(pid), 0600); err != nil { panic(err) }
+ code := m.Run() // testing runtime writes native coverage before returning
+ if err := os.WriteFile(filepath.Join(life, "finished."+pid), []byte(strconv.Itoa(code)), 0600); err != nil { panic(err) }
+ os.Exit(code)
+}
+
+func TestCoverageProcess(t *testing.T) {
+ switch os.Getenv("ACCEPTANCE_COVERAGE_MODE") {
+ case "zero": return
+ case "hit":
+  // Non-business directed utility call; no HTTP route or stock assertion.
+  send(httptest.NewRecorder(), 299, nil)
+  return
+ case "":
+  stop := make(chan os.Signal, 1)
+  signal.Notify(stop, syscall.SIGTERM, syscall.SIGINT)
+  defer signal.Stop(stop)
+  go main()
+  <-stop
+ default: t.Fatal("unknown coverage probe mode")
+ }
+}

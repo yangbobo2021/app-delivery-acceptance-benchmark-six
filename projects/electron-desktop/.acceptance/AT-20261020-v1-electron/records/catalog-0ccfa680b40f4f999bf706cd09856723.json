@@ -1,0 +1,329 @@
+{
+  "schema": "acceptance-catalog-v1",
+  "project": {
+    "id": "electron-desktop",
+    "label": "electron-desktop",
+    "root": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop",
+    "revision": "be952659c7d93018e26793daf2e58fa8321601f4"
+  },
+  "requirements": [
+    {
+      "id": "NOTE-01",
+      "title": "NOTE-01",
+      "text": "可以新建、选择、编辑、删除便签。每个便签有不变的独立 ID；两个同标题便签独立编辑、删除。"
+    },
+    {
+      "id": "NOTE-02",
+      "title": "NOTE-02",
+      "text": "标题去除首尾空白后必须为 1 至 80 个 Unicode 码点，正文为 0 至 10000 个 Unicode 码点。非法保存显示可见错误且不覆盖最近一次成功保存；错误文案不作要求。"
+    },
+    {
+      "id": "NOTE-03",
+      "title": "NOTE-03",
+      "text": "成功保存后完全退出应用再启动，标题与正文一致；删除结果也保留。不同用户数据目录互不影响。"
+    },
+    {
+      "id": "NOTE-04",
+      "title": "NOTE-04",
+      "text": "正文与标题作为普通文本展示，不解释 HTML 或脚本。渲染界面不能直接访问 Node 的 require、process 或文件系统。"
+    },
+    {
+      "id": "NOTE-05",
+      "title": "NOTE-05",
+      "text": "渲染端只能通过明确的便签 IPC 接口访问数据。向存储/删除接口提交 `../outside` 等越界 ID，应拒绝且不能在用户数据目录外产生或修改文件；具体报错形式不作要求。"
+    },
+    {
+      "id": "NOTE-06",
+      "title": "NOTE-06",
+      "text": "未选择便签时，保存/删除不得损坏现有数据；关闭后没有残留的本应用 Electron 进程。其他同时运行的 Electron 应用不在本需求范围内。"
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "NOTE-01-S01",
+      "title": "空数据中新建普通便签",
+      "priority": "P0",
+      "priority_reason": "空数据状态下无法建立并保存普通便签，用户无法开始记录。",
+      "description": "从无便签的独立用户数据目录启动实际应用，通过新建流程输入普通合法标题和正文并保存，确认生成一条可选择的便签，选择后内容与输入一致。新建及完成状态下，标题、正文和必要控件可见可读、可操作且无遮挡或裁切，排版层次、间距、对齐、字体与控件样式协调，符合项目已有风格并具有基本视觉完成度。",
+      "requirement_id": "NOTE-01",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "NOTE-01-S02",
+      "title": "选择并编辑指定便签",
+      "priority": "P0",
+      "priority_reason": "普通便签无法被正确选择和更新，日常查看及维护已有记录的主要流程受阻。",
+      "description": "准备两条标题、正文均不同的便签，切换选择后确认显示对应内容；编辑当前便签并成功保存，再切换回来，确认修改准确保留且另一条内容未变。选择、编辑及结果状态下，便签标题、正文、选择状态和必要控件可见可读、可操作且无遮挡或裁切，排版层次、间距、对齐、字体与控件样式协调，符合项目已有风格并具有基本视觉完成度。",
+      "requirement_id": "NOTE-01",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "NOTE-01-S03",
+      "title": "删除指定普通便签",
+      "priority": "P0",
+      "priority_reason": "无法删除指定普通便签会阻断日常清理；误删其他便签则直接损失用户已有记录。",
+      "description": "准备两条标题、正文均不同的便签，选中其中一条并完成应用提供的删除流程，确认被选便签不再可供选择，另一条仍存在且内容未变；不限定删除后的自动选择策略。删除前后，便签列表、剩余内容和必要控件可见可读、可操作且无遮挡或裁切，排版层次、间距、对齐、字体与控件样式协调，符合项目已有风格并具有基本视觉完成度。",
+      "requirement_id": "NOTE-01",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "NOTE-01-S04",
+      "title": "便签 ID 独立且保持不变",
+      "priority": "P1",
+      "priority_reason": "ID 重复或随操作改变会破坏便签身份的独立性和连续性；仅此失败尚不能证明内容损失。",
+      "description": "通过项目准备阶段确认的只读观察方式记录实际 ID：新建第一条便签后再新建不同标题的第二条，确认两个 ID 不同且第一条 ID 未变；修改第一条标题及正文并保存、切换选择，再删除第二条，确认各存续阶段的便签 ID 均与其创建时一致，不要求界面展示 ID。操作及结果状态下，便签标题、正文、选择状态和必要控件可见可读、可操作且无遮挡或裁切，排版层次、间距、对齐、字体与控件样式协调，符合项目已有风格并具有基本视觉完成度。",
+      "requirement_id": "NOTE-01",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "NOTE-01-S05",
+      "title": "同标题便签独立编辑",
+      "priority": "P0",
+      "priority_reason": "按标题混同编辑对象会改写另一条已保存便签的原始内容，且输入未确认恢复途径。",
+      "description": "分别准备两条同标题、正文不同的已保存便签，以仅修改目标正文、仅修改目标标题为两组编辑条件，通过选择核对正文确定目标并保存；每组均确认目标字段准确更新、未修改字段保持原值，另一条标题和正文不变，两条仍分别存在。选择、编辑及结果状态下，两条便签的列表项、当前正文、选择状态和必要控件可见可读、可操作且无遮挡或裁切，排版层次、间距、对齐、字体与控件样式协调，符合项目已有风格并具有基本视觉完成度。",
+      "requirement_id": "NOTE-01",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "NOTE-01-S06",
+      "title": "同标题便签独立删除",
+      "priority": "P0",
+      "priority_reason": "按标题连带删除会损失用户未授权删除的另一条原始记录，且输入未确认恢复途径。",
+      "description": "准备两条同标题、正文不同的已保存便签，通过选择核对正文来确定删除对象；只删除其中一条，确认目标便签消失，另一条仍可选择且标题、正文保持原值。删除前后，两条便签的列表项、当前或剩余正文、选择状态和必要控件可见可读、可操作且无遮挡或裁切，排版层次、间距、对齐、字体与控件样式协调，符合项目已有风格并具有基本视觉完成度。",
+      "requirement_id": "NOTE-01",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "NOTE-01-S07",
+      "title": "新增便签保留已有记录",
+      "priority": "P0",
+      "priority_reason": "新增时覆盖或移除已有便签会损失用户原始记录，且输入未确认恢复途径。",
+      "description": "已有一条成功保存的普通便签时，新建并保存另一条不同标题、正文的普通便签，确认两条分别存在且可选择，原便签标题和正文保持原值。新增及结果状态下，两条便签的列表项、当前标题、正文和必要控件可见可读、可操作且无遮挡或裁切，排版层次、间距、对齐、字体与控件样式协调，符合项目已有风格并具有基本视觉完成度。",
+      "requirement_id": "NOTE-01",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "NOTE-02-S01",
+      "title": "标题允许范围及去除首尾空白后的计数",
+      "priority": "P1",
+      "priority_reason": "错误计数或未先去除首尾空白会拒绝合法标题，限制明确允许的输入。",
+      "description": "选中便签并使用普通合法正文，分别保存首尾带空格的单个 😀 标题，以及首尾带空格的“77 个甲、1 个 😀、e、U+0301”组成的标题；去除首尾空格后分别为 1、80 个 Unicode 码点，两者均应成功保存。操作及结果状态下，相关内容、控件与反馈须可见可读、无遮挡或裁切，排版层次、间距、对齐及字体与控件一致性合理，具备基本视觉完成度并符合项目已有风格。",
+      "requirement_id": "NOTE-02",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "NOTE-02-S02",
+      "title": "正文允许空值及一万码点",
+      "priority": "P1",
+      "priority_reason": "额外要求正文非空或按其他单位计数会拒绝合法内容，影响空便签及较长正文保存。",
+      "description": "选中便签并使用普通合法标题，分别将正文设为空字符串，以及“9997 个甲、1 个 😀、e、U+0301”组成的 10000 个 Unicode 码点文本；两者均应成功保存。操作及结果状态下，相关内容、控件与反馈须可见可读、无遮挡或裁切，排版层次、间距、对齐及字体与控件一致性合理，具备基本视觉完成度并符合项目已有风格。",
+      "requirement_id": "NOTE-02",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "NOTE-02-S03",
+      "title": "非法长度保存被拒绝并显示错误",
+      "priority": "P1",
+      "priority_reason": "非法输入未被拒绝或没有可见错误，会使用户无法可靠判断保存是否成功。",
+      "description": "在选中便签时分别尝试保存：标题为空、标题全为空格、标题为“79 个甲、e、U+0301”组成的 81 码点文本，以及合法标题配“9999 个甲、e、U+0301”组成的 10001 码点正文；每组的另一字段均合法，每次均须拒绝保存并显示可见错误，不限定错误文案。操作及结果状态下，相关内容、控件与反馈须可见可读、无遮挡或裁切，排版层次、间距、对齐及字体与控件一致性合理，具备基本视觉完成度并符合项目已有风格。",
+      "requirement_id": "NOTE-02",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "NOTE-02-S04",
+      "title": "非法保存保护最近成功版本的完整内容",
+      "priority": "P0",
+      "priority_reason": "非法提交若改写最近成功版本，会破坏用户已保存的标题或正文，且输入未确认恢复途径。",
+      "description": "准备同一便签依次成功保存的不同版本 A、B，以 B 为最近成功版本；分别提交空或全空格标题、81 码点标题、10001 码点正文，并同时修改另一合法字段。每次提交后重新读取已保存内容，标题与正文均须完整保持 B，不得回退 A 或部分写入候选值；不以编辑区是否保留非法草稿判定保存数据。操作及结果状态下，相关内容、控件与反馈须可见可读、无遮挡或裁切，排版层次、间距、对齐及字体与控件一致性合理，具备基本视觉完成度并符合项目已有风格。",
+      "requirement_id": "NOTE-02",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "NOTE-03-S01",
+      "title": "空目录中首次保存的单条便签跨重启保留",
+      "priority": "P0",
+      "priority_reason": "首次成功保存的普通便签重启后丢失或内容改变，用户最基本的记录留存流程无法完成。",
+      "description": "从空的独立用户数据目录启动应用，新建并成功保存一条使用普通合法标题和正文的便签；完全退出后以同一目录启动，能够选择该便签，标题和正文与保存时一致。各关键操作与结果状态中，所需内容、列表状态和控件应可见、可读、可操作，无遮挡或裁切；排版层次、间距、对齐及字体与控件的一致性合理，具备基本视觉完成度并符合项目已有风格。",
+      "requirement_id": "NOTE-03",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "NOTE-03-S02",
+      "title": "已删除便签跨重启保持删除",
+      "priority": "P1",
+      "priority_reason": "已删除便签重启后恢复，使清理结果失效，用户需要重复处理旧记录。",
+      "description": "在同一用户数据目录中准备已成功保存并完成删除的便签；完全退出应用再以该目录启动，该便签仍不出现在可选择的便签集合中。各关键操作与结果状态中，所需内容、列表状态和控件应可见、可读、可操作，无遮挡或裁切；排版层次、间距、对齐及字体与控件的一致性合理，具备基本视觉完成度并符合项目已有风格。",
+      "requirement_id": "NOTE-03",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "NOTE-03-S03",
+      "title": "空目录及已有数据目录读取互相隔离",
+      "priority": "P1",
+      "priority_reason": "当前目录显示另一目录的记录，用户无法准确查看自己的便签集合；单凭此结果不推定发生底层数据改写或隐私泄露。",
+      "description": "准备已有普通便签的独立用户数据目录 A，退出后以空目录 B 启动，B 不应显示 A 的便签；随后为 B 成功保存可区分的普通便签并完全退出，分别以 A、B 启动，所见便签集合及标题、正文均与各自准备数据一致，不混入另一目录的数据。各关键操作与结果状态中，所需内容、列表状态和控件应可见、可读、可操作，无遮挡或裁切；排版层次、间距、对齐及字体与控件的一致性合理，具备基本视觉完成度并符合项目已有风格。",
+      "requirement_id": "NOTE-03",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "NOTE-03-S04",
+      "title": "保存和删除不改动其他数据目录",
+      "priority": "P0",
+      "priority_reason": "一个目录的保存或删除若使另一目录原有记录被覆盖或丢失，会损害未经授权操作的用户原始数据，且没有已确认的恢复途径。",
+      "description": "独立用户数据目录 A、B 均已有可区分的已保存便签，并明确 A 的原有便签集合及标题、正文；以 B 启动，修改并成功保存一条便签、删除另一条，完全退出后以 A 启动，A 的原有便签集合及各标题、正文均与操作前一致。各关键操作与结果状态中，所需内容、列表状态和控件应可见、可读、可操作，无遮挡或裁切；排版层次、间距、对齐及字体与控件的一致性合理，具备基本视觉完成度并符合项目已有风格。",
+      "requirement_id": "NOTE-03",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "NOTE-03-S05",
+      "title": "已保存便签的普通修改跨重启保留",
+      "priority": "P0",
+      "priority_reason": "成功保存的日常修改重启后回退或丢失，使持续编辑用户记录的主要流程失效，并丢失已确认保存的新内容。",
+      "description": "准备一条已成功保存的便签，将标题和正文均改为与原值不同的普通合法文本并再次成功保存；完全退出后以同一用户数据目录启动，选择该便签，标题和正文均为最近一次成功保存的值。各关键操作与结果状态中，所需内容、列表状态和控件应可见、可读、可操作，无遮挡或裁切；排版层次、间距、对齐及字体与控件的一致性合理，具备基本视觉完成度并符合项目已有风格。",
+      "requirement_id": "NOTE-03",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "NOTE-04-S01",
+      "title": "标题与正文按字面展示 HTML 文本",
+      "priority": "P1",
+      "priority_reason": "HTML 被解释会改变便签内容的实际呈现，造成文本含义失真或内容被隐藏。",
+      "description": "以 `<b>N4</b>&lt;i&gt;` 分别作为合法标题和正文保存并重新选择，在所有现有展示位置均应按字面显示完整文本，不产生加粗元素、不将实体解码为标签字符。关键操作与结果状态下，标题、正文及所需控件可见、可读、可操作，无遮挡或裁切，排版层次清楚、间距与对齐合理、字体和控件样式一致，具有基本视觉完成度并符合项目已有设计风格。",
+      "requirement_id": "NOTE-04",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "NOTE-04-S02",
+      "title": "标题与正文中的脚本不能执行",
+      "priority": "P0",
+      "priority_reason": "文本若获得任意渲染脚本执行权，即可读取界面内容并操纵应用界面，越过文本与应用代码的信任边界。",
+      "description": "分别将含 `<script>` 的载荷及本地可触发事件处理器的载荷作为合法标题、正文保存并重新选择，载荷仅尝试读取当前界面文字并追加可辨识标记；所有现有展示位置均须按字面显示原始文本，不执行载荷，也不出现载荷生成的额外内容或界面改动。关键操作与结果状态下，标题、正文及所需控件可见、可读、可操作，无遮挡或裁切，排版层次清楚、间距与对齐合理、字体和控件样式一致，具有基本视觉完成度并符合项目已有设计风格。",
+      "requirement_id": "NOTE-04",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "NOTE-04-S03",
+      "title": "实际渲染上下文隔离 Node 与直接文件访问",
+      "priority": "P0",
+      "priority_reason": "直接暴露 Node 能力或文件系统会越过渲染权限边界，使界面获得本地运行环境或便签范围外文件的访问能力。",
+      "description": "在实际应用正常配置的渲染上下文中查看普通便签，并分别探测 Node require、真实 Node process 及直接文件系统入口；渲染端不能取得或调用这些 Node 能力，也不能通过直接文件系统入口读取或改写预置隔离夹具文件，便签仍能正常查看。关键操作与结果状态下，标题、正文及所需控件可见、可读、可操作，无遮挡或裁切，排版层次清楚、间距与对齐合理、字体和控件样式一致，具有基本视觉完成度并符合项目已有设计风格。",
+      "requirement_id": "NOTE-04",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "NOTE-05-S01",
+      "title": "便签数据访问限定于明确 IPC",
+      "priority": "P1",
+      "priority_reason": "绕过便签 IPC 的数据通路会使访问约束失效，但仅此失败尚不能证明目录外数据受损。",
+      "description": "在实际应用渲染上下文通过已声明的 window.notes.list/save/remove 访问普通合法便签，并核对运行时数据访问边界：持久数据访问必须经过明确的便签 IPC，渲染端其他实际可调用入口也不能绕过该 IPC 读取或改写便签数据；仅桥接方法名称及操作成功不足以判定通过。",
+      "requirement_id": "NOTE-05",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "NOTE-05-S02",
+      "title": "拒绝越界 ID 存储并保护目录外文件",
+      "priority": "P0",
+      "priority_reason": "放行越界存储可越过用户数据目录边界，并覆盖目录外既有文件；没有已确认的恢复途径。",
+      "description": "在实际应用渲染上下文调用 window.notes.save，标题与正文均合法，ID 使用 ../outside，并覆盖经路径解析确实越出用户数据目录的多级路径代表；分别准备目录外目标不存在和已有测试文件的情况。各请求均应被拒绝，目录外不得产生文件，既有测试文件不得被改写或删除，不限定具体报错形式。",
+      "requirement_id": "NOTE-05",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "NOTE-05-S03",
+      "title": "拒绝越界 ID 删除并保留目录外文件",
+      "priority": "P0",
+      "priority_reason": "放行越界删除可直接删除用户数据目录外的既有文件，没有已确认的恢复途径。",
+      "description": "在实际应用渲染上下文向 window.notes.remove 提交 ../outside，并覆盖经路径解析确实指向目录外既有测试文件的多级路径代表。各请求均应被拒绝，目录外测试文件必须保持存在且内容不变，目录外不得产生其他文件，不限定具体报错形式。",
+      "requirement_id": "NOTE-05",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "NOTE-06-S01",
+      "title": "未选择便签时保存保护已有数据",
+      "priority": "P0",
+      "priority_reason": "误将保存写入现有便签会未经授权改写用户原始内容，且没有已确认的恢复途径。",
+      "description": "准备多条内容可区分的已保存便签，在界面可达的无选中状态检查保存入口并尝试保存；若此时允许编辑，使用与原内容不同且符合 NOTE-02 的标题和正文，操作后原有便签均仍可打开，标题与正文保持原值。关键状态下，便签列表、核对所需标题正文及相关操作控件可见可读、无遮挡或裁切，排版层次、间距、对齐、字体与控件一致性合理，符合项目已有风格并具基本视觉完成度。",
+      "requirement_id": "NOTE-06",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "NOTE-06-S02",
+      "title": "未选择便签时删除保护已有数据",
+      "priority": "P0",
+      "priority_reason": "无选中项时误删现有便签会造成未经授权的原始数据丢失，且没有已确认的恢复途径。",
+      "description": "准备多条内容可区分的已保存便签，在界面可达的无选中状态检查删除入口并尝试删除；操作后每条原有便签均仍可打开，标题与正文保持原值。关键状态下，便签列表、核对所需标题正文及相关操作控件可见可读、无遮挡或裁切，排版层次、间距、对齐、字体与控件一致性合理，符合项目已有风格并具基本视觉完成度。",
+      "requirement_id": "NOTE-06",
+      "kind": "BLACK_BOX"
+    },
+    {
+      "id": "NOTE-06-S03",
+      "title": "正常关闭后本应用进程全部退出",
+      "priority": "P1",
+      "priority_reason": "关闭后仍有本应用进程存活，使应用未真正退出并继续占用本机资源；本场景不证明数据损失或权限越界。",
+      "description": "启动实际应用并确认本次启动的进程归属，通过正常关闭入口关闭应用；关闭流程结束后，本次启动的本应用 Electron 进程及其派生的本应用 Electron 进程均已结束。关闭前，主要内容与正常关闭入口可见可读、无遮挡或裁切，排版层次、间距、对齐、字体与控件一致性合理，符合项目已有风格并具基本视觉完成度。",
+      "requirement_id": "NOTE-06",
+      "kind": "BLACK_BOX"
+    }
+  ],
+  "design_gaps": [],
+  "scenario_generation": "v4 internal self-check; no independent scenario review",
+  "target_sources": [
+    {
+      "target": "NOTE-01",
+      "scenario_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/scenario-NOTE-01-v2/scenarios.current.json",
+      "selfcheck_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/scenario-NOTE-01-v2/selfcheck.current.json",
+      "terminal_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/scenario-NOTE-01-v2/terminal.json",
+      "scenario_sha256": "8dc93d2e18a5e92d8ad7ccd89ca9223f5f3aa2c81f82afbd6fb8afac7ddaaea7",
+      "selfcheck_sha256": "b9fe576d0776e113d7a4cddb0215638653ca42a844ada25a9aec90e8a4f8b53a"
+    },
+    {
+      "target": "NOTE-02",
+      "scenario_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/scenario-NOTE-02/scenarios.current.json",
+      "selfcheck_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/scenario-NOTE-02/selfcheck.current.json",
+      "terminal_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/scenario-NOTE-02/terminal.json",
+      "scenario_sha256": "6245e421ca4217ef65ca11d6f18b22334e377f3e1d87022be1c5c3edcdd33f91",
+      "selfcheck_sha256": "b4973e572d4f6de0eee40cd6a33eb87c9c949bd294d3d3b0578ffcc769618fe9"
+    },
+    {
+      "target": "NOTE-03",
+      "scenario_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/scenario-NOTE-03-v2/scenarios.current.json",
+      "selfcheck_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/scenario-NOTE-03-v2/selfcheck.current.json",
+      "terminal_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/scenario-NOTE-03-v2/terminal.json",
+      "scenario_sha256": "2978546f9085632d0ee347f91e991abfb231e624cd643a448322204cfab432f9",
+      "selfcheck_sha256": "bb5a7c6dc305f293084f62c532cb2753c1539511bc710da593b766ff2251a3be"
+    },
+    {
+      "target": "NOTE-04",
+      "scenario_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/scenario-NOTE-04/scenarios.current.json",
+      "selfcheck_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/scenario-NOTE-04/selfcheck.current.json",
+      "terminal_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/scenario-NOTE-04/terminal.json",
+      "scenario_sha256": "ef27f7217ca5b81912ed59f523e60442445c8ca36d4ac87c961c9bfd6259a4e3",
+      "selfcheck_sha256": "b580e7b561d303c6ee2c37ed846b9a79abae2da74549947dd122ad605e25311e"
+    },
+    {
+      "target": "NOTE-05",
+      "scenario_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/scenario-NOTE-05-v2/scenarios.current.json",
+      "selfcheck_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/scenario-NOTE-05-v2/selfcheck.current.json",
+      "terminal_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/scenario-NOTE-05-v2/terminal.json",
+      "scenario_sha256": "50b57bafee6c6e9769a1046b9e0bca552405555f9c36dc4bd809a1e2aadbfcb3",
+      "selfcheck_sha256": "c67bc4c44300988f8bb9ea3a6b9942bf98194c5dde103c19b6c01569186b3b76"
+    },
+    {
+      "target": "NOTE-06",
+      "scenario_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/scenario-NOTE-06/scenarios.current.json",
+      "selfcheck_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/scenario-NOTE-06/selfcheck.current.json",
+      "terminal_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/scenario-NOTE-06/terminal.json",
+      "scenario_sha256": "d39c2574e16f8db3837d62697ec4d29aec48273fe564893ba3005413f7558cc6",
+      "selfcheck_sha256": "5650dd2dec33be0fd6dbef49fa848a5f45cc489115cb6d4b544ee2bfd970235d"
+    }
+  ],
+  "cross_target_review": {
+    "ownership": "Each scene belongs to its named original requirement.",
+    "contradictions": "No conflicting expected outcomes identified across the six lists.",
+    "duplicate_purposes": "Related setup appears across targets, but checks have distinct target-owned assertions; no materially duplicate purpose retained."
+  },
+  "execution_status": "No business scenario executed in first phase.",
+  "acceptance_id": "AT-20261020-v1-electron",
+  "scope_sha256": "da964873eb7a7d3d002b8b783843d9ae5ae8655b59298495e6a547031e0a0e07",
+  "updated_at": "2026-10-20T02:38:39.465517+00:00"
+}

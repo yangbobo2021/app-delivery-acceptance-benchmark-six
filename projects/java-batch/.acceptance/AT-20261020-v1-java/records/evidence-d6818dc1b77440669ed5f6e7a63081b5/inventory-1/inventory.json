@@ -1,0 +1,18 @@
+{
+  "schema": "acceptance-project-source-inventory-v1",
+  "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+  "project_id": "java-batch",
+  "source_paths": [
+    "projects/java-batch/src/main/java/benchmark/BatchReport.java"
+  ],
+  "source_hashes": {
+    "projects/java-batch/src/main/java/benchmark/BatchReport.java": "821ba9c5ed64ff2b72dad2c6bfa9ecfac7e5c42e646836f83ce32b89cf2ee2bb"
+  },
+  "change_scope": {
+    "kind": "requirements-baseline",
+    "base_revision": null,
+    "changed_files": [],
+    "changed_lines": {},
+    "reason": "No PR or code-diff target in this requirements acceptance"
+  }
+}

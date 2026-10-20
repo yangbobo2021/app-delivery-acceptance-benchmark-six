@@ -1,0 +1,133 @@
+{
+  "schema": "isolated-scene-pipeline-state-v1",
+  "config_sha256": "3dbc9efef8dd2fcb40ddcce148a9cc43ba89853ae0d766cbd22c2115abc76a3d",
+  "bindings": {
+    "case_input": "0896841e75214b9c2ec9ee9f1362a14ad545577155854c93439b65e8ffc61583",
+    "guide": "3319c88e4a7fb1f2681a247ca076697569b24e4f250704075559b3b1bc3c6044",
+    "template_catalog": "dcdba2879d7226d80acfa1d8b136997406563d6854a76400e98a4a7719ef9a64"
+  },
+  "stages": {
+    "prepare": {
+      "status": "completed",
+      "started_at": "2026-10-20T03:37:57.474041+00:00",
+      "result": {
+        "root": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workspace",
+        "catalog": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/case-inv-02-s02-v1/catalog.json",
+        "setup_seconds": 0,
+        "check_seconds": 0
+      },
+      "finished_at": "2026-10-20T03:37:58.489200+00:00"
+    },
+    "case": {
+      "status": "completed",
+      "started_at": "2026-10-20T03:37:58.787613+00:00",
+      "result": {
+        "metrics": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/case-inv-02-s02-v1/case/metrics.json",
+        "answer": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/case-inv-02-s02-v1/case/answer.json",
+        "seconds": 92.865013833,
+        "usage": {
+          "toolUses": 15,
+          "tokens": {
+            "coverage": "partial",
+            "totals": {
+              "input": {
+                "total": 330645,
+                "uncached": 28309,
+                "cacheRead": 302336,
+                "cacheWrite": 0
+              },
+              "output": {
+                "total": 4328,
+                "visible": 3793,
+                "reasoning": 535
+              }
+            }
+          }
+        },
+        "tool_calls": 15,
+        "restarted_after_unavailable_session": false
+      },
+      "finished_at": "2026-10-20T03:39:32.921817+00:00"
+    },
+    "execution": {
+      "status": "completed",
+      "started_at": "2026-10-20T03:39:33.219201+00:00",
+      "result": {
+        "receipt": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/case-inv-02-s02-v1/execution/execution.json",
+        "log": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/case-inv-02-s02-v1/execution/execution.log",
+        "exit_code": 1,
+        "seconds": 0.553024125052616,
+        "test_files": [
+          "projects/python-cli/tests/coverage_support/README.md",
+          "projects/python-cli/tests/coverage_support/adapter.py",
+          "projects/python-cli/tests/coverage_support/collect.py",
+          "projects/python-cli/tests/coverage_support/coverage-requirements.txt",
+          "projects/python-cli/tests/coverage_support/direct.py",
+          "projects/python-cli/tests/coverage_support/tool-lock.json",
+          "projects/python-cli/tests/test_inv_02_s02.py",
+          "projects/python-cli/tests/test_inv_03_s01.py"
+        ]
+      },
+      "finished_at": "2026-10-20T03:39:38.567077+00:00"
+    },
+    "evidence": {
+      "status": "completed",
+      "started_at": "2026-10-20T03:39:38.961512+00:00",
+      "result": {
+        "manifest": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/case-inv-02-s02-v1/frozen-evidence.json",
+        "paths": [
+          "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/case-inv-02-s02-v1/frozen-evidence/0/execution.log",
+          "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/case-inv-02-s02-v1/frozen-evidence/0/execution.json",
+          "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/case-inv-02-s02-v1/frozen-evidence/1/.coverage.bobos-MacBook-Air-2_local.pid34244.X4wj7C8x.H7JxAxIe7JXh",
+          "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/case-inv-02-s02-v1/frozen-evidence/2/.coverage.bobos-MacBook-Air-2_local.pid34246.XFPjMKix.HNQIp837rWOh",
+          "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/case-inv-02-s02-v1/frozen-evidence/3/.coverage.bobos-MacBook-Air-2_local.pid34251.XbBW9Ykx.HyMMc1BDNK1h",
+          "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/case-inv-02-s02-v1/frozen-evidence/4/lifecycle.json"
+        ],
+        "file_count": 6,
+        "bytes": 167024
+      },
+      "finished_at": "2026-10-20T03:39:39.981453+00:00"
+    },
+    "gate": {
+      "status": "completed",
+      "started_at": "2026-10-20T03:39:40.300221+00:00",
+      "result": {
+        "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/case-inv-02-s02-v1/handoff-gate.json",
+        "seconds": 0.775
+      },
+      "finished_at": "2026-10-20T03:39:41.251685+00:00"
+    },
+    "review": {
+      "status": "completed",
+      "started_at": "2026-10-20T03:39:41.442523+00:00",
+      "result": {
+        "answer": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/case-inv-02-s02-v1/review/answer.json",
+        "metrics": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/case-inv-02-s02-v1/review/metrics.json",
+        "status": "product_bug",
+        "seconds": 65.065376375,
+        "usage": {
+          "toolUses": 11,
+          "tokens": {
+            "coverage": "partial",
+            "totals": {
+              "input": {
+                "total": 217981,
+                "uncached": 36605,
+                "cacheRead": 181376,
+                "cacheWrite": 0
+              },
+              "output": {
+                "total": 2560,
+                "visible": 2141,
+                "reasoning": 419
+              }
+            }
+          }
+        },
+        "tool_calls": 11,
+        "restarted_after_unavailable_session": false
+      },
+      "finished_at": "2026-10-20T03:40:47.118808+00:00"
+    }
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "schema": "project-coverage-probe-report-v1",
+  "plan": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/coverage-2/probe-plan.json",
+  "plan_sha256": "359c25a7974beed693ae875cc133f3da9260de166c2699b73ba4ddcf8e32b896",
+  "runtime_manifest": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/runtime-4/runtime/runtime.json",
+  "runtime_sha256": "633a6709953472d6d92896e60e74f0e00c7c19b1959ff3fbf6cb70996d1af31d",
+  "workspace": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workspace",
+  "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+  "routes": [
+    {
+      "id": "rust-native-process",
+      "source_paths": [
+        "projects/rust-tui/src/main.rs"
+      ],
+      "probes": {
+        "zero": {
+          "status": "passed",
+          "receipts": {
+            "collect": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/coverage-2/probes/rust-native-process/zero/collect/receipt.json",
+              "sha256": "0a76b04e72093ec60686cae08deae4eceb71bdbd8c63095a0e8f760de2845928"
+            },
+            "adapter": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/coverage-2/probes/rust-native-process/zero/adapter/receipt.json",
+              "sha256": "5385b3b9056f0455ad5fec92850106e81d94e6f5817a7d0f764c76221db08465"
+            },
+            "direct": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/coverage-2/probes/rust-native-process/zero/direct/receipt.json",
+              "sha256": "bfdb5936cb567601abb4a3500717b71a636e16ef9f4eacb04f43b694e3728b3b"
+            }
+          },
+          "native": [
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/coverage-2/probes/rust-native-process/zero/raw/probe-15792-13316407715689091110_0.profraw",
+              "sha256": "afc71c38cb074702cd0c68accf38e7ffbc8ec24a05aa04736778b5f69c8352a0"
+            },
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/coverage-2/probes/rust-native-process/zero/raw/probe-binary",
+              "sha256": "6899027a76646ed8e59ac95ed3f9331460b83124f36ea058e5392f24e8b38e77"
+            }
+          ],
+          "normalized_sha256": "44211e47a5c4d04fcebbe523059399a40a2cf5a5476be9b966192ac19aafa28f"
+        },
+        "nonzero": {
+          "status": "passed",
+          "receipts": {
+            "collect": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/coverage-2/probes/rust-native-process/nonzero/collect/receipt.json",
+              "sha256": "83ce0c06bb41f78e085a9afaa7c9d7839f9a5b9ffcb0fde35581e7959f61fb54"
+            },
+            "adapter": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/coverage-2/probes/rust-native-process/nonzero/adapter/receipt.json",
+              "sha256": "a3f2d4dd0ef5018e312c73e0a138fa75a1fa88039440079f3c8c24f90bd38c2a"
+            },
+            "direct": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/coverage-2/probes/rust-native-process/nonzero/direct/receipt.json",
+              "sha256": "58e7af072deb72f1be21b60326aa9de085b5c4346ae428efeb589efe0b129c39"
+            }
+          },
+          "native": [
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/coverage-2/probes/rust-native-process/nonzero/raw/probe-16057-13316407715689091110_0.profraw",
+              "sha256": "d0c1e2fd186b1326698166a28dfb02e5c609837d5c2b7bb1638918163f6a0e2c"
+            },
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/coverage-2/probes/rust-native-process/nonzero/raw/probe-binary",
+              "sha256": "5c1594a1032edac8040cd32122b3ba0ff360841b40bfc82b4b735489da7cd5d1"
+            }
+          ],
+          "normalized_sha256": "8d316b1b237818823ce241d7059b6f163f60afd401d86111d2686a752a8523bd"
+        }
+      }
+    }
+  ],
+  "status": "ready"
+}

@@ -1,0 +1,276 @@
+{
+  "schema": "acceptance-catalog-v1",
+  "project": {
+    "id": "java-batch",
+    "label": "每日收款批处理",
+    "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+    "root": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch"
+  },
+  "requirements": [
+    {
+      "id": "BATCH-01",
+      "title": "BATCH-01",
+      "text": "BATCH-01：命令接受 `--input <绝对路径>` 和 `--output <绝对路径>`，两者都必填。输入必须以 `event_id,account,amount_cents` 为唯一表头，并至少有一条数据行。每行恰好三列；event_id 和 account 是非空 ASCII 字母、数字、下划线或连字符，金额是 1 至 1000000000 的十进制整数。不支持 CSV 引号语法。"
+    },
+    {
+      "id": "BATCH-02",
+      "title": "BATCH-02",
+      "text": "BATCH-02：对每个 account 汇总金额与不同 event_id 的笔数。相同 event_id、account、amount_cents 的重复行只处理一次；相同 event_id 对应不同内容时整批失败。账户名大小写敏感。"
+    },
+    {
+      "id": "BATCH-03",
+      "title": "BATCH-03",
+      "text": "BATCH-03：成功时输出 UTF-8 CSV，表头固定为 `account,total_cents,event_count`，账户按字典序排列；退出码 0，标准错误为空。所有金额使用精确整数，输出每次相同。"
+    },
+    {
+      "id": "BATCH-04",
+      "title": "BATCH-04",
+      "text": "BATCH-04：任何参数、读取或数据错误都以退出码 2 失败，标准错误给出非空说明，不生成部分输出。若输出路径已存在，不覆盖它；输入文件保持原样。"
+    },
+    {
+      "id": "BATCH-05",
+      "title": "BATCH-05",
+      "text": "BATCH-05：可从任意工作目录执行，输入和输出路径可位于不同目录。成功生成的输出文件可再次作为普通文件读取；程序不在输入目录创建临时文件。"
+    },
+    {
+      "id": "BATCH-06",
+      "title": "BATCH-06",
+      "text": "BATCH-06：有 1000 条合法记录的文件应在普通本地机器上完成处理；空行、列数错误、无数据行都应给出 BATCH-04 规定的失败反馈。"
+    }
+  ],
+  "reverse_rules": [],
+  "scenarios": [
+    {
+      "id": "BATCH-01-S001",
+      "requirement_id": "BATCH-01",
+      "title": "普通合法输入受理",
+      "description": "提供有效的 --input 和 --output 绝对路径，输出路径尚不存在；输入使用准确表头 event_id,account,amount_cents，并仅含普通三列记录 evt1,acct1,125。批处理成功完成，该记录被正常处理。",
+      "priority": "P0"
+    },
+    {
+      "id": "BATCH-01-S002",
+      "requirement_id": "BATCH-01",
+      "title": "两个路径参数均必填",
+      "description": "其余条件有效，分别省略 --input、省略 --output，以及保留选项但不给出其路径值；每种情况均因缺少必填参数或参数值而被拒绝。",
+      "priority": "P1"
+    },
+    {
+      "id": "BATCH-01-S003",
+      "requirement_id": "BATCH-01",
+      "title": "拒绝相对路径参数",
+      "description": "分别仅将输入路径或输出路径改为相对路径，另一参数保持有效绝对路径；相对输入实际可读、相对输出的父目录可写且目标不存在，排除其他失败原因。两种输入均因路径不是绝对路径而被拒绝。",
+      "priority": "P1"
+    },
+    {
+      "id": "BATCH-01-S004",
+      "requirement_id": "BATCH-01",
+      "title": "受理含空格和中文的绝对路径",
+      "description": "使用名称含空格和中文的可读输入文件及尚不存在的输出文件，将各自完整绝对路径作为单个参数值传入，输入内容普通合法。程序按完整路径定位文件并成功处理，不因这些路径字符拒绝或截断参数。",
+      "priority": "P1"
+    },
+    {
+      "id": "BATCH-01-S005",
+      "requirement_id": "BATCH-01",
+      "title": "准确且唯一的表头",
+      "description": "分别使用列名大小写变化、列序调换、列名附加空白的三列表头并附合法数据，或使用两条合法数据行构成无表头文件；另在正确表头及合法数据之后再次插入完整表头。各组输入均被拒绝，重复表头不得被静默跳过。",
+      "priority": "P1"
+    },
+    {
+      "id": "BATCH-01-S006",
+      "requirement_id": "BATCH-01",
+      "title": "受理标识符允许字符及非字母开头",
+      "description": "在正确表头下准备 event_id 分别为 0、_、-、Az_09-z，account 分别为 -、0、_、aZ_09-z 的四条记录，金额均为普通合法值。各行均被受理并进入处理，不因数字开头、仅含下划线或连字符、混合大小写而被排除。",
+      "priority": "P1"
+    },
+    {
+      "id": "BATCH-01-S007",
+      "requirement_id": "BATCH-01",
+      "title": "拒绝空值及非法标识符字符",
+      "description": "保持表头、列数、金额及另一标识符合法，分别令 event_id 或 account 为空、含内部空格、含句点或含中文字符。每组输入均被拒绝，不得通过补默认值、删除字符或替换字符使其被接受。",
+      "priority": "P1"
+    },
+    {
+      "id": "BATCH-01-S008",
+      "requirement_id": "BATCH-01",
+      "title": "受理金额上下界",
+      "description": "使用不同普通事件标识符和账户，分别提供金额为 1 和 1000000000 的合法三列记录。两个端点均被受理并进入处理，不被误判为越界。",
+      "priority": "P1"
+    },
+    {
+      "id": "BATCH-01-S009",
+      "requirement_id": "BATCH-01",
+      "title": "拒绝越界及非整数金额",
+      "description": "保持表头、三列结构和标识符合法，分别将金额设为 0、-1、1000000001、1.5、abc 或空字段。每组输入均被拒绝，不得通过截断、取整或补默认金额使其被接受。",
+      "priority": "P1"
+    },
+    {
+      "id": "BATCH-01-S010",
+      "requirement_id": "BATCH-01",
+      "title": "不解释CSV字段引号",
+      "description": "保持准确表头和三列结构，分别将原本合法的 event_id、account 或金额字段用一对双引号包围，例如 \"evt1\",acct1,125。每组输入均被拒绝，不得通过去除引号将其作为合法记录处理。",
+      "priority": "P1"
+    },
+    {
+      "id": "BATCH-02-S01",
+      "requirement_id": "BATCH-02",
+      "title": "按账户汇总金额与事件笔数",
+      "description": "输入四条 event_id 各不相同的合法记录：acct_A 的金额依次为100、100、250，acct_B 的金额为80，执行批处理。结果须包含且仅包含这两个账户，acct_A 总金额450、笔数3，acct_B 总金额80、笔数1；金额相同的不同事件仍分别计数。",
+      "priority": "P0"
+    },
+    {
+      "id": "BATCH-02-S02",
+      "requirement_id": "BATCH-02",
+      "title": "非相邻重复事件只计一次",
+      "description": "输入依次包含 e1/acct_A/120、e2/acct_A/70、e3/acct_B/50，以及再次出现的 e1/acct_A/120，执行批处理。acct_A 总金额须为190、笔数2，acct_B 总金额须为50、笔数1，非相邻的完全重复行不得增加金额或笔数。",
+      "priority": "P1"
+    },
+    {
+      "id": "BATCH-02-S03",
+      "requirement_id": "BATCH-02",
+      "title": "相同事件内容冲突导致整批失败",
+      "description": "分别准备两份其余内容合法的输入，每份包含两行相同 event_id：第一份仅 account 不同，分别为 Acct 与 acct，金额均为100；第二份 account 相同，仅金额分别为100与101。执行后两批均须整批失败，不能忽略冲突行后成功，也不能选择某行或把冲突行作为新事件完成汇总。",
+      "priority": "P1"
+    },
+    {
+      "id": "BATCH-02-S04",
+      "requirement_id": "BATCH-02",
+      "title": "大小写不同的账户分别汇总",
+      "description": "输入不同 event_id 的合法记录：Acct 金额100，以及 acct 金额40、60，执行批处理。结果须保留 Acct 与 acct 两个独立账户，分别为总金额100、笔数1和总金额100、笔数2，不得统一大小写后合并。",
+      "priority": "P1"
+    },
+    {
+      "id": "BATCH-03-S01",
+      "requirement_id": "BATCH-03",
+      "title": "普通成功输出符合交付格式",
+      "description": "使用仅含 e1,alice,125 的合法输入和不存在的输出路径执行处理。输出须为有效 UTF-8 CSV，表头恰为 account,total_cents,event_count，数据行为 alice,125,1；退出码为 0，标准错误为空。",
+      "priority": "P0"
+    },
+    {
+      "id": "BATCH-03-S02",
+      "requirement_id": "BATCH-03",
+      "title": "账户按字典序而非输入顺序排列",
+      "description": "准备账户依次为 b、ab、a、aa 的合法记录，各事件 ID 唯一，成功处理后输出数据行的账户顺序须为 a、aa、ab、b，以同时区分输入顺序、逆序及错误的前缀排序。",
+      "priority": "P1"
+    },
+    {
+      "id": "BATCH-03-S03",
+      "requirement_id": "BATCH-03",
+      "title": "跨越32位范围的金额保持精确",
+      "description": "准备同一账户的五条合法记录，事件 ID 各不相同，四条金额为 1000000000，一条为 294967297。成功处理后的 total_cents 须精确表示整数 4294967297，不得溢出、截断或舍入。",
+      "priority": "P1"
+    },
+    {
+      "id": "BATCH-03-S04",
+      "requirement_id": "BATCH-03",
+      "title": "相同输入重复运行输出一致",
+      "description": "对同一份普通合法输入执行两次成功处理，每次使用不同且不存在的输出路径。两份输出文件须逐字节相同，不因运行次数或输出路径而变化。",
+      "priority": "P1"
+    },
+    {
+      "id": "BATCH-04-S01",
+      "requirement_id": "BATCH-04",
+      "title": "参数错误统一失败反馈",
+      "description": "分别缺少必填参数、缺少参数值，或将输入或输出路径设为相对路径，其余条件合法且指定的输出路径原本不存在。每次均退出 2、标准错误包含非空错误说明，且不创建输出文件。",
+      "priority": "P1"
+    },
+    {
+      "id": "BATCH-04-S02",
+      "requirement_id": "BATCH-04",
+      "title": "输入读取失败不交付输出",
+      "description": "参数格式合法，分别指定不存在的输入文件和执行身份确实不可读取的输入文件，输出路径原本不存在。每次均退出 2、标准错误包含非空错误说明，且不创建输出文件。",
+      "priority": "P1"
+    },
+    {
+      "id": "BATCH-04-S03",
+      "requirement_id": "BATCH-04",
+      "title": "数据错误整批失败且无部分输出",
+      "description": "分别使用相关需求已确定非法的错误表头、无数据行、空行、列数错误、非法或空标识符、越界或非整数金额，以及同一 event_id 对应不同内容的样本；能置于数据行的错误安排在合法可汇总记录之后。每批均退出 2、标准错误包含非空错误说明，且原本不存在的输出路径不出现文件，不得留下合法前缀的汇总。",
+      "priority": "P1"
+    },
+    {
+      "id": "BATCH-04-S04",
+      "requirement_id": "BATCH-04",
+      "title": "已有输出文件始终受到保护",
+      "description": "输出路径预先存在内容已知的非空文件，分别使用合法输入和含合法前缀的数据错误输入执行；另以合法输入文件自身作为输出路径执行。各组原有文件均须继续存在于原路径，字节内容完全不变。",
+      "priority": "P0"
+    },
+    {
+      "id": "BATCH-04-S05",
+      "requirement_id": "BATCH-04",
+      "title": "成功与失败均保留输入原文件",
+      "description": "使用内容已知的输入文件，在输出路径与输入不同且原本不存在时，分别执行合法批次、缺少输出参数的调用、含合法前缀的数据错误批次，以及执行身份不可读取该文件的调用。成功或失败返回后，输入文件均须继续存在于原路径，完整字节内容与执行前一致。",
+      "priority": "P0"
+    },
+    {
+      "id": "BATCH-05-S01",
+      "requirement_id": "BATCH-05",
+      "title": "从无关工作目录执行",
+      "description": "使用合法输入和位于同一数据目录的全新输出路径，从与程序位置及数据目录均不同、不含项目文件副本的现有工作目录启动；应完成处理并在指定输出路径生成文件。",
+      "priority": "P1"
+    },
+    {
+      "id": "BATCH-05-S02",
+      "requirement_id": "BATCH-05",
+      "title": "输入输出分属不同目录",
+      "description": "在已确认可启动的工作目录下，以绝对路径指定两个不同现有目录中的合法输入文件和全新输出路径；应完成处理，结果文件生成在指定输出目录。",
+      "priority": "P1"
+    },
+    {
+      "id": "BATCH-05-S03",
+      "requirement_id": "BATCH-05",
+      "title": "成功输出可作为普通文件重读",
+      "description": "处理普通合法输入并成功生成输出文件；程序结束后，以普通本地文件读取操作重新打开指定输出路径并读取至末尾，应能成功读取本次生成的完整内容。",
+      "priority": "P0"
+    },
+    {
+      "id": "BATCH-05-S04",
+      "requirement_id": "BATCH-05",
+      "title": "处理期间不在输入目录创建临时文件",
+      "description": "分别运行普通合法输入和末行列数错误的输入，输出路径均位于输入目录之外；每次执行期间输入目录均不得创建临时文件，包括随后删除的临时文件。",
+      "priority": "P2"
+    },
+    {
+      "id": "BATCH-06-S01",
+      "requirement_id": "BATCH-06",
+      "title": "完整处理1000条合法记录",
+      "description": "在配置已记录的本地机器上，处理正确表头及1000条合法记录：event_id各不相同，10个账户各100条，每条金额100分，输出路径预先不存在。应完成处理，退出码0、标准错误为空，输出为规定的UTF-8汇总CSV，10个账户按字典序排列，每个账户总额10000分、笔数100，无遗漏或额外账户；不引入未约定的耗时阈值。",
+      "priority": "P1"
+    },
+    {
+      "id": "BATCH-06-S02",
+      "requirement_id": "BATCH-06",
+      "title": "数据中有空行时整批失败",
+      "description": "在正确表头及合法数据行之间插入一个空行，使用预先不存在的输出路径处理。应以退出码2失败，标准错误给出非空说明，输出路径不得生成部分结果。",
+      "priority": "P1"
+    },
+    {
+      "id": "BATCH-06-S03",
+      "requirement_id": "BATCH-06",
+      "title": "数据列数不足或过多时整批失败",
+      "description": "分别处理两个文件：均含正确表头和一条合法数据行，随后分别为仅两列的数据行、含四列的数据行，其余字段使用合法值，各自输出路径预先不存在。两种情况均应以退出码2失败，标准错误给出非空说明，输出路径不得生成部分结果。",
+      "priority": "P1"
+    },
+    {
+      "id": "BATCH-06-S04",
+      "requirement_id": "BATCH-06",
+      "title": "仅有表头时失败",
+      "description": "处理仅含正确表头而没有数据行的文件，使用预先不存在的输出路径。应以退出码2失败，标准错误给出非空说明，输出路径不得生成部分结果。",
+      "priority": "P1"
+    }
+  ],
+  "design_gaps": [
+    {
+      "requirement_id": "BATCH-03",
+      "quote": "账户按字典序排列",
+      "reason": "该义务在混合大小写及下划线、连字符账户之间的相对次序尚无明确比较合同；可执行排序操作，但无法据现有输入独立裁定这些字符之间的预期顺序。小写字母及前缀关系已由 BATCH-03-S02 覆盖。"
+    },
+    {
+      "requirement_id": "BATCH-06",
+      "quote": "普通本地机器",
+      "reason": "未定义哪些机器配置属于普通本地机器。S01可验证已记录本地环境中的1000条完整处理，但不能据此确认该环境满足此限定或外推其他配置；需要确认代表配置范围。"
+    }
+  ],
+  "acceptance_id": "AT-20261020-v1-java",
+  "scope_sha256": "bcdef962ff8a9739376cbf6d9fa684161ab5f2baebac7a144b7df35802d2e0a8",
+  "updated_at": "2026-10-20T02:53:24.627102+00:00"
+}

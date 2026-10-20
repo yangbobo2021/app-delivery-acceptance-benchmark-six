@@ -1,0 +1,10 @@
+{"scenario":"TODO-01-S01","viewport":{"width":1280,"height":800},"result":"business assertions passed","screenshots":["/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/fresh-execution/screenshots/01-before.png","/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/fresh-execution/screenshots/02-filled.png","/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/fresh-execution/screenshots/03-added.png"]}
+✔ TODO-01-S01: add 买牛奶 through the browser (1551.159833ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 1
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1855.228333

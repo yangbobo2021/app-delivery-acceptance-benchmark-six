@@ -1,0 +1,1 @@
+{"schema":"coverage-probe-normalized-v1","components":[{"id":"projects/ts-web/build.mjs","source_paths":["projects/ts-web/build.mjs"],"metrics":{"line":{"status":"measured","covered":1,"total":1,"pct":100},"branch":{"status":"measured","covered":0,"total":0,"pct":100}}}]}

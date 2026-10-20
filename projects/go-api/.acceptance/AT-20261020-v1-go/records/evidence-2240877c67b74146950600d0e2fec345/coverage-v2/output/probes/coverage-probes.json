@@ -1,0 +1,76 @@
+{
+  "schema": "project-coverage-probe-report-v1",
+  "plan": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/coverage-v2/output/probe-plan.json",
+  "plan_sha256": "af227e6028d098ddf876a2f51793d6757b450b49c25115af5a527d14f41885e3",
+  "runtime_manifest": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/runtime-v2/output/runtime/runtime.json",
+  "runtime_sha256": "7c9779b91ba116bb17863bef5cc9453fe01802f938098ad52935698c646b7f8c",
+  "workspace": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workspace",
+  "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+  "routes": [
+    {
+      "id": "go-api-process",
+      "source_paths": [
+        "projects/go-api/main.go"
+      ],
+      "probes": {
+        "zero": {
+          "status": "passed",
+          "receipts": {
+            "collect": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/coverage-v2/output/probes/go-api-process/zero/collect/receipt.json",
+              "sha256": "ad0b366b1df1f0c62cf25bc8fb86ef8789f7056d38b8f969be1cff13326dd475"
+            },
+            "adapter": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/coverage-v2/output/probes/go-api-process/zero/adapter/receipt.json",
+              "sha256": "a825fe89b57fe9e8f4da117681821c2134c2dffec242eda4ce54b6011ab2ce50"
+            },
+            "direct": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/coverage-v2/output/probes/go-api-process/zero/direct/receipt.json",
+              "sha256": "47bcf84d9b304482cd5a6894277ef6d5f787a4ea285f41ee1e9bd55f5f282d3f"
+            }
+          },
+          "native": [
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/coverage-v2/output/probes/go-api-process/zero/raw/covcounters.92693296bbc058414674b6688e10b66b.35799.1792463847211830000",
+              "sha256": "2caa56b86634227bbaf901ca63948c05fafe95b947768aed6b9890c7cb7ce9af"
+            },
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/coverage-v2/output/probes/go-api-process/zero/raw/covmeta.92693296bbc058414674b6688e10b66b",
+              "sha256": "f3d7dccbcd63286cd940067e90455ef33c97ff5bd6dd342ceb60b1c01f7d38f0"
+            }
+          ],
+          "normalized_sha256": "489f6d6fff1a40c2bb0d6ce47002fdeca5a21be4c316f882863e5e9701d5fd02"
+        },
+        "nonzero": {
+          "status": "passed",
+          "receipts": {
+            "collect": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/coverage-v2/output/probes/go-api-process/nonzero/collect/receipt.json",
+              "sha256": "b959143705d3a5a4aec305fb18ba63d20f88f03541ca41e263aff98b34373463"
+            },
+            "adapter": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/coverage-v2/output/probes/go-api-process/nonzero/adapter/receipt.json",
+              "sha256": "63b8c2cb4a2976fe114ff42b3c2beeedc458beee85c9265729d874fb4e9accb1"
+            },
+            "direct": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/coverage-v2/output/probes/go-api-process/nonzero/direct/receipt.json",
+              "sha256": "311aeb8034baac98ca6d17d5ee08c3b8519e81d33de467e53ce85cc488514591"
+            }
+          },
+          "native": [
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/coverage-v2/output/probes/go-api-process/nonzero/raw/covcounters.92693296bbc058414674b6688e10b66b.36773.1792463858069728000",
+              "sha256": "eeb0e6f456fab5b94878fb3249e4404c49fff9c108192fe3fc2e5bf5dd31f5cc"
+            },
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/coverage-v2/output/probes/go-api-process/nonzero/raw/covmeta.92693296bbc058414674b6688e10b66b",
+              "sha256": "f3d7dccbcd63286cd940067e90455ef33c97ff5bd6dd342ceb60b1c01f7d38f0"
+            }
+          ],
+          "normalized_sha256": "73ef4523a6e5d297bc21e7caf8a9a0468e954bb9dc47edbed215617df0212e01"
+        }
+      }
+    }
+  ],
+  "status": "ready"
+}

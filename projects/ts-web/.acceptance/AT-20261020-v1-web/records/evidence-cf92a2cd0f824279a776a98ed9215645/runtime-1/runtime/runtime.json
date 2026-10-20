@@ -1,0 +1,210 @@
+{
+  "schema": "project-runtime-preparation-v1",
+  "status": "ready",
+  "acceptance": {
+    "project_root": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web",
+    "id": "AT-20261020-v1-web",
+    "scope_sha256": "64dfe822d5cf23a37b7f2e8b67cc197ef98b77b2f995362f0ff0883af79121a7",
+    "knowledge_receipt": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/knowledge-reads/fa6c2cadb6e24ccb89076408252e80f7.json"
+  },
+  "workspace": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workspace",
+  "runtime_root": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/runtime-1/runtime/runtime",
+  "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+  "components": [],
+  "test_roots": [
+    "projects/ts-web/tests"
+  ],
+  "platform": {
+    "system": "Darwin",
+    "machine": "arm64"
+  },
+  "dependency_hashes": {
+    "projects/ts-web/package.json": "f819fc89290ff685e778e795a4c5b5130e50cfc1ddae15087cdd7c2283f14e50",
+    "projects/ts-web/package-lock.json": "795d801b5047f86d790320c62c854d04011b41a1cabfa5ca883641ebb95db602"
+  },
+  "knowledge_receipt": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/knowledge-reads/fa6c2cadb6e24ccb89076408252e80f7.json",
+  "knowledge_read_sha256": "23d7949b427064947979e7889f77e7059cf4df5f9fb1836f733b9565eaf44076",
+  "knowledge_used": [
+    "INDEX.md"
+  ],
+  "spec_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/runtime-1/agent-spec.json",
+  "spec_sha256": "00bc42594d9d9aa465f5f536fe54542fe9967826e4ed08436f6b97be998ba0f1",
+  "recipe_candidate": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/runtime-1/runtime/recipe-candidate.md",
+  "recipe_candidate_sha256": "8e611e5b67dbc877dd4024c95aadb60e68935e4184cdb4589550ac28cd5855c5",
+  "setup": [
+    {
+      "command": [
+        "/opt/homebrew/bin/node",
+        "-e",
+        "require('node:fs').mkdirSync(process.argv[1], {recursive:true})",
+        "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/runtime-1/runtime/runtime/browser-tools"
+      ],
+      "cwd": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workspace",
+      "env": {},
+      "timeout_seconds": 30,
+      "exit_code": 0,
+      "seconds": 0.083,
+      "log": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/runtime-1/runtime/setup-00.log",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/opt/homebrew/bin/npm",
+        "ci",
+        "--include=dev",
+        "--no-audit",
+        "--no-fund",
+        "--cache",
+        "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/runtime-1/runtime/runtime/npm-cache"
+      ],
+      "cwd": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workspace/projects/ts-web",
+      "env": {
+        "PATH": "/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+      },
+      "timeout_seconds": 300,
+      "exit_code": 0,
+      "seconds": 5.891,
+      "log": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/runtime-1/runtime/setup-01.log",
+      "output_sha256": "657d589be776fe1251ee216f20599a2accba75b9520f948e215e41b0b68d43d8"
+    },
+    {
+      "command": [
+        "/opt/homebrew/bin/npm",
+        "run",
+        "build"
+      ],
+      "cwd": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workspace/projects/ts-web",
+      "env": {
+        "PATH": "/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+      },
+      "timeout_seconds": 120,
+      "exit_code": 0,
+      "seconds": 0.297,
+      "log": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/runtime-1/runtime/setup-02.log",
+      "output_sha256": "ffcb35e28a762dd1ececf6481362ca28f41bc4393349d9ee2da68509cbbe276b"
+    },
+    {
+      "command": [
+        "/opt/homebrew/bin/npm",
+        "install",
+        "--prefix",
+        "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/runtime-1/runtime/runtime/browser-tools",
+        "--save-exact",
+        "--no-audit",
+        "--no-fund",
+        "--cache",
+        "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/runtime-1/runtime/runtime/npm-cache",
+        "playwright@1.56.1"
+      ],
+      "cwd": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/runtime-1/runtime/runtime",
+      "env": {
+        "PATH": "/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin",
+        "PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD": "1"
+      },
+      "timeout_seconds": 300,
+      "exit_code": 0,
+      "seconds": 7.647,
+      "log": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/runtime-1/runtime/setup-03.log",
+      "output_sha256": "a82244c62fc2ee0103197ab983f7a61ac83af366b09a05cd674a08eaf044e5c2"
+    },
+    {
+      "command": [
+        "/opt/homebrew/bin/node",
+        "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/runtime-1/runtime/runtime/browser-tools/node_modules/playwright/cli.js",
+        "install",
+        "chromium"
+      ],
+      "cwd": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/runtime-1/runtime/runtime",
+      "env": {
+        "PLAYWRIGHT_BROWSERS_PATH": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/runtime-1/runtime/runtime/playwright-browsers"
+      },
+      "timeout_seconds": 600,
+      "exit_code": 0,
+      "seconds": 86.224,
+      "log": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/runtime-1/runtime/setup-04.log",
+      "output_sha256": "de7508d129e2905ccb3926d714184520c88f5a4b8b914bc0d270331959f3c32a"
+    },
+    {
+      "command": [
+        "/opt/homebrew/bin/node",
+        "-e",
+        "require('node:fs').writeFileSync(process.argv[1], process.argv[2], 'utf8')",
+        "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/runtime-1/runtime/runtime/browser-tools/environment-smoke.test.cjs",
+        "const {test} = require('node:test');\nconst {spawn} = require('node:child_process');\nconst {once} = require('node:events');\nconst {createInterface} = require('node:readline');\nconst {chromium} = require('playwright');\n\ntest('browser runtime and project server entry', {timeout:45000}, async t => {\n  const server = spawn(process.execPath, ['server.mjs', '0'], {\n    cwd:process.cwd(), env:{...process.env, PORT:'0'},\n    stdio:['ignore','pipe','pipe']\n  });\n  server.stderr.pipe(process.stderr);\n  t.after(async () => {\n    if (server.pid && server.exitCode === null && server.signalCode === null) {\n      const stopped = once(server, 'exit');\n      server.kill('SIGTERM');\n      const force = setTimeout(() => server.kill('SIGKILL'), 2000);\n      force.unref();\n      try { await stopped; } finally { clearTimeout(force); }\n    }\n  });\n  const lines = createInterface({input:server.stdout});\n  let startupTimer;\n  let port;\n  try {\n    port = await Promise.race([\n      once(lines, 'line').then(([line]) => JSON.parse(line).port),\n      once(server, 'error').then(([error]) => { throw error; }),\n      once(server, 'exit').then(([code,signal]) => { throw new Error('Server exited before readiness: '+code+' '+signal); }),\n      new Promise((_,reject) => { startupTimer = setTimeout(() => reject(new Error('Server readiness timeout')), 10000); })\n    ]);\n  } finally {\n    clearTimeout(startupTimer);\n    lines.close();\n  }\n  if (!Number.isInteger(port) || port <= 0) throw new Error('Invalid server port');\n  const browser = await chromium.launch({headless:true, timeout:15000});\n  t.after(() => browser.close());\n  const context = await browser.newContext({viewport:{width:1280,height:800}});\n  const page = await context.newPage();\n  const scriptResponse = page.waitForResponse(response => new URL(response.url()).pathname === '/app.js', {timeout:15000});\n  const [document,script] = await Promise.all([\n    page.goto('http://127.0.0.1:'+port+'/', {waitUntil:'load',timeout:15000}),\n    scriptResponse\n  ]);\n  if (!document || document.status() !== 200 || script.status() !== 200) throw new Error('Project entry resources unavailable');\n  console.log(JSON.stringify({node:process.version,playwright:require('playwright/package.json').version,chromium:browser.version(),documentStatus:document.status(),scriptStatus:script.status(),viewport:page.viewportSize()}));\n});\n"
+      ],
+      "cwd": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workspace",
+      "env": {},
+      "timeout_seconds": 30,
+      "exit_code": 0,
+      "seconds": 0.071,
+      "log": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/runtime-1/runtime/setup-05.log",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "executables": [
+    {
+      "name": "node",
+      "path": "/opt/homebrew/bin/node",
+      "resolved_path": "/opt/homebrew/Cellar/node/25.5.0/bin/node",
+      "sha256": "45e39a9f8b22235cf7c4d88d49b8a8e8307297c6f1913e2b963327f771acdce3",
+      "version_command": [
+        "/opt/homebrew/bin/node",
+        "--version"
+      ],
+      "version_output": "v25.5.0",
+      "version_receipt": {
+        "command": [
+          "/opt/homebrew/bin/node",
+          "--version"
+        ],
+        "cwd": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workspace",
+        "env": {},
+        "timeout_seconds": 30,
+        "exit_code": 0,
+        "seconds": 0.025,
+        "log": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/runtime-1/runtime/version-00.log",
+        "output_sha256": "7115e8caf2f71e342b3dea758a733ed8a2eb89e8675bc5e9437f707763abe7b2"
+      }
+    },
+    {
+      "name": "npm",
+      "path": "/opt/homebrew/bin/npm",
+      "resolved_path": "/opt/homebrew/lib/node_modules/npm/bin/npm-cli.js",
+      "sha256": "8e5f6f3429f8cdbe693cdc29904e9d5a7b127a494bd15c804bd54c7403bfcbe7",
+      "version_command": [
+        "/opt/homebrew/bin/npm",
+        "--version"
+      ],
+      "version_output": "11.8.0",
+      "version_receipt": {
+        "command": [
+          "/opt/homebrew/bin/npm",
+          "--version"
+        ],
+        "cwd": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workspace",
+        "env": {},
+        "timeout_seconds": 30,
+        "exit_code": 0,
+        "seconds": 0.202,
+        "log": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/runtime-1/runtime/version-01.log",
+        "output_sha256": "b396e3e19de55c61b6773383a0a92ee45dd6cddcbec8a09d731a6f2caefa2c5b"
+      }
+    }
+  ],
+  "smoke": {
+    "command": [
+      "/opt/homebrew/bin/node",
+      "--test",
+      "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/runtime-1/runtime/runtime/browser-tools/environment-smoke.test.cjs"
+    ],
+    "cwd": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workspace/projects/ts-web",
+    "env": {
+      "PLAYWRIGHT_BROWSERS_PATH": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/runtime-1/runtime/runtime/playwright-browsers"
+    },
+    "timeout_seconds": 60,
+    "exit_code": 0,
+    "seconds": 2.872,
+    "log": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/runtime-1/runtime/smoke.log",
+    "output_sha256": "d0d2a96188e01d1eb2966e5f1f1ec81a2a8b4340910e0650bcc0adf4f28b477a"
+  }
+}

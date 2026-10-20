@@ -1,0 +1,41 @@
+{
+  "status": "verified",
+  "legacy_trace_count": 0,
+  "meaning": "Top-level traces counts legacy delivery-trace files; v4 result is in progress.case_history and project_state.traces",
+  "offline_no_local": true,
+  "requirement_id": "INV-02",
+  "scene_id": "INV-02-S02",
+  "priority": "P1",
+  "binding_id": "INV-02-S02-case",
+  "test_file": "projects/python-cli/tests/test_inv_02_s02.py, projects/python-cli/tests/coverage_support/adapter.py, projects/python-cli/tests/coverage_support/collect.py, projects/python-cli/tests/coverage_support/direct.py, projects/python-cli/tests/coverage_support/coverage-requirements.txt, projects/python-cli/tests/coverage_support/tool-lock.json, projects/python-cli/tests/coverage_support/README.md",
+  "formal_case_status": "failed",
+  "execution_known": true,
+  "execution_evidence_url": "/api/evidence?acceptance_id=AT-20261020-v1-python&trace=941683c9fd33f759&binding=INV-02-S02-case&artifact=d9f1624e4717da99",
+  "reviewer_verdict": "product_bug",
+  "reviewer_reason": "冻结失败由产品的32位回绕导致，测试结论可靠。",
+  "coverage_status": "measured",
+  "coverage_relation": "same_run",
+  "coverage_verified": true,
+  "coverage_execution_sha256": "5477b6ea667bc8ce5cc8ab986b76e568c8355146cd06fe40fa8ca940804235f5",
+  "project_scenes": 28,
+  "project_scenes_with_coverage": 2,
+  "archived_formal_observations": {
+    "boundary.csv": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance/AT-20261020-v1-python/records/evidence-02d248bbb9804884b790d5c56eb81dfb/case-inv-02-s02-v1/fresh-execution/inv-02-s02/boundary.csv",
+      "sha256": "7081613d13852bf1e6246360f12832889751fc5363f011161817be184c136c5e"
+    },
+    "stdout.bin": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance/AT-20261020-v1-python/records/evidence-02d248bbb9804884b790d5c56eb81dfb/case-inv-02-s02-v1/fresh-execution/inv-02-s02/stdout.bin",
+      "sha256": "9ebada5847d55509b16bf58d4902ce9bca5ec54df80593b19cc53433b8156973"
+    },
+    "stderr.bin": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance/AT-20261020-v1-python/records/evidence-02d248bbb9804884b790d5c56eb81dfb/case-inv-02-s02-v1/fresh-execution/inv-02-s02/stderr.bin",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "observations.json": {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance/AT-20261020-v1-python/records/evidence-02d248bbb9804884b790d5c56eb81dfb/case-inv-02-s02-v1/fresh-execution/inv-02-s02/observations.json",
+      "sha256": "7e02a8dbfd41c887a0d46b38528f59182cf5fa6f33503942152a4d8535cb573d"
+    }
+  },
+  "archived_stdout": "{\"totals\": {\"boundary\": -2147483648}, \"row_count\": 4}"
+}

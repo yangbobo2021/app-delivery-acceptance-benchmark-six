@@ -1,0 +1,22 @@
+{
+  "status": "product_bug",
+  "coverage": "测试通过真实 Terminal/PTY 执行产品，覆盖打开三项混合状态清单及按 j 后的关键画面，视觉判据由冻结截图人工审查。覆盖率绑定本次场景执行：rustc 1.94.0 → llvm-profdata/llvm-cov 21.1.8，main.rs 行覆盖 84/128（65.625%）；分支覆盖不可用，不能替代业务判断。",
+  "oracle": "原始 TUI-02 明确要求全部可见项目名称、完成状态及当前选择可辨认，选中文字与背景不能同色；独立夹具为 Buy milk（未完成）、Read book（完成）、Water plants（未完成）。缺陷判定不依赖新增展示格式或主观配色偏好。",
+  "evidence": "冻结命令退出码为 0，但日志明确仅机械检查通过、仍需截图审查。初始截图第一项呈空白灰条，名称与完成状态不可读；按 j 后灰条移动至第二项，其名称与完成状态也不可读。源码 draw 在多项目时将选中行前景和背景均设为 DarkGrey，与截图观察一致。",
+  "ui_review": {
+    "status": "failed",
+    "screenshot_paths": [
+      "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/frozen-evidence/7/tui02-01-open.png",
+      "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-02-S01-1/frozen-evidence/7/tui02-02-after-j.png"
+    ],
+    "reason": "已直接观察两张图片。标题、操作提示、未选中列表及底部状态行清楚，区域互不遮挡或裁切，等宽字体、行距和对齐一致，层次合理。但两种关键状态下选中行均只剩灰色实心条，文字、完成标识和选择符不可见，用户无法确认当前操作对象，违反明确可读性要求。"
+  },
+  "findings": [
+    {
+      "kind": "product",
+      "reason": "80×24 彩色终端显示三项清单时，选中行文字与背景同色；初始选中 Buy milk 和按 j 后选中 Read book 均可复现，直接违反 TUI-02。",
+      "requested_change": "修复多项目清单选中行的前景与背景对比，确保名称、完成状态和选择标识同时可读；修复后重新冻结相同场景的两个关键状态供复审。"
+    }
+  ],
+  "summary": "机械执行成功，但冻结截图直接证明选中项不可读，本场景存在产品缺陷。"
+}

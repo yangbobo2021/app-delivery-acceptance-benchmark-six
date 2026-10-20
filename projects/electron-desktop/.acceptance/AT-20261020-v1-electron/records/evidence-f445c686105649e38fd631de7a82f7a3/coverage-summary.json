@@ -1,0 +1,125 @@
+{
+  "schema": "project-coverage-summary-snapshot-v1",
+  "reports": [
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-03-S01/execution/coverage-report.json",
+      "sha256": "974237bd59827afc4473a0b61b5972dde452dd2e3c4173d7920e00e9844cdab5"
+    }
+  ],
+  "prepared_sha256": "62282a63188bf6f1afaa51f79634519b13d7fa2ec6d4d79797033893b4892ffa",
+  "summary": {
+    "tools": [
+      {
+        "name": "istanbul-lib-instrument",
+        "version": "6.0.3",
+        "role": "JavaScript instrumentation and native zero units"
+      },
+      {
+        "name": "istanbul-lib-coverage",
+        "version": "3.2.2",
+        "role": "native merge and line/branch statistics"
+      },
+      {
+        "name": "istanbul-lib-source-maps",
+        "version": "5.0.6",
+        "role": "TypeScript source map remapping"
+      },
+      {
+        "name": "esbuild",
+        "version": "0.28.2",
+        "role": "TypeScript transform and isolated Electron bundle"
+      }
+    ],
+    "scopes": {
+      "project": {
+        "status": "incomplete",
+        "components": [
+          {
+            "id": "projects/electron-desktop/src/main.ts",
+            "label": "main.ts",
+            "source_paths": [
+              "projects/electron-desktop/src/main.ts"
+            ],
+            "line": {
+              "status": "measured",
+              "covered": 8,
+              "total": 8,
+              "pct": 100
+            },
+            "branch": {
+              "status": "measured",
+              "covered": 3,
+              "total": 4,
+              "pct": 75
+            }
+          },
+          {
+            "id": "projects/electron-desktop/src/preload.ts",
+            "label": "preload.ts",
+            "source_paths": [
+              "projects/electron-desktop/src/preload.ts"
+            ],
+            "line": {
+              "status": "measured",
+              "covered": 1,
+              "total": 1,
+              "pct": 100
+            },
+            "branch": {
+              "status": "measured",
+              "covered": 0,
+              "total": 0,
+              "pct": 100
+            }
+          },
+          {
+            "id": "projects/electron-desktop/src/renderer.ts",
+            "label": "renderer.ts",
+            "source_paths": [
+              "projects/electron-desktop/src/renderer.ts"
+            ],
+            "line": {
+              "status": "measured",
+              "covered": 8,
+              "total": 8,
+              "pct": 100
+            },
+            "branch": {
+              "status": "measured",
+              "covered": 0,
+              "total": 2,
+              "pct": 0
+            }
+          },
+          {
+            "id": "projects/electron-desktop/src/store.ts",
+            "label": "store.ts",
+            "source_paths": [
+              "projects/electron-desktop/src/store.ts"
+            ],
+            "line": {
+              "status": "measured",
+              "covered": 9,
+              "total": 11,
+              "pct": 81.81
+            },
+            "branch": {
+              "status": "measured",
+              "covered": 12,
+              "total": 24,
+              "pct": 50
+            }
+          }
+        ]
+      },
+      "changed_files": {
+        "status": "unavailable",
+        "reason": "This frozen baseline declares no changed-file scope"
+      },
+      "changed_lines": {
+        "status": "unavailable",
+        "reason": "This frozen baseline declares no changed-line scope"
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "status": "passed_local",
+  "test_files": [
+    "projects/rust-tui/tests/tui04_single_toggle.py",
+    "projects/rust-tui/tests/llvm_coverage/adapter.py",
+    "projects/rust-tui/tests/llvm_coverage/direct.py",
+    "projects/rust-tui/tests/llvm_coverage/config.json",
+    "projects/rust-tui/tests/llvm_coverage/probe.rs",
+    "projects/rust-tui/tests/llvm_coverage/README.md"
+  ],
+  "test_command": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "projects/rust-tui/tests/tui04_single_toggle.py"
+  ],
+  "test_env": {
+    "TERM": "xterm-256color"
+  },
+  "observations": [
+    "复用已有用例，保留此前测试修改；最小路径及完整用例均通过统一调试入口运行，退出码均为0。",
+    "完整执行使用两个新建单项文件和独立真实终端会话，均为80列24行，NO_COLOR未设置。",
+    "初始done=0和done=1各按一次空格，分别保存为1和0；退出前约55毫秒和57毫秒观察到磁盘更新，id和title保持不变。",
+    "逐张查看完整执行的四张原生窗口调试截图，确认完成标识双向变化；应用标题、项目名称、选中标识、操作提示及底部状态行完整可读，无明显遮挡或裁切，间距、对齐及样式一致。",
+    "窗口边界分别为[540,291,1110,662]和[554,291,1124,662]，尺寸均为570×371；截图配套JSON记录了终端尺寸、状态和原始文件文本。",
+    "两个产品进程退出码均为0，终端恢复检查通过，清理错误均为空。",
+    "覆盖率采集完整结束：rustc 1.94.0 → llvm-profdata/llvm-cov 21.1.8，原生行覆盖96/128；分支覆盖不可用。"
+  ],
+  "evidence_paths": [
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/case/debug/attempt-fda08a78ee654138aee6b5b4e707661d/state/screens",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/case/debug/attempt-fda08a78ee654138aee6b5b4e707661d/state/tui04-single-toggle/summary.json",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-2/case/debug/attempt-fda08a78ee654138aee6b5b4e707661d/execution/coverage-report.json"
+  ],
+  "limitations": [
+    "所列截图为本次调试输出，不是正式证据；正式UI结论仍须宿主冻结重跑及独立视觉复审。",
+    "正式运行须由入口绑定全新的TUI_CASE_ROOT、TUI_SCREENSHOT_DIR及覆盖率产品二进制，并保持NO_COLOR未设置。",
+    "本场景仅覆盖单项文件的两种初始完成状态。"
+  ],
+  "reason": "两个切换方向、即时显示与保存、身份保持及正常清理均已本地验证，正式验收仍待宿主重跑和独立审查。"
+}

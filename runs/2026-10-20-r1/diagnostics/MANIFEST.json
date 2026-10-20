@@ -1,0 +1,174 @@
+{
+  "schema": "benchmark-first-attempt-diagnostics-v1",
+  "baseline": "be952659c7d93018e26793daf2e58fa8321601f4",
+  "files": [
+    {
+      "origin": "shared",
+      "source_relative_path": "projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/analysis-1/metrics.json",
+      "copy_relative_path": "setup/web-foreign-change-metrics.json",
+      "sha256": "b61cf4580706df101548f1149bf84c206f2d8f84c435e8ff1c6fe835f16d1d23",
+      "bytes": 3124
+    },
+    {
+      "origin": "shared",
+      "source_relative_path": "projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/analysis-2/metrics.json",
+      "copy_relative_path": "setup/java-foreign-change-metrics.json",
+      "sha256": "23fa76fe1a9d1ab65badd061797958280804480c5c330e95feb63503be706219",
+      "bytes": 3000
+    },
+    {
+      "origin": "py-go",
+      "source_relative_path": "projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/coverage-v2/output/probe-gate.stderr",
+      "copy_relative_path": "python/coverage-v2-probe-gate.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "origin": "py-go",
+      "source_relative_path": "projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/offline-view-inv-03-s01-attempt1.json",
+      "copy_relative_path": "python/first-offline-check.json",
+      "sha256": "546f23d0102f9114473f6693450668d50895742d7f7d0b28331a184ddbaec573",
+      "bytes": 268
+    },
+    {
+      "origin": "py-go",
+      "source_relative_path": "projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/offline-view-inv-02-s02-chain-v1.json",
+      "copy_relative_path": "python/final-offline-proof.json",
+      "sha256": "57ab6dfa15f6a37c61bc69710af45b4545e80c4240341a203107afb6f2ce3e70",
+      "bytes": 2846
+    },
+    {
+      "origin": "py-go",
+      "source_relative_path": "projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/offline-view-stock-06-s02-chain-v1.json",
+      "copy_relative_path": "go/final-offline-proof.json",
+      "sha256": "fc9eee2332d9e4a00c7ec11951818297bb66e9f33735240f2e5cff41d4ec31a7",
+      "bytes": 4113
+    },
+    {
+      "origin": "web-electron",
+      "source_relative_path": "projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/coverage-1/probes/coverage-probes.json",
+      "copy_relative_path": "web/first-coverage-probes.json",
+      "sha256": "26b065e1e0b63909db3f1af159887882d2ee733abb207a371ddf9f86592a0d32",
+      "bytes": 10366
+    },
+    {
+      "origin": "web-electron",
+      "source_relative_path": "projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/offline-phase2b-assertions.json",
+      "copy_relative_path": "web/final-offline-proof.json",
+      "sha256": "a6b5958e90e30ec470ab817acf939182cde190a3bf208b8de915f37570cb9879",
+      "bytes": 2698
+    },
+    {
+      "origin": "web-electron",
+      "source_relative_path": "projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/phase2b-image-audit.json",
+      "copy_relative_path": "web/image-input-audit.json",
+      "sha256": "6be32377e3066fec9b6d01e74de028b36cc4d49fa37cfb7910fe30395e316f0f",
+      "bytes": 7984
+    },
+    {
+      "origin": "web-electron",
+      "source_relative_path": "projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-03-S01/case/debug/attempt-1a55cc98da9849a1884303afd351a9bc/execution/host.log",
+      "copy_relative_path": "electron/first-cdp-debug-host.log",
+      "sha256": "aeeeb26b310a0a784ae5d05fb2eed704206bb4196cda707c08f4e6a23dbc7690",
+      "bytes": 1259
+    },
+    {
+      "origin": "web-electron",
+      "source_relative_path": "projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/scenario-NOTE-01/scenarios.current.json",
+      "copy_relative_path": "electron/first-note01-scenes.json",
+      "sha256": "cd77e758139014bb4f6592f0fdce30dc17b5b12a9e448e5a0bd727a220560422",
+      "bytes": 5566
+    },
+    {
+      "origin": "web-electron",
+      "source_relative_path": "projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/scenario-NOTE-01-v2/scenarios.current.json",
+      "copy_relative_path": "electron/revised-note01-scenes.json",
+      "sha256": "8dc93d2e18a5e92d8ad7ccd89ca9223f5f3aa2c81f82afbd6fb8afac7ddaaea7",
+      "bytes": 6626
+    },
+    {
+      "origin": "web-electron",
+      "source_relative_path": "projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/offline-phase2b-assertions.json",
+      "copy_relative_path": "electron/final-offline-proof.json",
+      "sha256": "7d50eb2d7637042bebfce819410c333048305fda7cbd8319d35c3654b21cd65a",
+      "bytes": 7753
+    },
+    {
+      "origin": "web-electron",
+      "source_relative_path": "projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/phase2b-image-audit.json",
+      "copy_relative_path": "electron/image-input-audit.json",
+      "sha256": "bfe1358b57f4ba8e22b8ccfe307e3084f591ddec0f5dea242fd6cb533d362b54",
+      "bytes": 9249
+    },
+    {
+      "origin": "java-rust",
+      "source_relative_path": "projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/coverage-request-2.json",
+      "copy_relative_path": "java/relative-registry-request.json",
+      "sha256": "816582cbd230620d646fbbaf6984b300e02e8704d4fb3172bd8dc5e91694414d",
+      "bytes": 1780
+    },
+    {
+      "origin": "java-rust",
+      "source_relative_path": "projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/cases/BATCH-03-S01-1/blocked-case-retirement.json",
+      "copy_relative_path": "java/first-blocked-case-retirement.json",
+      "sha256": "83ff127f63379aa59525d73db705e66e58dad5f65beabe3ac9402fff025bd69f",
+      "bytes": 1305
+    },
+    {
+      "origin": "java-rust",
+      "source_relative_path": "projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/offline-view-proof-4.json",
+      "copy_relative_path": "java/final-offline-proof.json",
+      "sha256": "d980b39c5d56997d23cfe19ba85cc043427f6c306844e232765dcd0b62830b6a",
+      "bytes": 185145
+    },
+    {
+      "origin": "java-rust",
+      "source_relative_path": "projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/scenario-TUI-04-1/scenarios.current.json",
+      "copy_relative_path": "rust/first-tui04-scenes.json",
+      "sha256": "cbf311f1d061576482f47701cfe03e0f97a0acddb25ebd956ff6eff2b1cd2dfc",
+      "bytes": 3172
+    },
+    {
+      "origin": "java-rust",
+      "source_relative_path": "projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/scenario-TUI-04-2/scenarios.current.json",
+      "copy_relative_path": "rust/revised-tui04-scenes.json",
+      "sha256": "af71061a315858a545bf9ca0ff761f08da72ae5a279725b948d5844e04a2aa03",
+      "bytes": 3200
+    },
+    {
+      "origin": "java-rust",
+      "source_relative_path": "projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-1/review/answer.json",
+      "copy_relative_path": "rust/first-review.json",
+      "sha256": "ab83fe4878e8a8a3ba67886281148c3be12edea7786f93ea8698d0aa6479b9be",
+      "bytes": 2852
+    },
+    {
+      "origin": "java-rust",
+      "source_relative_path": "projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-1/review-1/answer.json",
+      "copy_relative_path": "rust/second-review.json",
+      "sha256": "93aa9eb95fb97dfa926d790e057f2c03df2bde2449b929dca5ee5d242a8b2adc",
+      "bytes": 3081
+    },
+    {
+      "origin": "java-rust",
+      "source_relative_path": "projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/cases/TUI-04-S01-1/review-2/answer.json",
+      "copy_relative_path": "rust/third-review.json",
+      "sha256": "cfa838bf34007ea3b1f4aaead0ce07d5fc4e1adfa4f18a8f35e4beebc60727cc",
+      "bytes": 1981
+    },
+    {
+      "origin": "java-rust",
+      "source_relative_path": "projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/coverage-2/handoff.json",
+      "copy_relative_path": "rust/repaired-coverage-handoff.json",
+      "sha256": "034e03c390a5ea37114da8d71232ef901508a307a7221a6beb4a6160186a9193",
+      "bytes": 2187
+    },
+    {
+      "origin": "java-rust",
+      "source_relative_path": "projects/rust-tui/.acceptance-local/AT-20261020-v1-rust/workflows/offline-view-proof-2.json",
+      "copy_relative_path": "rust/final-offline-proof.json",
+      "sha256": "f231972441a0232eb6987224728208984d69337ed1f39d5fed24761fa814ab31",
+      "bytes": 189672
+    }
+  ]
+}

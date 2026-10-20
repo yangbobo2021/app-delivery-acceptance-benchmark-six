@@ -1,0 +1,52 @@
+{
+  "model": "gpt-6.1-sol",
+  "effort": "high",
+  "started_at": "2026-10-20T03:06:00.922Z",
+  "prompt_characters": 18823,
+  "image_inputs": [
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-03-S01/frozen-evidence/12/01-empty.png",
+      "sha256": "6180fbbb6e01785d610dc1499f376b1049256cefc9f582012e63ac75a8de36de"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-03-S01/frozen-evidence/12/02-entered.png",
+      "sha256": "a728b6309e702b6a2521bef3fbb16791c5aebea3e43f45396eac2b619b70b3c3"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-03-S01/frozen-evidence/12/03-saved.png",
+      "sha256": "fc0cbdc93b685f3538fd3e4b3b84072fb41eb449e5a77c4e662c25eabb3cd353"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-03-S01/frozen-evidence/12/04-restarted.png",
+      "sha256": "395cfefaac89c2f6b3048db561babdbfbd6039c53235e671d0663bf3251f5a76"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-03-S01/frozen-evidence/12/05-restored-selected.png",
+      "sha256": "11b45dd713a816ceff4fc34e10bfe7a7ce21530f0a341902d4d3ff9b62e8403b"
+    }
+  ],
+  "image_aliases": {},
+  "status": "success",
+  "usage": {
+    "toolUses": 13,
+    "tokens": {
+      "coverage": "partial",
+      "totals": {
+        "input": {
+          "total": 354639,
+          "uncached": 42575,
+          "cacheRead": 312064,
+          "cacheWrite": 0
+        },
+        "output": {
+          "total": 3262,
+          "visible": 2812,
+          "reasoning": 450
+        }
+      }
+    }
+  },
+  "seconds": 81.14064112499999,
+  "tool_calls": 13,
+  "finished_at": "2026-10-20T03:07:22.063Z"
+}

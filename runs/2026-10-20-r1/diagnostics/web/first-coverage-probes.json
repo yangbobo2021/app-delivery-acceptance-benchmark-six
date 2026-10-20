@@ -1,0 +1,172 @@
+{
+  "schema": "project-coverage-probe-report-v1",
+  "plan": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/coverage-1/probe-plan.json",
+  "plan_sha256": "1c94d87785e17643e77d7a7dbf5641ec8ba27277b46914830be909672f6c243c",
+  "runtime_manifest": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/runtime-1/runtime/runtime.json",
+  "runtime_sha256": "7d6cf053c8408677e106094b6f9187a9a562af8e2e559e76a7fa3493e60ece63",
+  "workspace": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workspace",
+  "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+  "routes": [
+    {
+      "id": "node-server",
+      "source_paths": [
+        "projects/ts-web/server.mjs"
+      ],
+      "probes": {
+        "zero": {
+          "status": "passed",
+          "receipts": {
+            "collect": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/coverage-1/probes/node-server/zero/collect/receipt.json",
+              "sha256": "f1a77e3bd4f60d504c99d04f26195721fcb24bb5320cd8c21ff96f2064c86c7c"
+            },
+            "adapter": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/coverage-1/probes/node-server/zero/adapter/receipt.json",
+              "sha256": "0e17c81241e5e9fcc8f6bf3f4e457c00a1a89842927fba896c469aaa0f13208e"
+            },
+            "direct": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/coverage-1/probes/node-server/zero/direct/receipt.json",
+              "sha256": "a73d3e50a069d8050218ed9f1c9e87977e6e4f942b39d0c634379168158427b8"
+            }
+          },
+          "native": [
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/coverage-1/probes/node-server/zero/raw/probe-lifecycle.json",
+              "sha256": "02d0e190d72ade762535b497fbf26fec40f0cec6f59730a65540f8cc718f66c5"
+            },
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/coverage-1/probes/node-server/zero/raw/zero.coverage.json",
+              "sha256": "962259b06a7cfa5a38dcc747c5025362a1ddf960f21b61b564714ed6916653a2"
+            }
+          ],
+          "normalized_sha256": "f37ea902177676a1d18d1eb29e56d84aadf4a83dc1355f91b0c91e38e4764e83"
+        },
+        "nonzero": {
+          "status": "passed",
+          "receipts": {
+            "collect": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/coverage-1/probes/node-server/nonzero/collect/receipt.json",
+              "sha256": "9071c4c04f83c02ec3e8cde7e7592bf94a4d1fa7d54722a5a6ac490071c1b4f7"
+            },
+            "adapter": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/coverage-1/probes/node-server/nonzero/adapter/receipt.json",
+              "sha256": "af19d8294e3b546672e950ff4a4ee4a1959d3793deda37bd5d465267a9b420f8"
+            },
+            "direct": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/coverage-1/probes/node-server/nonzero/direct/receipt.json",
+              "sha256": "2ba629437a01699b5db4bc8f205c065767bb4b4e8f4ddc702e4edd0138addd33"
+            }
+          },
+          "native": [
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/coverage-1/probes/node-server/nonzero/raw/node-45814.coverage.json",
+              "sha256": "9d8c8232fae248a0c9df8a0642f1fd2377cb8194e207a326cfd3fc2fba18ebf9"
+            },
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/coverage-1/probes/node-server/nonzero/raw/node-45814.ended.json",
+              "sha256": "e439bd736b13f7cc29fea9b2f04645721fc3423d499f2b6235560677d6a772e5"
+            },
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/coverage-1/probes/node-server/nonzero/raw/node-45814.started.json",
+              "sha256": "575142783ec7ae7c99a20ebaaa65731b2aa534aa4cc2e95ff505cdeb8ccd2ae4"
+            },
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/coverage-1/probes/node-server/nonzero/raw/probe-lifecycle.json",
+              "sha256": "b21a98655f900edd3ed44049c2fa3beede0a8d3a5f0dd7a0824a75f31b81a26d"
+            }
+          ],
+          "normalized_sha256": "869a8ce13690dc2e6396614494bd9d604d6a15f235711eae54f1045bb96c6c5a"
+        }
+      }
+    },
+    {
+      "id": "chromium-app",
+      "source_paths": [
+        "projects/ts-web/src/app.ts"
+      ],
+      "probes": {
+        "zero": {
+          "status": "failed",
+          "reason": "coverage collect probe failed"
+        },
+        "nonzero": {
+          "status": "failed",
+          "reason": "coverage collect probe failed"
+        }
+      }
+    },
+    {
+      "id": "node-build",
+      "source_paths": [
+        "projects/ts-web/build.mjs"
+      ],
+      "probes": {
+        "zero": {
+          "status": "passed",
+          "receipts": {
+            "collect": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/coverage-1/probes/node-build/zero/collect/receipt.json",
+              "sha256": "5c384ac1c23dd86a4a5c63500426502b77609f7b9e9db0bc4d4b5691173165d2"
+            },
+            "adapter": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/coverage-1/probes/node-build/zero/adapter/receipt.json",
+              "sha256": "a5dc78190c350031900ca42285739ba3b003ce1e5ddaf94732dfb7685776482a"
+            },
+            "direct": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/coverage-1/probes/node-build/zero/direct/receipt.json",
+              "sha256": "a754806febf9ced03cd031972c7fbeb937703072f00ab358e7752e617e7aab62"
+            }
+          },
+          "native": [
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/coverage-1/probes/node-build/zero/raw/probe-lifecycle.json",
+              "sha256": "15b86e69b1d640d35618cbd72d5cc567a9c0127f1f3161038d91d22e21ec31e4"
+            },
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/coverage-1/probes/node-build/zero/raw/zero.coverage.json",
+              "sha256": "a1afa28b63ffcfde83ea706cc3b824922a11c08c8f4888fbb66a456e8056d2d9"
+            }
+          ],
+          "normalized_sha256": "7cb63b9dd8bb17be23ea622bd92b96ae52b369f21068999c5b7f078b94f8bf07"
+        },
+        "nonzero": {
+          "status": "passed",
+          "receipts": {
+            "collect": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/coverage-1/probes/node-build/nonzero/collect/receipt.json",
+              "sha256": "91c44cc5776d0348583988832d8ff0ee56a305185c8155eae234321c41a7e15f"
+            },
+            "adapter": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/coverage-1/probes/node-build/nonzero/adapter/receipt.json",
+              "sha256": "fb09b82203bb34fee041ca63c29744c678b5032cd283f12d6d3937e367424b2f"
+            },
+            "direct": {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/coverage-1/probes/node-build/nonzero/direct/receipt.json",
+              "sha256": "2089d79b3154c2c27449744fdbb4e46fabfd07ffe1799d1cfd607759deb1883b"
+            }
+          },
+          "native": [
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/coverage-1/probes/node-build/nonzero/raw/node-46020.coverage.json",
+              "sha256": "da2e643f6cf3e3cfc61c1212ad065b818904b542315475b1037b15babfa19429"
+            },
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/coverage-1/probes/node-build/nonzero/raw/node-46020.ended.json",
+              "sha256": "c499280e3076c4549144157164189c8aea214abcde33ac2df52c620f5f72d159"
+            },
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/coverage-1/probes/node-build/nonzero/raw/node-46020.started.json",
+              "sha256": "75279d00fa7adac486ac4e25c1401870b0c980007f0f2d8dd7fad4819d6daad0"
+            },
+            {
+              "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/coverage-1/probes/node-build/nonzero/raw/probe-lifecycle.json",
+              "sha256": "43ed3ca9aa7fa3abc1bdfff9c097d7b68529b5e736bd3fbfe2c169a0befa4af5"
+            }
+          ],
+          "normalized_sha256": "69868615a5b8940ad9385970449374bb9136b0b792ae53d65230be086e2c0001"
+        }
+      }
+    }
+  ],
+  "status": "partial"
+}

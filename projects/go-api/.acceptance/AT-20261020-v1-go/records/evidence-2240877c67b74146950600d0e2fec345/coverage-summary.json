@@ -1,0 +1,57 @@
+{
+  "schema": "project-coverage-summary-snapshot-v1",
+  "reports": [
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/go-api/.acceptance-local/AT-20261020-v1-go/workflows/case-stock-02-s01-v1/execution/coverage-report.json",
+      "sha256": "021d54f4986497b8ae35f4cd862dfa858b4ba411c341df98851368b7f52950dd"
+    }
+  ],
+  "prepared_sha256": "96add1e99419275ab7c574d4496dd9ad17063812ebda885ad06a2dae6fefddf5",
+  "summary": {
+    "tools": [
+      {
+        "name": "Go native coverage toolchain",
+        "version": "go1.25.7",
+        "role": "go test 编译及原生快照采集；go tool covdata debugdump、percent、merge 负责语句分母、命中、百分比及合并。完整能力由宿主探针复核。"
+      }
+    ],
+    "scopes": {
+      "project": {
+        "status": "measured",
+        "components": [
+          {
+            "id": "go-api",
+            "label": "Go API",
+            "source_paths": [
+              "projects/go-api/main.go"
+            ],
+            "line": {
+              "status": "unavailable",
+              "reason": "Go native coverage measures statements, not executable lines"
+            },
+            "branch": {
+              "status": "unavailable",
+              "reason": "Go native coverage does not measure branches"
+            },
+            "statement": {
+              "status": "measured",
+              "label": "Go statements",
+              "covered": 47,
+              "total": 70,
+              "pct": 67.1,
+              "tool_output": "totalStmts: 70 coveredStmts: 47\n\tstock.local/app\t\tcoverage: 67.1% of statements\n"
+            }
+          }
+        ]
+      },
+      "changed_files": {
+        "status": "unavailable",
+        "reason": "This acceptance is based on original requirements at a fixed baseline, not a commit diff."
+      },
+      "changed_lines": {
+        "status": "unavailable",
+        "reason": "This acceptance is based on original requirements at a fixed baseline, not a commit diff."
+      }
+    }
+  }
+}

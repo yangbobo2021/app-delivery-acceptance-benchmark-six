@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "coverage": "本场景的退出码、stderr、输出文件、UTF-8、CSV表头、数据行数量及金额/笔数均有有效断言。仅证明单账户普通成功路径，不外推多账户排序或跨次稳定性。覆盖率绑定本次冻结执行：JaCoCo 0.8.12.202403310830 agent采集、CLI统计，行46/63、分支22/44；不替代业务判断。",
+  "oracle": "合法输入来自BATCH-01；alice汇总125、笔数1由独立夹具及BATCH-02推导；输出格式、退出码0与stderr为空来自BATCH-03。未发现额外业务策略约束。",
+  "evidence": "测试编译并启动真实benchmark.BatchReport入口，输出初始不存在。冻结执行及产品进程均退出0；实际输出为account,total_cents,event_count\\nalice,125,1\\n。原始stderr仅含与注入配置完全匹配的JVM覆盖率提示，移除该环境提示后为空。原始输出与断言结果一致。",
+  "ui_review": {
+    "status": "not_applicable",
+    "screenshot_paths": [],
+    "reason": "目标不涉及 UI"
+  },
+  "findings": [],
+  "summary": "本场景测试结论可靠，可判通过。"
+}

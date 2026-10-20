@@ -1,0 +1,12 @@
+{
+  "schema": "acceptance-source-inventory-v1",
+  "project_id": "go-api",
+  "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+  "scope": "original-requirements",
+  "source_paths": [
+    "projects/go-api/main.go"
+  ],
+  "changed_files": [],
+  "changed_lines": {},
+  "changed_scope_reason": "This acceptance is based on original requirements at a fixed baseline, not a commit diff."
+}

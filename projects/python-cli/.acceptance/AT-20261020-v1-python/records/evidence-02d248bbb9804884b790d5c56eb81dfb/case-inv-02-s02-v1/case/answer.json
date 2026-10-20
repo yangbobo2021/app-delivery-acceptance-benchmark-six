@@ -1,0 +1,41 @@
+{
+  "status": "product_failure",
+  "test_files": [
+    "projects/python-cli/tests/test_inv_02_s02.py",
+    "projects/python-cli/tests/coverage_support/adapter.py",
+    "projects/python-cli/tests/coverage_support/collect.py",
+    "projects/python-cli/tests/coverage_support/direct.py",
+    "projects/python-cli/tests/coverage_support/coverage-requirements.txt",
+    "projects/python-cli/tests/coverage_support/tool-lock.json",
+    "projects/python-cli/tests/coverage_support/README.md"
+  ],
+  "test_command": [
+    "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/runtime-v2/output/runtime/runtime/venv/bin/python",
+    "-B",
+    "projects/python-cli/tests/test_inv_02_s02.py"
+  ],
+  "test_env": {
+    "ACCEPTANCE_CASE_ROOT": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/case-inv-02-s02-v1/case/replay-state"
+  },
+  "observations": [
+    "通过统一 debug_case.py 入口执行一次，使用本次新建的隔离输入与输出目录。",
+    "同一账号依次输入 1000000000、1000000000、147483647、1。",
+    "CLI 退出码为 0，stderr 为空；stdout 为 {\"totals\":{\"boundary\":-2147483648},\"row_count\":4}。",
+    "账号身份、JSON 结构及行数检查通过；精确总额应为 2147483648，实际为 -2147483648，业务测试及统一入口退出码均为 1。",
+    "只读检查发现 add_amount 将累加结果按有符号32位范围回绕，与实际错误一致。",
+    "coverage.py 7.16.2 报告状态为 measured，采集生命周期 complete=true，保留了三个原生快照。",
+    "仅新增场景测试，保留前序测试，未修改产品源码。"
+  ],
+  "evidence_paths": [
+    "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/case-inv-02-s02-v1/case/debug/request-01.json",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/case-inv-02-s02-v1/case/debug/attempt-01/state/inv-02-s02",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/case-inv-02-s02-v1/case/debug/attempt-01/execution/execution.json",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/case-inv-02-s02-v1/case/debug/attempt-01/execution/coverage-report.json",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/case-inv-02-s02-v1/case/debug/attempt-01/execution/native/lifecycle.json"
+  ],
+  "limitations": [
+    "结论限于冻结场景指定的四笔累计跨界输入，待调度器冻结重跑及独立审查。",
+    "重跑须使用新的 ACCEPTANCE_CASE_ROOT；统一入口按契约绑定该变量。"
+  ],
+  "reason": "合法累计总额 2147483648 被回绕为 -2147483648，违反 INV-02。"
+}

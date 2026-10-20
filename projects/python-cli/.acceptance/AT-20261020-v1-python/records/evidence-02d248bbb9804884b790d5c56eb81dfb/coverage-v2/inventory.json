@@ -1,0 +1,14 @@
+{
+  "schema": "acceptance-source-inventory-v1",
+  "project_id": "python-cli",
+  "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+  "scope": "original-requirements",
+  "source_paths": [
+    "projects/python-cli/invoice/__init__.py",
+    "projects/python-cli/invoice/__main__.py",
+    "projects/python-cli/invoice/totals.py"
+  ],
+  "changed_files": [],
+  "changed_lines": {},
+  "changed_scope_reason": "This acceptance is based on original requirements at a fixed baseline, not a commit diff."
+}

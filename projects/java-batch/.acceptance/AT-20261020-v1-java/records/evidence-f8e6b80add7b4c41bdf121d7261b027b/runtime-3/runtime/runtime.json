@@ -1,0 +1,158 @@
+{
+  "schema": "project-runtime-preparation-v1",
+  "status": "ready",
+  "acceptance": {
+    "project_root": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch",
+    "id": "AT-20261020-v1-java",
+    "scope_sha256": "bcdef962ff8a9739376cbf6d9fa684161ab5f2baebac7a144b7df35802d2e0a8",
+    "knowledge_receipt": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/knowledge-reads/182007fe511c415693d69a1c5c954b00.json"
+  },
+  "workspace": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workspace",
+  "runtime_root": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/runtime-3/runtime/runtime",
+  "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+  "components": [],
+  "test_roots": [
+    "projects/java-batch/tests"
+  ],
+  "platform": {
+    "system": "Darwin",
+    "machine": "arm64"
+  },
+  "dependency_hashes": {},
+  "knowledge_receipt": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/knowledge-reads/182007fe511c415693d69a1c5c954b00.json",
+  "knowledge_read_sha256": "2c414c77bfbef30174add748c3763ee766119db1dac992335b3354a3e58f0a8a",
+  "knowledge_used": [
+    "INDEX.md"
+  ],
+  "spec_path": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/runtime-3/agent-spec.json",
+  "spec_sha256": "b3150ced8cf0dedfba5dd63d6e92e5b11c641cbbce842ed34dedef97c019bfe0",
+  "recipe_candidate": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/runtime-3/runtime/recipe-candidate.md",
+  "recipe_candidate_sha256": "478de5f680dafec9ee1e7607ed4168e286a531d1764745bd58cfbef9c3c086ad",
+  "setup": [
+    {
+      "command": [
+        "/bin/mkdir",
+        "-p",
+        "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/runtime-3/runtime/runtime/java-batch/classes"
+      ],
+      "cwd": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workspace",
+      "env": {},
+      "timeout_seconds": 30,
+      "exit_code": 0,
+      "seconds": 0.003,
+      "log": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/runtime-3/runtime/setup-00.log",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home/bin/javac",
+        "--release",
+        "17",
+        "-encoding",
+        "UTF-8",
+        "-d",
+        "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/runtime-3/runtime/runtime/java-batch/classes",
+        "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workspace/projects/java-batch/src/main/java/benchmark/BatchReport.java"
+      ],
+      "cwd": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workspace/projects/java-batch",
+      "env": {},
+      "timeout_seconds": 60,
+      "exit_code": 0,
+      "seconds": 0.743,
+      "log": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/runtime-3/runtime/setup-01.log",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "executables": [
+    {
+      "name": "java",
+      "path": "/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home/bin/java",
+      "resolved_path": "/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home/bin/java",
+      "sha256": "1d7220618cbb7f600063c7f238b5c401fa49f63214082287e04cfedd78d075fa",
+      "version_command": [
+        "/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home/bin/java",
+        "-version"
+      ],
+      "version_output": "openjdk version \"21.0.5\" 2024-10-15 LTS\nOpenJDK Runtime Environment Temurin-21.0.5+11 (build 21.0.5+11-LTS)\nOpenJDK 64-Bit Server VM Temurin-21.0.5+11 (build 21.0.5+11-LTS, mixed mode, sharing)",
+      "version_receipt": {
+        "command": [
+          "/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home/bin/java",
+          "-version"
+        ],
+        "cwd": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workspace",
+        "env": {},
+        "timeout_seconds": 30,
+        "exit_code": 0,
+        "seconds": 0.071,
+        "log": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/runtime-3/runtime/version-00.log",
+        "output_sha256": "19394370661bf341f36af15116351a904c5cf04268171a6c28f3f373ea735b81"
+      }
+    },
+    {
+      "name": "javac",
+      "path": "/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home/bin/javac",
+      "resolved_path": "/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home/bin/javac",
+      "sha256": "5fb93d58c77badfd51edb92b8c6988c2895071b060a30526e63f6744554a322a",
+      "version_command": [
+        "/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home/bin/javac",
+        "-version"
+      ],
+      "version_output": "javac 21.0.5",
+      "version_receipt": {
+        "command": [
+          "/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home/bin/javac",
+          "-version"
+        ],
+        "cwd": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workspace",
+        "env": {},
+        "timeout_seconds": 30,
+        "exit_code": 0,
+        "seconds": 0.219,
+        "log": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/runtime-3/runtime/version-01.log",
+        "output_sha256": "bccfa1dacc191c77be39ae34e9f868e68f0d7ea6f3642f769af5b0e7a7fd2126"
+      }
+    },
+    {
+      "name": "python3",
+      "path": "/opt/homebrew/bin/python3",
+      "resolved_path": "/opt/homebrew/Cellar/python@3.14/3.14.2_1/Frameworks/Python.framework/Versions/3.14/bin/python3.14",
+      "sha256": "00c07e4d31048b15eebbe4c883f229338c5b2d598e9ee061da39b7fccba20cad",
+      "version_command": [
+        "/opt/homebrew/bin/python3",
+        "--version"
+      ],
+      "version_output": "Python 3.14.2",
+      "version_receipt": {
+        "command": [
+          "/opt/homebrew/bin/python3",
+          "--version"
+        ],
+        "cwd": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workspace",
+        "env": {},
+        "timeout_seconds": 30,
+        "exit_code": 0,
+        "seconds": 0.017,
+        "log": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/runtime-3/runtime/version-02.log",
+        "output_sha256": "154ebd4b103b23b709d31a51461b80e35b5bd7da5e24dd86d6616727a32aa244"
+      }
+    }
+  ],
+  "smoke": {
+    "command": [
+      "/opt/homebrew/bin/python3",
+      "-c",
+      "import subprocess, sys; result = subprocess.run(sys.argv[1:]); sys.exit(0 if result.returncode == 2 else 1)",
+      "/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home/bin/java",
+      "-cp",
+      "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/runtime-3/runtime/runtime/java-batch/classes",
+      "benchmark.BatchReport"
+    ],
+    "cwd": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workspace/projects/java-batch",
+    "env": {},
+    "timeout_seconds": 30,
+    "exit_code": 0,
+    "seconds": 0.126,
+    "log": "/Users/boboyang/work/app-delivery-acceptance-v1-java-rust/projects/java-batch/.acceptance-local/AT-20261020-v1-java/workflows/runtime-3/runtime/smoke.log",
+    "output_sha256": "6ac0eebf343c4ced5b61797a975b9f626e73b0be8cdde2ad40606047d534f019"
+  }
+}

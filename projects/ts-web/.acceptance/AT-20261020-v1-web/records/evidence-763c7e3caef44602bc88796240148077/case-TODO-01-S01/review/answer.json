@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "coverage": "仅审查 TODO-01-S01。断言检查添加前后精确标题数量由 0 增至 1，并确认新增条目可见，可识别未添加、标题错误或重复新增。本次覆盖率绑定同一冻结场景、版本和执行；Istanbul 6.0.3 插桩，经 esbuild 0.28.2 转译，由 istanbul-lib-coverage 3.2.2 合并统计。app.ts 行覆盖 22/22、分支 6/10，不代替业务判断。",
+  "oracle": "预期来自 TODO-01 原文“输入非空标题并添加后，列表出现该待办”；独立输入为“买牛奶”，未从产品输出生成预期。视觉判定遵循本次明确要求的可读、无遮挡及基本美观性，不附加品牌或配色标准。",
+  "evidence": "测试运行真实构建、本地 HTTP 服务及隔离 Chromium，通过输入框填写并点击 Add；覆盖率适配仅对产品源码插桩。冻结退出码为 0，日志记录 1 项通过；原始观察确认标题匹配数 0→1，无清理错误，采集生命周期完整。附图与观察一致。",
+  "ui_review": {
+    "status": "passed",
+    "screenshot_paths": [
+      "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/frozen-evidence/15/01-before.png",
+      "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/frozen-evidence/15/02-filled.png",
+      "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/ts-web/.acceptance-local/AT-20261020-v1-web/workflows/case-TODO-01-S01/frozen-evidence/15/03-added.png"
+    ],
+    "reason": "直接观察三张 1280×800 图片：空白、已输入及新增状态完整清晰；输入框、Add 和新增“买牛奶”均无遮挡或裁切。标题层次明确，表单与列表对齐，间距合理，字体、圆角及控件样式协调，具有基本视觉完成度；实际填写和点击记录支持任务可完成。"
+  },
+  "findings": [],
+  "summary": "冻结证据支持普通非空标题添加成功，本场景业务及 UI 验收通过。"
+}

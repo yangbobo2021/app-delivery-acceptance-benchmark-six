@@ -1,0 +1,157 @@
+{
+  "schema": "project-tool-coverage-report-v1",
+  "protocol": "project-coverage-v1",
+  "prepared": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/coverage-2/prepared",
+  "prepared_sha256": "62282a63188bf6f1afaa51f79634519b13d7fa2ec6d4d79797033893b4892ffa",
+  "scene_id": "NOTE-01-S07",
+  "revision": "be952659c7d93018e26793daf2e58fa8321601f4",
+  "source_hashes": {
+    "projects/electron-desktop/build.mjs": "84116660e600773715ccf8c8d47c760bd34f9b91325acf4c6f4c3c4e1e3645be",
+    "projects/electron-desktop/src/main.ts": "9ce2366d42a7f028e011073e3e69f219be444132b565679b54df920cede55461",
+    "projects/electron-desktop/src/preload.ts": "f7688c1dc92c29923f2f3e74a446ec74c74ae38bafa3f8f4ef633a2f182b9b85",
+    "projects/electron-desktop/src/renderer.ts": "4f6d9362b24aa24bb75dfd9b2c7b224fa0ab27eaff6b4e1679b48235ff73d475",
+    "projects/electron-desktop/src/store.ts": "56e1b585f6ca75ce437667b507ca7e6b6cffdf3f26182b40136e636cc3c5d76f",
+    "projects/electron-desktop/src/index.html": "98b7e08d2c6e6c12391d6a441c771aee43b3dec7d35f1cee44e21b6c79c479a0"
+  },
+  "tools": [
+    {
+      "name": "istanbul-lib-instrument",
+      "version": "6.0.3",
+      "role": "JavaScript instrumentation and native zero units"
+    },
+    {
+      "name": "istanbul-lib-coverage",
+      "version": "3.2.2",
+      "role": "native merge and line/branch statistics"
+    },
+    {
+      "name": "istanbul-lib-source-maps",
+      "version": "5.0.6",
+      "role": "TypeScript source map remapping"
+    },
+    {
+      "name": "esbuild",
+      "version": "0.28.2",
+      "role": "TypeScript transform and isolated Electron bundle"
+    }
+  ],
+  "collection_relation": "same_run",
+  "receipt_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/execution/execution.json",
+  "execution_sha256": "5fb4214021b0250f00bcede78eeb0862a056fea1d40039e00ac5a6a5239a855b",
+  "raw_evidence": [
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/execution/native/collection.json",
+      "sha256": "6b3070bd35e0588d7291e73741582ffbcaed2c558e497ee3446b41359a353186"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/execution/native/lifecycle-76435.json",
+      "sha256": "bd7900a320374b9da129322b334f553850a38c00e47a5d2856eccb2930e96f9e"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/execution/native/run-context.json",
+      "sha256": "4fe2923c16abd5eda9e10c64f72de0761fc415007f635331bf9bbe4c15d4d084"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/execution/native/snapshot-1637249d-34e9-43d6-951b-3cafbd227c2e-0.05644737013582857.json",
+      "sha256": "dc8db0e94ee9b5bab1f3532cbdfd8755fc619a054924b3fe3256253282c4b865"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/execution/native/snapshot-1637249d-34e9-43d6-951b-3cafbd227c2e-0.8764101907661399.json",
+      "sha256": "47baadfe30c6fe726ff83859ee6cece863f6fc4a582b019e823716e3b1bf7004"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/execution/native/snapshot-main-76435.json",
+      "sha256": "d60c52e5da1e3b8040a2a040373dd31615af44c8b03d22a598f066ba756627a1"
+    },
+    {
+      "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/execution/native/stop.json",
+      "sha256": "28656352e7d34a3c1c4965b64f5aac8ae8259bd6bfda63ebe92fed5d03dc1547"
+    }
+  ],
+  "execution_request": {
+    "path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/execution/coverage-request.json",
+    "sha256": "50b043aa286c818b8cc677b56e399cfc751032e6e69745e1aeff8112bb5d93c4"
+  },
+  "status": "incomplete",
+  "components": [
+    {
+      "id": "projects/electron-desktop/src/main.ts",
+      "label": "main.ts",
+      "source_paths": [
+        "projects/electron-desktop/src/main.ts"
+      ],
+      "line": {
+        "status": "measured",
+        "covered": 8,
+        "total": 8,
+        "pct": 100
+      },
+      "branch": {
+        "status": "measured",
+        "covered": 3,
+        "total": 4,
+        "pct": 75
+      }
+    },
+    {
+      "id": "projects/electron-desktop/src/preload.ts",
+      "label": "preload.ts",
+      "source_paths": [
+        "projects/electron-desktop/src/preload.ts"
+      ],
+      "line": {
+        "status": "measured",
+        "covered": 1,
+        "total": 1,
+        "pct": 100
+      },
+      "branch": {
+        "status": "measured",
+        "covered": 0,
+        "total": 0,
+        "pct": 100
+      }
+    },
+    {
+      "id": "projects/electron-desktop/src/renderer.ts",
+      "label": "renderer.ts",
+      "source_paths": [
+        "projects/electron-desktop/src/renderer.ts"
+      ],
+      "line": {
+        "status": "measured",
+        "covered": 8,
+        "total": 8,
+        "pct": 100
+      },
+      "branch": {
+        "status": "measured",
+        "covered": 0,
+        "total": 2,
+        "pct": 0
+      }
+    },
+    {
+      "id": "projects/electron-desktop/src/store.ts",
+      "label": "store.ts",
+      "source_paths": [
+        "projects/electron-desktop/src/store.ts"
+      ],
+      "line": {
+        "status": "measured",
+        "covered": 9,
+        "total": 11,
+        "pct": 81.81
+      },
+      "branch": {
+        "status": "measured",
+        "covered": 11,
+        "total": 24,
+        "pct": 45.83
+      }
+    }
+  ],
+  "report_path": "/Users/boboyang/work/app-delivery-acceptance-v1-web-electron/projects/electron-desktop/.acceptance-local/AT-20261020-v1-electron/workflows/case-NOTE-01-S07/execution/coverage-report.json",
+  "report_sha256": "fb4b57f678caea9bbefa2bbc089fd7f259605e90bab3e3186f804037ccea96cf",
+  "capture_end": "2026-10-20T04:01:40.628304+00:00"
+}

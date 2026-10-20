@@ -1,0 +1,52 @@
+{
+  "schema": "isolated-test-execution-v1",
+  "start_utc": "2026-10-20T03:39:34.519654+00:00",
+  "cwd": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workspace",
+  "command": [
+    "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/runtime-v2/output/runtime/runtime/venv/bin/python",
+    "-B",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workspace/projects/python-cli/tests/coverage_support/adapter.py",
+    "run",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/case-inv-02-s02-v1/execution/coverage-request.json",
+    "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/case-inv-02-s02-v1/execution/run-response.json"
+  ],
+  "env_changes": {
+    "ACCEPTANCE_CASE_ROOT": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/case-inv-02-s02-v1/fresh-execution"
+  },
+  "fresh_dirs": [
+    "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/case-inv-02-s02-v1/fresh-execution"
+  ],
+  "head_before": "be952659c7d93018e26793daf2e58fa8321601f4",
+  "tracked_changes_before": "",
+  "status_before": "?? projects/python-cli/tests/coverage_support/README.md\n?? projects/python-cli/tests/coverage_support/adapter.py\n?? projects/python-cli/tests/coverage_support/collect.py\n?? projects/python-cli/tests/coverage_support/coverage-requirements.txt\n?? projects/python-cli/tests/coverage_support/direct.py\n?? projects/python-cli/tests/coverage_support/tool-lock.json\n?? projects/python-cli/tests/test_inv_02_s02.py\n?? projects/python-cli/tests/test_inv_03_s01.py",
+  "test_file_sha256_before": {
+    "projects/python-cli/tests/coverage_support/README.md": "96ff3a7e817bd2cc9818b9b496feddf018c3febaf6c8c1ed72c45fb1d73090e4",
+    "projects/python-cli/tests/coverage_support/adapter.py": "e59a25ebbeeeb654aa2ebba80335f65587b4b6f66ca735598c6cd0ce5010e4fd",
+    "projects/python-cli/tests/coverage_support/collect.py": "88d83549ff74386cce54a2ff56a4f6e627b1cfe94b82d195d96c1bfc0fffd453",
+    "projects/python-cli/tests/coverage_support/coverage-requirements.txt": "b69684abad190dea565783e8534d6116e82e1811a0d2b9f1bf99f9613ee83c28",
+    "projects/python-cli/tests/coverage_support/direct.py": "a6b228ad2269606157517eff132ac706478eeb2c41889829783c4b030991b0e0",
+    "projects/python-cli/tests/coverage_support/tool-lock.json": "a371e32285e70c144219cc531644e1d4e790b9e7f2981fbd8c701acc0dbde3c6",
+    "projects/python-cli/tests/test_inv_02_s02.py": "343cee2da0a931f40220fff660505d4fe1118b338fe806c3a96d7787af0e22f3",
+    "projects/python-cli/tests/test_inv_03_s01.py": "5cdc58878a8f1b2729295033fe3eacd578a4dccc5710462666b00ecdbc9e2dcd"
+  },
+  "coverage_session_path": "/Users/boboyang/work/app-delivery-acceptance-v1-py-go/projects/python-cli/.acceptance-local/AT-20261020-v1-python/workflows/case-inv-02-s02-v1/execution/coverage-request.json",
+  "coverage_session_sha256": "b4371b49f67427062421b22b34e3f8cf16d006c7bd483d3734b905af591bee77",
+  "child_pid": 34239,
+  "end_utc": "2026-10-20T03:39:35.146189+00:00",
+  "duration_seconds": 0.553024125052616,
+  "exit_code": 1,
+  "head_after": "be952659c7d93018e26793daf2e58fa8321601f4",
+  "tracked_changes_after": "",
+  "status_after": "?? projects/python-cli/tests/coverage_support/README.md\n?? projects/python-cli/tests/coverage_support/adapter.py\n?? projects/python-cli/tests/coverage_support/collect.py\n?? projects/python-cli/tests/coverage_support/coverage-requirements.txt\n?? projects/python-cli/tests/coverage_support/direct.py\n?? projects/python-cli/tests/coverage_support/tool-lock.json\n?? projects/python-cli/tests/test_inv_02_s02.py\n?? projects/python-cli/tests/test_inv_03_s01.py",
+  "test_file_sha256_after": {
+    "projects/python-cli/tests/coverage_support/README.md": "96ff3a7e817bd2cc9818b9b496feddf018c3febaf6c8c1ed72c45fb1d73090e4",
+    "projects/python-cli/tests/coverage_support/adapter.py": "e59a25ebbeeeb654aa2ebba80335f65587b4b6f66ca735598c6cd0ce5010e4fd",
+    "projects/python-cli/tests/coverage_support/collect.py": "88d83549ff74386cce54a2ff56a4f6e627b1cfe94b82d195d96c1bfc0fffd453",
+    "projects/python-cli/tests/coverage_support/coverage-requirements.txt": "b69684abad190dea565783e8534d6116e82e1811a0d2b9f1bf99f9613ee83c28",
+    "projects/python-cli/tests/coverage_support/direct.py": "a6b228ad2269606157517eff132ac706478eeb2c41889829783c4b030991b0e0",
+    "projects/python-cli/tests/coverage_support/tool-lock.json": "a371e32285e70c144219cc531644e1d4e790b9e7f2981fbd8c701acc0dbde3c6",
+    "projects/python-cli/tests/test_inv_02_s02.py": "343cee2da0a931f40220fff660505d4fe1118b338fe806c3a96d7787af0e22f3",
+    "projects/python-cli/tests/test_inv_03_s01.py": "5cdc58878a8f1b2729295033fe3eacd578a4dccc5710462666b00ecdbc9e2dcd"
+  },
+  "log_sha256": "d03f636f6804716853ba511ebe0c48cafee6d1d540bfb07bacde8b9bde2d8a25"
+}
