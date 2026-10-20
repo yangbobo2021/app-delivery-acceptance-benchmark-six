@@ -13,4 +13,6 @@ This repository contains six small, independently runnable applications for chec
 
 `main` is the baseline under test: project source, requirements, and public test rules only. Create an acceptance-result branch **from a specific `main` commit** and record that commit hash with the result. Generated scenarios, execution evidence, coverage, and result views belong on result branches or in ignored local execution directories. Earlier result branches remain historical records of the baseline they actually tested; they are not silently rebased when `main` advances.
 
+In particular, `codex/acceptance-benchmark-round-1` and `codex/java-rust-acceptance-r6-20261020` were created before this unified six-project/UI baseline. Their evidence remains valid for the source revision recorded in each report, but neither branch is a test result for the current `main`.
+
 The evaluator's itemized defect truth is kept separately from `main` so a scenario-generating agent cannot learn expected failures from the checkout. See [docs/benchmark-protocol.md](docs/benchmark-protocol.md) for scope, evidence, and scoring boundaries.
